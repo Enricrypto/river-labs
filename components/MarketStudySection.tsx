@@ -294,7 +294,7 @@ function Slide04() {
   const groups = [
     {
       process: "Licitações",
-      impact: "R$144M de margem incremental",
+      impact: "R$160M de margem incremental",
       color: "#A3BFFA",
       items: [
         {
@@ -349,7 +349,7 @@ function Slide04() {
         {
           what: "Leitura automática de PDFs → Excel",
           how: "Quantidades extraídas sem digitação manual",
-          tools: ["PDF OCR"],
+          tools: ["Extração de PDF"],
         },
         {
           what: "Checklist automático de exigências por órgão",
@@ -412,13 +412,13 @@ function Slide05() {
     {
       label: "1. Volume de licitações: 30 → 70/ano",
       math: "40 extras × 20% taxa de vitória × R$180M × 10% margem",
-      result: "+R$144M",
+      result: "+R$144M margem",
       color: "#A3BFFA",
     },
     {
       label: "2. Taxa de vitória: 20% → 23% (propostas melhores)",
-      math: "+3 contratos × R$180M × 10% margem",
-      result: "+R$54M",
+      math: "30 × +3 p.p. × R$180M × 10% margem",
+      result: "+R$16M margem",
       color: "#A3BFFA",
     },
     {
@@ -448,10 +448,15 @@ function Slide05() {
             30 licitações × 20% × R$180M valor médio ={" "}
             <span className="text-white font-medium">R$1,08B receita atual</span>
           </p>
-          <p className="text-gray-600 text-xs mt-1">Custo engenheiro: R$120/h <Source label="IBGE 2024" /></p>
+          <p className="text-gray-600 text-xs mt-1">
+            Custo engenheiro: R$120/h <Source label="IBGE 2024" /> · Volume, taxa de vitória e valor médio: <Source label="dados Ápia" />
+          </p>
         </div>
 
         {/* Levers */}
+        <p className="text-gray-500 text-[10px] uppercase tracking-widest mb-2">
+          Alavancas 1 e 2 · resultado = margem líquida (não receita)
+        </p>
         <div className="space-y-2.5">
           {levers.map((l, i) => (
             <div
@@ -476,7 +481,7 @@ function Slide05() {
           style={{ border: "1px solid rgba(181,234,215,0.2)", background: "rgba(181,234,215,0.04)" }}
         >
           <p className="text-gray-300 text-sm font-medium">Impacto anual total mensurável</p>
-          <p className="font-serif text-2xl font-medium text-[#B5EAD7]">R$247M</p>
+          <p className="font-serif text-2xl font-medium text-[#B5EAD7]">R$210M</p>
         </div>
       </div>
 
@@ -493,7 +498,7 @@ function Slide05() {
             {[
               { label: "Investimento River Labs", value: "R$3,2M", accent: "text-white" },
               { label: "Economia direta/ano", value: "~R$50M", accent: "text-[#B5EAD7]" },
-              { label: "Potencial total (4 frentes)", value: "R$247M", accent: "text-[#B5EAD7]" },
+              { label: "Potencial total (4 frentes)", value: "R$210M", accent: "text-[#B5EAD7]" },
             ].map(r => (
               <div key={r.label} className="flex flex-col text-left gap-0.5">
                 <span className="text-gray-600 text-[10px]">{r.label}</span>
@@ -577,7 +582,7 @@ function Slide06() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
             {[
               "Métricas citam TCU/IBGE/Lei 8.666",
-              "R$247M traça até 30 licitações × R$180M",
+              "R$210M traça até 30 licitações × R$180M",
               "Ferramentas reais: Claude, Zapier, Sheets",
               "Payback ~3 semanas (só custos diretos)",
               "Pagamento parcial após 1 contrato ganho",
