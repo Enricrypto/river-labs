@@ -119,7 +119,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          Decomposição de Margem — Construção Pesada Brasil 2024
+          De onde vem (e some) o lucro — Construção Pesada Brasil 2024
         </p>
         <div className="space-y-3">
           {[
@@ -130,7 +130,7 @@ function Slide02() {
             { label: "Com River Labs (+4pp)", pct: 12, color: "#A3BFFA", text: "12%", source: null },
           ].map(row => (
             <div key={row.label} className="flex items-center gap-3">
-              <span className="text-gray-500 text-xs w-48 shrink-0 flex items-center">
+              <span className="text-gray-500 text-xs w-28 sm:w-44 shrink-0 flex items-center flex-wrap gap-y-0.5">
                 {row.label}
                 {row.source && <Source label={row.source} />}
               </span>
@@ -165,8 +165,8 @@ function Slide02() {
           },
           {
             value: "8–12%",
-            label: "Sobrecusto típico",
-            desc: "Da receita consumida em overrun e retrabalho",
+            label: "Custo extra por projeto",
+            desc: "Da receita gasta em atrasos e correções",
             source: "IBGE PAIC",
             color: "#B5EAD7",
           },
@@ -217,13 +217,13 @@ function Slide03() {
     },
     {
       icon: MessageSquare,
-      title: "Documentação Técnica & Laudos",
+      title: "Relatórios e Documentos Técnicos",
       accent: "#D7BDE2",
       source: "IBGE",
       lines: [
         { tree: "├─", text: "40–120h por laudo ou memorial técnico", bold: false },
         { tree: "├─", text: "R$4,8k–14k por documento (a R$120/h)", bold: true },
-        { tree: "└─", text: "Erro em laudo → embargo, glosa ou revisão contratual", bold: false },
+        { tree: "└─", text: "Erro em laudo → paralisação, desconto ou revisão do contrato", bold: false },
       ],
     },
   ];
@@ -302,13 +302,13 @@ function Slide04() {
           tools: ["Claude 3.5"],
         },
         {
-          what: "Takeoff de quantitativos 95% preciso",
+          what: "Levantamento de quantidades: 95% preciso",
           how: "PDF/CAD do projeto → planilha orçamentária",
           tools: ["Llama 3.1"],
         },
         {
           what: "Alertas de editais em 5 min",
-          how: "RSS TCU/DNIT → notificação automática",
+          how: "Alertas automáticos de novos editais",
           tools: ["Zapier"],
         },
       ],
@@ -351,7 +351,7 @@ function Slide04() {
           tools: ["PDF OCR"],
         },
         {
-          what: "Fluxo de compliance TCU",
+          what: "Checklist automático de exigências por órgão",
           how: "Checklist automático por tipo de órgão",
           tools: ["Google Forms"],
         },
@@ -415,14 +415,14 @@ function Slide05() {
       color: "#A3BFFA",
     },
     {
-      label: "2. Win rate: 20% → 23% (memoriais melhores)",
+      label: "2. Taxa de vitória: 20% → 23% (propostas melhores)",
       math: "+3 contratos × R$180M ticket médio",
       result: "+R$54M",
       color: "#A3BFFA",
     },
     {
-      label: "3. Overrun: 8% → 4% da receita R$1,2B",
-      math: "4pp × R$1,2B base",
+      label: "3. Custo extra de obra: 8% → 4% da receita",
+      math: "4 pontos % × R$1,2B de receita base",
       result: "+R$48M",
       color: "#B5EAD7",
     },
@@ -460,7 +460,7 @@ function Slide05() {
             >
               <div className="flex-1">
                 <p className="text-gray-300 text-xs font-medium mb-0.5">{l.label}</p>
-                <p className="text-gray-600 text-xs font-mono">{l.math}</p>
+                <p className="text-gray-600 text-xs font-mono wrap-break-word">{l.math}</p>
               </div>
               <span className="font-serif text-lg font-medium shrink-0" style={{ color: l.color }}>
                 {l.result}
@@ -492,7 +492,7 @@ function Slide05() {
             {[
               { label: "Investimento River Labs", value: "R$3,2M", accent: "text-white" },
               { label: "Impacto anual", value: "R$247M", accent: "text-[#B5EAD7]" },
-              { label: "Breakeven", value: "~8–10 meses", accent: "text-white" },
+              { label: "Ponto de retorno", value: "~8–10 meses", accent: "text-white" },
             ].map(r => (
               <div key={r.label} className="flex flex-col text-left gap-0.5">
                 <span className="text-gray-600 text-[10px]">{r.label}</span>
@@ -597,8 +597,8 @@ function Slide06() {
         <div>
           <p className="font-serif text-xl text-white font-medium mb-1.5">Pronto para testar?</p>
           <p className="text-gray-400 text-xs leading-relaxed">
-            Diagnóstico gratuito em 48h. Identificamos as 3 maiores oportunidades de ROI e mostramos
-            um output real de IA nos seus dados.
+            Diagnóstico gratuito em 48h. Identificamos as 3 maiores oportunidades e mostramos
+            um resultado real de IA aplicado nos seus dados.
           </p>
         </div>
         <Link
@@ -655,7 +655,7 @@ export default function MarketStudySection() {
             </h2>
             <p className="text-gray-500 text-sm mt-3 max-w-md leading-relaxed">
               Análise de oportunidades de IA & automação com números verificáveis — fontes TCU, IBGE,
-              Lei 8.666 e math da própria receita da Ápia.
+              Lei 8.666 e com base na própria receita da Ápia.
             </p>
           </div>
           <div className="hidden md:flex items-center gap-2">

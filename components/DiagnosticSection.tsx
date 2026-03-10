@@ -59,7 +59,7 @@ const STEPS: StepDef[] = [
   {
     id: "receita_fontes",
     title: "Como vocês ganham dinheiro",
-    subtitle: "Entender as fontes de receita ajuda a identificar onde a IA gera mais impacto.",
+    subtitle: "Entender as fontes de receita ajuda a identificar onde a automação gera mais resultado.",
     questions: [
       {
         id: "fontes",
@@ -113,8 +113,8 @@ const STEPS: StepDef[] = [
   },
   {
     id: "execucao",
-    title: "Execução de obras & overruns",
-    subtitle: "Atrasos e sobrecustos são os maiores destruidores de margem.",
+    title: "Execução de obras & custos extras",
+    subtitle: "Atrasos e custos extras são os maiores destruidores de lucro.",
     questions: [
       {
         id: "freq_atrasos",
@@ -125,7 +125,7 @@ const STEPS: StepDef[] = [
       },
       {
         id: "overrun",
-        label: "Qual é o sobrecusto médio (overrun) por projeto?",
+        label: "Qual é o custo extra médio por projeto?",
         type: "choice",
         options: ["Praticamente nenhum", "Até 5%", "5% – 15%", "15% – 30%", "Acima de 30%"],
         required: true,
@@ -147,8 +147,8 @@ const STEPS: StepDef[] = [
   },
   {
     id: "documentacao",
-    title: "Relatórios, documentação & compliance",
-    subtitle: "Documentação consome horas valiosas de engenheiros — e pode ser automatizada.",
+    title: "Relatórios, documentos e obrigações",
+    subtitle: "Documentação consome horas valiosas de engenheiros — e pode ser acelerada com automação.",
     questions: [
       {
         id: "horas_doc",
@@ -162,11 +162,11 @@ const STEPS: StepDef[] = [
         label: "Qual processo documental é mais trabalhoso hoje?",
         type: "choice",
         options: [
-          "Relatórios de avanço físico-financeiro",
+          "Relatórios de progresso de obra",
           "Laudos e pareceres técnicos",
           "Documentação de compliance e licenciamento",
           "Comunicação formal com órgãos públicos",
-          "Boletins de medição e memórias de cálculo",
+          "Planilhas de medição e memórias de cálculo",
         ],
         required: true,
       },
@@ -208,8 +208,8 @@ const STEPS: StepDef[] = [
   },
   {
     id: "tecnologia",
-    title: "Tecnologia & dados hoje",
-    subtitle: "O ponto de partida define o que é possível implementar — e em quanto tempo.",
+    title: "Ferramentas & sistemas que vocês usam",
+    subtitle: "Entender o que já existe nos ajuda a propor o que faz sentido.",
     questions: [
       {
         id: "ferramentas",
@@ -265,8 +265,8 @@ const STEPS: StepDef[] = [
   },
   {
     id: "ia",
-    title: "Abertura para IA & automação",
-    subtitle: "Sem julgamento — só queremos entender o contexto para propor o que faz sentido.",
+    title: "Experiência com automação",
+    subtitle: "Sem julgamento — o contexto nos ajuda a propor a solução certa.",
     questions: [
       {
         id: "experiencia_ia",
@@ -282,7 +282,7 @@ const STEPS: StepDef[] = [
       },
       {
         id: "problema_prioritario",
-        label: "Se a IA pudesse resolver um problema hoje, qual seria?",
+        label: "Se a tecnologia pudesse resolver um problema hoje, qual seria?",
         type: "choice",
         options: [
           "Automatizar a preparação de propostas e licitações",
@@ -406,22 +406,24 @@ function ScaleInput({
 }) {
   return (
     <div>
-      <div className="flex gap-1.5 flex-wrap">
-        {Array.from({ length: 11 }, (_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => onChange(i)}
-            className="w-9 h-9 rounded-lg text-sm font-medium transition-all duration-150"
-            style={{
-              background: value === i ? "#A3BFFA" : "transparent",
-              color: value === i ? "#111827" : "rgb(107,114,128)",
-              border: value === i ? "none" : "1px solid rgba(255,255,255,0.08)",
-            }}
-          >
-            {i}
-          </button>
-        ))}
+      <div className="overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
+        <div className="flex gap-1.5" style={{ minWidth: "max-content" }}>
+          {Array.from({ length: 11 }, (_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => onChange(i)}
+              className="w-9 h-9 rounded-lg text-sm font-medium transition-all duration-150 shrink-0"
+              style={{
+                background: value === i ? "#A3BFFA" : "transparent",
+                color: value === i ? "#111827" : "rgb(107,114,128)",
+                border: value === i ? "none" : "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              {i}
+            </button>
+          ))}
+        </div>
       </div>
       {hint && <p className="text-gray-600 text-xs mt-3">{hint}</p>}
     </div>
@@ -469,7 +471,7 @@ function SuccessScreen() {
           }}
         >
           <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ background: "rgba(181,234,215,0.15)" }}>
-            <CheckCircle2 className="w-7 h-7 text-[#B5EAD7]" strokeWidth={1.5} />
+            <CheckCircle2 className="w-7 h-7 text-pastel-green" strokeWidth={1.5} />
           </div>
           <div>
             <h3 className="font-serif text-3xl text-white font-medium mb-3">
@@ -478,19 +480,19 @@ function SuccessScreen() {
             <p className="text-gray-400 text-base leading-relaxed max-w-sm mx-auto">
               Nossa equipe vai analisar suas respostas e entrar em contato em até{" "}
               <span className="text-white">48 horas</span> com as principais oportunidades
-              de ROI identificadas.
+              de melhoria identificadas.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs">
             <Link
               href="#contact"
-              className="flex-1 flex items-center justify-center gap-2 bg-[#A3BFFA] text-gray-900 text-sm font-medium py-3 px-5 rounded-xl hover:bg-[#B5C9FF] transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 bg-pastel-blue text-gray-900 text-sm font-medium py-3 px-5 rounded-xl hover:bg-[#B5C9FF] transition-colors"
             >
               Agendar call agora
               <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
             </Link>
           </div>
-          <p className="text-gray-700 text-xs">Sem compromisso. Apenas insights acionáveis.</p>
+          <p className="text-gray-700 text-xs">Sem compromisso. Apenas recomendações práticas.</p>
         </div>
       </div>
     </section>
@@ -555,7 +557,7 @@ export default function DiagnosticSection() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <span className="text-[#B5EAD7] text-xs font-medium tracking-widest uppercase">
+          <span className="text-pastel-green text-xs font-medium tracking-widest uppercase">
             Diagnóstico Gratuito
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-white mt-2">
@@ -574,7 +576,7 @@ export default function DiagnosticSection() {
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs text-gray-500"
                 style={{ border: "1px solid rgba(255,255,255,0.08)" }}
               >
-                <span className="w-1 h-1 rounded-full bg-[#B5EAD7] inline-block" />
+                <span className="w-1 h-1 rounded-full bg-pastel-green inline-block" />
                 {pill}
               </span>
             ))}
@@ -598,7 +600,7 @@ export default function DiagnosticSection() {
             {/* Step meta */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="text-[#A3BFFA] text-xs font-medium">
+                <span className="text-pastel-blue text-xs font-medium">
                   Etapa {step + 1} de {TOTAL}
                 </span>
                 <div className="flex gap-1">
@@ -607,16 +609,21 @@ export default function DiagnosticSection() {
                       key={i}
                       type="button"
                       onClick={() => i < step && setStep(i)}
-                      className="h-0.5 w-4 rounded-full transition-all duration-300"
-                      style={{
-                        background: i < step
-                          ? "#A3BFFA"
-                          : i === step
-                          ? "rgba(163,191,250,0.5)"
-                          : "rgba(255,255,255,0.12)",
-                        cursor: i < step ? "pointer" : "default",
-                      }}
-                    />
+                      className="py-2 flex items-center"
+                      aria-label={`Ir para etapa ${i + 1}`}
+                      style={{ cursor: i < step ? "pointer" : "default" }}
+                    >
+                      <div
+                        className="h-1 w-4 rounded-full transition-all duration-300"
+                        style={{
+                          background: i < step
+                            ? "#A3BFFA"
+                            : i === step
+                            ? "rgba(163,191,250,0.5)"
+                            : "rgba(255,255,255,0.12)",
+                        }}
+                      />
+                    </button>
                   ))}
                 </div>
               </div>
@@ -689,7 +696,7 @@ export default function DiagnosticSection() {
                             >
                               <span className="flex items-center justify-between gap-3">
                                 {opt}
-                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-[#A3BFFA]" strokeWidth={2.5} />}
+                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-pastel-blue" strokeWidth={2.5} />}
                               </span>
                             </button>
                           );
