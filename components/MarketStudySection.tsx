@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -640,6 +640,12 @@ export default function MarketStudySection() {
   const prev = useCallback(() => setCurrent(c => (c - 1 + TOTAL) % TOTAL), []);
   const next = useCallback(() => setCurrent(c => (c + 1) % TOTAL), []);
   const CurrentSlide = SLIDES[current];
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = tabsRef.current?.children[current] as HTMLElement | undefined;
+    el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  }, [current]);
 
   return (
     <section className="py-24 bg-gray-950" id="market-study">
@@ -680,7 +686,7 @@ export default function MarketStudySection() {
         </div>
 
         {/* Tab nav */}
-        <div className="flex overflow-x-auto gap-1 mb-6 pb-1" style={{ scrollbarWidth: "none" }}>
+        <div ref={tabsRef} className="flex overflow-x-auto gap-1 mb-6 pb-1" style={{ scrollbarWidth: "none" }}>
           {SLIDE_LABELS.map((label, i) => (
             <button
               key={label}
