@@ -66,7 +66,7 @@ function Slide01() {
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             Entre as <span className="text-white font-medium">maiores construtoras pesadas</span> do
-            Brasil, com expertise em infraestrutura de larga escala e projetos estratégicos nacionais.
+            Brasil, com especialização em infraestrutura de larga escala e projetos estratégicos nacionais.
           </p>
         </div>
         <div>
@@ -197,7 +197,7 @@ function Slide03() {
       icon: FileText,
       title: "Preparação de Licitações",
       accent: "#A3BFFA",
-      source: "TCU 2023",
+      source: "estimativa de mercado",
       lines: [
         { tree: "├─", text: "250h médio por proposta", bold: false },
         { tree: "├─", text: "R$120/h × 250h = R$30k por licitação", bold: true },
@@ -280,8 +280,8 @@ function Slide03() {
       >
         <AlertTriangle className="w-4 h-4 text-[#D7BDE2] mt-0.5 shrink-0" strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
-          <strong className="text-white">30 licitações/ano × R$30k × 80% perdidas</strong> ={" "}
-          <strong className="text-[#D7BDE2]">R$720k–900k/ano</strong> em horas de engenharia que não
+          <strong className="text-white">30 licitações/ano × R$30k × 70–80% perdidas</strong> ={" "}
+          <strong className="text-[#D7BDE2]">R$630k–720k/ano</strong> em horas de engenharia que não
           geram nenhum contrato. Esse número é recuperável.
         </p>
       </div>
@@ -294,7 +294,7 @@ function Slide04() {
   const groups = [
     {
       process: "Licitações",
-      impact: "R$144M de receita incremental",
+      impact: "R$144M de margem incremental",
       color: "#A3BFFA",
       items: [
         {
@@ -320,7 +320,7 @@ function Slide04() {
       color: "#B5EAD7",
       items: [
         {
-          what: "Dashboard de avanço em tempo real",
+          what: "Painel de acompanhamento de obra em tempo real",
           how: "Dados de campo + ERP → relatório automático",
           tools: ["Google Sheets", "Make.com"],
         },
@@ -347,8 +347,8 @@ function Slide04() {
           tools: ["Notion", "Claude 3.5"],
         },
         {
-          what: "OCR de projetos PDF → Excel",
-          how: "Quantitativos extraídos sem digitação manual",
+          what: "Leitura automática de PDFs → Excel",
+          how: "Quantidades extraídas sem digitação manual",
           tools: ["PDF OCR"],
         },
         {
@@ -363,7 +363,7 @@ function Slide04() {
   return (
     <div className="flex flex-col gap-5 min-h-[400px]">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-        Ferramentas reais, sem buzzwords. Cada linha abaixo pode ser testada{" "}
+        Ferramentas reais, sem promessas vazias. Cada linha abaixo pode ser testada{" "}
         <span className="text-white font-medium">ainda esta semana</span>.
       </p>
 
@@ -411,13 +411,13 @@ function Slide05() {
   const levers = [
     {
       label: "1. Volume de licitações: 30 → 70/ano",
-      math: "40 extras × 20% win rate × R$180M ticket",
+      math: "40 extras × 20% taxa de vitória × R$180M × 10% margem",
       result: "+R$144M",
       color: "#A3BFFA",
     },
     {
       label: "2. Taxa de vitória: 20% → 23% (propostas melhores)",
-      math: "+3 contratos × R$180M ticket médio",
+      math: "+3 contratos × R$180M × 10% margem",
       result: "+R$54M",
       color: "#A3BFFA",
     },
@@ -445,7 +445,7 @@ function Slide05() {
         >
           <p className="text-gray-600 text-xs uppercase tracking-widest mb-2">Base de cálculo</p>
           <p className="text-gray-300 text-sm font-mono">
-            30 licitações × 20% × R$180M ticket ={" "}
+            30 licitações × 20% × R$180M valor médio ={" "}
             <span className="text-white font-medium">R$1,08B receita atual</span>
           </p>
           <p className="text-gray-600 text-xs mt-1">Custo engenheiro: R$120/h <Source label="IBGE 2024" /></p>
@@ -486,14 +486,14 @@ function Slide05() {
           className="rounded-2xl p-6 text-center"
           style={{ border: "1px solid rgba(163,191,250,0.2)", background: "rgba(163,191,250,0.06)" }}
         >
-          <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">ROI em 24 meses</p>
-          <p className="font-serif text-4xl font-medium text-[#A3BFFA] mb-0.5">3,2×</p>
-          <p className="text-gray-500 text-xs">retorno sobre investimento</p>
+          <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">Ponto de retorno</p>
+          <p className="font-serif text-4xl font-medium text-[#A3BFFA] mb-0.5">~3 sem.</p>
+          <p className="text-gray-500 text-xs">só com economia de custos diretos</p>
           <div className="mt-5 pt-5 space-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
             {[
               { label: "Investimento River Labs", value: "R$3,2M", accent: "text-white" },
-              { label: "Impacto anual", value: "R$247M", accent: "text-[#B5EAD7]" },
-              { label: "Ponto de retorno", value: "~8–10 meses", accent: "text-white" },
+              { label: "Economia direta/ano", value: "~R$50M", accent: "text-[#B5EAD7]" },
+              { label: "Upside total (4 alavancas)", value: "R$247M", accent: "text-[#B5EAD7]" },
             ].map(r => (
               <div key={r.label} className="flex flex-col text-left gap-0.5">
                 <span className="text-gray-600 text-[10px]">{r.label}</span>
@@ -529,13 +529,13 @@ function Slide06() {
     {
       number: "02",
       title: "30% apenas após ganhar 1 contrato",
-      desc: "Nosso fee é parcialmente atrelado a resultado. Se a IA não ganhar 1 contrato extra, vocês não pagam a parcela de sucesso.",
+      desc: "Nosso honorário é parcialmente atrelado a resultado. Se não ganharmos 1 contrato extra, vocês não pagam a parcela de sucesso.",
       color: "#B5EAD7",
     },
     {
       number: "03",
-      title: "Código 100% seu, zero lock-in",
-      desc: "Tudo que construirmos roda na infra da Ápia. Sem plataforma proprietária, sem dependência de fornecedor.",
+      title: "Código 100% seu, sem dependência",
+      desc: "Tudo que construirmos roda na infra da Ápia. Sem plataforma proprietária, sem vínculo com fornecedor.",
       color: "#D7BDE2",
     },
     {
@@ -579,7 +579,7 @@ function Slide06() {
               "Métricas citam TCU/IBGE/Lei 8.666",
               "R$247M traça até 30 licitações × R$180M",
               "Ferramentas reais: Claude, Zapier, Sheets",
-              "ROI 3,2× (não 10× mágico)",
+              "Payback ~3 semanas (só custos diretos)",
               "Pagamento parcial após 1 contrato ganho",
             ].map(item => (
               <div key={item} className="flex items-start gap-2">
