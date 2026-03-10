@@ -134,13 +134,14 @@ function Slide02() {
                 {row.label}
                 {row.source && <Source label={row.source} />}
               </span>
-              <div className="flex-1 bg-white/5 rounded-full h-5 overflow-hidden">
-                <div
-                  className="h-full rounded-full flex items-center justify-end pr-2 transition-all"
-                  style={{ width: `${row.pct}%`, background: row.color }}
-                >
-                  <span className="text-white text-[10px] font-medium">{row.text}</span>
+              <div className="flex-1 flex items-center gap-2">
+                <div className="flex-1 bg-white/5 rounded-full h-5 overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all"
+                    style={{ width: `${row.pct}%`, background: row.color }}
+                  />
                 </div>
+                <span className="text-gray-300 text-[10px] font-medium w-8 text-right shrink-0">{row.text}</span>
               </div>
             </div>
           ))}
