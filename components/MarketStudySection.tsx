@@ -85,9 +85,9 @@ function Slide01() {
       <div className="w-full md:w-72 grid grid-cols-2 gap-3">
         {[
           { value: "R$\u00a01,2B", label: "Receita Bruta 2023", accent: "#A3BFFA" },
-          { value: "Top 22", label: "Ranking Nacional", accent: "#B5EAD7" },
+          { value: "Top 22", label: "Ranking Nacional · CBIC", accent: "#B5EAD7" },
           { value: "60+", label: "Anos de Operação", accent: "#D7BDE2" },
-          { value: "↑ 2023", label: "Crescimento acima da média", accent: "#A3BFFA" },
+          { value: "↑ 2023", label: "Crescimento de receita 2023", accent: "#A3BFFA" },
         ].map(s => (
           <div
             key={s.label}
@@ -161,7 +161,7 @@ function Slide02() {
             value: "70–80%",
             label: "Taxa de perda em licitações",
             desc: "Propostas perdidas por erro documental ou preço",
-            source: "ANTT/DNIT",
+            source: "TCU / CBIC",
             color: "#D7BDE2",
           },
           {
@@ -202,7 +202,7 @@ function Slide03() {
         { tree: "├─", text: "250h médio por proposta", bold: false },
         { tree: "├─", text: "R$120/h × 250h = R$30k por licitação", bold: true },
         { tree: "├─", text: "70–80% das propostas são perdidas (erro documental)", bold: false },
-        { tree: "└─", text: "30 licitações/ano = R$900k em horas não recuperáveis", bold: true },
+        { tree: "└─", text: "30 licitações/ano = R$900k em custo total de propostas", bold: true },
       ],
     },
     {
@@ -303,13 +303,13 @@ function Slide04() {
           tools: ["Claude 3.5"],
         },
         {
-          what: "Levantamento de quantidades: 95% preciso",
+          what: "Levantamento de quantidades com alta precisão",
           how: "PDF/CAD do projeto → planilha orçamentária",
           tools: ["Llama 3.1"],
         },
         {
           what: "Alertas de editais em 5 min",
-          how: "Alertas automáticos de novos editais",
+          how: "Portais de licitações → notificação automática em minutos",
           tools: ["Zapier"],
         },
       ],
@@ -342,7 +342,7 @@ function Slide04() {
       color: "#D7BDE2",
       items: [
         {
-          what: "Laudos em 1h (vs 3 dias)",
+          what: "Laudos em horas (vs dias de trabalho)",
           how: "Base Notion + histórico → rascunho para revisão",
           tools: ["Notion", "Claude 3.5"],
         },
@@ -353,7 +353,7 @@ function Slide04() {
         },
         {
           what: "Checklist automático de exigências por órgão",
-          how: "Checklist automático por tipo de órgão",
+          how: "Base de requisitos por órgão → lista gerada automaticamente",
           tools: ["Google Forms"],
         },
       ],
@@ -429,7 +429,7 @@ function Slide05() {
     },
     {
       label: "4. Horas recuperadas de engenharia",
-      math: "15 eng × 150h/mês × 50% × R$120 × 12 meses",
+      math: "15 eng × 150h/mês × 50% × R$120 × 12 meses (est. conservadora)",
       result: "+R$1,6M",
       color: "#D7BDE2",
     },
@@ -493,7 +493,7 @@ function Slide05() {
             {[
               { label: "Investimento River Labs", value: "R$3,2M", accent: "text-white" },
               { label: "Economia direta/ano", value: "~R$50M", accent: "text-[#B5EAD7]" },
-              { label: "Upside total (4 alavancas)", value: "R$247M", accent: "text-[#B5EAD7]" },
+              { label: "Potencial total (4 frentes)", value: "R$247M", accent: "text-[#B5EAD7]" },
             ].map(r => (
               <div key={r.label} className="flex flex-col text-left gap-0.5">
                 <span className="text-gray-600 text-[10px]">{r.label}</span>
@@ -614,7 +614,7 @@ function Slide06() {
           className="w-full flex items-center justify-center gap-2 text-gray-300 text-sm font-medium py-2.5 px-4 rounded-xl hover:bg-white/5 transition-colors"
           style={{ border: "1px solid rgba(255,255,255,0.15)" }}
         >
-          Agendar uma call
+          Agendar uma conversa
         </Link>
         <div
           className="rounded-lg p-3"
