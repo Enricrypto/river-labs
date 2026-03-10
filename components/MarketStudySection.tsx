@@ -125,7 +125,7 @@ function Slide02() {
           {[
             { label: "Receita bruta", pct: 100, color: "#374151", text: "100%", source: null },
             { label: "Custos diretos & indiretos", pct: 84, color: "#4B5563", text: "~84%", source: "IBGE PAIC" },
-            { label: "Overrun & retrabalho", pct: 8, color: "#D7BDE2", text: "8%", source: "TCU" },
+            { label: "Atrasos & retrabalho", pct: 8, color: "#D7BDE2", text: "8%", source: "TCU" },
             { label: "Margem líquida atual", pct: 8, color: "#6B7280", text: "8%", source: "IBGE" },
             { label: "Com River Labs (+4pp)", pct: 12, color: "#A3BFFA", text: "12%", source: null },
           ].map(row => (
@@ -316,7 +316,7 @@ function Slide04() {
     },
     {
       process: "Controle de Obra",
-      impact: "R$48M economizados em overrun",
+      impact: "R$48M economizados em custos extras",
       color: "#B5EAD7",
       items: [
         {
@@ -325,7 +325,7 @@ function Slide04() {
           tools: ["Google Sheets", "Make.com"],
         },
         {
-          what: "Previsão de overrun 30 dias antes",
+          what: "Previsão de custo extra 30 dias antes",
           how: "Padrões históricos → alerta de desvio",
           tools: ["Claude 3.5"],
         },
