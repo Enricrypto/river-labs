@@ -87,7 +87,7 @@ function Slide01() {
           { value: "R$\u00a01,2B", label: "Receita Bruta 2023", accent: "#A3BFFA" },
           { value: "Top 22", label: "Ranking Nacional · CBIC", accent: "#B5EAD7" },
           { value: "60+", label: "Anos de Operação", accent: "#D7BDE2" },
-          { value: "↑ 2023", label: "Crescimento de receita 2023", accent: "#A3BFFA" },
+          { value: "6", label: "Segmentos de atuação", accent: "#A3BFFA" },
         ].map(s => (
           <div
             key={s.label}
@@ -211,7 +211,7 @@ function Slide03() {
       accent: "#B5EAD7",
       source: "Lei 8.666/93",
       lines: [
-        { tree: "├─", text: "120h/mês engenheiro sênior em relatórios e controle", bold: false },
+        { tree: "├─", text: "120h/mês engenheiro sênior em relatórios e controle (est.)", bold: false },
         { tree: "├─", text: "Multa diária: 0,05% × R$50M = R$25k/dia", bold: true },
         { tree: "└─", text: "1 semana de atraso = R$175k em custo direto", bold: true },
       ],
@@ -220,7 +220,7 @@ function Slide03() {
       icon: MessageSquare,
       title: "Relatórios e Documentos Técnicos",
       accent: "#D7BDE2",
-      source: "IBGE",
+      source: "estimativa de mercado",
       lines: [
         { tree: "├─", text: "40–120h por laudo ou memorial técnico", bold: false },
         { tree: "├─", text: "R$4,8k–14k por documento (a R$120/h)", bold: true },
@@ -325,7 +325,7 @@ function Slide04() {
           tools: ["Google Sheets", "Make.com"],
         },
         {
-          what: "Previsão de custo extra 30 dias antes",
+          what: "Previsão de custo extra com antecedência",
           how: "Padrões históricos → alerta de desvio",
           tools: ["Claude 3.5"],
         },
@@ -508,7 +508,7 @@ function Slide05() {
           style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
         >
           <p className="text-gray-600 text-[10px] uppercase tracking-widest mb-2">Fontes</p>
-          {["TCU relatórios", "Lei 8.666/93", "IBGE PAIC 2024", "ANTT/DNIT stats"].map(s => (
+          {["TCU relatórios", "Lei 8.666/93", "IBGE PAIC 2024", "CBIC 2023"].map(s => (
             <p key={s} className="text-gray-600 text-[10px] leading-relaxed">· {s}</p>
           ))}
         </div>
