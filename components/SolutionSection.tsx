@@ -31,7 +31,7 @@ export default function SolutionSection({ dict }: { dict: Dict["solutions"] }) {
 
       <div className="flex justify-center">
         <Link
-          href="#contact"
+          href="/contact"
           className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pastel-blue text-white text-lg font-medium hover:opacity-90 transition-opacity"
         >
           {dict.cta}

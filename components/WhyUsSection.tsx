@@ -86,7 +86,7 @@ export default function WhyUsSection({ dict }: { dict: Dict["whyus"] }) {
 
       <div className="text-center">
         <Link
-          href="#contact"
+          href="/contact"
           className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 text-gray-700 text-lg font-medium hover:bg-gray-50 transition-colors"
         >
           {dict.cta}

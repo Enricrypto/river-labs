@@ -13,7 +13,7 @@ export default function Hero({ dict }: { dict: Dict["hero"] }) {
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Link
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-pastel-blue text-white text-lg font-medium hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
             {dict.cta1}
