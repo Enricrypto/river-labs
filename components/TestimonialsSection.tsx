@@ -48,7 +48,6 @@ export default function TestimonialsSection({ dict }: { dict: Dict["testimonials
           <div key={i} className="flex flex-col items-center gap-1">
             <span className={`text-3xl font-medium tracking-tight ${statColors[i % statColors.length]}`}>{s.value}</span>
             <span className="text-base text-gray-500 font-normal">{s.label}</span>
-            {i < dict.stats.length - 1 && <div className="hidden md:block absolute w-px h-12 bg-gray-200" />}
           </div>
         ))}
       </div>
