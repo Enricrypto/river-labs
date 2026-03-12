@@ -504,6 +504,8 @@ export default function DiagnosticSection() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   const current = STEPS[step];
 
@@ -533,13 +535,27 @@ export default function DiagnosticSection() {
       });
   }
 
-  function handleNext() {
+  async function handleNext() {
     if (!isStepValid()) return;
     if (step < TOTAL - 1) {
       setStep(s => s + 1);
       window.scrollTo({ top: document.getElementById("diagnostic")?.offsetTop ?? 0, behavior: "smooth" });
     } else {
-      setSubmitted(true);
+      setSending(true);
+      setSendError(false);
+      try {
+        const res = await fetch("/api/diagnostic", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ answers, steps: STEPS }),
+        });
+        if (!res.ok) throw new Error("send failed");
+        setSubmitted(true);
+      } catch {
+        setSendError(true);
+      } finally {
+        setSending(false);
+      }
     }
   }
 
@@ -747,20 +763,25 @@ export default function DiagnosticSection() {
                 Voltar
               </button>
 
-              <button
-                type="button"
-                onClick={handleNext}
-                disabled={!isStepValid()}
-                className="flex items-center gap-2 text-sm font-medium py-2.5 px-6 rounded-xl transition-all duration-200"
-                style={{
-                  background: isStepValid() ? "#A3BFFA" : "rgba(163,191,250,0.2)",
-                  color: isStepValid() ? "#111827" : "rgba(163,191,250,0.4)",
-                  cursor: isStepValid() ? "pointer" : "not-allowed",
-                }}
-              >
-                {step === TOTAL - 1 ? "Enviar diagnóstico" : "Continuar"}
-                <ChevronRight className="w-4 h-4" />
-              </button>
+              <div className="flex flex-col items-end gap-2">
+                {sendError && (
+                  <p className="text-red-400/80 text-xs">Erro ao enviar. Tente novamente.</p>
+                )}
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  disabled={!isStepValid() || sending}
+                  className="flex items-center gap-2 text-sm font-medium py-2.5 px-6 rounded-xl transition-all duration-200"
+                  style={{
+                    background: isStepValid() && !sending ? "#A3BFFA" : "rgba(163,191,250,0.2)",
+                    color: isStepValid() && !sending ? "#111827" : "rgba(163,191,250,0.4)",
+                    cursor: isStepValid() && !sending ? "pointer" : "not-allowed",
+                  }}
+                >
+                  {sending ? "Enviando…" : step === TOTAL - 1 ? "Enviar diagnóstico" : "Continuar"}
+                  {!sending && <ChevronRight className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
           </div>
         </div>
