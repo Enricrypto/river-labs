@@ -53,23 +53,31 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
 
         {/* Process roadmap */}
         <div className="mt-12 md:mt-20 w-full max-w-4xl bg-white rounded-2xl shadow-sm border border-gray-100 px-5 py-6 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
-          <div className="flex items-stretch gap-1.5 min-w-150">
+          <div className="flex items-stretch gap-2 min-w-150">
             {(STEPS[(lang as keyof typeof STEPS) ?? "en"] ?? STEPS.en).map((step, i, arr) => (
-              <div key={step.num} className="flex items-stretch gap-1.5 flex-1">
+              <div key={step.num} className="flex items-stretch gap-2 flex-1">
                 {/* Step card */}
-                <div className="flex-1 rounded-xl px-3 py-3.5 flex flex-col gap-2.5" style={{ background: step.bg, border: `1px solid ${step.color}22` }}>
-                  {/* Icon + number */}
-                  <div className="flex items-center justify-between">
-                    <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: `${step.color}22` }}>
-                      <Icon icon={step.icon} width={15} style={{ color: step.color }} />
-                    </div>
-                    <span className="font-mono text-[10px] font-semibold" style={{ color: step.color }}>{step.num}</span>
+                <div
+                  className="group flex-1 rounded-xl px-4 py-4 flex flex-col gap-3 cursor-default transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.09)]"
+                  style={{ background: step.bg, border: `1px solid ${step.color}33` }}
+                >
+                  {/* Icon */}
+                  <div
+                    className="w-8 h-8 rounded-xl flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
+                    style={{ background: `${step.color}28` }}
+                  >
+                    <Icon icon={step.icon} width={17} style={{ color: step.color }} />
                   </div>
-                  {/* Title */}
-                  <p className="text-gray-800 text-xs font-semibold leading-tight">{step.title}</p>
+                  {/* Number + title */}
+                  <div>
+                    <span className="font-mono text-[9px] font-bold tracking-widest uppercase" style={{ color: step.color }}>
+                      {step.num}
+                    </span>
+                    <p className="text-gray-800 text-[11px] font-bold leading-snug mt-0.5">{step.title}</p>
+                  </div>
                   {/* Deliverable */}
-                  <div className="mt-auto">
-                    <span className="inline-block px-1.5 py-0.5 rounded text-[9px] font-medium text-gray-500 bg-white/70 border border-gray-200/60">
+                  <div className="mt-auto pt-2.5" style={{ borderTop: `1px solid ${step.color}25` }}>
+                    <span className="text-[9px] font-semibold uppercase tracking-wide" style={{ color: step.color, opacity: 0.7 }}>
                       {step.deliverable}
                     </span>
                   </div>
