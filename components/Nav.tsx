@@ -14,8 +14,8 @@ export default function Nav({ dict, lang }: { dict: Dict["nav"]; lang: "en" | "e
   const links = [
     { label: dict.services, href: "#services" },
     { label: dict.casestudies, href: "#case-studies" },
-    { label: dict.contact, href: "#contact" },
-    { label: dict.quote, href: "#contact" },
+    { label: dict.contact, href: "/contact" },
+    { label: dict.quote, href: "/contact" },
   ];
 
   function switchLang(newLang: string) {

@@ -19,7 +19,7 @@ export default function CTASection({ dict }: { dict: Dict["cta"] }) {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <Link
-              href="/contact"
+              href="/diagnostic"
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pastel-green text-gray-900 text-lg font-medium hover:bg-pastel-green/90 transition-colors w-full sm:w-auto shadow-sm"
             >
               {dict.btn1}
