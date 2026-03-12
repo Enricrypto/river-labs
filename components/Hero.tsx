@@ -1,5 +1,30 @@
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 import type { Dict } from "@/lib/translations";
+
+const STEPS = {
+  en: [
+    { num: "01", icon: "mdi:magnify", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Process Discovery", deliverable: "Process map" },
+    { num: "02", icon: "mdi:chart-bar", color: "#D7BDE2", bg: "rgba(215,189,226,0.12)", title: "Opportunity Assessment", deliverable: "Use case matrix" },
+    { num: "03", icon: "mdi:cpu-64-bit", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Solution Design", deliverable: "Architecture plan" },
+    { num: "04", icon: "mdi:rocket-launch-outline", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Pilot Build", deliverable: "Prototype + metrics" },
+    { num: "05", icon: "mdi:trending-up", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Deploy & Optimize", deliverable: "Production system" },
+  ],
+  es: [
+    { num: "01", icon: "mdi:magnify", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Descubrimiento", deliverable: "Mapa de proceso" },
+    { num: "02", icon: "mdi:chart-bar", color: "#D7BDE2", bg: "rgba(215,189,226,0.12)", title: "Evaluación", deliverable: "Matriz de casos" },
+    { num: "03", icon: "mdi:cpu-64-bit", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Diseño de solución", deliverable: "Plan de arquitectura" },
+    { num: "04", icon: "mdi:rocket-launch-outline", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Piloto", deliverable: "Prototipo + métricas" },
+    { num: "05", icon: "mdi:trending-up", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Despliegue", deliverable: "Sistema en producción" },
+  ],
+  pt: [
+    { num: "01", icon: "mdi:magnify", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Descoberta", deliverable: "Mapa de processo" },
+    { num: "02", icon: "mdi:chart-bar", color: "#D7BDE2", bg: "rgba(215,189,226,0.12)", title: "Avaliação", deliverable: "Matriz de casos" },
+    { num: "03", icon: "mdi:cpu-64-bit", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Design da solução", deliverable: "Plano de arquitetura" },
+    { num: "04", icon: "mdi:rocket-launch-outline", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Piloto", deliverable: "Protótipo + métricas" },
+    { num: "05", icon: "mdi:trending-up", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Deploy & Otimização", deliverable: "Sistema em produção" },
+  ],
+};
 
 export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string }) {
   return (
@@ -26,29 +51,38 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
           </Link>
         </div>
 
-        {/* Abstract Chart */}
-        <div className="mt-12 md:mt-20 w-full max-w-3xl aspect-[21/9] bg-white rounded-xl shadow-sm border border-gray-200 relative flex items-end justify-around px-4 md:p-8 py-4 opacity-90 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/50 pointer-events-none" />
-          <div className="w-[12%] h-[40%] bg-pastel-blue rounded-t-md" />
-          <div className="w-[12%] h-[60%] bg-pastel-green rounded-t-md" />
-          <div className="w-[12%] h-[30%] bg-pastel-purple rounded-t-md" />
-          <div className="w-[12%] h-[80%] bg-pastel-blue rounded-t-md" />
-          <div className="w-[12%] h-[95%] bg-pastel-green rounded-t-md shadow-[0_0_20px_rgba(181,234,215,0.4)] relative">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-900 whitespace-nowrap">+40%</div>
+        {/* Process roadmap */}
+        <div className="mt-12 md:mt-20 w-full max-w-4xl bg-white rounded-2xl shadow-sm border border-gray-100 px-5 py-6 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+          <div className="flex items-stretch gap-1.5 min-w-150">
+            {(STEPS[(lang as keyof typeof STEPS) ?? "en"] ?? STEPS.en).map((step, i, arr) => (
+              <div key={step.num} className="flex items-stretch gap-1.5 flex-1">
+                {/* Step card */}
+                <div className="flex-1 rounded-xl px-3 py-3.5 flex flex-col gap-2.5" style={{ background: step.bg, border: `1px solid ${step.color}22` }}>
+                  {/* Icon + number */}
+                  <div className="flex items-center justify-between">
+                    <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: `${step.color}22` }}>
+                      <Icon icon={step.icon} width={15} style={{ color: step.color }} />
+                    </div>
+                    <span className="font-mono text-[10px] font-semibold" style={{ color: step.color }}>{step.num}</span>
+                  </div>
+                  {/* Title */}
+                  <p className="text-gray-800 text-xs font-semibold leading-tight">{step.title}</p>
+                  {/* Deliverable */}
+                  <div className="mt-auto">
+                    <span className="inline-block px-1.5 py-0.5 rounded text-[9px] font-medium text-gray-500 bg-white/70 border border-gray-200/60">
+                      {step.deliverable}
+                    </span>
+                  </div>
+                </div>
+                {/* Arrow connector */}
+                {i < arr.length - 1 && (
+                  <div className="flex items-center shrink-0 self-center">
+                    <Icon icon="mdi:chevron-right" width={14} className="text-gray-300" />
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none text-gray-300"
-            preserveAspectRatio="none"
-            viewBox="0 0 100 100"
-          >
-            <path
-              d="M10,80 Q30,60 50,70 T90,20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="0.5"
-              strokeDasharray="2,2"
-            />
-          </svg>
         </div>
       </div>
     </section>
