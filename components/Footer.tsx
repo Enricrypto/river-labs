@@ -10,18 +10,21 @@ export default function Footer({ dict, lang }: { dict: Dict["footer"]; lang: "en
         <Logo size="md" />
 
         <div className="flex flex-wrap gap-x-8 gap-y-4 text-base text-gray-600 font-medium">
-          {dict.links.map((link) => (
-            <Link key={link} href="#" className="hover:text-pastel-blue transition-colors">
-              {link}
-            </Link>
-          ))}
+          {dict.links.map((link) => {
+            const isContact = ["Contact", "Contacto", "Contato", "Get a Quote", "Cotización", "Orçamento"].includes(link);
+            return (
+              <Link key={link} href={isContact ? "/contact" : "#"} className="hover:text-pastel-blue transition-colors">
+                {link}
+              </Link>
+            );
+          })}
         </div>
 
         <Link
-          href="/contact"
+          href="/diagnostic"
           className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gray-50 text-gray-700 text-base font-medium hover:bg-gray-100 transition-colors border border-gray-200"
         >
-          {lang === "en" ? "Start Free Diagnosis" : lang === "es" ? "Diagnóstico Gratuito" : "Diagnóstico Gratuito"}
+          {lang === "en" ? "Start Free Diagnosis" : "Diagnóstico Gratuito"}
         </Link>
       </div>
 
