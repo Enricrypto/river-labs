@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import type { Dict } from "@/lib/translations";
 
-export default function CTASection({ dict }: { dict: Dict["cta"] }) {
+export default function CTASection({ dict, lang }: { dict: Dict["cta"]; lang: string }) {
   return (
     <section id="contact" className="py-24 px-4 w-full bg-[#f6f9fc] mt-auto">
       <div className="max-w-4xl mx-auto bg-pastel-blue rounded-[2.5rem] p-10 md:p-16 text-center shadow-lg relative overflow-hidden">
@@ -19,7 +19,7 @@ export default function CTASection({ dict }: { dict: Dict["cta"] }) {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
             <Link
-              href="/diagnostic"
+              href={`/${lang}/diagnostic`}
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pastel-green text-gray-900 text-lg font-medium hover:bg-pastel-green/90 transition-colors w-full sm:w-auto shadow-sm"
             >
               {dict.btn1}

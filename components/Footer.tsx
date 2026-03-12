@@ -21,7 +21,7 @@ export default function Footer({ dict, lang }: { dict: Dict["footer"]; lang: "en
         </div>
 
         <Link
-          href="/diagnostic"
+          href={`/${lang}/diagnostic`}
           className="hidden lg:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-gray-50 text-gray-700 text-base font-medium hover:bg-gray-100 transition-colors border border-gray-200"
         >
           {lang === "en" ? "Start Free Diagnosis" : "Diagnóstico Gratuito"}

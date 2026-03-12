@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Dict } from "@/lib/translations";
 
-export default function Hero({ dict }: { dict: Dict["hero"] }) {
+export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string }) {
   return (
     <section className="pt-28 pb-12 px-4 md:px-6 w-full max-w-7xl mx-auto flex flex-col items-center">
       <div className="w-full bg-[#f6faf8] rounded-[2rem] md:rounded-[3rem] px-6 py-20 md:py-32 flex flex-col items-center text-center relative overflow-hidden border border-gray-100">
@@ -13,7 +13,7 @@ export default function Hero({ dict }: { dict: Dict["hero"] }) {
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Link
-            href="/diagnostic"
+            href={`/${lang}/diagnostic`}
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-pastel-blue text-white text-lg font-medium hover:opacity-90 transition-opacity w-full sm:w-auto"
           >
             {dict.cta1}

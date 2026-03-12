@@ -25,7 +25,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     <>
       <Nav dict={dict.nav} lang={typedLang} />
       <main>
-        <Hero dict={dict.hero} />
+        <Hero dict={dict.hero} lang={typedLang} />
         <SocialProofBar dict={dict.proof} />
         <ProblemSection dict={dict.problems} />
         <SolutionSection dict={dict.solutions} />
@@ -35,7 +35,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <WhyUsSection dict={dict.whyus} />
         <ApiaAccessCard />
         <FAQSection dict={dict.faq} />
-        <CTASection dict={dict.cta} />
+        <CTASection dict={dict.cta} lang={typedLang} />
       </main>
       <Footer dict={dict.footer} lang={typedLang} />
     </>

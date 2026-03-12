@@ -15,7 +15,7 @@ export default function Nav({ dict, lang }: { dict: Dict["nav"]; lang: "en" | "e
     { label: dict.services, href: "#services" },
     { label: dict.casestudies, href: "#case-studies" },
     { label: dict.contact, href: "/contact" },
-    { label: dict.quote, href: "/contact" },
+    { label: dict.quote, href: `/${lang}/diagnostic` },
   ];
 
   function switchLang(newLang: string) {
