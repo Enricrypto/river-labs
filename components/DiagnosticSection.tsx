@@ -684,12 +684,20 @@ export default function DiagnosticSection() {
                   {/* Multiselect */}
                   {q.type === "multiselect" && (
                     <>
-                      {q.maxSelect && (
-                        <p className="text-gray-700 text-xs mb-3">
-                          Selecione até {q.maxSelect}. Selecionados:{" "}
-                          {((answers[q.id] as string[] | undefined) ?? []).length}/{q.maxSelect}
-                        </p>
-                      )}
+                      <div className="flex items-center gap-2 mb-3">
+                        <span
+                          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
+                          style={{ background: "rgba(163,191,250,0.08)", color: "#A3BFFA", border: "1px solid rgba(163,191,250,0.2)" }}
+                        >
+                          <span className="w-1 h-1 rounded-full bg-pastel-blue inline-block" />
+                          {q.maxSelect ? `Escolha até ${q.maxSelect}` : "Pode selecionar mais de uma"}
+                        </span>
+                        {q.maxSelect && (
+                          <span className="text-gray-600 text-xs">
+                            {((answers[q.id] as string[] | undefined) ?? []).length}/{q.maxSelect} selecionados
+                          </span>
+                        )}
+                      </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {q.options!.map(opt => {
                           const vals = (answers[q.id] as string[] | undefined) ?? [];
