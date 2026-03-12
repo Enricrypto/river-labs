@@ -11,9 +11,9 @@ export default function Footer({ dict, lang }: { dict: Dict["footer"]; lang: "en
 
         <div className="flex flex-wrap gap-x-8 gap-y-4 text-base text-gray-600 font-medium">
           {dict.links.map((link) => {
-            const isContact = ["Contact", "Contacto", "Contato", "Get a Quote", "Cotización", "Orçamento"].includes(link);
+            const isContact = ["Contact", "Contacto", "Contato"].includes(link);
             return (
-              <Link key={link} href={isContact ? "/contact" : "#"} className="hover:text-pastel-blue transition-colors">
+              <Link key={link} href={isContact ? `/${lang}/contact` : "#"} className="hover:text-pastel-blue transition-colors">
                 {link}
               </Link>
             );

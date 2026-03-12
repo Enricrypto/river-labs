@@ -485,7 +485,7 @@ function SuccessScreen() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs">
             <Link
-              href="/contact"
+              href="/pt/contact"
               className="flex-1 flex items-center justify-center gap-2 bg-pastel-blue text-gray-900 text-sm font-medium py-3 px-5 rounded-xl hover:bg-[#B5C9FF] transition-colors"
             >
               Agendar call agora

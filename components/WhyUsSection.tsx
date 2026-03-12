@@ -4,7 +4,7 @@ import type { Dict } from "@/lib/translations";
 
 const icons = [Target, Code2, CalendarClock, Languages];
 
-export default function WhyUsSection({ dict }: { dict: Dict["whyus"] }) {
+export default function WhyUsSection({ dict, lang }: { dict: Dict["whyus"]; lang: string }) {
   const featuredTitle = dict.features[0].title;
   const featuredDesc = dict.features[0].desc;
   const FeaturedIcon = icons[0];
@@ -86,7 +86,7 @@ export default function WhyUsSection({ dict }: { dict: Dict["whyus"] }) {
 
       <div className="text-center">
         <Link
-          href="/contact"
+          href={`/${lang}/contact`}
           className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-300 text-gray-700 text-lg font-medium hover:bg-gray-50 transition-colors"
         >
           {dict.cta}

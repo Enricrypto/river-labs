@@ -28,11 +28,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Hero dict={dict.hero} lang={typedLang} />
         <SocialProofBar dict={dict.proof} />
         <ProblemSection dict={dict.problems} />
-        <SolutionSection dict={dict.solutions} />
+        <SolutionSection dict={dict.solutions} lang={typedLang} />
         <MethodologySection dict={dict.methodology} />
         <ComparisonSection dict={dict.comparison} />
         <TestimonialsSection dict={dict.testimonials} />
-        <WhyUsSection dict={dict.whyus} />
+        <WhyUsSection dict={dict.whyus} lang={typedLang} />
         <ApiaAccessCard />
         <FAQSection dict={dict.faq} />
         <CTASection dict={dict.cta} lang={typedLang} />

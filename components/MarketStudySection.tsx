@@ -608,14 +608,14 @@ function Slide06() {
           </p>
         </div>
         <Link
-          href="/contact"
+          href="/pt/contact"
           className="w-full flex items-center justify-center gap-2 bg-[#A3BFFA] text-gray-900 text-sm font-medium py-2.5 px-4 rounded-xl hover:bg-[#B5C9FF] transition-colors"
         >
           Falar com a River Labs
           <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
         </Link>
         <Link
-          href="/contact"
+          href="/pt/contact"
           className="w-full flex items-center justify-center gap-2 text-gray-300 text-sm font-medium py-2.5 px-4 rounded-xl hover:bg-white/5 transition-colors"
           style={{ border: "1px solid rgba(255,255,255,0.15)" }}
         >

@@ -5,7 +5,6 @@ export type Dict = {
     services: string;
     casestudies: string;
     contact: string;
-    quote: string;
   };
   hero: {
     heading1: string;
@@ -76,7 +75,6 @@ const en: Dict = {
     services: "Services",
     casestudies: "Case Studies",
     contact: "Contact",
-    quote: "Get a Quote",
   },
   hero: {
     heading1: "Transform Operations with",
@@ -181,7 +179,7 @@ const en: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs. Transformative AI consulting.",
-    links: ["Services", "Case Studies", "Blog", "Contact", "Get a Quote"],
+    links: ["Services", "Case Studies", "Blog", "Contact"],
   },
 };
 
@@ -190,7 +188,6 @@ const es: Dict = {
     services: "Servicios",
     casestudies: "Casos de Éxito",
     contact: "Contacto",
-    quote: "Solicitar Cotización",
   },
   hero: {
     heading1: "Transforma tus Operaciones con",
@@ -295,7 +292,7 @@ const es: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs. Consultoría de IA transformadora.",
-    links: ["Servicios", "Casos de Éxito", "Blog", "Contacto", "Cotización"],
+    links: ["Servicios", "Casos de Éxito", "Blog", "Contacto"],
   },
 };
 
@@ -304,7 +301,6 @@ const pt: Dict = {
     services: "Serviços",
     casestudies: "Casos de Sucesso",
     contact: "Contato",
-    quote: "Solicitar Orçamento",
   },
   hero: {
     heading1: "Transforme suas Operações com",
@@ -409,7 +405,7 @@ const pt: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs. Consultoria de IA transformadora.",
-    links: ["Serviços", "Casos de Sucesso", "Blog", "Contato", "Orçamento"],
+    links: ["Serviços", "Casos de Sucesso", "Blog", "Contato"],
   },
 };
 

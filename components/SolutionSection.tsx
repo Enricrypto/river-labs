@@ -3,7 +3,7 @@ import type { Dict } from "@/lib/translations";
 
 const rowColors = ["text-pastel-green", "text-pastel-blue", "text-pastel-purple", "text-pastel-green", "text-pastel-blue"];
 
-export default function SolutionSection({ dict }: { dict: Dict["solutions"] }) {
+export default function SolutionSection({ dict, lang }: { dict: Dict["solutions"]; lang: string }) {
   return (
     <section className="py-24 px-6 max-w-5xl mx-auto w-full border-t border-gray-100">
       <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-gray-900 mb-16 text-center">
@@ -31,7 +31,7 @@ export default function SolutionSection({ dict }: { dict: Dict["solutions"] }) {
 
       <div className="flex justify-center">
         <Link
-          href="/contact"
+          href={`/${lang}/contact`}
           className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-pastel-blue text-white text-lg font-medium hover:opacity-90 transition-opacity"
         >
           {dict.cta}

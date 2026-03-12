@@ -25,7 +25,7 @@ export default function CTASection({ dict, lang }: { dict: Dict["cta"]; lang: st
               {dict.btn1}
             </Link>
             <Link
-              href="/contact"
+              href={`/${lang}/contact`}
               className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-white/30 text-white text-lg font-medium hover:bg-white/10 transition-colors w-full sm:w-auto"
             >
               {dict.btn2}
