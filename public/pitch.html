@@ -167,11 +167,23 @@
     /* ============================
        SLIDE 07 — SERVIÇOS
     ============================ */
-    .services-bento { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: 1fr 1fr auto; gap: 12px; flex: 1; overflow: hidden; }
+    .services-bento {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      grid-template-rows: 1fr 1fr auto;
+      grid-template-areas:
+        "featured inteligencia"
+        "featured automacao"
+        "desenvolvimento desenvolvimento";
+      gap: 12px;
+      flex: 1;
+    }
     .sv { border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 9px; border: 1px solid var(--g200); background: var(--white); transition: border-color .2s, box-shadow .2s, transform .2s; }
     .sv:hover { border-color: rgba(163,191,250,0.5); box-shadow: 0 8px 28px rgba(163,191,250,0.12); transform: translateY(-2px); }
-    .sv.featured { background: var(--dark); border-color: transparent; grid-row: span 2; justify-content: space-between; }
+    .sv.featured { background: var(--dark); border-color: transparent; grid-area: featured; justify-content: space-between; }
     .sv.featured:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.22); border-color: transparent; }
+    .sv.inteligencia { grid-area: inteligencia; }
+    .sv.automacao { grid-area: automacao; }
     .sv-icon { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .sv:not(.featured) .sv-icon { background: var(--bg); }
     .sv.featured .sv-icon { background: rgba(255,255,255,0.09); }
@@ -181,7 +193,7 @@
     .sv p { font-size: 11.5px; color: var(--g500); line-height: 1.5; }
     .sv.featured p { font-size: 12.5px; color: rgba(255,255,255,0.42); }
     .sv-quote { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07); font-family: var(--ff-serif); font-size: 12.5px; color: rgba(255,255,255,0.32); font-style: italic; line-height: 1.55; }
-    .sv-row { display: flex; align-items: center; gap: 14px; border-radius: 14px; padding: 14px 22px; border: 1px solid var(--g200); background: var(--white); grid-column: 1 / -1; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .sv-row { display: flex; align-items: center; gap: 14px; border-radius: 14px; padding: 14px 22px; border: 1px solid var(--g200); background: var(--white); grid-area: desenvolvimento; transition: border-color .2s, box-shadow .2s, transform .2s; }
     .sv-row:hover { border-color: rgba(163,191,250,0.5); box-shadow: 0 6px 20px rgba(163,191,250,0.1); transform: translateY(-1px); }
     .sv-row h3 { font-family: var(--ff-ui); font-size: 13.5px; font-weight: 600; color: var(--g900); }
     .sv-row p { font-size: 11px; color: var(--g500); line-height: 1.45; margin-top: 1px; }
@@ -519,12 +531,12 @@
         </div>
         <div class="sv-quote">"A jornada é construída com vocês, não para vocês."</div>
       </div>
-      <div class="sv">
+      <div class="sv inteligencia">
         <div class="sv-icon"><iconify-icon icon="mdi:chart-line" width="15" style="color:var(--purple-dark)"></iconify-icon></div>
         <h3>Inteligência de mercado</h3>
         <p>Relatórios customizados por setor — dados que informam decisões, não só apresentações.</p>
       </div>
-      <div class="sv">
+      <div class="sv automacao">
         <div class="sv-icon"><iconify-icon icon="mdi:robot-outline" width="15" style="color:var(--green-dark)"></iconify-icon></div>
         <h3>Automação</h3>
         <p>Redução de processos manuais repetitivos. Mais tempo para o que importa.</p>
