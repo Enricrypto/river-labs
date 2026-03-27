@@ -167,7 +167,7 @@
     /* ============================
        SLIDE 07 — SERVIÇOS
     ============================ */
-    .services-bento { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; flex: 1; }
+    .services-bento { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: 1fr 1fr auto; gap: 12px; flex: 1; overflow: hidden; }
     .sv { border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 9px; border: 1px solid var(--g200); background: var(--white); transition: border-color .2s, box-shadow .2s, transform .2s; }
     .sv:hover { border-color: rgba(163,191,250,0.5); box-shadow: 0 8px 28px rgba(163,191,250,0.12); transform: translateY(-2px); }
     .sv.featured { background: var(--dark); border-color: transparent; grid-row: span 2; justify-content: space-between; }
@@ -181,7 +181,7 @@
     .sv p { font-size: 11.5px; color: var(--g500); line-height: 1.5; }
     .sv.featured p { font-size: 12.5px; color: rgba(255,255,255,0.42); }
     .sv-quote { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07); font-family: var(--ff-serif); font-size: 12.5px; color: rgba(255,255,255,0.32); font-style: italic; line-height: 1.55; }
-    .sv-row { display: flex; align-items: center; gap: 14px; border-radius: 14px; padding: 16px 22px; border: 1px solid var(--g200); background: var(--white); flex-shrink: 0; margin-top: 12px; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .sv-row { display: flex; align-items: center; gap: 14px; border-radius: 14px; padding: 14px 22px; border: 1px solid var(--g200); background: var(--white); grid-column: 1 / -1; transition: border-color .2s, box-shadow .2s, transform .2s; }
     .sv-row:hover { border-color: rgba(163,191,250,0.5); box-shadow: 0 6px 20px rgba(163,191,250,0.1); transform: translateY(-1px); }
     .sv-row h3 { font-family: var(--ff-ui); font-size: 13.5px; font-weight: 600; color: var(--g900); }
     .sv-row p { font-size: 11px; color: var(--g500); line-height: 1.45; margin-top: 1px; }
@@ -529,11 +529,11 @@
         <h3>Automação</h3>
         <p>Redução de processos manuais repetitivos. Mais tempo para o que importa.</p>
       </div>
-    </div>
-    <div class="sv-row">
-      <div class="sv-icon" style="background:var(--bg); flex-shrink:0"><iconify-icon icon="mdi:code-braces" width="15" style="color:var(--blue-dark)"></iconify-icon></div>
-      <div style="flex:1"><h3>Desenvolvimento</h3><p>Soluções proprietárias no seu departamento — software house focada em resultado de negócio.</p></div>
-      <iconify-icon icon="mdi:arrow-top-right" width="15" style="color:var(--g300); flex-shrink:0"></iconify-icon>
+      <div class="sv-row">
+        <div class="sv-icon" style="background:var(--bg); flex-shrink:0"><iconify-icon icon="mdi:code-braces" width="15" style="color:var(--blue-dark)"></iconify-icon></div>
+        <div style="flex:1"><h3>Desenvolvimento</h3><p>Soluções proprietárias no seu departamento — software house focada em resultado de negócio.</p></div>
+        <iconify-icon icon="mdi:arrow-top-right" width="15" style="color:var(--g300); flex-shrink:0"></iconify-icon>
+      </div>
     </div>
   </div>
 </section>
