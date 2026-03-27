@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>River Labs — Pitch</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    :root {
+      --blue: #A3BFFA; --blue-mid: #7CA3F5; --blue-dark: #6B9BF2;
+      --green: #B5EAD7; --green-dark: #5DB891;
+      --purple: #D7BDE2; --purple-dark: #A67DC5;
+      --bg: #f6faf8; --dark: #111827;
+      --g900: #111827; --g800: #1F2937; --g700: #374151;
+      --g600: #4B5563; --g500: #6B7280; --g400: #9CA3AF;
+      --g300: #D1D5DB; --g200: #E5E7EB; --g100: #F3F4F6;
+      --white: #FAFAFA;
+      --ff-serif: 'Playfair Display', Georgia, serif;
+      --ff-sans: 'Inter', system-ui, sans-serif;
+      --ff-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    html, body { height: 100%; background: var(--bg); }
+    body { font-family: var(--ff-sans); -webkit-font-smoothing: antialiased; }
+
+    /* — Reveal base overrides — */
+    .reveal { font-family: var(--ff-sans); font-size: 16px; color: var(--g900); }
+    .reveal .slides { text-align: left; }
+    .reveal .slides > section {
+      padding: 0 !important; background: var(--white);
+      height: 100%; width: 100%;
+      display: flex !important; flex-direction: column; text-align: left;
+    }
+    .reveal h1,.reveal h2,.reveal h3,.reveal h4 {
+      font-family: var(--ff-serif); font-weight: 500;
+      letter-spacing: -0.02em; color: var(--g900);
+      line-height: 1.1; text-transform: none;
+    }
+    .reveal p { line-height: 1.6; color: var(--g600); }
+    .reveal ul { list-style: none; padding: 0; margin: 0; }
+    .reveal blockquote { background: none; border: none; padding: 0; margin: 0; box-shadow: none; font-style: italic; width: 100%; }
+    .reveal .progress { height: 2px; background: var(--g100); }
+    .reveal .progress span { background: var(--blue-mid); transition: width 0.4s ease; }
+    .reveal .controls { color: var(--g300); }
+    .reveal .controls button.navigate-right { border-left-color: var(--blue-mid) !important; }
+    .reveal .controls button.navigate-left { border-right-color: var(--blue-mid) !important; }
+    .reveal .controls button.navigate-up { border-bottom-color: var(--blue-mid) !important; }
+    .reveal .controls button.navigate-down { border-top-color: var(--blue-mid) !important; }
+
+    /* — Layout primitives — */
+    .si { width: 100%; height: 100%; padding: 32px 48px; display: flex; flex-direction: column; }
+
+    .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-shrink: 0; }
+    .topbar-n { font-family: var(--ff-ui); font-size: 10px; font-weight: 500; color: var(--g400); letter-spacing: 0.06em; }
+    .topbar-n.light { color: rgba(255,255,255,0.22); }
+
+    .logo { display: flex; align-items: center; gap: 9px; }
+    .logo svg { width: 20px; height: 20px; stroke: var(--g900); fill: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .logo span { font-family: var(--ff-ui); font-size: 14px; font-weight: 500; color: var(--g900); letter-spacing: -0.01em; }
+    .logo.light svg { stroke: rgba(255,255,255,0.8); }
+    .logo.light span { color: rgba(255,255,255,0.8); }
+
+    .lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--g400); margin-bottom: 8px; }
+    .lbl.light { color: rgba(255,255,255,0.3); }
+    .lbl.accent { color: var(--blue-dark); }
+
+    .sh { margin-bottom: 16px; flex-shrink: 0; }
+    .sh h2 { font-size: clamp(20px, 2.8vw, 32px); }
+    .sh .sub { font-size: 12px; color: var(--g500); margin-top: 4px; font-style: italic; }
+
+    .sfoot { margin-top: auto; padding-top: 8px; border-top: 1px solid var(--g100); font-size: 9px; color: var(--g400); font-style: italic; flex-shrink: 0; }
+    .sfoot.dark { border-top-color: rgba(255,255,255,0.06); color: rgba(255,255,255,0.18); }
+
+    /* — Logo SVG shorthand for reuse — */
+    .logo-svg { width: 20px; height: 20px; }
+
+    /* ============================
+       SLIDE 01 — COVER
+    ============================ */
+    .s01 { background: var(--bg) !important; }
+    .cover-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 16px 0; }
+    .cover-body h1 {
+      font-family: var(--ff-serif); font-size: clamp(30px, 4.2vw, 52px);
+      font-weight: 500; color: var(--g900); line-height: 1.1;
+      letter-spacing: -0.025em; max-width: 620px; margin-bottom: 14px;
+    }
+    .cover-body h1 em { color: var(--g500); font-style: italic; }
+    .cover-body .note { font-size: 13px; color: var(--g500); line-height: 1.55; max-width: 460px; }
+
+    .team-strip { display: flex; gap: 14px; border-top: 1px solid var(--g200); padding-top: 18px; flex-shrink: 0; }
+    .tm { display: flex; align-items: center; gap: 10px; flex: 1; }
+    .tm img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--g200); flex-shrink: 0; }
+    .tm .nm { font-family: var(--ff-ui); font-size: 11.5px; font-weight: 600; color: var(--g900); line-height: 1.2; }
+    .tm .rl { font-size: 10px; color: var(--g500); margin-top: 1px; line-height: 1.3; }
+
+    /* ============================
+       SLIDE 02 — PROVOCAÇÃO
+    ============================ */
+    .s02 { background: var(--dark) !important; }
+    .prov-head h2 { font-size: clamp(24px, 3.4vw, 40px); color: var(--white); max-width: 560px; }
+    .prov-head h2 em { color: var(--blue); font-style: italic; }
+
+    .stats-row {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+      flex: 1; gap: 1px;
+      background: rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; margin: 16px 0;
+    }
+    .stat-cell { background: rgba(255,255,255,0.02); padding: 24px 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .sn { font-family: var(--ff-serif); font-size: clamp(44px, 6vw, 76px); font-weight: 500; line-height: 1; letter-spacing: -0.04em; }
+    .sn.blue { color: var(--blue); } .sn.green { color: var(--green); } .sn.purple { color: var(--purple); }
+    .sl { font-size: 11.5px; color: rgba(255,255,255,0.42); line-height: 1.45; margin-top: 10px; }
+    .ss { font-size: 9px; color: rgba(255,255,255,0.16); font-style: italic; margin-top: 12px; }
+    .prov-foot blockquote { font-family: var(--ff-serif); font-size: 14px; color: rgba(255,255,255,0.45); font-style: italic; line-height: 1.55; max-width: 620px; }
+
+    /* ============================
+       SLIDES 03–05 — CASES
+    ============================ */
+    .case-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; flex: 1; align-items: start; }
+    .case-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(163,191,250,0.1); border: 1px solid rgba(163,191,250,0.25);
+      border-radius: 100px; padding: 4px 12px 4px 8px;
+      font-family: var(--ff-ui); font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue-dark);
+      width: fit-content; margin-bottom: 14px;
+    }
+    .case-steps { display: flex; flex-direction: column; gap: 14px; padding-left: 14px; border-left: 2px solid var(--g100); }
+    .cs-lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--g400); }
+    .cs-title { font-family: var(--ff-serif); font-size: 15px; font-weight: 500; color: var(--g900); line-height: 1.2; margin-top: 2px; }
+    .cs-text { font-size: 11.5px; color: var(--g600); line-height: 1.5; margin-top: 2px; }
+    .mkt-note { background: rgba(163,191,250,0.07); border-left: 2px solid var(--blue); border-radius: 0 8px 8px 0; padding: 9px 13px; font-size: 10px; color: var(--g600); line-height: 1.5; margin-top: 14px; }
+    .mkt-note strong { color: var(--blue-dark); }
+
+    .case-metrics { display: flex; flex-direction: column; gap: 10px; }
+    .mc { border-radius: 14px; padding: 20px 18px; display: flex; flex-direction: column; gap: 5px; }
+    .mc.primary { background: var(--dark); }
+    .mc.secondary { background: var(--bg); border: 1px solid var(--g200); }
+    .mc.tertiary { background: rgba(181,234,215,0.1); border: 1px solid rgba(181,234,215,0.28); }
+    .mv { font-family: var(--ff-serif); line-height: 1; letter-spacing: -0.03em; }
+    .mc.primary .mv { font-size: 46px; color: var(--blue); }
+    .mc.secondary .mv { font-size: 28px; color: var(--g900); }
+    .mc.tertiary .mv { font-size: 28px; color: var(--green-dark); }
+    .ml { font-size: 11px; line-height: 1.4; }
+    .mc.primary .ml { color: rgba(255,255,255,0.42); }
+    .mc.secondary .ml, .mc.tertiary .ml { color: var(--g600); }
+
+    /* ============================
+       SLIDE 06 — BENCHMARK
+    ============================ */
+    .s06 { background: var(--dark) !important; }
+    .bench-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; flex: 1; margin-bottom: 14px; }
+    .bc { border-radius: 14px; padding: 22px 20px; display: flex; flex-direction: column; justify-content: space-between; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); }
+    .bn { font-family: var(--ff-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 500; line-height: 1; letter-spacing: -0.04em; }
+    .bc:nth-child(1) .bn { color: var(--blue); } .bc:nth-child(2) .bn { color: var(--green); } .bc:nth-child(3) .bn { color: var(--purple); }
+    .bk { font-family: var(--ff-ui); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; margin-bottom: 5px; }
+    .bc:nth-child(1) .bk { color: rgba(163,191,250,0.65); } .bc:nth-child(2) .bk { color: rgba(181,234,215,0.65); } .bc:nth-child(3) .bk { color: rgba(215,189,226,0.65); }
+    .bd { font-size: 11.5px; color: rgba(255,255,255,0.38); line-height: 1.5; }
+    .bsrc { font-size: 9px; color: rgba(255,255,255,0.16); font-style: italic; margin-top: 12px; }
+    .bench-insight { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 18px 22px; display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+    .bench-insight p { font-family: var(--ff-serif); font-size: 15px; color: rgba(255,255,255,0.55); font-style: italic; line-height: 1.4; }
+    .bench-insight p strong { color: var(--blue); font-style: normal; font-weight: 500; }
+    .bi-icon { width: 34px; height: 34px; background: rgba(163,191,250,0.1); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+    /* ============================
+       SLIDE 07 — SERVIÇOS
+    ============================ */
+    .services-bento { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; flex: 1; }
+    .sv { border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 9px; border: 1px solid var(--g200); background: var(--white); transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .sv:hover { border-color: rgba(163,191,250,0.5); box-shadow: 0 8px 28px rgba(163,191,250,0.12); transform: translateY(-2px); }
+    .sv.featured { background: var(--dark); border-color: transparent; grid-row: span 2; justify-content: space-between; }
+    .sv.featured:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.22); border-color: transparent; }
+    .sv-icon { width: 32px; height: 32px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .sv:not(.featured) .sv-icon { background: var(--bg); }
+    .sv.featured .sv-icon { background: rgba(255,255,255,0.09); }
+    .sv h3 { font-family: var(--ff-ui); font-weight: 600; letter-spacing: -0.01em; color: var(--g900); }
+    .sv:not(.featured) h3 { font-size: 14px; }
+    .sv.featured h3 { font-size: 19px; color: var(--white); margin-top: 10px; }
+    .sv p { font-size: 11.5px; color: var(--g500); line-height: 1.5; }
+    .sv.featured p { font-size: 12.5px; color: rgba(255,255,255,0.42); }
+    .sv-quote { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.07); font-family: var(--ff-serif); font-size: 12.5px; color: rgba(255,255,255,0.32); font-style: italic; line-height: 1.55; }
+    .sv-row { display: flex; align-items: center; gap: 14px; border-radius: 14px; padding: 16px 22px; border: 1px solid var(--g200); background: var(--white); flex-shrink: 0; margin-top: 12px; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    .sv-row:hover { border-color: rgba(163,191,250,0.5); box-shadow: 0 6px 20px rgba(163,191,250,0.1); transform: translateY(-1px); }
+    .sv-row h3 { font-family: var(--ff-ui); font-size: 13.5px; font-weight: 600; color: var(--g900); }
+    .sv-row p { font-size: 11px; color: var(--g500); line-height: 1.45; margin-top: 1px; }
+
+    /* ============================
+       SLIDE 08 — IDEIAS
+    ============================ */
+    .ideas-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; flex: 1; }
+    .ic { border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--g200); background: var(--white); }
+    .ic-head { display: flex; align-items: center; gap: 9px; padding-bottom: 10px; border-bottom: 1px solid var(--g100); }
+    .ic-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ic-head h3 { font-family: var(--ff-ui); font-size: 12.5px; font-weight: 600; color: var(--g900); }
+    .ic-item { display: flex; align-items: flex-start; gap: 7px; font-size: 11.5px; color: var(--g600); line-height: 1.4; }
+    .ic-dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+    .ic-data { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--g100); font-size: 9.5px; color: var(--g400); line-height: 1.4; font-style: italic; }
+    .ic-data strong { color: var(--g600); font-style: normal; }
+
+    /* ============================
+       SLIDE 09 — PROCESSO
+    ============================ */
+    .process-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
+    .process-strip { display: flex; align-items: stretch; gap: 6px; background: var(--white); border-radius: 18px; border: 1px solid var(--g100); padding: 16px; box-shadow: 0 2px 18px rgba(0,0,0,0.04); }
+    .ps { flex: 1; border-radius: 12px; padding: 14px 12px; display: flex; flex-direction: column; gap: 7px; cursor: default; transition: transform .2s, box-shadow .2s; }
+    .ps:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.07); }
+    .pc { display: flex; align-items: center; flex-shrink: 0; color: var(--g300); }
+    .ps-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .ps-num { font-family: var(--ff-ui); font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--g700); }
+    .ps-title { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; color: var(--g800); line-height: 1.2; }
+    .ps-del { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g600); margin-top: auto; padding-top: 7px; }
+    .proc-anchor { background: rgba(163,191,250,0.07); border-left: 2px solid var(--blue); border-radius: 0 8px 8px 0; padding: 11px 15px; }
+    .proc-anchor p { font-size: 11.5px; color: var(--g700); line-height: 1.5; }
+    .proc-anchor strong { color: var(--blue-dark); }
+
+    /* ============================
+       SLIDE 10 — SETORES
+    ============================ */
+    .sectors-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; flex: 1; }
+    .sec { border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 9px; border: 1px solid var(--g200); background: var(--white); transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .sec:nth-child(1):hover { box-shadow: 0 8px 24px rgba(163,191,250,0.18); border-color: rgba(163,191,250,0.4); transform: translateY(-2px); }
+    .sec:nth-child(2):hover { box-shadow: 0 8px 24px rgba(181,234,215,0.18); border-color: rgba(181,234,215,0.4); transform: translateY(-2px); }
+    .sec:nth-child(3):hover { box-shadow: 0 8px 24px rgba(215,189,226,0.18); border-color: rgba(215,189,226,0.4); transform: translateY(-2px); }
+    .sec:nth-child(4):hover { box-shadow: 0 8px 24px rgba(163,191,250,0.18); border-color: rgba(163,191,250,0.4); transform: translateY(-2px); }
+    .sec-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .sec h3 { font-family: var(--ff-ui); font-size: 15px; font-weight: 600; color: var(--g900); }
+    .sec .ex { font-size: 11.5px; color: var(--g500); line-height: 1.5; }
+
+    /* ============================
+       SLIDE 11 — FECHAMENTO
+    ============================ */
+    .s11 { background: var(--bg) !important; }
+    .closing-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; flex: 1; align-items: start; }
+    .poll-head { font-family: var(--ff-serif); font-size: 17px; font-weight: 500; color: var(--g900); line-height: 1.3; margin-bottom: 14px; }
+    .poll-opts { display: flex; flex-direction: column; gap: 8px; }
+    .po { display: flex; align-items: flex-start; gap: 9px; padding: 11px 13px; border-radius: 11px; border: 1px solid var(--g200); background: var(--white); transition: border-color .2s, background .2s; cursor: default; }
+    .po:hover { border-color: rgba(163,191,250,0.5); background: rgba(163,191,250,0.03); }
+    .po-letter { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; color: var(--blue-dark); background: rgba(163,191,250,0.14); border-radius: 5px; padding: 2px 6px; flex-shrink: 0; margin-top: 1px; }
+    .po-text { font-size: 12px; color: var(--g700); line-height: 1.4; }
+    .closing-right { display: flex; flex-direction: column; gap: 12px; }
+    .cq { background: var(--dark); border-radius: 16px; padding: 24px; }
+    .cq p { font-family: var(--ff-serif); font-size: 14px; color: var(--white); font-style: italic; line-height: 1.55; }
+    .cq p em { color: var(--green); font-style: normal; }
+    .ns { background: var(--white); border-radius: 16px; padding: 20px; border: 1px solid var(--g200); }
+    .ns .ns-lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--g400); margin-bottom: 5px; }
+    .ns .ns-title { font-family: var(--ff-ui); font-size: 13.5px; font-weight: 600; color: var(--g900); margin-bottom: 3px; }
+    .ns .ns-desc { font-size: 11px; color: var(--g500); line-height: 1.45; }
+    .contacts { display: flex; flex-direction: column; gap: 5px; padding: 0 4px; }
+    .ci { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--g600); }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ═══════════════ 01 COVER ═══════════════ -->
+<section class="s01">
+  <div class="si">
+    <div class="topbar">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">01 / 11</span>
+    </div>
+    <div class="cover-body">
+      <div class="lbl">Transformação Digital · IA · Pessoas</div>
+      <h1>Transformação digital que começa <em>pelas pessoas,</em> não pela ferramenta.</h1>
+      <p class="note">Brasileiros com experiência internacional, ajudando empresas a capturar valor real com IA — não apenas adotá-la.</p>
+    </div>
+    <div class="team-strip">
+      <div class="tm">
+        <img src="./Enrique_PP.png" alt="Enrique Ibarra">
+        <div><div class="nm">Enrique Ibarra</div><div class="rl">Engenheiro Full Stack</div></div>
+      </div>
+      <div class="tm">
+        <img src="./Antonio_PP.png" alt="Antonio Rapozo">
+        <div><div class="nm">Antonio Rapozo</div><div class="rl">Dev &amp; Soluções Tech</div></div>
+      </div>
+      <div class="tm">
+        <img src="./Joao_PP.png" alt="João Guilherme Santos">
+        <div><div class="nm">João Guilherme Santos</div><div class="rl">Arquiteto de Soluções</div></div>
+      </div>
+      <div class="tm">
+        <img src="./Leonardo_PP.png" alt="Leonardo Werner">
+        <div><div class="nm">Leonardo Werner</div><div class="rl">Cultura, Pessoas &amp; Governança</div></div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">Apresentação rápida de cada um — uma frase por pessoa. Contextualizar: brasileiros com experiência internacional, foco no mercado BR. O time é o produto — mostrar diversidade de perfis (tech + pessoas) é diferencial desde a primeira tela.</aside>
+</section>
+
+<!-- ═══════════════ 02 PROVOCAÇÃO ═══════════════ -->
+<section class="s02">
+  <div class="si">
+    <div class="topbar">
+      <div class="logo light">
+        <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n light">02 / 11</span>
+    </div>
+    <div class="prov-head">
+      <div class="lbl light">A provocação de abertura</div>
+      <h2>A ferramenta chegou.<br><em>A estratégia, não.</em></h2>
+    </div>
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div>
+          <div class="sn blue">88%</div>
+          <div class="sl">das empresas dizem usar IA — mas só <strong style="color:rgba(255,255,255,0.75)">6%</strong> se consideram "high performers" em captura de valor real.</div>
+        </div>
+        <div class="ss">McKinsey Global Survey on AI, 2025</div>
+      </div>
+      <div class="stat-cell">
+        <div>
+          <div class="sn green">70%</div>
+          <div class="sl">das iniciativas de transformação digital falham em atingir seus objetivos.</div>
+        </div>
+        <div class="ss">McKinsey / Gartner, 2025–2026</div>
+      </div>
+      <div class="stat-cell">
+        <div>
+          <div class="sn purple">+80%</div>
+          <div class="sl">dos projetos de IA ficam presos em pilotos que nunca chegam à operação real.</div>
+        </div>
+        <div class="ss">MIT / RAND, via LinkedIn</div>
+      </div>
+    </div>
+    <div class="prov-foot">
+      <blockquote>"Não é falta de ferramenta. É falta de estratégia, de método, e de quem olhe para as pessoas no processo. É exatamente aí que a River Labs entra."</blockquote>
+    </div>
+    <div class="sfoot dark">Fonte: McKinsey Global Survey on AI 2025; MIT Sloan Management Review; Gartner, 2023–2025</div>
+  </div>
+  <aside class="notes">Perguntas para a audiência: Quem na sua empresa está pensando tecnologia de forma estratégica? Como ela dialoga com as pessoas e processos existentes? Quais são as principais barreiras?</aside>
+</section>
+
+<!-- ═══════════════ 03 CASO 1 — WASHDOG ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">03 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl accent">Prova de Conceito · Caso 01 — Enrique</div>
+      <h2>De zero à primeira página —<br>como o Washdog conquistou o Google</h2>
+      <div class="sub">Auto-lavagem de pets · Mercado saturado · Lançamento do zero</div>
+    </div>
+    <div class="case-layout">
+      <div>
+        <div class="case-tag">
+          <iconify-icon icon="mdi:magnify" width="11"></iconify-icon>
+          Marketing Digital com IA
+        </div>
+        <div class="case-steps">
+          <div>
+            <div class="cs-lbl">Desafio</div>
+            <div class="cs-title">Novo negócio, sem presença digital</div>
+            <div class="cs-text">Mercado competitivo, sem posicionamento, sem SEO, sem redes sociais e sem prova social.</div>
+          </div>
+          <div>
+            <div class="cs-lbl">Solução</div>
+            <div class="cs-title">Marketing digital escalável com IA</div>
+            <div class="cs-text">SEO programático, geração de conteúdo com IA, listagens automatizadas, blog e redes sociais.</div>
+          </div>
+          <div>
+            <div class="cs-lbl">Resultado</div>
+            <div class="cs-title">Primeira página em 1 mês</div>
+            <div class="cs-text">De invisível a destaque nas buscas do Google, com crescimento acelerado de tráfego orgânico.</div>
+          </div>
+        </div>
+        <div class="mkt-note"><strong>42% das empresas</strong> apontam marketing e vendas como a função nº1 de uso de IA generativa. <em style="color:var(--g500)">(Qualtrics, 2025)</em></div>
+      </div>
+      <div class="case-metrics">
+        <div class="mc primary">
+          <div class="mv">+4.000</div>
+          <div class="ml">impressões orgânicas no primeiro mês</div>
+        </div>
+        <div class="mc secondary">
+          <div class="mv">1ª pág.</div>
+          <div class="ml">resultados Google para buscas-alvo</div>
+        </div>
+        <div class="mc tertiary">
+          <div class="mv">0 → presente</div>
+          <div class="ml">presença digital — do zero ao visível</div>
+        </div>
+      </div>
+    </div>
+    <div class="sfoot">Washdog · Posicionamento orgânico via SEO programático e conteúdo gerado com IA</div>
+  </div>
+  <aside class="notes">~55s: "O Washdog entrou em um mercado já consolidado sem nenhuma presença digital. Aplicamos SEO programático, geração de conteúdo com IA, listagens automatizadas e blog. Em menos de um mês, chegou à primeira página do Google com mais de 4 mil impressões orgânicas. De invisível a referência — partindo do zero."</aside>
+</section>
+
+<!-- ═══════════════ 04 CASO 2 — RFP ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">04 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl accent">Prova de Conceito · Caso 02 — João</div>
+      <h2>Automação de RFP<br>e-commerce</h2>
+      <div class="sub">A completar com dados reais do caso</div>
+    </div>
+    <div class="case-layout">
+      <div>
+        <div class="case-tag"><iconify-icon icon="mdi:robot-outline" width="11"></iconify-icon>Automação de Processos</div>
+        <div class="case-steps">
+          <div><div class="cs-lbl">Desafio</div><div class="cs-title">A completar — João</div><div class="cs-text">Dor específica do processo de RFP no e-commerce.</div></div>
+          <div><div class="cs-lbl">Solução</div><div class="cs-title">A completar — João</div><div class="cs-text">O que foi automatizado / estruturado.</div></div>
+          <div><div class="cs-lbl">Resultado</div><div class="cs-title">A completar — João</div><div class="cs-text">Tempo economizado, erros reduzidos.</div></div>
+        </div>
+        <div class="mkt-note">Apenas <strong>25% das iniciativas digitais entregam os KPIs prometidos</strong>. A diferença está em métricas claras desde o início. <em style="color:var(--g500)">(Sparkco / McKinsey)</em></div>
+      </div>
+      <div class="case-metrics">
+        <div class="mc primary"><div class="mv">—</div><div class="ml">Métrica principal a definir</div></div>
+        <div class="mc secondary"><div class="mv">—</div><div class="ml">Resultado secundário</div></div>
+        <div class="mc tertiary"><div class="mv">—</div><div class="ml">Impacto operacional</div></div>
+      </div>
+    </div>
+    <div class="sfoot">E-commerce · Automação de RFP · A completar com dados reais</div>
+  </div>
+  <aside class="notes">João apresenta este caso — ~1 minuto. Mesmo formato: contexto → solução → resultado com 1 número de impacto em destaque.</aside>
+</section>
+
+<!-- ═══════════════ 05 CASO 3 — LOGÍSTICA ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">05 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl accent">Prova de Conceito · Caso 03 — Antonio</div>
+      <h2>Logística &amp; Governo</h2>
+      <div class="sub">A completar com dados reais do caso</div>
+    </div>
+    <div class="case-layout">
+      <div>
+        <div class="case-tag"><iconify-icon icon="mdi:truck-outline" width="11"></iconify-icon>Logística / Setor Público</div>
+        <div class="case-steps">
+          <div><div class="cs-lbl">Desafio</div><div class="cs-title">A completar — Antonio</div><div class="cs-text">Setor / escala do problema operacional.</div></div>
+          <div><div class="cs-lbl">Solução</div><div class="cs-title">A completar — Antonio</div><div class="cs-text">Tecnologia aplicada à operação real.</div></div>
+          <div><div class="cs-lbl">Resultado</div><div class="cs-title">A completar — Antonio</div><div class="cs-text">Impacto mensurável.</div></div>
+        </div>
+      </div>
+      <div class="case-metrics">
+        <div class="mc primary"><div class="mv">—</div><div class="ml">Dado de impacto em destaque</div></div>
+        <div class="mc secondary"><div class="mv">—</div><div class="ml">Resultado secundário</div></div>
+        <div class="mc tertiary"><div class="mv">—</div><div class="ml">Impacto operacional</div></div>
+      </div>
+    </div>
+    <div class="sfoot">Logística · Setor público · Fonte: Qualtrics How Businesses Use AI 2025; Sparkco / McKinsey, 2024–2025</div>
+  </div>
+  <aside class="notes">Antonio apresenta — ~1 minuto. Fala-ponte ao final dos 3 casos: "Setores diferentes, problemas diferentes — mesma abordagem: entender as pessoas antes de propor a tecnologia."</aside>
+</section>
+
+<!-- ═══════════════ 06 BENCHMARK ═══════════════ -->
+<section class="s06">
+  <div class="si">
+    <div class="topbar">
+      <div class="logo light"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n light">06 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl light">Nossa proposta · O mercado</div>
+      <h2 style="color:var(--white); font-size:clamp(24px,3.6vw,44px)">Adoção não é resultado.</h2>
+      <div class="sub" style="color:rgba(255,255,255,0.38)">O que separa as empresas que capturam valor das que ficam presas em pilotos</div>
+    </div>
+    <div class="bench-cards">
+      <div class="bc">
+        <div class="bn">75%</div>
+        <div class="bk">Adoção alta</div>
+        <div class="bd">das empresas já usam IA em alguma função em 2025, ante 55% em 2023.</div>
+        <div class="bsrc">Qualtrics, 2025</div>
+      </div>
+      <div class="bc">
+        <div class="bn">&lt;40%</div>
+        <div class="bk">Estratégia baixa</div>
+        <div class="bd">das empresas têm uma estratégia formal de IA. Mesmo entre as maiores, menos da metade.</div>
+        <div class="bsrc">MIT Sloan Management Review</div>
+      </div>
+      <div class="bc">
+        <div class="bn">70%</div>
+        <div class="bk">Resultado baixo</div>
+        <div class="bd">dos projetos de transformação digital falham em capturar o valor prometido.</div>
+        <div class="bsrc">McKinsey / Gartner, 2025</div>
+      </div>
+    </div>
+    <div class="bench-insight">
+      <div class="bi-icon"><iconify-icon icon="mdi:lightbulb-outline" width="17" style="color:var(--blue)"></iconify-icon></div>
+      <p>"IA não falha por falta de ferramenta. Falha por falta de <strong>estratégia e de quem olhe pelas pessoas</strong> no processo."</p>
+    </div>
+    <div class="sfoot dark">Fonte: Qualtrics 2025; MIT Sloan Management Review; McKinsey Global Survey on AI 2025; Gartner 2023–2025</div>
+  </div>
+</section>
+
+<!-- ═══════════════ 07 SERVIÇOS ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">07 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl">Nossa proposta · Serviços</div>
+      <h2>Quatro frentes, uma lógica</h2>
+    </div>
+    <div class="services-bento">
+      <div class="sv featured">
+        <div>
+          <div class="sv-icon"><iconify-icon icon="mdi:lightbulb-outline" width="17" style="color:var(--blue)"></iconify-icon></div>
+          <h3>AI Labs</h3>
+          <p>Workshops de co-criação com equipes. Laboratório de ideias com IA — para descobrir onde a tecnologia gera valor real no seu contexto.</p>
+        </div>
+        <div class="sv-quote">"A jornada é construída com vocês, não para vocês."</div>
+      </div>
+      <div class="sv">
+        <div class="sv-icon"><iconify-icon icon="mdi:chart-line" width="15" style="color:var(--purple-dark)"></iconify-icon></div>
+        <h3>Inteligência de mercado</h3>
+        <p>Relatórios customizados por setor — dados que informam decisões, não só apresentações.</p>
+      </div>
+      <div class="sv">
+        <div class="sv-icon"><iconify-icon icon="mdi:robot-outline" width="15" style="color:var(--green-dark)"></iconify-icon></div>
+        <h3>Automação</h3>
+        <p>Redução de processos manuais repetitivos. Mais tempo para o que importa.</p>
+      </div>
+    </div>
+    <div class="sv-row">
+      <div class="sv-icon" style="background:var(--bg); flex-shrink:0"><iconify-icon icon="mdi:code-braces" width="15" style="color:var(--blue-dark)"></iconify-icon></div>
+      <div style="flex:1"><h3>Desenvolvimento</h3><p>Soluções proprietárias no seu departamento — software house focada em resultado de negócio.</p></div>
+      <iconify-icon icon="mdi:arrow-top-right" width="15" style="color:var(--g300); flex-shrink:0"></iconify-icon>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 08 IDEIAS POR SETOR ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">08 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl">Nossa proposta · Aplicações</div>
+      <h2>Provocações e possibilidades reais</h2>
+      <div class="sub">Onde a IA já gera resultado — e onde pode gerar no seu setor</div>
+    </div>
+    <div class="ideas-cols">
+      <div class="ic">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:rgba(163,191,250,0.12)"><iconify-icon icon="mdi:truck-outline" width="15" style="color:var(--blue-dark)"></iconify-icon></div>
+          <h3>Logística</h3>
+        </div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Precificação dinâmica com IA</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Roteirização inteligente</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Agentes de IA para decisões na jornada pós-compra</div>
+        <div class="ic-data">Players no BR já usam agentes de IA para otimizar decisões críticas de entrega. <strong>(TI Inside, dez. 2025)</strong></div>
+      </div>
+      <div class="ic">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:rgba(181,234,215,0.15)"><iconify-icon icon="mdi:store-outline" width="15" style="color:var(--green-dark)"></iconify-icon></div>
+          <h3>Varejo / E-commerce</h3>
+        </div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Gestão de reservas automatizada</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Previsão de demanda com IA</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Marketing digital escalável</div>
+        <div class="ic-data"><strong>59% do varejo brasileiro</strong> já usa IA e 90% pretende ampliar. <strong>(TI Inside, nov. 2025)</strong></div>
+      </div>
+      <div class="ic">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:rgba(215,189,226,0.15)"><iconify-icon icon="mdi:account-group-outline" width="15" style="color:var(--purple-dark)"></iconify-icon></div>
+          <h3>Serviços / RH</h3>
+        </div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Mapeamento de custo de turnover</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Onboarding automatizado</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Diagnóstico de cultura organizacional</div>
+        <div class="ic-data">O desafio agora não é começar a usar IA — é orquestrar de forma estratégica na operação.</div>
+      </div>
+    </div>
+    <div class="sfoot">Fonte: TI Inside nov–dez 2025; Qualtrics 2025 — Dinâmica: "Algum desses ressoa com o que vocês vivem hoje?"</div>
+  </div>
+</section>
+
+<!-- ═══════════════ 09 PROCESSO ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">09 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl">Nossa proposta · Método</div>
+      <h2>Do diagnóstico ao piloto em produção</h2>
+      <div class="sub">Ágil, co-criado, orientado a resultado — com as pessoas, não para elas</div>
+    </div>
+    <div class="process-wrap">
+      <div class="process-strip">
+        <div class="ps" style="background:rgba(163,191,250,0.09);border:1px solid rgba(163,191,250,0.2)">
+          <div class="ps-icon" style="background:rgba(163,191,250,0.2)"><iconify-icon icon="mdi:magnify" width="14" style="color:#A3BFFA"></iconify-icon></div>
+          <div class="ps-num">01</div><div class="ps-title">Descoberta</div>
+          <div class="ps-del" style="border-top:1px solid rgba(163,191,250,0.2)">Mapa de processo</div>
+        </div>
+        <div class="pc"><iconify-icon icon="mdi:chevron-right" width="11"></iconify-icon></div>
+        <div class="ps" style="background:rgba(215,189,226,0.09);border:1px solid rgba(215,189,226,0.2)">
+          <div class="ps-icon" style="background:rgba(215,189,226,0.2)"><iconify-icon icon="mdi:chart-bar" width="14" style="color:#D7BDE2"></iconify-icon></div>
+          <div class="ps-num">02</div><div class="ps-title">Diagnóstico</div>
+          <div class="ps-del" style="border-top:1px solid rgba(215,189,226,0.2)">Matriz de casos</div>
+        </div>
+        <div class="pc"><iconify-icon icon="mdi:chevron-right" width="11"></iconify-icon></div>
+        <div class="ps" style="background:rgba(181,234,215,0.09);border:1px solid rgba(181,234,215,0.2)">
+          <div class="ps-icon" style="background:rgba(181,234,215,0.2)"><iconify-icon icon="mdi:cpu-64-bit" width="14" style="color:#B5EAD7"></iconify-icon></div>
+          <div class="ps-num">03</div><div class="ps-title">Design da solução</div>
+          <div class="ps-del" style="border-top:1px solid rgba(181,234,215,0.2)">Plano de arquitetura</div>
+        </div>
+        <div class="pc"><iconify-icon icon="mdi:chevron-right" width="11"></iconify-icon></div>
+        <div class="ps" style="background:rgba(163,191,250,0.09);border:1px solid rgba(163,191,250,0.2)">
+          <div class="ps-icon" style="background:rgba(163,191,250,0.2)"><iconify-icon icon="mdi:rocket-launch-outline" width="14" style="color:#A3BFFA"></iconify-icon></div>
+          <div class="ps-num">04</div><div class="ps-title">Piloto</div>
+          <div class="ps-del" style="border-top:1px solid rgba(163,191,250,0.2)">Protótipo + métricas</div>
+        </div>
+        <div class="pc"><iconify-icon icon="mdi:chevron-right" width="11"></iconify-icon></div>
+        <div class="ps" style="background:rgba(181,234,215,0.09);border:1px solid rgba(181,234,215,0.2)">
+          <div class="ps-icon" style="background:rgba(181,234,215,0.2)"><iconify-icon icon="mdi:trending-up" width="14" style="color:#B5EAD7"></iconify-icon></div>
+          <div class="ps-num">05</div><div class="ps-title">Deploy &amp; Otimização</div>
+          <div class="ps-del" style="border-top:1px solid rgba(181,234,215,0.2)">Sistema em produção</div>
+        </div>
+      </div>
+      <div class="proc-anchor">
+        <p>Grandes programas digitais levam em média <strong>28 meses</strong> para gerar valor — e muitos falham antes disso. Nosso processo coloca um piloto em produção <strong>em semanas, não anos.</strong></p>
+      </div>
+    </div>
+    <div class="sfoot">Fonte: Sparkco / McKinsey, 2024–2025 · Co-criação em cada etapa, time do cliente envolvido</div>
+  </div>
+</section>
+
+<!-- ═══════════════ 10 SETORES ═══════════════ -->
+<section>
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">10 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl">Fechamento · Onde atuamos</div>
+      <h2>Setores onde atuamos</h2>
+      <div class="sub">Logística · Varejo · Serviços · Imobiliário</div>
+    </div>
+    <div class="sectors-grid">
+      <div class="sec">
+        <div class="sec-icon" style="background:rgba(163,191,250,0.12)"><iconify-icon icon="mdi:truck-outline" width="19" style="color:var(--blue-dark)"></iconify-icon></div>
+        <h3>Logística</h3>
+        <div class="ex">Otimização de rotas, precificação dinâmica, decisões pós-compra com agentes de IA.</div>
+      </div>
+      <div class="sec">
+        <div class="sec-icon" style="background:rgba(181,234,215,0.15)"><iconify-icon icon="mdi:store-outline" width="19" style="color:var(--green-dark)"></iconify-icon></div>
+        <h3>Varejo &amp; E-commerce</h3>
+        <div class="ex">Previsão de demanda, marketing digital com IA, gestão de estoque e atendimento.</div>
+      </div>
+      <div class="sec">
+        <div class="sec-icon" style="background:rgba(215,189,226,0.15)"><iconify-icon icon="mdi:account-group-outline" width="19" style="color:var(--purple-dark)"></iconify-icon></div>
+        <h3>Serviços &amp; RH</h3>
+        <div class="ex">Diagnóstico de cultura, onboarding automatizado, mapeamento de turnover.</div>
+      </div>
+      <div class="sec">
+        <div class="sec-icon" style="background:rgba(163,191,250,0.12)"><iconify-icon icon="mdi:home-outline" width="19" style="color:var(--blue-dark)"></iconify-icon></div>
+        <h3>Imobiliário</h3>
+        <div class="ex">Automação de processos comerciais, relatórios de mercado, análise de dados.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 11 FECHAMENTO ═══════════════ -->
+<section class="s11">
+  <div class="si">
+    <div class="topbar">
+      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
+      <span class="topbar-n">11 / 11</span>
+    </div>
+    <div class="sh">
+      <div class="lbl">Vamos conversar?</div>
+      <h2>Qual é o momento da sua empresa<br>em relação à tecnologia?</h2>
+    </div>
+    <div class="closing-grid">
+      <div>
+        <div class="poll-opts">
+          <div class="po"><span class="po-letter">A</span><span class="po-text">Ainda estamos avaliando se faz sentido investir</span></div>
+          <div class="po"><span class="po-letter">B</span><span class="po-text">Já usamos algumas ferramentas, mas de forma dispersa</span></div>
+          <div class="po"><span class="po-letter">C</span><span class="po-text">Há uma iniciativa em andamento que precisa de estrutura</span></div>
+          <div class="po"><span class="po-letter">D</span><span class="po-text">Queremos implementar algo novo e não sabemos por onde começar</span></div>
+        </div>
+      </div>
+      <div class="closing-right">
+        <div class="cq">
+          <p>"Não precisamos de um grande projeto para começar. Precisamos de uma conversa honesta sobre o que está travando. <em>É com isso que podemos ajudar.</em>"</p>
+        </div>
+        <div class="ns">
+          <div class="ns-lbl">Próximo passo</div>
+          <div class="ns-title">Conversa de diagnóstico — 45 min</div>
+          <div class="ns-desc">Sem compromisso. Só uma conversa honesta sobre onde a tecnologia pode ajudar — e onde não pode.</div>
+        </div>
+        <div class="contacts">
+          <div class="ci"><iconify-icon icon="mdi:linkedin" width="13" style="color:var(--g400)"></iconify-icon><span>River Labs no LinkedIn</span></div>
+          <div class="ci"><iconify-icon icon="mdi:web" width="13" style="color:var(--g400)"></iconify-icon><span>riverlabs.com</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">Fechar com a pergunta: "O que ressoa com o que vocês vivem hoje?" Abrir para Q&A com energia — não como formalidade. Não fechar com "obrigado" genérico.</aside>
+</section>
+
+</div><!-- .slides -->
+</div><!-- .reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1200, height: 675,
+    margin: 0, minScale: 0.2, maxScale: 2.0,
+    hash: true, history: true,
+    progress: true, slideNumber: false,
+    controls: true, controlsLayout: 'bottom-right', controlsTutorial: false,
+    transition: 'fade', transitionSpeed: 'fast', backgroundTransition: 'fade',
+    plugins: [RevealNotes],
+  });
+</script>
+</body>
+</html>
