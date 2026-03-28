@@ -10,7 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import ApiaAccessCard from "@/components/ApiaAccessCard";
+import ClientAccessCards from "@/components/ClientAccessCards";
 import Footer from "@/components/Footer";
 
 export function generateStaticParams() {
@@ -33,7 +33,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <ComparisonSection dict={dict.comparison} />
         <TestimonialsSection dict={dict.testimonials} />
         <WhyUsSection dict={dict.whyus} lang={typedLang} />
-        <ApiaAccessCard />
+        {lang === "pt" && <ClientAccessCards />}
         <FAQSection dict={dict.faq} />
         <CTASection dict={dict.cta} lang={typedLang} />
       </main>
