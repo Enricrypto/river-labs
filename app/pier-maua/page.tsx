@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
-import MarketStudySection from "@/components/MarketStudySection";
+import PierMauaMarketStudySection from "@/components/PierMauaMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
 
-const PASSWORD = process.env.NEXT_PUBLIC_APIA_PASSWORD ?? "";
-const STORAGE_KEY = "apia_unlocked";
+const PASSWORD = process.env.NEXT_PUBLIC_PIER_MAUA_PASSWORD ?? "";
+const STORAGE_KEY = "pier_maua_unlocked";
 
-export default function ApiaPage() {
+export default function PierMauaPage() {
   const [unlocked, setUnlocked] = useState(false);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
@@ -47,9 +47,9 @@ export default function ApiaPage() {
             Voltar ao site
           </Link>
           <span className="text-white/10">·</span>
-          <span className="text-gray-600 text-xs">Grupo Ápia × River Labs — Acesso restrito</span>
+          <span className="text-gray-600 text-xs">Píer Mauá × River Labs — Acesso restrito</span>
         </div>
-        <MarketStudySection />
+        <PierMauaMarketStudySection />
         <DiagnosticSection />
       </main>
     );
@@ -61,14 +61,14 @@ export default function ApiaPage() {
         <div className="mb-8 text-center">
           <div
             className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-5"
-            style={{ background: "rgba(163,191,250,0.1)", border: "1px solid rgba(163,191,250,0.2)" }}
+            style={{ background: "rgba(56,189,248,0.1)", border: "1px solid rgba(56,189,248,0.2)" }}
           >
-            <Lock className="w-5 h-5 text-[#A3BFFA]" strokeWidth={1.5} />
+            <Lock className="w-5 h-5" style={{ color: "#38BDF8" }} strokeWidth={1.5} />
           </div>
           <h1 className="font-serif text-2xl text-white font-medium mb-2">Acesso restrito</h1>
           <p className="text-gray-500 text-sm leading-relaxed">
             Este material é exclusivo para<br />
-            <span className="text-gray-400">Grupo Ápia × River Labs</span>
+            <span className="text-gray-400">Píer Mauá × River Labs</span>
           </p>
         </div>
 
@@ -81,9 +81,7 @@ export default function ApiaPage() {
               placeholder="Senha de acesso"
               autoFocus
               className="w-full bg-white/5 border rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 outline-none transition-colors pr-10"
-              style={{
-                borderColor: error ? "rgba(248,113,113,0.5)" : "rgba(255,255,255,0.1)",
-              }}
+              style={{ borderColor: error ? "rgba(248,113,113,0.5)" : "rgba(255,255,255,0.1)" }}
             />
             <button
               type="button"
@@ -93,16 +91,11 @@ export default function ApiaPage() {
               {show ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>
           </div>
-
-          {error && (
-            <p className="text-red-400/80 text-xs text-center">
-              Senha incorreta. Tente novamente.
-            </p>
-          )}
-
+          {error && <p className="text-red-400/80 text-xs text-center">Senha incorreta. Tente novamente.</p>}
           <button
             type="submit"
-            className="w-full bg-[#A3BFFA] text-gray-900 font-medium text-sm py-3 rounded-xl hover:bg-[#B5C9FF] transition-colors"
+            className="w-full font-medium text-sm py-3 rounded-xl transition-colors"
+            style={{ background: "#38BDF8", color: "#0f172a" }}
           >
             Acessar
           </button>

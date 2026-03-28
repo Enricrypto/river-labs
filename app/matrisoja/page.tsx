@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
-import MarketStudySection from "@/components/MarketStudySection";
+import MatrisojaMarketStudySection from "@/components/MatrisojaMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
 
-const PASSWORD = process.env.NEXT_PUBLIC_APIA_PASSWORD ?? "";
-const STORAGE_KEY = "apia_unlocked";
+const PASSWORD = process.env.NEXT_PUBLIC_MATRISOJA_PASSWORD ?? "";
+const STORAGE_KEY = "matrisoja_unlocked";
 
-export default function ApiaPage() {
+export default function MatrisojaPage() {
   const [unlocked, setUnlocked] = useState(false);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
@@ -47,9 +47,9 @@ export default function ApiaPage() {
             Voltar ao site
           </Link>
           <span className="text-white/10">·</span>
-          <span className="text-gray-600 text-xs">Grupo Ápia × River Labs — Acesso restrito</span>
+          <span className="text-gray-600 text-xs">Matrisoja × River Labs — Acesso restrito</span>
         </div>
-        <MarketStudySection />
+        <MatrisojaMarketStudySection />
         <DiagnosticSection />
       </main>
     );
@@ -61,14 +61,14 @@ export default function ApiaPage() {
         <div className="mb-8 text-center">
           <div
             className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-5"
-            style={{ background: "rgba(163,191,250,0.1)", border: "1px solid rgba(163,191,250,0.2)" }}
+            style={{ background: "rgba(45,212,191,0.1)", border: "1px solid rgba(45,212,191,0.2)" }}
           >
-            <Lock className="w-5 h-5 text-[#A3BFFA]" strokeWidth={1.5} />
+            <Lock className="w-5 h-5" style={{ color: "#2DD4BF" }} strokeWidth={1.5} />
           </div>
           <h1 className="font-serif text-2xl text-white font-medium mb-2">Acesso restrito</h1>
           <p className="text-gray-500 text-sm leading-relaxed">
             Este material é exclusivo para<br />
-            <span className="text-gray-400">Grupo Ápia × River Labs</span>
+            <span className="text-gray-400">Matrisoja × River Labs</span>
           </p>
         </div>
 
@@ -102,7 +102,8 @@ export default function ApiaPage() {
 
           <button
             type="submit"
-            className="w-full bg-[#A3BFFA] text-gray-900 font-medium text-sm py-3 rounded-xl hover:bg-[#B5C9FF] transition-colors"
+            className="w-full font-medium text-sm py-3 rounded-xl transition-colors"
+            style={{ background: "#2DD4BF", color: "#0f172a" }}
           >
             Acessar
           </button>
