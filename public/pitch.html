@@ -102,6 +102,7 @@
     .s02 { background: var(--dark) !important; }
     .prov-head h2 { font-size: clamp(24px, 3.4vw, 40px); color: var(--white); max-width: 560px; }
     .prov-head h2 em { color: var(--blue); font-style: italic; }
+    .prov-why { font-family: var(--ff-serif); font-size: 14px; color: rgba(255,255,255,0.52); font-style: italic; line-height: 1.65; max-width: 700px; padding: 14px 18px; border-left: 2px solid rgba(163,191,250,0.3); margin-bottom: 4px; }
 
     .stats-row {
       display: grid; grid-template-columns: 1.5fr 1fr 1fr;
@@ -250,6 +251,9 @@
     .ns .ns-desc { font-size: 11px; color: var(--g500); line-height: 1.45; }
     .contacts { display: flex; flex-direction: column; gap: 5px; padding: 0 4px; }
     .ci { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--g600); }
+    .deliverable { background: var(--bg); border-radius: 12px; padding: 12px 16px; border: 1px solid var(--g200); display: flex; flex-direction: column; gap: 7px; }
+    .dv-lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g400); margin-bottom: 2px; }
+    .dv-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--g600); line-height: 1.4; }
   </style>
 </head>
 <body>
@@ -273,6 +277,10 @@
     </div>
     <div class="team-strip">
       <div class="tm">
+        <img src="./Leonardo_PP.png" alt="Leonardo Werner">
+        <div><div class="nm">Leonardo Werner</div><div class="rl">Cultura, Pessoas &amp; Governança</div></div>
+      </div>
+      <div class="tm">
         <img src="./Enrique_PP.png" alt="Enrique Ibarra">
         <div><div class="nm">Enrique Ibarra</div><div class="rl">Engenheiro Full Stack</div></div>
       </div>
@@ -283,10 +291,6 @@
       <div class="tm">
         <img src="./Joao_PP.png" alt="João Guilherme Santos">
         <div><div class="nm">João Guilherme Santos</div><div class="rl">Arquiteto de Soluções</div></div>
-      </div>
-      <div class="tm">
-        <img src="./Leonardo_PP.png" alt="Leonardo Werner">
-        <div><div class="nm">Leonardo Werner</div><div class="rl">Cultura, Pessoas &amp; Governança</div></div>
       </div>
     </div>
   </div>
@@ -307,6 +311,7 @@
       <div class="lbl light">A provocação de abertura</div>
       <h2>A ferramenta chegou.<br><em>A estratégia, não.</em></h2>
     </div>
+    <div class="prov-why">Na pandemia, empresas sem digitalização correram contra o tempo para não desaparecer. Com a IA, a mesma janela se abre agora — e ainda há espaço para sair na frente.</div>
     <div class="stats-row">
       <div class="stat-cell">
         <div>
@@ -401,28 +406,52 @@
     </div>
     <div class="sh">
       <div class="lbl accent">Prova de Conceito · Caso 02 — João</div>
-      <h2>Automação de RFP<br>e-commerce</h2>
-      <div class="sub">A completar com dados reais do caso</div>
+      <h2>De 10h por RFP a resposta automática —<br>1.094 horas salvas em 6 meses</h2>
+      <div class="sub">Enterprise Sales Engineering · 6 regiões · Rollout global</div>
     </div>
     <div class="case-layout">
       <div>
-        <div class="case-tag"><iconify-icon icon="mdi:robot-outline" width="11"></iconify-icon>Automação de Processos</div>
-        <div class="case-steps">
-          <div><div class="cs-lbl">Desafio</div><div class="cs-title">A completar — João</div><div class="cs-text">Dor específica do processo de RFP no e-commerce.</div></div>
-          <div><div class="cs-lbl">Solução</div><div class="cs-title">A completar — João</div><div class="cs-text">O que foi automatizado / estruturado.</div></div>
-          <div><div class="cs-lbl">Resultado</div><div class="cs-title">A completar — João</div><div class="cs-text">Tempo economizado, erros reduzidos.</div></div>
+        <div class="case-tag">
+          <iconify-icon icon="mdi:robot-outline" width="11"></iconify-icon>
+          AI RFP Assistant · Automação de Processos
         </div>
-        <div class="mkt-note">Apenas <strong>25% das iniciativas digitais entregam os KPIs prometidos</strong>. A diferença está em métricas claras desde o início. <em style="color:var(--g500)">(Sparkco / McKinsey)</em></div>
+        <div class="case-steps">
+          <div>
+            <div class="cs-lbl">Desafio</div>
+            <div class="cs-title">10 horas por proposta, respondidas manualmente</div>
+            <div class="cs-text">Equipes de Sales Engineering respondiam ~117 questões técnicas e de compliance por RFP, sem padronização nem escala.</div>
+          </div>
+          <div>
+            <div class="cs-lbl">Solução</div>
+            <div class="cs-title">AI RFP Assistant interno em produção global</div>
+            <div class="cs-text">112 RFPs processados e 13.100 respostas geradas em 6 meses, com rollout em EMEA, US, Brasil, LATAM e APAC.</div>
+          </div>
+          <div>
+            <div class="cs-lbl">Resultado</div>
+            <div class="cs-title">137 dias de trabalho recuperados</div>
+            <div class="cs-text">1.094 horas salvas (13.128 respostas × 5 min) e custo de infraestrutura de apenas $16,24 por RFP processado.</div>
+          </div>
+        </div>
+        <div class="mkt-note">Substituiu plataforma externa <strong>Loopio ($40k/ano)</strong> por solução própria a <strong>$3.600/ano</strong> — redução de <strong>91% no custo anual</strong>.</div>
       </div>
       <div class="case-metrics">
-        <div class="mc primary"><div class="mv">—</div><div class="ml">Métrica principal a definir</div></div>
-        <div class="mc secondary"><div class="mv">—</div><div class="ml">Resultado secundário</div></div>
-        <div class="mc tertiary"><div class="mv">—</div><div class="ml">Impacto operacional</div></div>
+        <div class="mc primary">
+          <div class="mv">1.094h</div>
+          <div class="ml">horas salvas em 6 meses de operação</div>
+        </div>
+        <div class="mc secondary">
+          <div class="mv">$36.4k</div>
+          <div class="ml">economizado vs. plataforma externa Loopio</div>
+        </div>
+        <div class="mc tertiary">
+          <div class="mv">~10h</div>
+          <div class="ml">de trabalho manual eliminado por RFP</div>
+        </div>
       </div>
     </div>
-    <div class="sfoot">E-commerce · Automação de RFP · A completar com dados reais</div>
+    <div class="sfoot">Global Sales Engineering · AI RFP Assistant · 112 RFPs · 6 regiões · 13.1K respostas geradas</div>
   </div>
-  <aside class="notes">João apresenta este caso — ~1 minuto. Mesmo formato: contexto → solução → resultado com 1 número de impacto em destaque.</aside>
+  <aside class="notes">João apresenta — ~1 min. "Construímos um assistente de IA interno que responde RFPs completos automaticamente. Em 6 meses: 112 propostas processadas, 13 mil respostas geradas, 1.094 horas salvas. E substituímos uma plataforma de $40k/ano por uma solução própria de $3.600 — com mais controle e mesma qualidade."</aside>
 </section>
 
 <!-- ═══════════════ 05 CASO 3 — LOGÍSTICA ═══════════════ -->
@@ -530,6 +559,7 @@
       </div>
     </div>
   </div>
+  <aside class="notes">Demo ao vivo por frente (~30s cada): AI Labs — abrir um workshop rápido ou canvas de co-criação com IA; Inteligência de mercado — mostrar exemplo de relatório gerado para um setor; Automação — demonstrar um fluxo automatizado em operação (ex: triagem de leads ou resposta automática); Desenvolvimento — mostrar interface ou MVP de solução proprietária entregue. O objetivo é tangibilizar — não apresentar, demonstrar.</aside>
 </section>
 
 <!-- ═══════════════ 08 IDEIAS POR SETOR ═══════════════ -->
@@ -664,6 +694,11 @@
           <div class="ns-lbl">Vamos conversar?</div>
           <div class="ns-title">Conversa de diagnóstico — 45 min</div>
           <div class="ns-desc">Sem compromisso. Só uma conversa honesta sobre onde a tecnologia pode ajudar — e onde não pode.</div>
+        </div>
+        <div class="deliverable">
+          <div class="dv-lbl">O que vem depois</div>
+          <div class="dv-item"><iconify-icon icon="mdi:file-document-outline" width="12" style="color:var(--blue-dark)"></iconify-icon><span>Relatório com os principais insights da conversa</span></div>
+          <div class="dv-item"><iconify-icon icon="mdi:clipboard-list-outline" width="12" style="color:var(--blue-dark)"></iconify-icon><span>Pesquisa de mapeamento de gaps para guiar os próximos passos</span></div>
         </div>
         <div class="contacts">
           <div class="ci"><iconify-icon icon="mdi:linkedin" width="13" style="color:var(--g400)"></iconify-icon><span>River Labs no LinkedIn</span></div>
