@@ -44,6 +44,14 @@ const CLIENTS = [
     label: "Bondinho Pão de Açúcar × River Labs",
     desc: "Teleférico, eventos e gastronomia — análise de bilheteria dinâmica e manutenção preditiva.",
   },
+  {
+    href: "/cataratas",
+    accent: "#4ADE80",
+    accentDim: "rgba(74,222,128,0.08)",
+    accentBorder: "rgba(74,222,128,0.15)",
+    label: "Grupo Cataratas × River Labs",
+    desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) — análise de fluxo e compliance ICMBio.",
+  },
 ];
 
 export default function ClientAccessCards() {
