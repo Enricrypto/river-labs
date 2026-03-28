@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const SKY = "#38BDF8";
-const SKY_DIM = "rgba(56,189,248,0.1)";
-const SKY_BORDER = "rgba(56,189,248,0.2)";
+const SKY = "#F472B6";
+const SKY_DIM = "rgba(244,114,182,0.1)";
+const SKY_BORDER = "rgba(244,114,182,0.2)";
 const CORAL = "#FB923C";
 const CORAL_DIM = "rgba(251,146,60,0.1)";
 const VIOLET = "#C084FC";

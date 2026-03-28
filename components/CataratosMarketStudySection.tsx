@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const GREEN = "#4ADE80";
-const GREEN_DIM = "rgba(74,222,128,0.1)";
-const GREEN_BORDER = "rgba(74,222,128,0.2)";
+const GREEN = "#C084FC";
+const GREEN_DIM = "rgba(192,132,252,0.1)";
+const GREEN_BORDER = "rgba(192,132,252,0.2)";
 const SKY = "#38BDF8";
 const SKY_DIM = "rgba(56,189,248,0.1)";
 const AMBER = "#F59E0B";

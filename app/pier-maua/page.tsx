@@ -61,9 +61,9 @@ export default function PierMauaPage() {
         <div className="mb-8 text-center">
           <div
             className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-5"
-            style={{ background: "rgba(56,189,248,0.1)", border: "1px solid rgba(56,189,248,0.2)" }}
+            style={{ background: "rgba(244,114,182,0.1)", border: "1px solid rgba(244,114,182,0.2)" }}
           >
-            <Lock className="w-5 h-5" style={{ color: "#38BDF8" }} strokeWidth={1.5} />
+            <Lock className="w-5 h-5" style={{ color: "#F472B6" }} strokeWidth={1.5} />
           </div>
           <h1 className="font-serif text-2xl text-white font-medium mb-2">Acesso restrito</h1>
           <p className="text-gray-500 text-sm leading-relaxed">
@@ -95,7 +95,7 @@ export default function PierMauaPage() {
           <button
             type="submit"
             className="w-full font-medium text-sm py-3 rounded-xl transition-colors"
-            style={{ background: "#38BDF8", color: "#0f172a" }}
+            style={{ background: "#F472B6", color: "#0f172a" }}
           >
             Acessar
           </button>

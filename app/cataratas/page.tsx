@@ -61,9 +61,9 @@ export default function CataratosPage() {
         <div className="mb-8 text-center">
           <div
             className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-5"
-            style={{ background: "rgba(74,222,128,0.1)", border: "1px solid rgba(74,222,128,0.2)" }}
+            style={{ background: "rgba(192,132,252,0.1)", border: "1px solid rgba(192,132,252,0.2)" }}
           >
-            <Lock className="w-5 h-5" style={{ color: "#4ADE80" }} strokeWidth={1.5} />
+            <Lock className="w-5 h-5" style={{ color: "#C084FC" }} strokeWidth={1.5} />
           </div>
           <h1 className="font-serif text-2xl text-white font-medium mb-2">Acesso restrito</h1>
           <p className="text-gray-500 text-sm leading-relaxed">
@@ -95,7 +95,7 @@ export default function CataratosPage() {
           <button
             type="submit"
             className="w-full font-medium text-sm py-3 rounded-xl transition-colors"
-            style={{ background: "#4ADE80", color: "#0f172a" }}
+            style={{ background: "#C084FC", color: "#0f172a" }}
           >
             Acessar
           </button>
