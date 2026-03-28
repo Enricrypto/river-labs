@@ -33,7 +33,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <ComparisonSection dict={dict.comparison} />
         <TestimonialsSection dict={dict.testimonials} />
         <WhyUsSection dict={dict.whyus} lang={typedLang} />
-        {lang === "pt" && <ClientAccessCards />}
+        <ClientAccessCards />
         <FAQSection dict={dict.faq} />
         <CTASection dict={dict.cta} lang={typedLang} />
       </main>
