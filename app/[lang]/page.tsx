@@ -6,7 +6,6 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import MethodologySection from "@/components/MethodologySection";
 import ComparisonSection from "@/components/ComparisonSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -31,7 +30,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <SolutionSection dict={dict.solutions} lang={typedLang} />
         <MethodologySection dict={dict.methodology} />
         <ComparisonSection dict={dict.comparison} />
-        <TestimonialsSection dict={dict.testimonials} />
         <WhyUsSection dict={dict.whyus} lang={typedLang} />
         <ClientAccessCards />
         <FAQSection dict={dict.faq} />
