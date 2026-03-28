@@ -36,6 +36,14 @@ const CLIENTS = [
     label: "Trem do Corcovado × River Labs",
     desc: "Bilheteria, operação ferroviária e compliance ICMBio — análise de receita e manutenção preditiva.",
   },
+  {
+    href: "/bondinho",
+    accent: "#F59E0B",
+    accentDim: "rgba(245,158,11,0.08)",
+    accentBorder: "rgba(245,158,11,0.15)",
+    label: "Bondinho Pão de Açúcar × River Labs",
+    desc: "Teleférico, eventos e gastronomia — análise de bilheteria dinâmica e manutenção preditiva.",
+  },
 ];
 
 export default function ClientAccessCards() {
