@@ -3,13 +3,12 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import SocialProofBar from "@/components/SocialProofBar";
 import ProblemSection from "@/components/ProblemSection";
-import SolutionSection from "@/components/SolutionSection";
+import ClientAccessCards from "@/components/ClientAccessCards";
 import MethodologySection from "@/components/MethodologySection";
 import ComparisonSection from "@/components/ComparisonSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import ClientAccessCards from "@/components/ClientAccessCards";
 import Footer from "@/components/Footer";
 
 export function generateStaticParams() {
@@ -27,11 +26,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Hero dict={dict.hero} lang={typedLang} />
         <SocialProofBar dict={dict.proof} />
         <ProblemSection dict={dict.problems} />
-        <SolutionSection dict={dict.solutions} lang={typedLang} />
+        <ClientAccessCards />
         <MethodologySection dict={dict.methodology} />
         <ComparisonSection dict={dict.comparison} />
         <WhyUsSection dict={dict.whyus} lang={typedLang} />
-        <ClientAccessCards />
         <FAQSection dict={dict.faq} />
         <CTASection dict={dict.cta} lang={typedLang} />
       </main>

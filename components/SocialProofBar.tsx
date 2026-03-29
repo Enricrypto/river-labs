@@ -1,24 +1,29 @@
-import { CheckCircle2, TrendingDown, Zap } from "lucide-react";
 import type { Dict } from "@/lib/translations";
+
+const CLIENTS = [
+  "Grupo Cataratas",
+  "Bondinho Pão de Açúcar",
+  "Trem do Corcovado",
+  "Píer Mauá",
+  "Matrisoja",
+  "Grupo Ápia",
+];
 
 export default function SocialProofBar({ dict }: { dict: Dict["proof"] }) {
   return (
-    <div className="w-full border-b border-gray-100 py-6 bg-white">
-      <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-base text-gray-500">
-        <span className="flex items-center gap-2">
-          <CheckCircle2 className="w-5 h-5 text-pastel-green shrink-0" strokeWidth={1.5} />
-          {dict.stat1}
+    <div className="w-full border-b border-gray-100 py-5 bg-white">
+      <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span className="text-xs font-medium text-gray-400 uppercase tracking-widest shrink-0 mr-2">
+          {dict.label}
         </span>
-        <span className="hidden md:inline text-gray-300">|</span>
-        <span className="flex items-center gap-2">
-          <TrendingDown className="w-5 h-5 text-pastel-blue shrink-0" strokeWidth={1.5} />
-          {dict.stat2}
-        </span>
-        <span className="hidden md:inline text-gray-300">|</span>
-        <span className="flex items-center gap-2">
-          <Zap className="w-5 h-5 text-pastel-purple shrink-0" strokeWidth={1.5} />
-          {dict.stat3}
-        </span>
+        {CLIENTS.map((name, i) => (
+          <span key={name} className="flex items-center gap-3">
+            <span className="text-sm text-gray-600 font-medium whitespace-nowrap">{name}</span>
+            {i < CLIENTS.length - 1 && (
+              <span className="text-gray-200 text-xs select-none">·</span>
+            )}
+          </span>
+        ))}
       </div>
     </div>
   );

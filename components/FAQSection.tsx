@@ -18,7 +18,7 @@ export default function FAQSection({ dict }: { dict: Dict["faq"] }) {
                 <ChevronDown className="w-5 h-5 text-gray-400" strokeWidth={1.5} />
               </span>
             </summary>
-            <p className="text-lg text-gray-600 font-normal mt-4 pr-12 leading-relaxed">{faq.a}</p>
+            <p className="text-lg text-gray-600 font-normal mt-4 pr-4 md:pr-12 leading-relaxed">{faq.a}</p>
           </details>
         ))}
       </div>

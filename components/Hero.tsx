@@ -1,95 +1,57 @@
 import Link from "next/link";
-import { Icon } from "@iconify/react";
 import type { Dict } from "@/lib/translations";
-
-const STEPS = {
-  en: [
-    { num: "01", icon: "mdi:magnify", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Process Discovery", deliverable: "Process map" },
-    { num: "02", icon: "mdi:chart-bar", color: "#D7BDE2", bg: "rgba(215,189,226,0.12)", title: "Opportunity Assessment", deliverable: "Use case matrix" },
-    { num: "03", icon: "mdi:cpu-64-bit", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Solution Design", deliverable: "Architecture plan" },
-    { num: "04", icon: "mdi:rocket-launch-outline", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Pilot Build", deliverable: "Prototype + metrics" },
-    { num: "05", icon: "mdi:trending-up", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Deploy & Optimize", deliverable: "Production system" },
-  ],
-  es: [
-    { num: "01", icon: "mdi:magnify", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Descubrimiento", deliverable: "Mapa de proceso" },
-    { num: "02", icon: "mdi:chart-bar", color: "#D7BDE2", bg: "rgba(215,189,226,0.12)", title: "Evaluación", deliverable: "Matriz de casos" },
-    { num: "03", icon: "mdi:cpu-64-bit", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Diseño de solución", deliverable: "Plan de arquitectura" },
-    { num: "04", icon: "mdi:rocket-launch-outline", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Piloto", deliverable: "Prototipo + métricas" },
-    { num: "05", icon: "mdi:trending-up", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Despliegue", deliverable: "Sistema en producción" },
-  ],
-  pt: [
-    { num: "01", icon: "mdi:magnify", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Descoberta", deliverable: "Mapa de processo" },
-    { num: "02", icon: "mdi:chart-bar", color: "#D7BDE2", bg: "rgba(215,189,226,0.12)", title: "Avaliação", deliverable: "Matriz de casos" },
-    { num: "03", icon: "mdi:cpu-64-bit", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Design da solução", deliverable: "Plano de arquitetura" },
-    { num: "04", icon: "mdi:rocket-launch-outline", color: "#A3BFFA", bg: "rgba(163,191,250,0.12)", title: "Piloto", deliverable: "Protótipo + métricas" },
-    { num: "05", icon: "mdi:trending-up", color: "#B5EAD7", bg: "rgba(181,234,215,0.12)", title: "Deploy & Otimização", deliverable: "Sistema em produção" },
-  ],
-};
 
 export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string }) {
   return (
     <section className="pt-28 pb-12 px-4 md:px-6 w-full max-w-7xl mx-auto flex flex-col items-center">
-      <div className="w-full bg-[#f6faf8] rounded-[2rem] md:rounded-[3rem] px-6 py-20 md:py-32 flex flex-col items-center text-center relative overflow-hidden border border-gray-100">
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-medium text-gray-900 tracking-tight leading-[1.1] max-w-4xl mb-6">
-          {dict.heading1} <span className="italic text-gray-600">{dict.headingItalic}</span> {dict.heading2}
-        </h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed font-normal">
-          {dict.sub}
-        </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <Link
-            href={`/${lang}/diagnostic`}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-pastel-blue text-white text-lg font-medium hover:opacity-90 transition-opacity w-full sm:w-auto"
-          >
-            {dict.cta1}
-          </Link>
-          <Link
-            href="#case-studies"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-pastel-green text-gray-700 text-lg font-medium hover:bg-pastel-green/10 transition-colors w-full sm:w-auto bg-white"
-          >
-            {dict.cta2}
-          </Link>
+      <div className="w-full bg-[#f6faf8] rounded-[2rem] md:rounded-[3rem] px-8 md:px-16 py-20 md:py-32 flex flex-col relative overflow-hidden border border-gray-100">
+
+        {/* Decorative background circles */}
+        <div className="absolute top-0 right-0 w-[480px] h-[480px] rounded-full bg-[#A3BFFA] opacity-[0.07] blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-[360px] h-[360px] rounded-full bg-[#B5EAD7] opacity-[0.09] blur-3xl translate-y-1/2 pointer-events-none" />
+
+        <div className="relative z-10 max-w-4xl">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-gray-900 tracking-tight leading-[1.08]">
+            {dict.heading1}
+            <br />
+            <span className="italic text-gray-500">{dict.headingItalic}</span>
+            <br />
+            {dict.heading2}
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-500 mt-8 mb-10 leading-relaxed font-normal max-w-2xl">
+            {dict.sub}
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-start gap-3">
+            <Link
+              href={`/${lang}/diagnostic`}
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-gray-900 text-white text-base font-medium hover:bg-gray-800 transition-colors"
+            >
+              {dict.cta1}
+            </Link>
+            <Link
+              href="#case-studies"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-gray-300 text-gray-700 text-base font-medium hover:bg-white transition-colors"
+            >
+              {dict.cta2}
+            </Link>
+          </div>
         </div>
 
-        {/* Process roadmap */}
-        <div className="mt-12 md:mt-20 w-full max-w-4xl bg-white rounded-2xl shadow-sm border border-gray-100 px-5 py-6 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
-          <div className="flex items-stretch gap-2 min-w-150">
-            {(STEPS[(lang as keyof typeof STEPS) ?? "en"] ?? STEPS.en).map((step, i, arr) => (
-              <div key={step.num} className="flex items-stretch gap-2 flex-1">
-                {/* Step card */}
-                <div
-                  className="group flex-1 rounded-xl px-4 py-4 flex flex-col gap-3 cursor-default transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.09)]"
-                  style={{ background: step.bg, border: `1px solid ${step.color}33` }}
-                >
-                  {/* Icon */}
-                  <div
-                    className="w-8 h-8 rounded-xl flex items-center justify-center transition-transform duration-200 group-hover:scale-110"
-                    style={{ background: `${step.color}28` }}
-                  >
-                    <Icon icon={step.icon} width={17} style={{ color: step.color }} />
-                  </div>
-                  {/* Number + title */}
-                  <div>
-                    <span className="font-mono text-[9px] font-bold tracking-widest uppercase" style={{ color: step.color }}>
-                      {step.num}
-                    </span>
-                    <p className="text-gray-800 text-[11px] font-bold leading-snug mt-0.5">{step.title}</p>
-                  </div>
-                  {/* Deliverable */}
-                  <div className="mt-auto pt-2.5" style={{ borderTop: `1px solid ${step.color}25` }}>
-                    <span className="text-[9px] font-semibold uppercase tracking-wide" style={{ color: step.color, opacity: 0.7 }}>
-                      {step.deliverable}
-                    </span>
-                  </div>
-                </div>
-                {/* Arrow connector */}
-                {i < arr.length - 1 && (
-                  <div className="flex items-center shrink-0 self-center">
-                    <Icon icon="mdi:chevron-right" width={14} className="text-gray-300" />
-                  </div>
-                )}
-              </div>
-            ))}
+        {/* Bottom stat strip */}
+        <div className="relative z-10 mt-16 md:mt-24 pt-8 border-t border-gray-200/80 grid grid-cols-3 gap-6 max-w-lg">
+          <div>
+            <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">90</p>
+            <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">dias ao ROI</p>
+          </div>
+          <div>
+            <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">3</p>
+            <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">semanas ao protótipo</p>
+          </div>
+          <div>
+            <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">6</p>
+            <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">clientes ativos</p>
           </div>
         </div>
       </div>
