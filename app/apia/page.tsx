@@ -6,7 +6,6 @@ import Link from "next/link";
 import MarketStudySection from "@/components/MarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
 
-const PASSWORD = process.env.NEXT_PUBLIC_APIA_PASSWORD ?? "";
 const STORAGE_KEY = "apia_unlocked";
 
 export default function ApiaPage() {
@@ -15,15 +14,23 @@ export default function ApiaPage() {
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
   const [ready, setReady] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem(STORAGE_KEY) === "1") setUnlocked(true);
     setReady(true);
   }, []);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (input === PASSWORD) {
+    setLoading(true);
+    const res = await fetch("/api/unlock", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ client: "apia", password: input }),
+    });
+    setLoading(false);
+    if (res.ok) {
       sessionStorage.setItem(STORAGE_KEY, "1");
       setUnlocked(true);
       setError(false);
@@ -81,9 +88,7 @@ export default function ApiaPage() {
               placeholder="Senha de acesso"
               autoFocus
               className="w-full bg-white/5 border rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 outline-none transition-colors pr-10"
-              style={{
-                borderColor: error ? "rgba(248,113,113,0.5)" : "rgba(255,255,255,0.1)",
-              }}
+              style={{ borderColor: error ? "rgba(248,113,113,0.5)" : "rgba(255,255,255,0.1)" }}
             />
             <button
               type="button"
@@ -93,18 +98,13 @@ export default function ApiaPage() {
               {show ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>
           </div>
-
-          {error && (
-            <p className="text-red-400/80 text-xs text-center">
-              Senha incorreta. Tente novamente.
-            </p>
-          )}
-
+          {error && <p className="text-red-400/80 text-xs text-center">Senha incorreta. Tente novamente.</p>}
           <button
             type="submit"
-            className="w-full bg-[#A3BFFA] text-gray-900 font-medium text-sm py-3 rounded-xl hover:bg-[#B5C9FF] transition-colors"
+            disabled={loading}
+            className="w-full bg-[#A3BFFA] text-gray-900 font-medium text-sm py-3 rounded-xl hover:bg-[#B5C9FF] transition-colors disabled:opacity-60"
           >
-            Acessar
+            {loading ? "Verificando..." : "Acessar"}
           </button>
         </form>
 
