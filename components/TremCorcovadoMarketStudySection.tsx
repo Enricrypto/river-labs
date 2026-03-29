@@ -96,7 +96,7 @@ function Slide01() {
         </div>
       </div>
 
-      <div className="w-full md:w-72 grid grid-cols-2 gap-3">
+      <div className="w-full md:w-80 grid grid-cols-2 gap-3">
         {[
           { value: "R$\u00a035M", label: "Receita Operacional Est.", accent: EMERALD },
           { value: "500k", label: "Passageiros/ano", accent: AMBER },
@@ -105,13 +105,13 @@ function Slide01() {
         ].map(s => (
           <div
             key={s.label}
-            className="rounded-2xl p-5 flex flex-col justify-between min-h-30"
+            className="rounded-2xl p-5 flex flex-col justify-between min-h-36"
             style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}
           >
             <span className="font-serif text-2xl md:text-3xl font-medium" style={{ color: s.accent }}>
               {s.value}
             </span>
-            <span className="text-gray-500 text-xs leading-snug mt-2 line-clamp-2">{s.label}</span>
+            <span className="text-gray-500 text-xs leading-snug mt-2">{s.label}</span>
           </div>
         ))}
       </div>
