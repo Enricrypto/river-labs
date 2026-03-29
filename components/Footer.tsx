@@ -10,10 +10,10 @@ export default function Footer({ dict, lang }: { dict: Dict["footer"]; lang: "en
         <Logo size="md" />
 
         <div className="flex flex-wrap gap-x-8 gap-y-4 text-base text-gray-600 font-medium">
-          {dict.links.map((link) => {
-            const isContact = ["Contact", "Contacto", "Contato"].includes(link);
+          {dict.links.map((link, i) => {
+            const href = i === 0 ? `/${lang}#services` : i === 1 ? `/${lang}#case-studies` : `/${lang}/contact`;
             return (
-              <Link key={link} href={isContact ? `/${lang}/contact` : "#"} className="hover:text-pastel-blue transition-colors">
+              <Link key={link} href={href} className="hover:text-pastel-blue transition-colors">
                 {link}
               </Link>
             );
