@@ -111,7 +111,7 @@ function Slide01() {
             <span className="font-serif text-2xl md:text-3xl font-medium" style={{ color: s.accent }}>
               {s.value}
             </span>
-            <span className="text-gray-500 text-xs leading-snug mt-2">{s.label}</span>
+            <span className="text-gray-500 text-xs leading-snug mt-2 line-clamp-2">{s.label}</span>
           </div>
         ))}
       </div>
