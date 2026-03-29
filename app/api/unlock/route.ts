@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
   const expected = getPassword(client);
 
-  if (!expected || password !== expected) {
+  if (!expected || password !== expected.trim()) {
     return NextResponse.json({ ok: false }, { status: 401 });
   }
 
