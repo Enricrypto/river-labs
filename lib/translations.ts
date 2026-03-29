@@ -46,6 +46,13 @@ export type Dict = {
     features: { title: string; desc: string }[];
     cta: string;
   };
+  clientCards: {
+    sectionLabel: string;
+    heading: string;
+    subtitle: string;
+    restricted: string;
+    clients: { desc: string }[];
+  };
   faq: {
     heading: string;
     items: { q: string; a: string }[];
@@ -134,8 +141,8 @@ const en: Dict = {
     ],
   },
   comparison: {
-    heading: "Not your typical consulting firm",
-    badTitle: "Typical agency",
+    heading: "We build systems. We don't write reports.",
+    badTitle: "The old approach",
     badItems: [
       "R$50k diagnostic report you'll never implement",
       "Generic best practices, no access to your data",
@@ -166,6 +173,20 @@ const en: Dict = {
       },
     ],
     cta: "Talk to us",
+  },
+  clientCards: {
+    sectionLabel: "Restricted access · Exclusive studies",
+    heading: "Systems in production",
+    subtitle: "Each study is built from public data, sector research, and financial disclosures.",
+    restricted: "Restricted access",
+    clients: [
+      { desc: "Heavy construction, public tenders, and contract management — market study and custom diagnosis." },
+      { desc: "Soy trading, crop planning, and logistics compliance — AI-powered financial impact analysis." },
+      { desc: "Cruise terminal, events, and port compliance — study based on public financial disclosures and sector research." },
+      { desc: "Ticketing, railway operations, and ICMBio compliance — revenue analysis and predictive maintenance." },
+      { desc: "Cable car, events, and gastronomy — dynamic ticketing analysis and predictive maintenance." },
+      { desc: "7 ecotourism units (AquaRio, BioParque, Cataratas, Noronha) — flow analysis and ICMBio compliance." },
+    ],
   },
   faq: {
     heading: "Common questions",
@@ -276,8 +297,8 @@ const es: Dict = {
     ],
   },
   comparison: {
-    heading: "No somos una consultora típica",
-    badTitle: "Agencia típica",
+    heading: "Construimos sistemas. No escribimos reportes.",
+    badTitle: "El enfoque antiguo",
     badItems: [
       "Reporte de diagnóstico de R$50k que nunca implementarás",
       "Mejores prácticas genéricas, sin acceso a tus datos",
@@ -308,6 +329,20 @@ const es: Dict = {
       },
     ],
     cta: "Habla con nosotros",
+  },
+  clientCards: {
+    sectionLabel: "Acceso restringido · Estudios exclusivos",
+    heading: "Sistemas en producción",
+    subtitle: "Cada estudio está construido a partir de datos públicos, investigación sectorial y divulgaciones financieras.",
+    restricted: "Acceso restringido",
+    clients: [
+      { desc: "Construcción pesada, licitaciones y gestión de contratos — estudio de mercado y diagnóstico personalizado." },
+      { desc: "Trading de soja, planificación de cosecha y compliance logístico — análisis de impacto financiero con IA." },
+      { desc: "Terminal de cruceros, eventos y compliance portuario — estudio basado en divulgaciones financieras públicas e investigación sectorial." },
+      { desc: "Boletería, operación ferroviaria y compliance ICMBio — análisis de ingresos y mantenimiento predictivo." },
+      { desc: "Teleférico, eventos y gastronomía — análisis de boletería dinámica y mantenimiento predictivo." },
+      { desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) — análisis de flujo y compliance ICMBio." },
+    ],
   },
   faq: {
     heading: "Preguntas frecuentes",
@@ -418,8 +453,8 @@ const pt: Dict = {
     ],
   },
   comparison: {
-    heading: "Não somos uma consultoria típica",
-    badTitle: "Consultoria típica",
+    heading: "Construímos sistemas. Não escrevemos relatórios.",
+    badTitle: "A abordagem antiga",
     badItems: [
       "Relatório de diagnóstico de R$50k que você nunca vai implementar",
       "Melhores práticas genéricas, sem acesso aos seus dados",
@@ -451,6 +486,20 @@ const pt: Dict = {
     ],
     cta: "Fale com a gente",
   },
+  clientCards: {
+    sectionLabel: "Acesso restrito · Estudos exclusivos",
+    heading: "Sistemas em produção",
+    subtitle: "Cada estudo é construído a partir de dados públicos, pesquisa setorial e divulgações financeiras.",
+    restricted: "Acesso restrito",
+    clients: [
+      { desc: "Construção pesada, licitações e gestão de contratos — estudo de mercado e diagnóstico personalizado." },
+      { desc: "Trading de soja, planejamento de safra e compliance logístico — análise de impacto financeiro com IA." },
+      { desc: "Terminal de cruzeiros, eventos e compliance portuário — estudo baseado em divulgações financeiras públicas e pesquisa setorial." },
+      { desc: "Bilheteria, operação ferroviária e compliance ICMBio — análise de receita e manutenção preditiva." },
+      { desc: "Teleférico, eventos e gastronomia — análise de bilheteria dinâmica e manutenção preditiva." },
+      { desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) — análise de fluxo e compliance ICMBio." },
+    ],
+  },
   faq: {
     heading: "Perguntas frequentes",
     items: [
@@ -472,7 +521,7 @@ const pt: Dict = {
       },
       {
         q: "Quais setores vocês conhecem melhor?",
-        a: "Turismo e hospitalidade, agronegócio, portos e logística, e imóveis. Esses setores compõem a maior parte do nosso trabalho porque suas operações geram dados financeiros ricos que a IA consegue agir diretamente.",
+        a: "Turismo e hospitalidade, agronegócio, portos e logística, e imóveis. Esses setores compõem a maior parte do nosso trabalho porque suas operações geram dados financieros ricos que a IA consegue agir diretamente.",
       },
     ],
   },

@@ -26,7 +26,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Hero dict={dict.hero} lang={typedLang} />
         <SocialProofBar dict={dict.proof} />
         <ProblemSection dict={dict.problems} />
-        <ClientAccessCards />
+        <ClientAccessCards dict={dict.clientCards} />
         <MethodologySection dict={dict.methodology} />
         <ComparisonSection dict={dict.comparison} />
         <WhyUsSection dict={dict.whyus} lang={typedLang} />
