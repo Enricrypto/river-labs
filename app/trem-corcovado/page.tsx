@@ -5,11 +5,12 @@ import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import TremCorcovadoMarketStudySection from "@/components/TremCorcovadoMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
+import { STEPS_TREM_CORCOVADO } from "@/lib/diagnosticSteps";
 
 const STORAGE_KEY = "trem_corcovado_unlocked";
 
 export default function TremCorcovadoPage() {
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "1");
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
@@ -17,7 +18,6 @@ export default function TremCorcovadoPage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") setUnlocked(true);
     setReady(true);
   }, []);
 
@@ -57,7 +57,7 @@ export default function TremCorcovadoPage() {
           <span className="text-gray-600 text-xs">Trem do Corcovado × River Labs — Acesso restrito</span>
         </div>
         <TremCorcovadoMarketStudySection />
-        <DiagnosticSection />
+        <DiagnosticSection steps={STEPS_TREM_CORCOVADO} />
       </main>
     );
   }

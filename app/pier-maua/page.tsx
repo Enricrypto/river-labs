@@ -5,11 +5,12 @@ import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import PierMauaMarketStudySection from "@/components/PierMauaMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
+import { STEPS_PIER_MAUA } from "@/lib/diagnosticSteps";
 
 const STORAGE_KEY = "pier_maua_unlocked";
 
 export default function PierMauaPage() {
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "1");
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
@@ -17,7 +18,6 @@ export default function PierMauaPage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") setUnlocked(true);
     setReady(true);
   }, []);
 
@@ -57,7 +57,7 @@ export default function PierMauaPage() {
           <span className="text-gray-600 text-xs">Píer Mauá × River Labs — Acesso restrito</span>
         </div>
         <PierMauaMarketStudySection />
-        <DiagnosticSection />
+        <DiagnosticSection steps={STEPS_PIER_MAUA} />
       </main>
     );
   }

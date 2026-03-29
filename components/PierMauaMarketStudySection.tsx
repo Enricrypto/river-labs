@@ -18,9 +18,7 @@ const SKY = "#F472B6";
 const SKY_DIM = "rgba(244,114,182,0.1)";
 const SKY_BORDER = "rgba(244,114,182,0.2)";
 const CORAL = "#FB923C";
-const CORAL_DIM = "rgba(251,146,60,0.1)";
 const VIOLET = "#C084FC";
-const VIOLET_DIM = "rgba(192,132,252,0.1)";
 
 const TOTAL = 6;
 
@@ -407,7 +405,7 @@ function Slide05() {
 
   return (
     <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         <div
           className="rounded-xl p-4 mb-4"
           style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
@@ -432,9 +430,9 @@ function Slide05() {
               className="rounded-xl p-4 flex items-start justify-between gap-4"
               style={{ border: "1px solid rgba(255,255,255,0.06)", background: "rgba(255,255,255,0.015)" }}
             >
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-gray-300 text-xs font-medium mb-0.5">{l.label}</p>
-                <p className="text-gray-600 text-xs font-mono leading-relaxed">{l.math}</p>
+                <p className="text-gray-600 text-xs font-mono leading-relaxed break-all">{l.math}</p>
               </div>
               <span className="font-serif text-lg font-medium shrink-0" style={{ color: l.color }}>
                 {l.result}

@@ -5,11 +5,12 @@ import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import MatrisojaMarketStudySection from "@/components/MatrisojaMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
+import { STEPS_MATRISOJA } from "@/lib/diagnosticSteps";
 
 const STORAGE_KEY = "matrisoja_unlocked";
 
 export default function MatrisojaPage() {
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "1");
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
@@ -17,7 +18,6 @@ export default function MatrisojaPage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") setUnlocked(true);
     setReady(true);
   }, []);
 
@@ -57,7 +57,7 @@ export default function MatrisojaPage() {
           <span className="text-gray-600 text-xs">Matrisoja × River Labs — Acesso restrito</span>
         </div>
         <MatrisojaMarketStudySection />
-        <DiagnosticSection />
+        <DiagnosticSection steps={STEPS_MATRISOJA} />
       </main>
     );
   }

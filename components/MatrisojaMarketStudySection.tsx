@@ -8,8 +8,6 @@ import {
   AlertTriangle,
   FileText,
   Truck,
-  ClipboardList,
-  CheckCircle2,
   ArrowUpRight,
   TrendingUp,
 } from "lucide-react";
@@ -19,9 +17,7 @@ const TEAL = "#2DD4BF";
 const TEAL_DIM = "rgba(45,212,191,0.12)";
 const TEAL_BORDER = "rgba(45,212,191,0.2)";
 const GREEN = "#86EFAC";
-const GREEN_DIM = "rgba(134,239,172,0.1)";
 const AMBER = "#FCD34D";
-const AMBER_DIM = "rgba(252,211,77,0.1)";
 
 const TOTAL = 6;
 
@@ -464,7 +460,7 @@ function Slide05() {
 
   return (
     <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         <div
           className="rounded-xl p-4 mb-4"
           style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
@@ -489,9 +485,9 @@ function Slide05() {
               className="rounded-xl p-4 flex items-start justify-between gap-4"
               style={{ border: "1px solid rgba(255,255,255,0.06)", background: "rgba(255,255,255,0.015)" }}
             >
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-gray-300 text-xs font-medium mb-0.5">{l.label}</p>
-                <p className="text-gray-600 text-xs font-mono">{l.math}</p>
+                <p className="text-gray-600 text-xs font-mono break-all">{l.math}</p>
               </div>
               <span className="font-serif text-lg font-medium shrink-0" style={{ color: l.color }}>
                 {l.result}
@@ -627,14 +623,12 @@ function Slide06() {
 /* ── Shell ────────────────────────────────────────────── */
 export default function MatrisojaMarketStudySection() {
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState<1 | -1>(1);
-  const [animating, setAnimating] = useState(false);
+const [animating, setAnimating] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const go = useCallback(
     (next: number) => {
       if (animating || next === current) return;
-      setDirection(next > current ? 1 : -1);
       setAnimating(true);
       if (timerRef.current) clearTimeout(timerRef.current);
       timerRef.current = setTimeout(() => {

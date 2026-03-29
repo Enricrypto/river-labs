@@ -437,7 +437,7 @@ function Slide05() {
 
   return (
     <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         {/* Base */}
         <div
           className="rounded-xl p-4 mb-4"
@@ -464,7 +464,7 @@ function Slide05() {
               className="rounded-xl p-4 flex items-start justify-between gap-4"
               style={{ border: "1px solid rgba(255,255,255,0.06)", background: "rgba(255,255,255,0.015)" }}
             >
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="text-gray-300 text-xs font-medium mb-0.5">{l.label}</p>
                 <p className="text-gray-600 text-xs font-mono wrap-break-word">{l.math}</p>
               </div>

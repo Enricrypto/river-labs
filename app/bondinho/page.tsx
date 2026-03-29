@@ -5,11 +5,12 @@ import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import BondinhoMarketStudySection from "@/components/BondinhoMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
+import { STEPS_BONDINHO } from "@/lib/diagnosticSteps";
 
 const STORAGE_KEY = "bondinho_unlocked";
 
 export default function BondinhoPage() {
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "1");
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
@@ -17,7 +18,6 @@ export default function BondinhoPage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY) === "1") setUnlocked(true);
     setReady(true);
   }, []);
 
@@ -57,7 +57,7 @@ export default function BondinhoPage() {
           <span className="text-gray-600 text-xs">Bondinho Pão de Açúcar × River Labs — Acesso restrito</span>
         </div>
         <BondinhoMarketStudySection />
-        <DiagnosticSection />
+        <DiagnosticSection steps={STEPS_BONDINHO} />
       </main>
     );
   }

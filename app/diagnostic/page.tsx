@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, CheckCircle2, Check, ArrowUpRight, ArrowLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight, CheckCircle2, Check, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 /* ─── Types ────────────────────────────────────────────── */
