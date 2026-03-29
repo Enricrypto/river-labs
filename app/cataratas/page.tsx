@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
-import CataratosMarketStudySection from "@/components/CataratosMarketStudySection";
+import CataratAsMarketStudySection from "@/components/CataratAsMarketStudySection";
 import DiagnosticSection from "@/components/DiagnosticSection";
 import { STEPS_CATARATAS } from "@/lib/diagnosticSteps";
 
@@ -56,7 +56,7 @@ export default function CataratosPage() {
           <span className="text-white/10">·</span>
           <span className="text-gray-600 text-xs">Grupo Cataratas × River Labs — Acesso restrito</span>
         </div>
-        <CataratosMarketStudySection />
+        <CataratAsMarketStudySection />
         <DiagnosticSection steps={STEPS_CATARATAS} accentColor="#C084FC" />
       </main>
     );

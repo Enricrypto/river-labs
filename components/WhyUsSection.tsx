@@ -4,7 +4,7 @@ import type { Dict } from "@/lib/translations";
 export default function WhyUsSection({ dict, lang }: { dict: Dict["whyus"]; lang: string }) {
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto w-full border-t border-gray-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
 
         {/* Left: heading + CTA */}
         <div>

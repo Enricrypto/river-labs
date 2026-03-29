@@ -52,7 +52,7 @@ function Tool({ name }: { name: string }) {
 /* ── Slide 01 ─────────────────────────────────────────── */
 function Slide01() {
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-start min-h-100">
+    <div className="flex flex-col md:flex-row gap-8 items-start md:min-h-100">
       <div className="flex-1 flex flex-col gap-6 justify-between">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pastel-blue/10 border border-pastel-blue/20 mb-5 w-fit">
@@ -108,7 +108,7 @@ function Slide01() {
 /* ── Slide 02 ─────────────────────────────────────────── */
 function Slide02() {
   return (
-    <div className="flex flex-col gap-7 min-h-100">
+    <div className="flex flex-col gap-7 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         A construção pesada opera com margens finas e alta exposição a risco. O jogo se ganha ou se
         perde nos <span className="text-white">processos internos</span>.
@@ -230,7 +230,7 @@ function Slide03() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-100">
+    <div className="flex flex-col gap-5 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Engenheiros sêniores custam{" "}
         <span className="text-white font-medium">R$120/h (IBGE 2024)</span>. Cada hora em trabalho não
@@ -361,7 +361,7 @@ function Slide04() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-100">
+    <div className="flex flex-col gap-5 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Ferramentas reais, sem promessas vazias. Cada linha abaixo pode ser testada{" "}
         <span className="text-white font-medium">ainda esta semana</span>.
@@ -436,7 +436,7 @@ function Slide05() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 min-h-100 items-start">
+    <div className="flex flex-col md:flex-row gap-6 md:min-h-100 items-start">
       <div className="flex-1 min-w-0">
         {/* Base */}
         <div
@@ -552,7 +552,7 @@ function Slide06() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 min-h-100 items-start">
+    <div className="flex flex-col md:flex-row gap-8 md:min-h-100 items-start">
       <div className="flex-1 flex flex-col gap-5">
         <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
           Não pedimos que você acredite no potencial da IA.{" "}

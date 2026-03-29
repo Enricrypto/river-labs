@@ -174,7 +174,7 @@ export default function ContactPage({ params }: { params: Promise<{ lang: string
           {t.successBack}
         </Link>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
           <div>
             <span className="text-pastel-blue text-xs font-medium tracking-widest uppercase">{t.badge}</span>
             <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight text-gray-900 mt-3 mb-6 leading-tight">{t.heading}</h1>
