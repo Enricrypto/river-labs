@@ -7,8 +7,8 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
       <div className="w-full bg-[#f6faf8] rounded-[2rem] md:rounded-[3rem] px-8 md:px-16 py-20 md:py-32 flex flex-col relative overflow-hidden border border-gray-100">
 
         {/* Decorative background circles */}
-        <div className="absolute top-0 right-0 w-[480px] h-[480px] rounded-full bg-[#A3BFFA] opacity-[0.07] blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-[360px] h-[360px] rounded-full bg-[#B5EAD7] opacity-[0.09] blur-3xl translate-y-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-120 h-120 rounded-full bg-pastel-blue opacity-[0.07] blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+        <div className="absolute bottom-0 left-1/4 w-90 h-90 rounded-full bg-pastel-green opacity-[0.09] blur-3xl translate-y-1/2 pointer-events-none" />
 
         <div className="relative z-10 max-w-4xl">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-gray-900 tracking-tight leading-[1.08]">

@@ -57,7 +57,7 @@ function Tool({ name }: { name: string }) {
 /* ── Slide 01 ─────────────────────────────────────────── */
 function Slide01() {
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-start min-h-[400px]">
+    <div className="flex flex-col md:flex-row gap-8 items-start min-h-100">
       <div className="flex-1 flex flex-col gap-6 justify-between">
         <div>
           <div
@@ -105,7 +105,7 @@ function Slide01() {
         ].map(s => (
           <div
             key={s.label}
-            className="rounded-2xl p-5 flex flex-col justify-between min-h-[120px]"
+            className="rounded-2xl p-5 flex flex-col justify-between min-h-30"
             style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}
           >
             <span className="font-serif text-2xl md:text-3xl font-medium" style={{ color: s.accent }}>
@@ -122,7 +122,7 @@ function Slide01() {
 /* ── Slide 02 ─────────────────────────────────────────── */
 function Slide02() {
   return (
-    <div className="flex flex-col gap-7 min-h-[400px]">
+    <div className="flex flex-col gap-7 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Atrações turísticas premium têm custos operacionais altos e receita concentrada em temporada e fins de semana. A vantagem competitiva vem da{" "}
         <span className="text-white">ocupação máxima das cabines, digitalização da bilheteria e rentabilidade dos eventos</span>.
@@ -225,7 +225,7 @@ function Slide03() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Atendentes de turismo no Rio custam{" "}
         <span className="text-white font-medium">R$28/h (Catho 2026)</span>. Em uma atração com 1 milhão de visitantes/ano,
@@ -334,7 +334,7 @@ function Slide04() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Ferramentas reais, aplicadas à operação do Bondinho. Cada solução pode ser testada{" "}
         <span className="text-white font-medium">ainda esta semana</span> com dados reais de bilheteria, eventos e manutenção.
@@ -398,7 +398,7 @@ function Slide05() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
+    <div className="flex flex-col md:flex-row gap-6 min-h-100 items-start">
       <div className="flex-1 min-w-0">
         <div
           className="rounded-xl p-4 mb-4"
@@ -511,7 +511,7 @@ function Slide06() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 min-h-[400px]">
+    <div className="flex flex-col gap-6 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Copa 2026 e o legado olímpico trazem um fluxo histórico de turistas ao Rio. Concorrentes como o Cristo Redentor
         já avançam em digitalização, e apps como GetYourGuide capturam vendas antes mesmo do visitante chegar.{" "}

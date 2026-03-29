@@ -57,7 +57,7 @@ function Tool({ name }: { name: string }) {
 /* ── Slide 01 ─────────────────────────────────────────── */
 function Slide01() {
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-start min-h-[400px]">
+    <div className="flex flex-col md:flex-row gap-8 items-start min-h-100">
       <div className="flex-1 flex flex-col gap-6 justify-between">
         <div>
           <div
@@ -105,7 +105,7 @@ function Slide01() {
         ].map(s => (
           <div
             key={s.label}
-            className="rounded-2xl p-5 flex flex-col justify-between min-h-[120px]"
+            className="rounded-2xl p-5 flex flex-col justify-between min-h-30"
             style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}
           >
             <span className="font-serif text-2xl md:text-3xl font-medium" style={{ color: s.accent }}>
@@ -122,7 +122,7 @@ function Slide01() {
 /* ── Slide 02 ─────────────────────────────────────────── */
 function Slide02() {
   return (
-    <div className="flex flex-col gap-7 min-h-[400px]">
+    <div className="flex flex-col gap-7 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Atrações turísticas icônicas têm margens estruturalmente altas — mas concentradas em temporada e dependentes de
         fluxo externo. O jogo se vence na{" "}
@@ -226,7 +226,7 @@ function Slide03() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Bilheteiros no Rio de Janeiro custam{" "}
         <span className="text-white font-medium">R$25/h (Catho 2026)</span>. Em uma operação de alta frequência como
@@ -335,7 +335,7 @@ function Slide04() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Ferramentas reais, aplicadas à operação do Trem do Corcovado. Cada solução pode ser testada{" "}
         <span className="text-white font-medium">ainda esta semana</span> com dados reais de bilheteria, lotação e manutenção.
@@ -405,7 +405,7 @@ function Slide05() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
+    <div className="flex flex-col md:flex-row gap-6 min-h-100 items-start">
       <div className="flex-1 min-w-0">
         <div
           className="rounded-xl p-4 mb-4"
@@ -515,7 +515,7 @@ function Slide06() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 min-h-[400px]">
+    <div className="flex flex-col gap-6 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         A alta temporada verão 2026/27 começa em dezembro. Apps agregadores de turismo (GetYourGuide, Viator) já
         oferecem reserva digital para concorrentes do Cristo Redentor, e o ICMBio exige eficiência crescente

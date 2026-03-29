@@ -52,12 +52,12 @@ function Tool({ name }: { name: string }) {
 /* ── Slide 01 ─────────────────────────────────────────── */
 function Slide01() {
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-start min-h-[400px]">
+    <div className="flex flex-col md:flex-row gap-8 items-start min-h-100">
       <div className="flex-1 flex flex-col gap-6 justify-between">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#A3BFFA]/10 border border-[#A3BFFA]/20 mb-5 w-fit">
-            <Building2 className="w-3 h-3 text-[#A3BFFA]" strokeWidth={1.5} />
-            <span className="text-[#A3BFFA] text-xs font-medium tracking-wide">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-pastel-blue/10 border border-pastel-blue/20 mb-5 w-fit">
+            <Building2 className="w-3 h-3 text-pastel-blue" strokeWidth={1.5} />
+            <span className="text-pastel-blue text-xs font-medium tracking-wide">
               Fundada em 1960 · Belo Horizonte, MG
             </span>
           </div>
@@ -74,7 +74,7 @@ function Slide01() {
           <div className="grid grid-cols-2 gap-y-2 gap-x-6">
             {["Rodovias & Ferrovias", "Barragens", "Saneamento", "Projetos Industriais", "Concessões", "Engenharia Civil"].map(seg => (
               <div key={seg} className="flex items-center gap-2">
-                <div className="w-1 h-1 rounded-full bg-[#A3BFFA] shrink-0" />
+                <div className="w-1 h-1 rounded-full bg-pastel-blue shrink-0" />
                 <span className="text-gray-400 text-xs">{seg}</span>
               </div>
             ))}
@@ -91,7 +91,7 @@ function Slide01() {
         ].map(s => (
           <div
             key={s.label}
-            className="rounded-2xl p-5 flex flex-col justify-between min-h-[120px]"
+            className="rounded-2xl p-5 flex flex-col justify-between min-h-30"
             style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}
           >
             <span className="font-serif text-2xl md:text-3xl font-medium" style={{ color: s.accent }}>
@@ -108,7 +108,7 @@ function Slide01() {
 /* ── Slide 02 ─────────────────────────────────────────── */
 function Slide02() {
   return (
-    <div className="flex flex-col gap-7 min-h-[400px]">
+    <div className="flex flex-col gap-7 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         A construção pesada opera com margens finas e alta exposição a risco. O jogo se ganha ou se
         perde nos <span className="text-white">processos internos</span>.
@@ -230,7 +230,7 @@ function Slide03() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Engenheiros sêniores custam{" "}
         <span className="text-white font-medium">R$120/h (IBGE 2024)</span>. Cada hora em trabalho não
@@ -278,10 +278,10 @@ function Slide03() {
         className="rounded-xl p-4 flex items-start gap-3"
         style={{ border: "1px solid rgba(215,189,226,0.2)", background: "rgba(215,189,226,0.04)" }}
       >
-        <AlertTriangle className="w-4 h-4 text-[#D7BDE2] mt-0.5 shrink-0" strokeWidth={1.5} />
+        <AlertTriangle className="w-4 h-4 text-pastel-purple mt-0.5 shrink-0" strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
           <strong className="text-white">30 licitações/ano × R$30k × 70–80% perdidas</strong> ={" "}
-          <strong className="text-[#D7BDE2]">R$630k–720k/ano</strong> em horas de engenharia que não
+          <strong className="text-pastel-purple">R$630k–720k/ano</strong> em horas de engenharia que não
           geram nenhum contrato. Esse número é recuperável.
         </p>
       </div>
@@ -361,7 +361,7 @@ function Slide04() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Ferramentas reais, sem promessas vazias. Cada linha abaixo pode ser testada{" "}
         <span className="text-white font-medium">ainda esta semana</span>.
@@ -436,7 +436,7 @@ function Slide05() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
+    <div className="flex flex-col md:flex-row gap-6 min-h-100 items-start">
       <div className="flex-1 min-w-0">
         {/* Base */}
         <div
@@ -481,7 +481,7 @@ function Slide05() {
           style={{ border: "1px solid rgba(181,234,215,0.2)", background: "rgba(181,234,215,0.04)" }}
         >
           <p className="text-gray-300 text-sm font-medium">Impacto anual total mensurável</p>
-          <p className="font-serif text-2xl font-medium text-[#B5EAD7]">R$210M</p>
+          <p className="font-serif text-2xl font-medium text-pastel-green">R$210M</p>
         </div>
       </div>
 
@@ -492,13 +492,13 @@ function Slide05() {
           style={{ border: "1px solid rgba(163,191,250,0.2)", background: "rgba(163,191,250,0.06)" }}
         >
           <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">Ponto de retorno</p>
-          <p className="font-serif text-4xl font-medium text-[#A3BFFA] mb-0.5">~3 sem.</p>
+          <p className="font-serif text-4xl font-medium text-pastel-blue mb-0.5">~3 sem.</p>
           <p className="text-gray-500 text-xs">só com economia de custos diretos</p>
           <div className="mt-5 pt-5 space-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
             {[
               { label: "Investimento River Labs", value: "R$3,2M", accent: "text-white" },
-              { label: "Economia direta/ano", value: "~R$50M", accent: "text-[#B5EAD7]" },
-              { label: "Potencial total (4 frentes)", value: "R$210M", accent: "text-[#B5EAD7]" },
+              { label: "Economia direta/ano", value: "~R$50M", accent: "text-pastel-green" },
+              { label: "Potencial total (4 frentes)", value: "R$210M", accent: "text-pastel-green" },
             ].map(r => (
               <div key={r.label} className="flex flex-col text-left gap-0.5">
                 <span className="text-gray-600 text-[10px]">{r.label}</span>
@@ -552,7 +552,7 @@ function Slide06() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 min-h-[400px] items-start">
+    <div className="flex flex-col md:flex-row gap-8 min-h-100 items-start">
       <div className="flex-1 flex flex-col gap-5">
         <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
           Não pedimos que você acredite no potencial da IA.{" "}
@@ -588,7 +588,7 @@ function Slide06() {
               "Pagamento parcial após 1 contrato ganho",
             ].map(item => (
               <div key={item} className="flex items-start gap-2">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#B5EAD7] shrink-0 mt-0.5" strokeWidth={1.5} />
+                <CheckCircle2 className="w-3.5 h-3.5 text-pastel-green shrink-0 mt-0.5" strokeWidth={1.5} />
                 <span className="text-gray-500 text-xs leading-relaxed">{item}</span>
               </div>
             ))}
@@ -609,7 +609,7 @@ function Slide06() {
         </div>
         <Link
           href="/pt/contact"
-          className="w-full flex items-center justify-center gap-2 bg-[#A3BFFA] text-gray-900 text-sm font-medium py-2.5 px-4 rounded-xl hover:bg-[#B5C9FF] transition-colors"
+          className="w-full flex items-center justify-center gap-2 bg-pastel-blue text-gray-900 text-sm font-medium py-2.5 px-4 rounded-xl hover:bg-[#B5C9FF] transition-colors"
         >
           Falar com a River Labs
           <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
@@ -626,8 +626,8 @@ function Slide06() {
           style={{ background: "rgba(181,234,215,0.06)", border: "1px solid rgba(181,234,215,0.15)" }}
         >
           <div className="flex items-start gap-2">
-            <TrendingUp className="w-3.5 h-3.5 text-[#B5EAD7] shrink-0 mt-0.5" strokeWidth={1.5} />
-            <p className="text-[#B5EAD7] text-[10px] leading-relaxed">
+            <TrendingUp className="w-3.5 h-3.5 text-pastel-green shrink-0 mt-0.5" strokeWidth={1.5} />
+            <p className="text-pastel-green text-[10px] leading-relaxed">
               Primeiro teste gratuito. Pagamento de sucesso só após 1 contrato ganho.
             </p>
           </div>
@@ -659,7 +659,7 @@ export default function MarketStudySection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
-            <span className="text-[#A3BFFA] text-xs font-medium tracking-widest uppercase">
+            <span className="text-pastel-blue text-xs font-medium tracking-widest uppercase">
               Estudo de Mercado
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-white mt-2">
@@ -697,7 +697,7 @@ export default function MarketStudySection() {
               key={label}
               onClick={() => setCurrent(i)}
               className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 whitespace-nowrap ${
-                i === current ? "bg-[#A3BFFA]/15 text-[#A3BFFA]" : "text-gray-600 hover:text-gray-400"
+                i === current ? "bg-pastel-blue/15 text-pastel-blue" : "text-gray-600 hover:text-gray-400"
               }`}
               style={
                 i === current

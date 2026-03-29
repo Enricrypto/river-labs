@@ -99,7 +99,7 @@ function ChoiceCard({ label, selected, onClick }: { label: string; selected: boo
     >
       <span className="flex items-center justify-between gap-3">
         {label}
-        {selected && <Check className="w-3.5 h-3.5 shrink-0 text-[#A3BFFA]" strokeWidth={2.5} />}
+        {selected && <Check className="w-3.5 h-3.5 shrink-0 text-pastel-blue" strokeWidth={2.5} />}
       </span>
     </button>
   );
@@ -209,7 +209,7 @@ export default function DiagnosticPage({ params }: { params: Promise<{ lang: str
       <div className="min-h-screen bg-gray-950 flex items-center justify-center px-6">
         <div className="w-full max-w-md text-center">
           <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: "rgba(181,234,215,0.15)" }}>
-            <CheckCircle2 className="w-7 h-7 text-[#B5EAD7]" strokeWidth={1.5} />
+            <CheckCircle2 className="w-7 h-7 text-pastel-green" strokeWidth={1.5} />
           </div>
           <h2 className="font-serif text-3xl text-white font-medium mb-3">{t.successTitle}</h2>
           <p className="text-gray-400 text-base leading-relaxed mb-8">
@@ -239,13 +239,13 @@ export default function DiagnosticPage({ params }: { params: Promise<{ lang: str
 
       <div className="max-w-2xl mx-auto px-6 py-16">
         <div className="mb-12 text-center">
-          <span className="text-[#B5EAD7] text-xs font-medium tracking-widest uppercase">{t.badge}</span>
+          <span className="text-pastel-green text-xs font-medium tracking-widest uppercase">{t.badge}</span>
           <h1 className="font-serif text-3xl md:text-4xl font-medium tracking-tight text-white mt-2">{t.heading}</h1>
           <p className="text-gray-500 text-sm mt-3 max-w-sm mx-auto leading-relaxed">{t.sub}</p>
           <div className="flex flex-wrap justify-center gap-2 mt-5">
             {t.pills.map(pill => (
               <span key={pill} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs text-gray-500" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
-                <span className="w-1 h-1 rounded-full bg-[#B5EAD7] inline-block" />
+                <span className="w-1 h-1 rounded-full bg-pastel-green inline-block" />
                 {pill}
               </span>
             ))}
@@ -260,7 +260,7 @@ export default function DiagnosticPage({ params }: { params: Promise<{ lang: str
           <div className="p-6 md:p-10">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="text-[#B5EAD7] text-xs font-medium">{t.stepOf(step + 1, TOTAL)}</span>
+                <span className="text-pastel-green text-xs font-medium">{t.stepOf(step + 1, TOTAL)}</span>
                 <div className="flex gap-1">
                   {Array.from({ length: TOTAL }).map((_, i) => (
                     <button key={i} type="button" onClick={() => i < step && setStep(i)} className="py-2 flex items-center" style={{ cursor: i < step ? "pointer" : "default" }}>
@@ -297,7 +297,7 @@ export default function DiagnosticPage({ params }: { params: Promise<{ lang: str
                     <>
                       <div className="flex items-center gap-2 mb-3">
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium" style={{ background: "rgba(181,234,215,0.08)", color: "#B5EAD7", border: "1px solid rgba(181,234,215,0.2)" }}>
-                          <span className="w-1 h-1 rounded-full bg-[#B5EAD7] inline-block" />
+                          <span className="w-1 h-1 rounded-full bg-pastel-green inline-block" />
                           {q.maxSelect ? t.multiMax(q.maxSelect) : t.multiAll}
                         </span>
                         {q.maxSelect && (
@@ -323,7 +323,7 @@ export default function DiagnosticPage({ params }: { params: Promise<{ lang: str
                             >
                               <span className="flex items-center justify-between gap-3">
                                 {opt}
-                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-[#B5EAD7]" strokeWidth={2.5} />}
+                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-pastel-green" strokeWidth={2.5} />}
                               </span>
                             </button>
                           );

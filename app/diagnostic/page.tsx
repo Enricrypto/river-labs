@@ -273,7 +273,7 @@ function ChoiceCard({ label, selected, onClick }: { label: string; selected: boo
     >
       <span className="flex items-center justify-between gap-3">
         {label}
-        {selected && <Check className="w-3.5 h-3.5 shrink-0 text-[#A3BFFA]" strokeWidth={2.5} />}
+        {selected && <Check className="w-3.5 h-3.5 shrink-0 text-pastel-blue" strokeWidth={2.5} />}
       </span>
     </button>
   );
@@ -328,7 +328,7 @@ function SuccessScreen() {
     <div className="min-h-screen bg-gray-950 flex items-center justify-center px-6">
       <div className="w-full max-w-md text-center">
         <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: "rgba(181,234,215,0.15)" }}>
-          <CheckCircle2 className="w-7 h-7 text-[#B5EAD7]" strokeWidth={1.5} />
+          <CheckCircle2 className="w-7 h-7 text-pastel-green" strokeWidth={1.5} />
         </div>
         <h2 className="font-serif text-3xl text-white font-medium mb-3">Diagnóstico enviado.</h2>
         <p className="text-gray-400 text-base leading-relaxed mb-8">
@@ -429,7 +429,7 @@ export default function DiagnosticPage() {
       <div className="max-w-2xl mx-auto px-6 py-16">
         {/* Header */}
         <div className="mb-12 text-center">
-          <span className="text-[#B5EAD7] text-xs font-medium tracking-widest uppercase">
+          <span className="text-pastel-green text-xs font-medium tracking-widest uppercase">
             Diagnóstico Gratuito
           </span>
           <h1 className="font-serif text-3xl md:text-4xl font-medium tracking-tight text-white mt-2">
@@ -442,7 +442,7 @@ export default function DiagnosticPage() {
           <div className="flex flex-wrap justify-center gap-2 mt-5">
             {["Grátis & sem compromisso", "Resposta em 48h", "Diagnóstico personalizado"].map(pill => (
               <span key={pill} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs text-gray-500" style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
-                <span className="w-1 h-1 rounded-full bg-[#B5EAD7] inline-block" />
+                <span className="w-1 h-1 rounded-full bg-pastel-green inline-block" />
                 {pill}
               </span>
             ))}
@@ -460,7 +460,7 @@ export default function DiagnosticPage() {
             {/* Step meta */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="text-[#B5EAD7] text-xs font-medium">Etapa {step + 1} de {TOTAL}</span>
+                <span className="text-pastel-green text-xs font-medium">Etapa {step + 1} de {TOTAL}</span>
                 <div className="flex gap-1">
                   {Array.from({ length: TOTAL }).map((_, i) => (
                     <button
@@ -512,7 +512,7 @@ export default function DiagnosticPage() {
                     <>
                       <div className="flex items-center gap-2 mb-3">
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium" style={{ background: "rgba(181,234,215,0.08)", color: "#B5EAD7", border: "1px solid rgba(181,234,215,0.2)" }}>
-                          <span className="w-1 h-1 rounded-full bg-[#B5EAD7] inline-block" />
+                          <span className="w-1 h-1 rounded-full bg-pastel-green inline-block" />
                           {q.maxSelect ? `Escolha até ${q.maxSelect}` : "Pode selecionar mais de uma"}
                         </span>
                         {q.maxSelect && (
@@ -541,7 +541,7 @@ export default function DiagnosticPage() {
                             >
                               <span className="flex items-center justify-between gap-3">
                                 {opt}
-                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-[#B5EAD7]" strokeWidth={2.5} />}
+                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-pastel-green" strokeWidth={2.5} />}
                               </span>
                             </button>
                           );

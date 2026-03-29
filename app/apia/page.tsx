@@ -84,7 +84,7 @@ export default function ApiaPage() {
               border: "1px solid rgba(163,191,250,0.2)"
             }}
           >
-            <Lock className='w-5 h-5 text-[#A3BFFA]' strokeWidth={1.5} />
+            <Lock className='w-5 h-5 text-pastel-blue' strokeWidth={1.5} />
           </div>
           <h1 className='font-serif text-2xl text-white font-medium mb-2'>
             Acesso restrito
@@ -134,7 +134,7 @@ export default function ApiaPage() {
           <button
             type='submit'
             disabled={loading}
-            className='w-full bg-[#A3BFFA] text-gray-900 font-medium text-sm py-3 rounded-xl hover:bg-[#B5C9FF] transition-colors disabled:opacity-60'
+            className='w-full bg-pastel-blue text-gray-900 font-medium text-sm py-3 rounded-xl hover:bg-[#B5C9FF] transition-colors disabled:opacity-60'
           >
             {loading ? "Verificando..." : "Acessar"}
           </button>

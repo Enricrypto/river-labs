@@ -57,7 +57,7 @@ export default function MatrisojaPage() {
           <span className="text-gray-600 text-xs">Matrisoja × River Labs — Acesso restrito</span>
         </div>
         <MatrisojaMarketStudySection />
-        <DiagnosticSection steps={STEPS_MATRISOJA} />
+        <DiagnosticSection steps={STEPS_MATRISOJA} accentColor="#2DD4BF" />
       </main>
     );
   }

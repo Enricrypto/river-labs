@@ -7,8 +7,8 @@ export default function CTASection({ dict, lang }: { dict: Dict["cta"]; lang: st
       <div className="max-w-5xl mx-auto bg-gray-950 rounded-[2rem] px-10 md:px-16 py-16 md:py-20 relative overflow-hidden">
 
         {/* Background accents */}
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-[#A3BFFA] opacity-[0.06] blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-[#B5EAD7] opacity-[0.05] blur-3xl -translate-x-1/4 translate-y-1/3 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-100 h-100 rounded-full bg-pastel-blue opacity-[0.06] blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-75 h-75 rounded-full bg-pastel-green opacity-[0.05] blur-3xl -translate-x-1/4 translate-y-1/3 pointer-events-none" />
 
         <div className="relative z-10 max-w-2xl">
           <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-white mb-5 leading-[1.1]">

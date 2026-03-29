@@ -57,7 +57,7 @@ function Tool({ name }: { name: string }) {
 /* ── Slide 01 ─────────────────────────────────────────── */
 function Slide01() {
   return (
-    <div className="flex flex-col md:flex-row gap-8 items-start min-h-[400px]">
+    <div className="flex flex-col md:flex-row gap-8 items-start min-h-100">
       <div className="flex-1 flex flex-col gap-6 justify-between">
         <div>
           <div
@@ -105,7 +105,7 @@ function Slide01() {
         ].map(s => (
           <div
             key={s.label}
-            className="rounded-2xl p-5 flex flex-col justify-between min-h-[120px]"
+            className="rounded-2xl p-5 flex flex-col justify-between min-h-30"
             style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.03)" }}
           >
             <span className="font-serif text-2xl md:text-3xl font-medium" style={{ color: s.accent }}>
@@ -122,7 +122,7 @@ function Slide01() {
 /* ── Slide 02 ─────────────────────────────────────────── */
 function Slide02() {
   return (
-    <div className="flex flex-col gap-7 min-h-[400px]">
+    <div className="flex flex-col gap-7 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Terminais de cruzeiros têm margens altas — mas concentradas na temporada. O jogo se ganha ou se perde na{" "}
         <span className="text-white">eficiência operacional fora do pico</span> e na velocidade de captação de eventos.
@@ -225,7 +225,7 @@ function Slide03() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Gerentes de operações portuárias custam{" "}
         <span className="text-white font-medium">R$65/h no Rio de Janeiro (Glassdoor)</span>. Cada hora em
@@ -334,7 +334,7 @@ function Slide04() {
   ];
 
   return (
-    <div className="flex flex-col gap-5 min-h-[400px]">
+    <div className="flex flex-col gap-5 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Ferramentas reais, aplicadas à operação do Píer Mauá. Cada linha pode ser testada{" "}
         <span className="text-white font-medium">ainda esta semana</span> com dados reais de atracações e eventos.
@@ -404,7 +404,7 @@ function Slide05() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 min-h-[400px] items-start">
+    <div className="flex flex-col md:flex-row gap-6 min-h-100 items-start">
       <div className="flex-1 min-w-0">
         <div
           className="rounded-xl p-4 mb-4"
@@ -514,7 +514,7 @@ function Slide06() {
   ];
 
   return (
-    <div className="flex flex-col gap-6 min-h-[400px]">
+    <div className="flex flex-col gap-6 min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         A temporada 2025/2026 começa em novembro. Concorrentes como Santos já usam IA para otimizar atracação, e o
         novo marco portuário (PL 733/25) pressiona eficiência.{" "}

@@ -8,15 +8,30 @@ import type { StepDef } from "@/lib/diagnosticSteps";
 type AnswerValue = string | string[] | number;
 type Answers = Record<string, AnswerValue>;
 
+/* ─── Accent color helpers ───────────────────────────────── */
+function hexToRgb(hex: string) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return { r, g, b };
+}
+
+function rgba(hex: string, alpha: number) {
+  const { r, g, b } = hexToRgb(hex);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
 /* ─── Sub-components ─────────────────────────────────────── */
 function ChoiceCard({
   label,
   selected,
   onClick,
+  accent,
 }: {
   label: string;
   selected: boolean;
   onClick: () => void;
+  accent: string;
 }) {
   return (
     <button
@@ -25,10 +40,10 @@ function ChoiceCard({
       className="w-full text-left px-4 py-3.5 rounded-xl text-sm transition-all duration-150"
       style={{
         border: selected
-          ? "1px solid rgba(163,191,250,0.45)"
+          ? `1px solid ${rgba(accent, 0.45)}`
           : "1px solid rgba(255,255,255,0.08)",
-        background: selected ? "rgba(163,191,250,0.08)" : "transparent",
-        color: selected ? "#A3BFFA" : "rgb(156,163,175)",
+        background: selected ? rgba(accent, 0.08) : "transparent",
+        color: selected ? accent : "rgb(156,163,175)",
       }}
       onMouseEnter={e => {
         if (!selected) {
@@ -46,7 +61,7 @@ function ChoiceCard({
       <span className="flex items-center justify-between gap-3">
         {label}
         {selected && (
-          <Check className="w-3.5 h-3.5 shrink-0 text-[#A3BFFA]" strokeWidth={2.5} />
+          <Check className="w-3.5 h-3.5 shrink-0" style={{ color: accent }} strokeWidth={2.5} />
         )}
       </span>
     </button>
@@ -57,10 +72,12 @@ function ScaleInput({
   value,
   onChange,
   hint,
+  accent,
 }: {
   value?: number;
   onChange: (v: number) => void;
   hint?: string;
+  accent: string;
 }) {
   return (
     <div>
@@ -73,7 +90,7 @@ function ScaleInput({
               onClick={() => onChange(i)}
               className="w-9 h-9 rounded-lg text-sm font-medium transition-all duration-150 shrink-0"
               style={{
-                background: value === i ? "#A3BFFA" : "transparent",
+                background: value === i ? accent : "transparent",
                 color: value === i ? "#111827" : "rgb(107,114,128)",
                 border: value === i ? "none" : "1px solid rgba(255,255,255,0.08)",
               }}
@@ -92,10 +109,12 @@ function TextInput({
   value,
   onChange,
   type = "text",
+  accent,
 }: {
   value: string;
   onChange: (v: string) => void;
   type?: string;
+  accent: string;
 }) {
   const [focused, setFocused] = useState(false);
   return (
@@ -109,7 +128,7 @@ function TextInput({
       className="w-full bg-transparent text-white text-sm placeholder-gray-700 py-3 px-4 rounded-xl outline-none transition-all duration-150"
       style={{
         border: focused
-          ? "1px solid rgba(163,191,250,0.5)"
+          ? `1px solid ${rgba(accent, 0.5)}`
           : "1px solid rgba(255,255,255,0.1)",
       }}
     />
@@ -117,19 +136,22 @@ function TextInput({
 }
 
 /* ─── Success screen ─────────────────────────────────────── */
-function SuccessScreen() {
+function SuccessScreen({ accent }: { accent: string }) {
   return (
     <section className="py-24 bg-gray-950" id="diagnostic">
       <div className="max-w-2xl mx-auto px-6 text-center">
         <div
           className="rounded-3xl p-12 flex flex-col items-center gap-6"
           style={{
-            border: "1px solid rgba(181,234,215,0.2)",
-            background: "rgba(181,234,215,0.04)",
+            border: `1px solid ${rgba(accent, 0.2)}`,
+            background: rgba(accent, 0.04),
           }}
         >
-          <div className="w-14 h-14 rounded-full flex items-center justify-center" style={{ background: "rgba(181,234,215,0.15)" }}>
-            <CheckCircle2 className="w-7 h-7 text-pastel-green" strokeWidth={1.5} />
+          <div
+            className="w-14 h-14 rounded-full flex items-center justify-center"
+            style={{ background: rgba(accent, 0.15) }}
+          >
+            <CheckCircle2 className="w-7 h-7" style={{ color: accent }} strokeWidth={1.5} />
           </div>
           <div>
             <h3 className="font-serif text-3xl text-white font-medium mb-3">
@@ -144,7 +166,8 @@ function SuccessScreen() {
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs">
             <Link
               href="/pt/contact"
-              className="flex-1 flex items-center justify-center gap-2 bg-pastel-blue text-gray-900 text-sm font-medium py-3 px-5 rounded-xl hover:bg-[#B5C9FF] transition-colors"
+              className="flex-1 flex items-center justify-center gap-2 text-sm font-medium py-3 px-5 rounded-xl transition-colors"
+              style={{ background: accent, color: "#111827" }}
             >
               Agendar call agora
               <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
@@ -158,7 +181,13 @@ function SuccessScreen() {
 }
 
 /* ─── Main Component ─────────────────────────────────────── */
-export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
+export default function DiagnosticSection({
+  steps,
+  accentColor = "#A3BFFA",
+}: {
+  steps: StepDef[];
+  accentColor?: string;
+}) {
   const TOTAL = steps.length;
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Answers>({});
@@ -222,9 +251,10 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
     if (step > 0) setStep(s => s - 1);
   }
 
-  if (submitted) return <SuccessScreen />;
+  if (submitted) return <SuccessScreen accent={accentColor} />;
 
   const progressPct = (step / TOTAL) * 100;
+  const valid = isStepValid();
 
   return (
     <section className="py-24 bg-gray-950" id="diagnostic">
@@ -232,14 +262,17 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <span className="text-pastel-green text-xs font-medium tracking-widest uppercase">
+          <span
+            className="text-xs font-medium tracking-widest uppercase"
+            style={{ color: accentColor }}
+          >
             Diagnóstico Gratuito
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-white mt-2">
             Descubra onde a IA pode<br className="hidden md:block" /> mudar seu resultado
           </h2>
           <p className="text-gray-500 text-sm mt-3 max-w-sm mx-auto leading-relaxed">
-            10 etapas, ~4 minutos. Ao final, você recebe um diagnóstico personalizado com as
+            {TOTAL} etapas, ~4 minutos. Ao final, você recebe um diagnóstico personalizado com as
             maiores oportunidades de ROI para o seu negócio.
           </p>
 
@@ -251,7 +284,10 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                 className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs text-gray-500"
                 style={{ border: "1px solid rgba(255,255,255,0.08)" }}
               >
-                <span className="w-1 h-1 rounded-full bg-pastel-green inline-block" />
+                <span
+                  className="w-1 h-1 rounded-full inline-block"
+                  style={{ background: accentColor }}
+                />
                 {pill}
               </span>
             ))}
@@ -267,7 +303,7 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
           <div className="h-0.5" style={{ background: "rgba(255,255,255,0.05)" }}>
             <div
               className="h-full transition-all duration-500"
-              style={{ width: `${progressPct}%`, background: "#A3BFFA" }}
+              style={{ width: `${progressPct}%`, background: accentColor }}
             />
           </div>
 
@@ -275,7 +311,7 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
             {/* Step meta */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="text-pastel-blue text-xs font-medium">
+                <span className="text-xs font-medium" style={{ color: accentColor }}>
                   Etapa {step + 1} de {TOTAL}
                 </span>
                 <div className="flex gap-1">
@@ -292,9 +328,9 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                         className="h-1 w-4 rounded-full transition-all duration-300"
                         style={{
                           background: i < step
-                            ? "#A3BFFA"
+                            ? accentColor
                             : i === step
-                            ? "rgba(163,191,250,0.5)"
+                            ? rgba(accentColor, 0.5)
                             : "rgba(255,255,255,0.12)",
                         }}
                       />
@@ -335,6 +371,7 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                           label={opt}
                           selected={answers[q.id] === opt}
                           onClick={() => setAnswer(q.id, opt)}
+                          accent={accentColor}
                         />
                       ))}
                     </div>
@@ -346,9 +383,16 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                       <div className="flex items-center gap-2 mb-3">
                         <span
                           className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
-                          style={{ background: "rgba(163,191,250,0.08)", color: "#A3BFFA", border: "1px solid rgba(163,191,250,0.2)" }}
+                          style={{
+                            background: rgba(accentColor, 0.08),
+                            color: accentColor,
+                            border: `1px solid ${rgba(accentColor, 0.2)}`,
+                          }}
                         >
-                          <span className="w-1 h-1 rounded-full bg-pastel-blue inline-block" />
+                          <span
+                            className="w-1 h-1 rounded-full inline-block"
+                            style={{ background: accentColor }}
+                          />
                           {q.maxSelect ? `Escolha até ${q.maxSelect}` : "Pode selecionar mais de uma"}
                         </span>
                         {q.maxSelect && (
@@ -370,16 +414,22 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                               className="w-full text-left px-4 py-3.5 rounded-xl text-sm transition-all duration-150"
                               style={{
                                 border: isSelected
-                                  ? "1px solid rgba(163,191,250,0.45)"
+                                  ? `1px solid ${rgba(accentColor, 0.45)}`
                                   : "1px solid rgba(255,255,255,0.08)",
-                                background: isSelected ? "rgba(163,191,250,0.08)" : "transparent",
-                                color: isDisabled ? "rgb(75,85,99)" : isSelected ? "#A3BFFA" : "rgb(156,163,175)",
+                                background: isSelected ? rgba(accentColor, 0.08) : "transparent",
+                                color: isDisabled ? "rgb(75,85,99)" : isSelected ? accentColor : "rgb(156,163,175)",
                                 cursor: isDisabled ? "not-allowed" : "pointer",
                               }}
                             >
                               <span className="flex items-center justify-between gap-3">
                                 {opt}
-                                {isSelected && <Check className="w-3.5 h-3.5 shrink-0 text-pastel-blue" strokeWidth={2.5} />}
+                                {isSelected && (
+                                  <Check
+                                    className="w-3.5 h-3.5 shrink-0"
+                                    style={{ color: accentColor }}
+                                    strokeWidth={2.5}
+                                  />
+                                )}
                               </span>
                             </button>
                           );
@@ -394,6 +444,7 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                       value={answers[q.id] as number | undefined}
                       onChange={v => setAnswer(q.id, v)}
                       hint={q.hint}
+                      accent={accentColor}
                     />
                   )}
 
@@ -403,6 +454,7 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                       type={q.type}
                       value={(answers[q.id] as string) ?? ""}
                       onChange={v => setAnswer(q.id, v)}
+                      accent={accentColor}
                     />
                   )}
                 </div>
@@ -437,12 +489,12 @@ export default function DiagnosticSection({ steps }: { steps: StepDef[] }) {
                 <button
                   type="button"
                   onClick={handleNext}
-                  disabled={!isStepValid() || sending}
+                  disabled={!valid || sending}
                   className="flex items-center gap-2 text-sm font-medium py-2.5 px-6 rounded-xl transition-all duration-200"
                   style={{
-                    background: isStepValid() && !sending ? "#A3BFFA" : "rgba(163,191,250,0.2)",
-                    color: isStepValid() && !sending ? "#111827" : "rgba(163,191,250,0.4)",
-                    cursor: isStepValid() && !sending ? "pointer" : "not-allowed",
+                    background: valid && !sending ? accentColor : rgba(accentColor, 0.2),
+                    color: valid && !sending ? "#111827" : rgba(accentColor, 0.4),
+                    cursor: valid && !sending ? "pointer" : "not-allowed",
                   }}
                 >
                   {sending ? "Enviando…" : step === TOTAL - 1 ? "Enviar diagnóstico" : "Continuar"}

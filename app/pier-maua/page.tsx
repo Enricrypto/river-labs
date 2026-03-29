@@ -57,7 +57,7 @@ export default function PierMauaPage() {
           <span className="text-gray-600 text-xs">Píer Mauá × River Labs — Acesso restrito</span>
         </div>
         <PierMauaMarketStudySection />
-        <DiagnosticSection steps={STEPS_PIER_MAUA} />
+        <DiagnosticSection steps={STEPS_PIER_MAUA} accentColor="#F472B6" />
       </main>
     );
   }
