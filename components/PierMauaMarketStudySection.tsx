@@ -99,9 +99,9 @@ function Slide01() {
       <div className="w-full md:w-72 grid grid-cols-2 gap-3">
         {[
           { value: "R$\u00a0102M", label: "Receita Operacional 2023", accent: SKY },
-          { value: "7×", label: "World Travel Award América do Sul", accent: CORAL },
+          { value: "7×", label: "World Travel Award Sul", accent: CORAL },
           { value: "50k m²", label: "Área Operacional Total", accent: VIOLET },
-          { value: "35k", label: "Passageiros/dia (capacidade)", accent: SKY },
+          { value: "35k", label: "Passageiros/dia", accent: SKY },
         ].map(s => (
           <div
             key={s.label}

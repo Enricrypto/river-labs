@@ -98,10 +98,10 @@ function Slide01() {
 
       <div className="w-full md:w-72 grid grid-cols-2 gap-3">
         {[
-          { value: "R$\u00a035M", label: "Receita Operacional Estimada", accent: EMERALD },
-          { value: "500k", label: "Passageiros/ano (capacidade)", accent: AMBER },
-          { value: "3,8 km", label: "Via Férrea Elétrica no Parque Tijuca", accent: VIOLET },
-          { value: "~2M/ano", label: "Visitantes Cristo Redentor (pré-pandemia)", accent: EMERALD },
+          { value: "R$\u00a035M", label: "Receita Operacional Est.", accent: EMERALD },
+          { value: "500k", label: "Passageiros/ano", accent: AMBER },
+          { value: "3,8 km", label: "Via Férrea Elétrica", accent: VIOLET },
+          { value: "~2M/ano", label: "Visitantes/ano (pré-pandemia)", accent: EMERALD },
         ].map(s => (
           <div
             key={s.label}

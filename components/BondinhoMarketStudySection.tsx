@@ -98,10 +98,10 @@ function Slide01() {
 
       <div className="w-full md:w-72 grid grid-cols-2 gap-3">
         {[
-          { value: "R$\u00a0115M", label: "Receita de Bilheteria Estimada 2025", accent: AMBER },
+          { value: "R$\u00a0115M", label: "Bilheteria Est. 2025", accent: AMBER },
           { value: "~1M", label: "Visitantes por ano", accent: CORAL },
-          { value: "1966", label: "Primeiro teleférico do Brasil em operação", accent: SKY },
-          { value: "R$\u00a0272M", label: "Receita Real 2020 (balanço)", accent: AMBER },
+          { value: "1966", label: "1º teleférico do Brasil", accent: SKY },
+          { value: "R$\u00a0272M", label: "Receita Real 2020", accent: AMBER },
         ].map(s => (
           <div
             key={s.label}

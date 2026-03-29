@@ -98,10 +98,10 @@ function Slide01() {
 
       <div className="w-full md:w-72 grid grid-cols-2 gap-3">
         {[
-          { value: "R$\u00a0300M", label: "Receita Operacional Estimada 2025", accent: GREEN },
-          { value: "5M+", label: "Visitantes/ano (todas as unidades)", accent: SKY },
+          { value: "R$\u00a0300M", label: "Receita Operacional Est. 2025", accent: GREEN },
+          { value: "5M+", label: "Visitantes/ano (grupo)", accent: SKY },
           { value: "585", label: "Funcionários (Grupo)", accent: AMBER },
-          { value: "18%", label: "Margem Líquida 1T25 (Urbia Cataratas)", accent: GREEN },
+          { value: "18%", label: "Margem Líquida 1T25", accent: GREEN },
         ].map(s => (
           <div
             key={s.label}
