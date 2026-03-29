@@ -209,18 +209,45 @@ _Automação de RFP e-commerce (João)_
 ### SLIDE 05 — 3 min
 
 **O que já resolvemos — caso 3**
-_Logística / governo (Antonio)_
+_De infraestrutura pública americana a segurança de IA (Antonio)_
 
 **Estrutura do caso:**
 
-- Contexto: setor / escala do problema
-- Solução: tecnologia aplicada à operação real
-- Resultado: impacto mensurável
+River Labs · 05 / 10
+Prova de Conceito · Caso 03 — Antonio
+
+De infraestrutura pública americana a segurança de IA — onde o erro não é uma opção
+Agências Federais dos EUA · Segurança de Navegação · Escala Empresarial
+
+---
+
+**Desafio**
+**Os dois ambientes mais exigentes do mundo digital**
+Agências governamentais americanas gerenciando bilhões em infraestrutura pública. Empresas expostas ao vetor de ataque número 1 do mundo corporativo: o navegador — hoje amplificado pela própria IA que as empresas adotaram.
+
+**Solução**
+**O mesmo profissional. O mesmo padrão. Dois contextos críticos.**
+Sistemas de gestão de infraestrutura adotados por 15+ estados americanos — e hoje, construindo proteção com IA em produção real para mais de 20.000 usuários corporativos contra ameaças invisíveis no navegador.
+
+**Resultado**
+**Quem opera onde falhar tem consequência real aprende diferente**
+Conformidade federal com zero margem a erro. IA aplicada à segurança ativa — protegendo empresas em escala sem que os usuários percebam o risco que foi removido.
+
+---
+
+| **15+** | **20k+** | **$500M+** |
+|---|---|---|
+| estados americanos atendidos | usuários corporativos protegidos | em infraestrutura pública sob gestão |
+
+---
+
+> "A maioria aprende em ambientes que toleram erro. Antonio construiu nos que não toleram."
 
 **Visual sugerido:**
 
-- Mapa, dashboard ou visual de processo
-- 1 dado de impacto em destaque
+- Mapa dos EUA com estados destacados + ícone de escudo/segurança
+- 3 métricas em destaque (15+, 20k+, $500M+)
+- Contraste visual: infraestrutura pública ↔ segurança corporativa
 
 **Fala-ponte ao final dos três casos (apresentador):**
 
