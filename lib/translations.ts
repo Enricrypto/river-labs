@@ -37,8 +37,6 @@ export type Dict = {
   };
   comparison: {
     heading: string;
-    badTitle: string;
-    badItems: string[];
     goodItems: string[];
   };
   whyus: {
@@ -92,15 +90,15 @@ const en: Dict = {
     sub: "By the time the problem is obvious, you've already left months of revenue behind.",
     items: [
       {
-        title: "Pricing that doesn't react to demand",
+        title: "Pricing that doesn't adapt to demand",
         desc: "Dynamic occupancy, seasonality, events — your pricing stays fixed while your competitors adapt in real time.",
       },
       {
-        title: "Processes bleeding cash quietly",
-        desc: "Manual workflows, fragmented data, slow approvals. The operational friction is hard to see on a spreadsheet, but it adds up fast.",
+        title: "Processes that limit what the team can deliver",
+        desc: "Manual approvals, spreadsheet handoffs, duplicated information across systems. Every step that could be automated is time your team spends on process — not on the business.",
       },
       {
-        title: "Data you have but don't use",
+        title: "Data you generate but don't use",
         desc: "Balance sheets, ticketing records, logistics logs — your operation already generates the signal. Nobody is reading it.",
       },
     ],
@@ -120,8 +118,8 @@ const en: Dict = {
     cta: "Get Your Free Diagnosis",
   },
   methodology: {
-    heading: "Diagnosis to ROI in 90 days",
-    sub: "We start with your financial documents, not a blank slide deck.",
+    heading: "Diagnosis to implementation in 90 days",
+    sub: "Built for the people who run the operation day-to-day.",
     steps: [
       {
         title: "Financial diagnosis",
@@ -142,13 +140,6 @@ const en: Dict = {
   },
   comparison: {
     heading: "We build systems. We don't write reports.",
-    badTitle: "The old approach",
-    badItems: [
-      "R$50k diagnostic report you'll never implement",
-      "Generic best practices, no access to your data",
-      "6 months before you see anything working",
-      "Monthly retainers with no defined outcome",
-    ],
     goodItems: [
       "Free diagnosis — specific to your financials",
       "AI systems calibrated on your real documents",
@@ -166,10 +157,6 @@ const en: Dict = {
       {
         title: "You own the system",
         desc: "No vendor lock-in, no SaaS subscriptions. Custom agents built to run inside your own infrastructure, fully documented and transferable.",
-      },
-      {
-        title: "Fixed price, defined scope",
-        desc: "Every project is priced by milestone, not by the hour. You know the cost before we start and the KPIs we're accountable for before we finish.",
       },
     ],
     cta: "Talk to us",
@@ -200,10 +187,6 @@ const en: Dict = {
         a: "No. We integrate with what you have — ERP, CRM, custom APIs. The goal is to add intelligence to your current infrastructure, not force a migration.",
       },
       {
-        q: "What happens after the pilot?",
-        a: "You test the prototype with real data and decide whether to deploy. If you do, we integrate into production and monitor KPIs. If you don't, you keep the diagnosis — there's no obligation.",
-      },
-      {
         q: "Do you replace our IT or data team?",
         a: "No — we work alongside them. We handle the AI architecture and model building; your team handles infrastructure access and deployment approvals. Knowledge transfer is part of every project.",
       },
@@ -215,7 +198,7 @@ const en: Dict = {
   },
   cta: {
     heading: "Find out what your operation is leaving behind",
-    sub: "Share your documents. We'll map your 3 biggest revenue levers — specific, auditable, no cost.",
+    sub: "Schedule a 45-min diagnosis call — specific, no commitment.",
     btn1: "Get My Free Diagnosis",
     btn2: "Book a 15-Min Call",
     badge: "No commitment. No generic benchmarks.",
@@ -248,15 +231,15 @@ const es: Dict = {
     sub: "Para cuando el problema es obvio, ya dejaste meses de ingresos atrás.",
     items: [
       {
-        title: "Precios que no reaccionan a la demanda",
+        title: "Precios que no se adaptan a la demanda",
         desc: "Ocupación dinámica, estacionalidad, eventos — tus precios se mantienen fijos mientras la competencia se adapta en tiempo real.",
       },
       {
-        title: "Procesos que sangran caja en silencio",
-        desc: "Flujos manuales, datos fragmentados, aprobaciones lentas. La fricción operativa es difícil de ver en una hoja de cálculo, pero se acumula rápido.",
+        title: "Procesos que limitan lo que el equipo puede entregar",
+        desc: "Aprobaciones manuales, handoffs por planilla, información duplicada entre sistemas. Cada paso que podría automatizarse es tiempo que la operación gasta en proceso — y no en el negocio.",
       },
       {
-        title: "Datos que tienes pero no usas",
+        title: "Datos que generas pero no utilizas",
         desc: "Balances, registros de ticketing, logs de logística — tu operación ya genera la señal. Nadie la está leyendo.",
       },
     ],
@@ -276,8 +259,8 @@ const es: Dict = {
     cta: "Obtén Tu Diagnóstico Gratuito",
   },
   methodology: {
-    heading: "Del diagnóstico al ROI en 90 días",
-    sub: "Empezamos con tus documentos financieros, no con una presentación en blanco.",
+    heading: "Del diagnóstico a la implementación en 90 días",
+    sub: "Diseñado para quien lleva la operación día a día.",
     steps: [
       {
         title: "Diagnóstico financiero",
@@ -298,13 +281,6 @@ const es: Dict = {
   },
   comparison: {
     heading: "Construimos sistemas. No escribimos reportes.",
-    badTitle: "El enfoque antiguo",
-    badItems: [
-      "Reporte de diagnóstico de R$50k que nunca implementarás",
-      "Mejores prácticas genéricas, sin acceso a tus datos",
-      "6 meses antes de ver algo funcionando",
-      "Retenciones mensuales sin resultado definido",
-    ],
     goodItems: [
       "Diagnóstico gratuito — específico para tus finanzas",
       "Sistemas de IA calibrados en tus documentos reales",
@@ -322,10 +298,6 @@ const es: Dict = {
       {
         title: "Tú eres dueño del sistema",
         desc: "Sin dependencia de proveedores, sin suscripciones SaaS. Agentes personalizados construidos para correr en tu propia infraestructura, completamente documentados y transferibles.",
-      },
-      {
-        title: "Precio fijo, alcance definido",
-        desc: "Cada proyecto tiene precio por hito, no por hora. Conoces el costo antes de empezar y los KPIs de los que somos responsables antes de terminar.",
       },
     ],
     cta: "Habla con nosotros",
@@ -356,10 +328,6 @@ const es: Dict = {
         a: "No. Nos integramos con lo que tienes — ERP, CRM, APIs personalizadas. El objetivo es agregar inteligencia a tu infraestructura actual, no forzar una migración.",
       },
       {
-        q: "¿Qué pasa después del piloto?",
-        a: "Pruebas el prototipo con datos reales y decides si implementar. Si lo haces, integramos en producción y monitoreamos KPIs. Si no, te quedas con el diagnóstico — sin obligación.",
-      },
-      {
         q: "¿Reemplazan a nuestro equipo de IT o datos?",
         a: "No — trabajamos junto a ellos. Nosotros manejamos la arquitectura de IA y la construcción de modelos; tu equipo maneja el acceso a infraestructura y las aprobaciones de despliegue. La transferencia de conocimiento es parte de cada proyecto.",
       },
@@ -371,7 +339,7 @@ const es: Dict = {
   },
   cta: {
     heading: "Descubre qué está dejando atrás tu operación",
-    sub: "Comparte tus documentos. Mapearemos tus 3 mayores palancas de ingreso — específicas, auditables, sin costo.",
+    sub: "Agenda una llamada de diagnóstico de 45 min — específica, sin compromiso.",
     btn1: "Obtener Mi Diagnóstico Gratuito",
     btn2: "Agendar Llamada de 15 Min",
     badge: "Sin compromiso. Sin benchmarks genéricos.",
@@ -404,15 +372,15 @@ const pt: Dict = {
     sub: "Quando o problema fica óbvio, você já deixou meses de receita para trás.",
     items: [
       {
-        title: "Precificação que não reage à demanda",
+        title: "Precificação que não se adapta à demanda",
         desc: "Ocupação dinâmica, sazonalidade, eventos — seus preços ficam fixos enquanto a concorrência se adapta em tempo real.",
       },
       {
-        title: "Processos sangrando caixa em silêncio",
-        desc: "Fluxos manuais, dados fragmentados, aprovações lentas. A fricção operacional é difícil de ver na planilha, mas se acumula rápido.",
+        title: "Processos que limitam o que a equipe consegue entregar",
+        desc: "Aprovações manuais, handoffs por planilha, informações duplicadas entre sistemas. Cada etapa que poderia ser automatizada é tempo que a operação gasta no processo — e não no negócio.",
       },
       {
-        title: "Dados que você tem mas não usa",
+        title: "Dados que você gera, mas não utiliza",
         desc: "Balanços, registros de bilheteria, logs de logística — sua operação já gera o sinal. Ninguém está lendo.",
       },
     ],
@@ -432,8 +400,8 @@ const pt: Dict = {
     cta: "Obtenha Seu Diagnóstico Gratuito",
   },
   methodology: {
-    heading: "Do diagnóstico ao ROI em 90 dias",
-    sub: "Começamos pelos seus documentos financeiros, não por um slide em branco.",
+    heading: "Do diagnóstico à implementação em 90 dias",
+    sub: "Feito para quem toca a operação no dia-a-dia.",
     steps: [
       {
         title: "Diagnóstico financeiro",
@@ -454,13 +422,6 @@ const pt: Dict = {
   },
   comparison: {
     heading: "Construímos sistemas. Não escrevemos relatórios.",
-    badTitle: "A abordagem antiga",
-    badItems: [
-      "Relatório de diagnóstico de R$50k que você nunca vai implementar",
-      "Melhores práticas genéricas, sem acesso aos seus dados",
-      "6 meses para ver qualquer coisa funcionando",
-      "Contratos mensais sem resultado definido",
-    ],
     goodItems: [
       "Diagnóstico gratuito — específico para o seu negócio",
       "Sistemas de IA calibrados nos seus documentos reais",
@@ -478,10 +439,6 @@ const pt: Dict = {
       {
         title: "Você é dono do sistema",
         desc: "Sem dependência de fornecedor, sem assinaturas SaaS. Agentes sob medida construídos para rodar na sua própria infraestrutura, totalmente documentados e transferíveis.",
-      },
-      {
-        title: "Preço fixo, escopo definido",
-        desc: "Todo projeto tem preço por marco, não por hora. Você sabe o custo antes de começar e os KPIs pelos quais somos responsáveis antes de terminarmos.",
       },
     ],
     cta: "Fale com a gente",
@@ -512,10 +469,6 @@ const pt: Dict = {
         a: "Não. Integramos com o que você tem — ERP, CRM, APIs personalizadas. O objetivo é adicionar inteligência à sua infraestrutura atual, sem forçar uma migração.",
       },
       {
-        q: "O que acontece depois do piloto?",
-        a: "Você testa o protótipo com dados reais e decide se vai para produção. Se decidir, integramos e monitoramos os KPIs. Se não, você fica com o diagnóstico — sem obrigação.",
-      },
-      {
         q: "Vocês substituem nossa equipe de TI ou dados?",
         a: "Não — trabalhamos junto com eles. A gente cuida da arquitetura de IA e construção dos modelos; sua equipe cuida do acesso à infraestrutura e aprovações de deploy. Transferência de conhecimento faz parte de todo projeto.",
       },
@@ -527,7 +480,7 @@ const pt: Dict = {
   },
   cta: {
     heading: "Descubra o que sua operação está deixando para trás",
-    sub: "Compartilhe seus documentos. Mapeamos suas 3 maiores alavancas de receita — específicas, auditáveis, sem custo.",
+    sub: "Agende uma conversa de diagnóstico de 45 min — específica, sem compromisso.",
     btn1: "Obter Meu Diagnóstico Gratuito",
     btn2: "Agendar Chamada de 15 Min",
     badge: "Sem compromisso. Sem benchmarks genéricos.",
