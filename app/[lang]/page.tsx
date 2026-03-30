@@ -6,7 +6,6 @@ import ProblemSection from "@/components/ProblemSection";
 import ClientAccessCards from "@/components/ClientAccessCards";
 import MethodologySection from "@/components/MethodologySection";
 import ComparisonSection from "@/components/ComparisonSection";
-import WhyUsSection from "@/components/WhyUsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -29,7 +28,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <ClientAccessCards dict={dict.clientCards} />
         <MethodologySection dict={dict.methodology} />
         <ComparisonSection dict={dict.comparison} />
-        <WhyUsSection dict={dict.whyus} lang={typedLang} />
         <FAQSection dict={dict.faq} />
         <CTASection dict={dict.cta} lang={typedLang} />
       </main>

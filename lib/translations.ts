@@ -92,7 +92,7 @@ const en: Dict = {
     items: [
       {
         title: "Pricing that doesn't adapt to demand",
-        desc: "Dynamic occupancy, seasonality, events — your pricing stays fixed while your competitors adapt in real time.",
+        desc: "Demand shifts with seasonality, events, and occupancy — but pricing doesn't follow. The margin you could capture stays on the table.",
       },
       {
         title: "Processes that limit what the team can deliver",
@@ -100,7 +100,7 @@ const en: Dict = {
       },
       {
         title: "Data you generate but don't use",
-        desc: "Balance sheets, ticketing records, logistics logs — your operation already generates the signal. Nobody is reading it.",
+        desc: "Balance sheets, ticketing records, logistics logs — your operation already generates the signal.",
       },
     ],
   },
@@ -124,7 +124,7 @@ const en: Dict = {
     principles: [
       "We co-create solutions with the team directly involved in the operation",
       "We train your team to use the tools independently — no vendor lock-in, no SaaS subscriptions",
-      "We deliver documented code and a working system inside your infrastructure — no black box, no dependency on River Labs",
+      "We deliver documented code and a working system inside your infrastructure.",
     ],
     steps: [
       { title: "Discovery", timeline: "Process map" },
@@ -228,7 +228,7 @@ const es: Dict = {
     items: [
       {
         title: "Precios que no se adaptan a la demanda",
-        desc: "Ocupación dinámica, estacionalidad, eventos — tus precios se mantienen fijos mientras la competencia se adapta en tiempo real.",
+        desc: "La demanda varía por estacionalidad, eventos y ocupación — pero el precio no la sigue. El margen que podrías capturar se queda en la mesa.",
       },
       {
         title: "Procesos que limitan lo que el equipo puede entregar",
@@ -236,7 +236,7 @@ const es: Dict = {
       },
       {
         title: "Datos que generas pero no utilizas",
-        desc: "Balances, registros de ticketing, logs de logística — tu operación ya genera la señal. Nadie la está leyendo.",
+        desc: "Balances, registros de ticketing, logs de logística — tu operación ya genera la señal.",
       },
     ],
   },
@@ -260,7 +260,7 @@ const es: Dict = {
     principles: [
       "Cocreamos soluciones junto al equipo directamente involucrado en la operación",
       "Capacitamos a tu equipo para usar las herramientas con autonomía: sin dependencia de proveedor, sin suscripciones SaaS",
-      "Entregamos el código documentado y el sistema funcionando dentro de tu infraestructura — sin caja negra, sin dependencia de River Labs",
+      "Entregamos el código documentado y el sistema funcionando dentro de tu infraestructura.",
     ],
     steps: [
       { title: "Descubrimiento", timeline: "Mapa de proceso" },
@@ -364,7 +364,7 @@ const pt: Dict = {
     items: [
       {
         title: "Precificação que não se adapta à demanda",
-        desc: "Ocupação dinâmica, sazonalidade, eventos — seus preços ficam fixos enquanto a concorrência se adapta em tempo real.",
+        desc: "A demanda varia com sazonalidade, eventos e ocupação — mas o preço não acompanha. A margem que poderia ser capturada fica na mesa.",
       },
       {
         title: "Processos que limitam o que a equipe consegue entregar",
@@ -372,7 +372,7 @@ const pt: Dict = {
       },
       {
         title: "Dados que você gera, mas não utiliza",
-        desc: "Balanços, registros de bilheteria, logs de logística — sua operação já gera o sinal. Ninguém está lendo.",
+        desc: "Balanços, registros de bilheteria, logs de logística — sua operação já gera o sinal.",
       },
     ],
   },
@@ -396,7 +396,7 @@ const pt: Dict = {
     principles: [
       "Cocriamos soluções junto ao time diretamente envolvido na operação",
       "Capacitamos seu time a utilizar as ferramentas com autonomia: sem dependência de fornecedor, sem assinaturas SaaS",
-      "Entregamos o código documentado e o sistema funcionando dentro da sua infraestrutura — sem caixa-preta, sem dependência da River Labs",
+      "Entregamos o código documentado e o sistema funcionando dentro da sua infraestrutura.",
     ],
     steps: [
       { title: "Descoberta", timeline: "Mapa de processo" },

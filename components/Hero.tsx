@@ -40,11 +40,7 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
         </div>
 
         {/* Bottom stat strip */}
-        <div className="relative z-10 mt-16 md:mt-24 pt-8 border-t border-gray-200/80 grid grid-cols-3 gap-3 md:gap-6 max-w-lg">
-          <div>
-            <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">90</p>
-            <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">dias ao ROI</p>
-          </div>
+        <div className="relative z-10 mt-16 md:mt-24 pt-8 border-t border-gray-200/80 grid grid-cols-2 gap-3 md:gap-6 max-w-xs">
           <div>
             <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">3</p>
             <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">semanas ao protótipo</p>
