@@ -105,7 +105,7 @@
     .prov-why { font-family: var(--ff-serif); font-size: 14px; color: rgba(255,255,255,0.75); font-style: italic; line-height: 1.65; max-width: 700px; padding: 14px 18px; border-left: 2px solid rgba(163,191,250,0.3); margin-bottom: 4px; }
 
     .stats-row {
-      display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
       flex: 1; gap: 1px;
       background: rgba(255,255,255,0.06); border-radius: 14px; overflow: hidden; margin: 16px 0;
     }
@@ -255,6 +255,16 @@
     .deliverable { background: var(--bg); border-radius: 12px; padding: 12px 16px; border: 1px solid var(--g200); display: flex; flex-direction: column; gap: 7px; }
     .dv-lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g400); margin-bottom: 2px; }
     .dv-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--g600); line-height: 1.4; }
+
+    /* ============================
+       SLIDE 02 — ACELERAÇÃO
+    ============================ */
+    .accel-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px; max-width: 680px; }
+    .accel-tag { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--g400); }
+    .accel-head { font-family: var(--ff-serif); font-size: clamp(30px, 4.2vw, 52px); font-weight: 500; color: var(--g900); line-height: 1.1; letter-spacing: -0.025em; }
+    .accel-text p { font-size: 16px; color: var(--g600); line-height: 1.65; max-width: 560px; }
+    .accel-text p + p { margin-top: 14px; }
+    .accel-bridge { font-family: var(--ff-serif); font-size: 15px; color: var(--g700); font-style: italic; padding: 14px 18px; border-left: 2px solid var(--blue); background: rgba(163,191,250,0.06); border-radius: 0 8px 8px 0; max-width: 520px; }
   </style>
 </head>
 <body>
@@ -269,7 +279,7 @@
         <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
         <span>River Labs</span>
       </div>
-      <span class="topbar-n">01 / 09</span>
+      <span class="topbar-n">01 / 10</span>
     </div>
     <div class="cover-body">
       <h1>Transformação digital que começa <em>pelas pessoas,</em> não pela ferramenta.</h1>
@@ -297,7 +307,29 @@
   <aside class="notes">Apresentação rápida de cada um — uma frase por pessoa. Contextualizar: brasileiros com experiência internacional, foco no mercado BR. O time é o produto — mostrar diversidade de perfis (tech + pessoas) é diferencial desde a primeira tela.</aside>
 </section>
 
-<!-- ═══════════════ 02 PROVOCAÇÃO ═══════════════ -->
+<!-- ═══════════════ 02 ACELERAÇÃO TECNOLÓGICA ═══════════════ -->
+<section class="s01">
+  <div class="si">
+    <div class="topbar">
+      <div class="logo">
+        <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">02 / 10</span>
+    </div>
+    <div class="accel-body">
+      <div class="accel-tag">Aceleração Tecnológica</div>
+      <h2 class="accel-head">A pandemia não avisou.<br>A IA está avisando.</h2>
+      <div class="accel-text">
+        <p>Em 2020, empresas que não tinham presença digital correram contra o tempo — muitas não chegaram ao outro lado.</p>
+        <p>Com a IA, a janela está aberta agora. A diferença é que desta vez você pode escolher quando entrar.</p>
+      </div>
+      <div class="accel-bridge">O problema não é quem usa. É quem tem estratégia.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ 03 PROVOCAÇÃO ═══════════════ -->
 <section class="s02">
   <div class="si">
     <div class="topbar">
@@ -305,12 +337,11 @@
         <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
         <span>River Labs</span>
       </div>
-      <span class="topbar-n light">02 / 09</span>
+      <span class="topbar-n light">03 / 10</span>
     </div>
     <div class="prov-head">
-      <h2>A ferramenta chegou.<br><em>A estratégia, não.</em></h2>
+      <h2>A ferramenta chegou.<br><em>A estratégia ainda não existe.</em></h2>
     </div>
-    <div class="prov-why">Na pandemia, empresas sem digitalização correram contra o tempo para não desaparecer. Com a IA, a mesma janela se abre agora — e ainda há espaço para sair na frente.</div>
     <div class="stats-row">
       <div class="stat-cell">
         <div>
@@ -344,7 +375,7 @@
   <div class="si">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">03 / 09</span>
+      <span class="topbar-n">04 / 10</span>
     </div>
     <div class="sh">
       <h2>Do zero a 4 mil impressões e 1ª página do Google — em 30 dias</h2>
@@ -400,7 +431,7 @@
   <div class="si">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">04 / 09</span>
+      <span class="topbar-n">05 / 10</span>
     </div>
     <div class="sh">
       <h2>De 10h por RFP a resposta automática —<br>1.094 horas salvas em 6 meses</h2>
@@ -456,7 +487,7 @@
   <div class="si">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">05 / 09</span>
+      <span class="topbar-n">06 / 10</span>
     </div>
     <div class="sh">
       <h2>De infraestrutura pública americana a segurança de IA</h2>
@@ -488,7 +519,7 @@
   <div class="si s7">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">06 / 09</span>
+      <span class="topbar-n">07 / 10</span>
     </div>
     <div class="sh">
     </div>
@@ -523,7 +554,7 @@
   <div class="si">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">07 / 09</span>
+      <span class="topbar-n">08 / 10</span>
     </div>
     <div class="sh">
       <h2>Provocações e possibilidades reais</h2>
@@ -566,7 +597,7 @@
   <div class="si">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">08 / 09</span>
+      <span class="topbar-n">09 / 10</span>
     </div>
     <div class="sh">
       <h2>Do diagnóstico à implementação em 90 dias</h2>
@@ -629,7 +660,7 @@
   <div class="si">
     <div class="topbar">
       <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">09 / 09</span>
+      <span class="topbar-n">10 / 10</span>
     </div>
     <div class="sh">
       <h2>Qual é o momento da sua empresa<br>em relação à tecnologia?</h2>
