@@ -33,7 +33,8 @@ export type Dict = {
   methodology: {
     heading: string;
     sub: string;
-    steps: { title: string; timeline: string; desc: string }[];
+    principles: string[];
+    steps: { title: string; timeline: string }[];
   };
   comparison: {
     heading: string;
@@ -120,22 +121,17 @@ const en: Dict = {
   methodology: {
     heading: "Diagnosis to implementation in 90 days",
     sub: "Built for the people who run the operation day-to-day.",
+    principles: [
+      "We co-create solutions with the team directly involved in the operation",
+      "We train your team to use the tools independently — no vendor lock-in, no SaaS subscriptions",
+      "We deliver documented code and a working system inside your infrastructure — no black box, no dependency on River Labs",
+    ],
     steps: [
-      {
-        title: "Financial diagnosis",
-        timeline: "Wk 1–2",
-        desc: "We read your balance sheets, ticketing data, and operational records. We map where revenue is leaking and build your opportunity model.",
-      },
-      {
-        title: "Working prototype",
-        timeline: "Wk 3–6",
-        desc: "A real system running on your real data — not a demo. You test it, break it, and approve before we go further.",
-      },
-      {
-        title: "Production & optimization",
-        timeline: "Wk 7–12",
-        desc: "Live integration into your existing stack. Continuous monitoring against the KPIs we defined at diagnosis.",
-      },
+      { title: "Discovery", timeline: "Process map" },
+      { title: "Diagnosis", timeline: "Case matrix" },
+      { title: "Solution design", timeline: "Architecture plan" },
+      { title: "Pilot", timeline: "Prototype + metrics" },
+      { title: "Deploy & Optimization", timeline: "System in production" },
     ],
   },
   comparison: {
@@ -261,22 +257,17 @@ const es: Dict = {
   methodology: {
     heading: "Del diagnóstico a la implementación en 90 días",
     sub: "Diseñado para quien lleva la operación día a día.",
+    principles: [
+      "Cocreamos soluciones junto al equipo directamente involucrado en la operación",
+      "Capacitamos a tu equipo para usar las herramientas con autonomía: sin dependencia de proveedor, sin suscripciones SaaS",
+      "Entregamos el código documentado y el sistema funcionando dentro de tu infraestructura — sin caja negra, sin dependencia de River Labs",
+    ],
     steps: [
-      {
-        title: "Diagnóstico financiero",
-        timeline: "Sem 1–2",
-        desc: "Analizamos tus balances, datos de ticketing y registros operativos. Mapeamos dónde se está escapando el ingreso y construimos tu modelo de oportunidades.",
-      },
-      {
-        title: "Prototipo funcional",
-        timeline: "Sem 3–6",
-        desc: "Un sistema real corriendo en tus datos reales — no una demo. Lo pruebas, lo rompes y lo apruebas antes de seguir.",
-      },
-      {
-        title: "Producción y optimización",
-        timeline: "Sem 7–12",
-        desc: "Integración en vivo en tu stack existente. Monitoreo continuo contra los KPIs que definimos en el diagnóstico.",
-      },
+      { title: "Descubrimiento", timeline: "Mapa de proceso" },
+      { title: "Diagnóstico", timeline: "Matriz de casos" },
+      { title: "Diseño de solución", timeline: "Plan de arquitectura" },
+      { title: "Piloto", timeline: "Prototipo + métricas" },
+      { title: "Deploy & Optimización", timeline: "Sistema en producción" },
     ],
   },
   comparison: {
@@ -402,22 +393,17 @@ const pt: Dict = {
   methodology: {
     heading: "Do diagnóstico à implementação em 90 dias",
     sub: "Feito para quem toca a operação no dia-a-dia.",
+    principles: [
+      "Cocriamos soluções junto ao time diretamente envolvido na operação",
+      "Capacitamos seu time a utilizar as ferramentas com autonomia: sem dependência de fornecedor, sem assinaturas SaaS",
+      "Entregamos o código documentado e o sistema funcionando dentro da sua infraestrutura — sem caixa-preta, sem dependência da River Labs",
+    ],
     steps: [
-      {
-        title: "Diagnóstico financeiro",
-        timeline: "Sem 1–2",
-        desc: "Lemos seus balanços, dados de bilheteria e registros operacionais. Mapeamos onde a receita está vazando e construímos seu modelo de oportunidades.",
-      },
-      {
-        title: "Protótipo funcionando",
-        timeline: "Sem 3–6",
-        desc: "Um sistema real rodando nos seus dados reais — não uma demo. Você testa, quebra e aprova antes de irmos adiante.",
-      },
-      {
-        title: "Produção e otimização",
-        timeline: "Sem 7–12",
-        desc: "Integração em produção no seu stack existente. Monitoramento contínuo contra os KPIs que definimos no diagnóstico.",
-      },
+      { title: "Descoberta", timeline: "Mapa de processo" },
+      { title: "Diagnóstico", timeline: "Matriz de casos" },
+      { title: "Design da solução", timeline: "Plano de arquitetura" },
+      { title: "Piloto", timeline: "Protótipo + métricas" },
+      { title: "Deploy & Otimização", timeline: "Sistema em produção" },
     ],
   },
   comparison: {
