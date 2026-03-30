@@ -127,6 +127,27 @@ Dados de mercado:
 
 ---
 
+### SLIDE 02B — 1 min
+
+**Ponte para os cases**
+_Não teoria. Implementações reais._
+
+**Conteúdo do slide:**
+
+- **Headline:** Não teoria. Implementações reais.
+- **Subheadline:** Cada case a seguir saiu do problema real de um cliente — com piloto, resultado e métrica.
+- **Linha de apoio (menor):** Setores diferentes. Mesma abordagem.
+
+**Nota de design:** Slide simples, alto contraste. Sem bullets. A headline ocupa a maior parte do espaço visual — é uma declaração, não um menu.
+
+**O que o apresentador faz:**
+
+- Pausa breve após os dados de falha do slide anterior
+- Lê (ou parafraseará) a headline com convicção
+- Não explica — deixa o próximo slide falar
+
+---
+
 ### SLIDE 03 — 3 min
 
 **O que já resolvemos — caso 1**
@@ -323,20 +344,37 @@ _Quatro frentes, uma lógica_
 
 ### SLIDE 8 — 4 min
 
-**Ideias concretas para o seu setor**
-_Provocações e possibilidades reais_
+**O que já dá para fazer — no seu setor, agora**
+_Exemplos concretos por área_
 
-**Exemplos por área:**
+**Conteúdo do slide:**
 
-- **Logística:** precificação dinâmica com IA, roteirização inteligente
-- **Varejo / e-commerce:** gestão de reservas, previsão de demanda, marketing digital
-- **Serviços / RH:** mapeamento de custo de turnover, onboarding automatizado
+**Logística**
+- Extração automática de dados de notas fiscais e comprovantes — zero entrada manual
+- Previsão de atrasos antes que aconteçam: rota + clima + histórico do motorista
+- Alerta quando o padrão de entrega de um fornecedor indica ruptura de estoque
+- Identificação automática dos principais motivos de devolução por SKU ou região
+- Pedidos de reposição disparados automaticamente antes do estoque acabar
+
+**Varejo / E-commerce**
+- Monitoramento de preço de concorrentes com alerta quando você sai do mercado
+- Geração em massa de descrições de produtos para o catálogo inteiro
+- Segmentação de clientes por comportamento + campanha certa para cada grupo
+- Identificação de quais carrinhos abandonados valem um desconto — e quais não valem
+- Previsão de demanda que age: o pedido de reposição já foi antes do produto acabar
+
+**Serviços** _(turismo, restaurantes, atrações)_
+- Chatbot treinado no seu próprio cardápio, horários e políticas — responde no WhatsApp 24h
+- Análise de avaliações do Google e TripAdvisor para identificar o que está afastando clientes
+- Geração automática de conteúdo para redes sociais a partir do calendário de eventos
+- Previsão de demanda por data/temporada para escalar equipe e estoque com antecedência
+- Respostas automáticas e personalizadas para avaliações negativas online
 
 **Intenção do slide:**
 
-- Mostrar que entendemos os setores que atendemos
+- Mostrar que entendemos os setores que atendemos com exemplos reais e tangíveis
 - Gerar identificação: "isso se parece com o nosso problema"
-- Não vender — provocar curiosidade
+- Não vender — provocar curiosidade e abrir conversa
 
 **Dados de mercado — Brasil:**
 
@@ -346,7 +384,7 @@ _Provocações e possibilidades reais_
 
 **Fala sugerida (apresentador):**
 
-> "No Brasil, quase 60% do varejo já usa IA, principalmente em marketing e atendimento. O desafio agora não é 'começar a usar IA', é orquestrar isso de forma estratégica na operação inteira."
+> "No Brasil, quase 60% do varejo já usa IA, principalmente em marketing e atendimento. O desafio agora não é 'começar a usar IA', é saber exatamente onde colocar — e garantir que funciona na operação real."
 > _(TI Inside, nov. 2025)_
 
 **Dinâmica sugerida:** Pausar aqui e perguntar à audiência — "Algum desses ressoa com o que vocês vivem hoje?" Gera engajamento e abre a conversa para o fechamento.
