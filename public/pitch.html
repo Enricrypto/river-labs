@@ -8,12 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root {
       --blue: #A3BFFA; --blue-mid: #7CA3F5; --blue-dark: #6B9BF2;
       --green: #B5EAD7; --green-dark: #5DB891;
       --purple: #D7BDE2; --purple-dark: #A67DC5;
+      --amber: #FCD34D; --amber-dark: #D97706;
       --bg: #f6faf8; --dark: #111827;
       --g900: #111827; --g800: #1F2937; --g700: #374151;
       --g600: #4B5563; --g500: #6B7280; --g400: #9CA3AF;
@@ -26,7 +28,6 @@
     html, body { height: 100%; background: var(--bg); }
     body { font-family: var(--ff-sans); -webkit-font-smoothing: antialiased; }
 
-    /* — Reveal base overrides — */
     .reveal { font-family: var(--ff-sans); font-size: 16px; color: var(--g900); }
     .reveal .slides { text-align: left; }
     .reveal .slides > section {
@@ -50,9 +51,8 @@
     .reveal .controls button.navigate-up { border-bottom-color: var(--blue-mid) !important; }
     .reveal .controls button.navigate-down { border-top-color: var(--blue-mid) !important; }
 
-    /* — Layout primitives — */
+    /* — Layout — */
     .si { width: 100%; height: 100%; padding: 32px 48px; display: flex; flex-direction: column; }
-
     .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-shrink: 0; }
     .topbar-n { font-family: var(--ff-ui); font-size: 10px; font-weight: 500; color: var(--g400); letter-spacing: 0.06em; }
     .topbar-n.light { color: rgba(255,255,255,0.22); }
@@ -63,10 +63,6 @@
     .logo.light svg { stroke: rgba(255,255,255,0.8); }
     .logo.light span { color: rgba(255,255,255,0.8); }
 
-    .lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--g400); margin-bottom: 8px; }
-    .lbl.light { color: rgba(255,255,255,0.3); }
-    .lbl.accent { color: var(--blue-dark); }
-
     .sh { margin-bottom: 16px; flex-shrink: 0; }
     .sh h2 { font-size: clamp(20px, 2.8vw, 32px); }
     .sh .sub { font-size: 12px; color: var(--g500); margin-top: 4px; font-style: italic; }
@@ -74,13 +70,21 @@
     .sfoot { margin-top: auto; padding-top: 8px; border-top: 1px solid var(--g100); font-size: 9px; color: var(--g400); font-style: italic; flex-shrink: 0; }
     .sfoot.dark { border-top-color: rgba(255,255,255,0.06); color: rgba(255,255,255,0.42); }
 
-    /* — Logo SVG shorthand for reuse — */
-    .logo-svg { width: 20px; height: 20px; }
+    /* ============================
+       SLIDE 01 — OPENING QUESTION
+    ============================ */
+    .s-bg { background: var(--bg) !important; }
+    .s-dark { background: var(--dark) !important; }
+    .poll-head { font-family: var(--ff-serif); font-size: clamp(22px, 3vw, 38px); font-weight: 500; color: var(--g900); line-height: 1.2; margin-bottom: 20px; max-width: 620px; }
+    .poll-opts { display: flex; flex-direction: column; gap: 8px; max-width: 600px; }
+    .po { display: flex; align-items: flex-start; gap: 9px; padding: 12px 14px; border-radius: 11px; border: 1px solid var(--g200); background: var(--white); transition: border-color .2s, background .2s; cursor: default; }
+    .po:hover { border-color: rgba(163,191,250,0.5); background: rgba(163,191,250,0.03); }
+    .po-letter { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; color: var(--blue-dark); background: rgba(163,191,250,0.14); border-radius: 5px; padding: 2px 6px; flex-shrink: 0; margin-top: 1px; }
+    .po-text { font-size: 13px; color: var(--g700); line-height: 1.4; }
 
     /* ============================
-       SLIDE 01 — COVER
+       SLIDE 02 — COVER
     ============================ */
-    .s01 { background: var(--bg) !important; }
     .cover-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 16px 0; }
     .cover-body h1 {
       font-family: var(--ff-serif); font-size: clamp(30px, 4.2vw, 52px);
@@ -88,8 +92,6 @@
       letter-spacing: -0.025em; max-width: 620px; margin-bottom: 14px;
     }
     .cover-body h1 em { color: var(--g500); font-style: italic; }
-    .cover-body .note { font-size: 13px; color: var(--g500); line-height: 1.55; max-width: 460px; }
-
     .team-strip { display: flex; gap: 14px; border-top: 1px solid var(--g200); padding-top: 18px; flex-shrink: 0; }
     .tm { display: flex; align-items: center; gap: 10px; flex: 1; }
     .tm img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--g200); flex-shrink: 0; }
@@ -97,13 +99,18 @@
     .tm .rl { font-size: 10px; color: var(--g500); margin-top: 1px; line-height: 1.3; }
 
     /* ============================
-       SLIDE 02 — PROVOCAÇÃO
+       SLIDE 03 — ACELERAÇÃO
     ============================ */
-    .s02 { background: var(--dark) !important; }
+    .accel-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px; max-width: 680px; }
+    .accel-tag { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--g400); }
+    .accel-head { font-family: var(--ff-serif); font-size: clamp(30px, 4.2vw, 52px); font-weight: 500; color: var(--g900); line-height: 1.1; letter-spacing: -0.025em; }
+    .accel-bridge { font-family: var(--ff-serif); font-size: 16px; color: var(--g700); font-style: italic; padding: 16px 20px; border-left: 2px solid var(--blue); background: rgba(163,191,250,0.06); border-radius: 0 8px 8px 0; max-width: 520px; }
+
+    /* ============================
+       SLIDE 04 — STATS
+    ============================ */
     .prov-head h2 { font-size: clamp(24px, 3.4vw, 40px); color: var(--white); max-width: 560px; }
     .prov-head h2 em { color: var(--blue); font-style: italic; }
-    .prov-why { font-family: var(--ff-serif); font-size: 14px; color: rgba(255,255,255,0.75); font-style: italic; line-height: 1.65; max-width: 700px; padding: 14px 18px; border-left: 2px solid rgba(163,191,250,0.3); margin-bottom: 4px; }
-
     .stats-row {
       display: grid; grid-template-columns: 1fr 1fr 1fr;
       flex: 1; gap: 1px;
@@ -112,14 +119,17 @@
     .stat-cell { background: rgba(255,255,255,0.02); padding: 24px 22px; display: flex; flex-direction: column; justify-content: space-between; }
     .sn { font-family: var(--ff-serif); font-size: clamp(44px, 6vw, 76px); font-weight: 500; line-height: 1; letter-spacing: -0.04em; }
     .sn.blue { color: var(--blue); } .sn.green { color: var(--green); } .sn.purple { color: var(--purple); }
-    .sl { font-size: 11.5px; color: rgba(255,255,255,0.68); line-height: 1.45; margin-top: 10px; }
+    .sl { font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.5; margin-top: 12px; }
+    .sl strong { color: rgba(255,255,255,0.95); }
     .ss { font-size: 9px; color: rgba(255,255,255,0.38); font-style: italic; margin-top: 12px; }
-    .prov-foot blockquote { font-family: var(--ff-serif); font-size: 14px; color: rgba(255,255,255,0.68); font-style: italic; line-height: 1.55; max-width: 620px; }
 
     /* ============================
-       SLIDES 03–05 — CASES
+       SLIDES 05–07 — CASES
     ============================ */
     .case-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; flex: 1; align-items: start; }
+    .case-identity { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .case-logo { height: 22px; width: auto; object-fit: contain; opacity: 0.9; max-width: 90px; }
+    .case-company { font-family: var(--ff-ui); font-size: 13px; font-weight: 700; color: var(--g800); }
     .case-tag {
       display: inline-flex; align-items: center; gap: 6px;
       background: rgba(163,191,250,0.1); border: 1px solid rgba(163,191,250,0.25);
@@ -134,7 +144,6 @@
     .cs-text { font-size: 11.5px; color: var(--g600); line-height: 1.5; margin-top: 2px; }
     .mkt-note { background: rgba(163,191,250,0.07); border-left: 2px solid var(--blue); border-radius: 0 8px 8px 0; padding: 9px 13px; font-size: 10px; color: var(--g600); line-height: 1.5; margin-top: 14px; }
     .mkt-note strong { color: var(--blue-dark); }
-
     .case-metrics { display: flex; flex-direction: column; gap: 10px; }
     .mc { border-radius: 14px; padding: 20px 18px; display: flex; flex-direction: column; gap: 5px; }
     .mc.primary { background: var(--dark); }
@@ -149,29 +158,11 @@
     .mc.secondary .ml, .mc.tertiary .ml { color: var(--g600); }
 
     /* ============================
-       SLIDE 06 — BENCHMARK
-    ============================ */
-    .s06 { background: var(--dark) !important; }
-    .bench-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; flex: 1; margin-bottom: 14px; }
-    .bc { border-radius: 14px; padding: 22px 20px; display: flex; flex-direction: column; justify-content: space-between; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); }
-    .bn { font-family: var(--ff-serif); font-size: clamp(40px, 5vw, 64px); font-weight: 500; line-height: 1; letter-spacing: -0.04em; }
-    .bc:nth-child(1) .bn { color: var(--blue); } .bc:nth-child(2) .bn { color: var(--green); } .bc:nth-child(3) .bn { color: var(--purple); }
-    .bk { font-family: var(--ff-ui); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; margin-bottom: 5px; }
-    .bc:nth-child(1) .bk { color: rgba(163,191,250,0.65); } .bc:nth-child(2) .bk { color: rgba(181,234,215,0.65); } .bc:nth-child(3) .bk { color: rgba(215,189,226,0.65); }
-    .bd { font-size: 11.5px; color: rgba(255,255,255,0.38); line-height: 1.5; }
-    .bsrc { font-size: 9px; color: rgba(255,255,255,0.16); font-style: italic; margin-top: 12px; }
-    .bench-insight { background: rgba(163,191,250,0.08); border: 1px solid rgba(163,191,250,0.2); border-radius: 14px; padding: 22px 26px; display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
-    .bench-insight p { font-family: var(--ff-serif); font-size: 18px; color: rgba(255,255,255,0.88); line-height: 1.45; }
-    .bench-insight p strong { color: var(--blue); font-style: normal; font-weight: 500; }
-    .bi-icon { width: 34px; height: 34px; background: rgba(163,191,250,0.1); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-
-    /* ============================
-       SLIDE 07 — SERVIÇOS
+       SLIDE 09 — SERVIÇOS (3 cards)
     ============================ */
     .services-bento {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1.15fr 1fr 1fr;
       gap: 12px;
       flex: 1;
     }
@@ -189,101 +180,113 @@
     .sv.featured p { font-size: 14px; color: rgba(255,255,255,0.68); }
 
     /* ============================
-       SLIDE 08 — IDEIAS
+       SLIDE 10 — IDEIAS (4 cols)
     ============================ */
-    .ideas-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; flex: 1; }
-    .ic { border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--g200); background: var(--white); }
-    .ic-head { display: flex; align-items: center; gap: 9px; padding-bottom: 10px; border-bottom: 1px solid var(--g100); }
-    .ic-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .ic-head h3 { font-family: var(--ff-ui); font-size: 16px; font-weight: 600; color: var(--g900); }
-    .ic-item { display: flex; align-items: flex-start; gap: 7px; font-size: 14px; color: var(--g600); line-height: 1.45; }
+    .ideas-cols { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; flex: 1; }
+    .ic { border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--g200); background: var(--white); }
+    .ic-head { display: flex; align-items: center; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--g100); }
+    .ic-icon { width: 26px; height: 26px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ic-head h3 { font-family: var(--ff-ui); font-size: 13px; font-weight: 600; color: var(--g900); }
+    .ic-item { display: flex; align-items: flex-start; gap: 7px; font-size: 11px; color: var(--g600); line-height: 1.4; }
     .ic-dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
-    .ic-data { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--g100); font-size: 9.5px; color: var(--g400); line-height: 1.4; font-style: italic; }
-    .ic-data strong { color: var(--g600); font-style: normal; }
 
     /* ============================
-       SLIDE 09 — PROCESSO
+       SLIDE 11 — PROCESSO + TRIÂNGULO
     ============================ */
-    .process-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
-    .process-strip { display: flex; align-items: stretch; gap: 6px; background: var(--white); border-radius: 18px; border: 1px solid var(--g100); padding: 16px; box-shadow: 0 2px 18px rgba(0,0,0,0.04); }
-    .ps { flex: 1; border-radius: 12px; padding: 14px 12px; display: flex; flex-direction: column; gap: 7px; cursor: default; transition: transform .2s, box-shadow .2s; }
+    .process-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+    .process-strip { display: flex; align-items: stretch; gap: 6px; background: var(--white); border-radius: 18px; border: 1px solid var(--g100); padding: 14px; box-shadow: 0 2px 18px rgba(0,0,0,0.04); flex-shrink: 0; }
+    .ps { flex: 1; border-radius: 12px; padding: 12px 10px; display: flex; flex-direction: column; gap: 6px; cursor: default; transition: transform .2s, box-shadow .2s; }
     .ps:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.07); }
     .pc { display: flex; align-items: center; flex-shrink: 0; color: var(--g300); }
     .ps-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .ps-num { font-family: var(--ff-ui); font-size: 8px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--g700); }
-    .ps-title { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; color: var(--g800); line-height: 1.2; }
-    .ps-del { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g600); margin-top: auto; padding-top: 7px; }
-    .principles-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-    .pr { display: flex; align-items: flex-start; gap: 10px; background: var(--white); border: 1px solid var(--g200); border-radius: 14px; padding: 14px 16px; }
-    .pr-letter { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; color: var(--blue-dark); background: rgba(163,191,250,0.14); border-radius: 5px; padding: 2px 7px; flex-shrink: 0; margin-top: 1px; }
-    .pr-text { font-size: 11.5px; color: var(--g600); line-height: 1.5; }
+    .ps-num { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--g700); }
+    .ps-title { font-family: var(--ff-ui); font-size: 13px; font-weight: 700; color: var(--g800); line-height: 1.2; }
+    .ps-del { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--g600); margin-top: auto; padding-top: 6px; }
+
+    /* Triad / Triangle */
+    .triad-outer { display: flex; align-items: center; justify-content: center; }
+    .triad-container { position: relative; width: 380px; height: 270px; flex-shrink: 0; }
+    .triad-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+    .triad-center {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--dark); border-radius: 50%;
+      width: 72px; height: 72px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 3px;
+      z-index: 2; box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+    }
+    .triad-center span { font-family: var(--ff-ui); font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-top: 2px; }
+    .triad-v {
+      position: absolute; background: var(--white);
+      border: 1px solid var(--g200); border-radius: 12px;
+      padding: 10px 14px; text-align: center; z-index: 2;
+      min-width: 116px; box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+    }
+    .triad-top { top: 0; left: 50%; transform: translateX(-50%); }
+    .triad-bl { bottom: 0; left: 0; }
+    .triad-br { bottom: 0; right: 0; }
+    .triad-lbl { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+    .triad-lbl.blue { color: var(--blue-dark); }
+    .triad-lbl.green { color: var(--green-dark); }
+    .triad-lbl.purple { color: var(--purple-dark); }
+    .triad-txt { font-size: 10px; color: var(--g600); line-height: 1.35; }
 
     /* ============================
-       SLIDE 10 — SETORES
+       SLIDE 12 — FECHAMENTO
     ============================ */
-    .sectors-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; flex: 1; }
-    .sec { border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 9px; border: 1px solid var(--g200); background: var(--white); transition: transform .2s, box-shadow .2s, border-color .2s; }
-    .sec:nth-child(1):hover { box-shadow: 0 8px 24px rgba(163,191,250,0.18); border-color: rgba(163,191,250,0.4); transform: translateY(-2px); }
-    .sec:nth-child(2):hover { box-shadow: 0 8px 24px rgba(181,234,215,0.18); border-color: rgba(181,234,215,0.4); transform: translateY(-2px); }
-    .sec:nth-child(3):hover { box-shadow: 0 8px 24px rgba(215,189,226,0.18); border-color: rgba(215,189,226,0.4); transform: translateY(-2px); }
-    .sec:nth-child(4):hover { box-shadow: 0 8px 24px rgba(163,191,250,0.18); border-color: rgba(163,191,250,0.4); transform: translateY(-2px); }
-    .sec-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
-    .sec h3 { font-family: var(--ff-ui); font-size: 15px; font-weight: 600; color: var(--g900); }
-    .sec .ex { font-size: 11.5px; color: var(--g500); line-height: 1.5; }
+    .closing-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; max-width: 700px; }
+    .closing-quote { background: var(--dark); border-radius: 20px; padding: 28px 32px; }
+    .closing-quote p { font-family: var(--ff-serif); font-size: clamp(17px, 2.2vw, 24px); color: var(--white); font-style: italic; line-height: 1.5; margin: 0; }
+    .closing-quote p em { color: var(--green); font-style: normal; }
+    .closing-meta { display: flex; align-items: center; gap: 16px; }
+    .closing-divider { width: 1px; height: 20px; background: var(--g200); }
+    .closing-link { font-size: 11px; color: var(--g500); }
 
-    /* ============================
-       SLIDE 11 — FECHAMENTO
-    ============================ */
-    .s11 { background: var(--bg) !important; }
-    .closing-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; flex: 1; align-items: start; }
-    .poll-head { font-family: var(--ff-serif); font-size: 17px; font-weight: 500; color: var(--g900); line-height: 1.3; margin-bottom: 14px; }
-    .poll-opts { display: flex; flex-direction: column; gap: 8px; }
-    .po { display: flex; align-items: flex-start; gap: 9px; padding: 11px 13px; border-radius: 11px; border: 1px solid var(--g200); background: var(--white); transition: border-color .2s, background .2s; cursor: default; }
-    .po:hover { border-color: rgba(163,191,250,0.5); background: rgba(163,191,250,0.03); }
-    .po-letter { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; color: var(--blue-dark); background: rgba(163,191,250,0.14); border-radius: 5px; padding: 2px 6px; flex-shrink: 0; margin-top: 1px; }
-    .po-text { font-size: 12px; color: var(--g700); line-height: 1.4; }
-    .closing-right { display: flex; flex-direction: column; gap: 12px; }
-    .cq { background: var(--dark); border-radius: 16px; padding: 24px; }
-    .cq p { font-family: var(--ff-serif); font-size: 14px; color: var(--white); font-style: italic; line-height: 1.55; }
-    .cq p em { color: var(--green); font-style: normal; }
-    .ns { background: var(--white); border-radius: 16px; padding: 20px; border: 1px solid var(--g200); }
-    .ns .ns-lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--g400); margin-bottom: 5px; }
-    .ns .ns-title { font-family: var(--ff-ui); font-size: 13.5px; font-weight: 600; color: var(--g900); margin-bottom: 3px; }
-    .ns .ns-desc { font-size: 11px; color: var(--g500); line-height: 1.45; }
-    .contacts { display: flex; flex-direction: column; gap: 5px; padding: 0 4px; }
-    .ci { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--g600); }
-    .deliverable { background: var(--bg); border-radius: 12px; padding: 12px 16px; border: 1px solid var(--g200); display: flex; flex-direction: column; gap: 7px; }
-    .dv-lbl { font-family: var(--ff-ui); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g400); margin-bottom: 2px; }
-    .dv-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--g600); line-height: 1.4; }
-
-    /* ============================
-       SLIDE 02 — ACELERAÇÃO
-    ============================ */
-    .accel-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px; max-width: 680px; }
-    .accel-tag { font-family: var(--ff-ui); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--g400); }
-    .accel-head { font-family: var(--ff-serif); font-size: clamp(30px, 4.2vw, 52px); font-weight: 500; color: var(--g900); line-height: 1.1; letter-spacing: -0.025em; }
-    .accel-text p { font-size: 16px; color: var(--g600); line-height: 1.65; max-width: 560px; }
-    .accel-text p + p { margin-top: 14px; }
-    .accel-bridge { font-family: var(--ff-serif); font-size: 15px; color: var(--g700); font-style: italic; padding: 14px 18px; border-left: 2px solid var(--blue); background: rgba(163,191,250,0.06); border-radius: 0 8px 8px 0; max-width: 520px; }
+    /* Flag icons */
+    .fi { line-height: 1; }
+    .flag-sm { display: inline-block; width: 20px; height: 14px; border-radius: 2px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0,0,0,0.1); flex-shrink: 0; font-size: 14px; line-height: 14px; vertical-align: middle; }
   </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- ═══════════════ 01 COVER ═══════════════ -->
-<section class="s01">
+<!-- ═══════════════ 01 ABERTURA — PERGUNTA ═══════════════ -->
+<section style="background: var(--bg) !important;">
   <div class="si">
     <div class="topbar">
       <div class="logo">
-        <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
         <span>River Labs</span>
       </div>
-      <span class="topbar-n">01 / 11</span>
+      <span class="topbar-n">01 / 12</span>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+      <div class="poll-head">Qual é o momento da sua empresa em relação à tecnologia?</div>
+      <div class="poll-opts">
+        <div class="po"><span class="po-letter">A</span><span class="po-text">Ainda estamos avaliando se faz sentido investir</span></div>
+        <div class="po"><span class="po-letter">B</span><span class="po-text">Já usamos algumas ferramentas, mas de forma dispersa</span></div>
+        <div class="po"><span class="po-letter">C</span><span class="po-text">Há uma iniciativa em andamento que precisa de estrutura</span></div>
+        <div class="po"><span class="po-letter">D</span><span class="po-text">Queremos implementar algo novo e não sabemos por onde começar</span></div>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">Slide de abertura — engajar a audiência imediatamente. Pergunta direta, sem rodeios. Deixar as pessoas responderem antes de apresentar o time.</aside>
+</section>
+
+<!-- ═══════════════ 02 COVER ═══════════════ -->
+<section style="background: var(--bg) !important;">
+  <div class="si">
+    <div class="topbar">
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">02 / 12</span>
     </div>
     <div class="cover-body">
       <h1>Transformação digital que começa <em>pelas pessoas,</em> não pela ferramenta.</h1>
-      <p class="note">Brasileiros com experiência internacional, ajudando empresas a capturar valor real com IA — não apenas adotá-la.</p>
     </div>
     <div class="team-strip">
       <div class="tm">
@@ -292,7 +295,7 @@
       </div>
       <div class="tm">
         <img src="./Enrique_PP.png" alt="Enrique Ibarra">
-        <div><div class="nm">Enrique Ibarra</div><div class="rl">Engenheiro Full Stack</div></div>
+        <div><div class="nm">Enrique Ibarra</div><div class="rl">Engenheiro Full Stack | Blockchain</div></div>
       </div>
       <div class="tm">
         <img src="./Antonio_PP.png" alt="Antonio Rapozo">
@@ -304,49 +307,45 @@
       </div>
     </div>
   </div>
-  <aside class="notes">Apresentação rápida de cada um — uma frase por pessoa. Contextualizar: brasileiros com experiência internacional, foco no mercado BR. O time é o produto — mostrar diversidade de perfis (tech + pessoas) é diferencial desde a primeira tela.</aside>
+  <aside class="notes">Apresentação rápida — uma frase por pessoa. O time é o produto.</aside>
 </section>
 
-<!-- ═══════════════ 02 ACELERAÇÃO TECNOLÓGICA ═══════════════ -->
-<section class="s01">
+<!-- ═══════════════ 03 ACELERAÇÃO TECNOLÓGICA ═══════════════ -->
+<section>
   <div class="si">
     <div class="topbar">
       <div class="logo">
-        <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
         <span>River Labs</span>
       </div>
-      <span class="topbar-n">02 / 11</span>
+      <span class="topbar-n">03 / 12</span>
     </div>
     <div class="accel-body">
-      <div class="accel-tag">Aceleração Tecnológica</div>
+      <div class="accel-tag">Aceleração Tecnológica Forçada</div>
       <h2 class="accel-head">A pandemia não avisou.<br>A IA está avisando.</h2>
-      <div class="accel-text">
-        <p>Em 2020, empresas que não tinham presença digital correram contra o tempo — muitas não chegaram ao outro lado.</p>
-        <p>Com a IA, a janela está aberta agora. A diferença é que desta vez você pode escolher quando entrar.</p>
-      </div>
-      <div class="accel-bridge">O problema não é quem usa. É quem tem estratégia.</div>
+      <div class="accel-bridge">A tecnologia só cria valor quando as pessoas estão no centro — não na periferia.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ 03 PROVOCAÇÃO ═══════════════ -->
-<section class="s02">
+<!-- ═══════════════ 04 STATS ═══════════════ -->
+<section style="background: var(--dark) !important;">
   <div class="si">
     <div class="topbar">
       <div class="logo light">
-        <svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
         <span>River Labs</span>
       </div>
-      <span class="topbar-n light">03 / 11</span>
+      <span class="topbar-n light">04 / 12</span>
     </div>
     <div class="prov-head">
-      <h2>A ferramenta chegou.<br><em>A estratégia ainda não existe.</em></h2>
+      <h2>A tecnologia está aí.<br><em>A estratégia, não necessariamente.</em></h2>
     </div>
     <div class="stats-row">
       <div class="stat-cell">
         <div>
           <div class="sn blue">88%</div>
-          <div class="sl">das empresas dizem usar IA — mas só <strong style="color:rgba(255,255,255,0.75)">6%</strong> se consideram "high performers" em captura de valor real.</div>
+          <div class="sl">das empresas dizem usar IA — mas só <strong>6%</strong> se consideram high performers em captura de valor real.</div>
         </div>
         <div class="ss">McKinsey Global Survey on AI, 2025</div>
       </div>
@@ -367,37 +366,46 @@
     </div>
     <div class="sfoot dark">Fonte: McKinsey Global Survey on AI 2025; MIT Sloan Management Review; Gartner, 2023–2025</div>
   </div>
-  <aside class="notes">Perguntas para a audiência: Quem na sua empresa está pensando tecnologia de forma estratégica? Como ela dialoga com as pessoas e processos existentes? Quais são as principais barreiras?</aside>
 </section>
 
-<!-- ═══════════════ BRIDGE — NÃO TEORIA ═══════════════ -->
+<!-- ═══════════════ 05 BRIDGE ═══════════════ -->
 <section>
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">04 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">05 / 12</span>
     </div>
-    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;max-width:640px;">
-      <h2 style="font-family:var(--ff-serif);font-size:clamp(32px,4.8vw,58px);font-weight:500;color:var(--g900);line-height:1.08;letter-spacing:-0.025em;margin-bottom:18px;">Não teoria.<br>Implementações reais.</h2>
-      <p style="font-size:16px;color:var(--g500);line-height:1.6;max-width:480px;">Cada case a seguir saiu do problema real de um cliente — com piloto, resultado e métrica.</p>
-      <p style="font-size:12px;color:var(--g400);font-style:italic;margin-top:14px;letter-spacing:0.02em;">Setores diferentes. Mesma abordagem.</p>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;max-width:680px;">
+      <h2 style="font-family:var(--ff-serif);font-size:clamp(36px,5.5vw,64px);font-weight:500;color:var(--g900);line-height:1.05;letter-spacing:-0.025em;">Soluções e implementações reais.</h2>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ 03 CASO 1 — WASHDOG ═══════════════ -->
+<!-- ═══════════════ 06 CASO 1 — WASHDOG ═══════════════ -->
 <section>
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">05 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">06 / 12</span>
     </div>
     <div class="sh">
       <h2>Do zero a 4 mil impressões e 1ª página do Google — em 30 dias</h2>
-      <div class="sub">Auto-lavagem de pets · Mercado saturado · Lançamento do zero</div>
+      <div class="sub">Auto-lavagem de pets · Lançamento do zero</div>
     </div>
     <div class="case-layout">
       <div>
+        <div class="case-identity">
+          <img class="case-logo" src="https://logo.clearbit.com/washdog.cl" alt="Washdog" onerror="this.style.display='none'">
+          <span class="case-company">Washdog</span>
+          <span class="flag-sm fi fi-cl"></span>
+          <span style="font-size:10px;color:var(--g400);">Chile</span>
+        </div>
         <div class="case-tag">
           <iconify-icon icon="mdi:magnify" width="11"></iconify-icon>
           Marketing Digital com IA
@@ -406,54 +414,53 @@
           <div>
             <div class="cs-lbl">Desafio</div>
             <div class="cs-title">Novo negócio, sem presença digital</div>
-            <div class="cs-text">Mercado competitivo, sem posicionamento, sem SEO, sem redes sociais e sem prova social.</div>
+            <div class="cs-text">Mercado competitivo, sem posicionamento, sem SEO e sem prova social.</div>
           </div>
           <div>
             <div class="cs-lbl">Solução</div>
             <div class="cs-title">Marketing digital escalável com IA</div>
-            <div class="cs-text">SEO programático, geração de conteúdo com IA, listagens automatizadas, blog e redes sociais.</div>
+            <div class="cs-text">SEO programático, conteúdo com IA, listagens automatizadas e redes sociais.</div>
           </div>
           <div>
             <div class="cs-lbl">Resultado</div>
             <div class="cs-title">Primeira página em 1 mês</div>
-            <div class="cs-text">De invisível a destaque nas buscas do Google, com crescimento acelerado de tráfego orgânico.</div>
+            <div class="cs-text">De invisível a destaque nas buscas do Google com crescimento acelerado de tráfego orgânico.</div>
           </div>
         </div>
         <div class="mkt-note"><strong>42% das empresas</strong> apontam marketing e vendas como a função nº1 de uso de IA generativa. <em style="color:var(--g500)">(Qualtrics, 2025)</em></div>
       </div>
       <div class="case-metrics">
-        <div class="mc primary">
-          <div class="mv">+4.000</div>
-          <div class="ml">impressões orgânicas no primeiro mês</div>
-        </div>
-        <div class="mc secondary">
-          <div class="mv">1ª pág.</div>
-          <div class="ml">resultados Google para buscas-alvo</div>
-        </div>
-        <div class="mc tertiary">
-          <div class="mv">0 → presente</div>
-          <div class="ml">presença digital — do zero ao visível</div>
-        </div>
+        <div class="mc primary"><div class="mv">+4.000</div><div class="ml">impressões orgânicas no primeiro mês</div></div>
+        <div class="mc secondary"><div class="mv">1ª pág.</div><div class="ml">resultados Google para buscas-alvo</div></div>
+        <div class="mc tertiary"><div class="mv">0 → presente</div><div class="ml">presença digital — do zero ao visível</div></div>
       </div>
     </div>
     <div class="sfoot">Washdog · Posicionamento orgânico via SEO programático e conteúdo gerado com IA</div>
   </div>
-  <aside class="notes">~55s: "O Washdog entrou em um mercado já consolidado sem nenhuma presença digital. Aplicamos SEO programático, geração de conteúdo com IA, listagens automatizadas e blog. Em menos de um mês, chegou à primeira página do Google com mais de 4 mil impressões orgânicas. De invisível a referência — partindo do zero."</aside>
 </section>
 
-<!-- ═══════════════ 04 CASO 2 — RFP ═══════════════ -->
+<!-- ═══════════════ 07 CASO 2 — VTEX ═══════════════ -->
 <section>
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">06 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">07 / 12</span>
     </div>
     <div class="sh">
       <h2>De 10h por RFP a resposta automática —<br>1.094 horas salvas em 6 meses</h2>
-      <div class="sub">Enterprise Sales Engineering · 6 regiões · Rollout global</div>
+      <div class="sub">Enterprise Sales Engineering · Rollout global em 6 regiões</div>
     </div>
     <div class="case-layout">
       <div>
+        <div class="case-identity">
+          <img class="case-logo" src="https://logo.clearbit.com/vtex.com" alt="VTEX" onerror="this.style.display='none'">
+          <span class="case-company">VTEX</span>
+          <span class="flag-sm fi fi-br"></span>
+          <span style="font-size:10px;color:var(--g400);">Brasil</span>
+        </div>
         <div class="case-tag">
           <iconify-icon icon="mdi:robot-outline" width="11"></iconify-icon>
           AI RFP Assistant · Automação de Processos
@@ -462,61 +469,73 @@
           <div>
             <div class="cs-lbl">Desafio</div>
             <div class="cs-title">10 horas por proposta, respondidas manualmente</div>
-            <div class="cs-text">Equipes de Sales Engineering respondiam ~117 questões técnicas e de compliance por RFP, sem padronização nem escala.</div>
+            <div class="cs-text">Equipes respondiam ~117 questões técnicas e de compliance por RFP sem padronização.</div>
           </div>
           <div>
             <div class="cs-lbl">Solução</div>
             <div class="cs-title">AI RFP Assistant interno em produção global</div>
-            <div class="cs-text">112 RFPs processados e 13.100 respostas geradas em 6 meses, com rollout em EMEA, US, Brasil, LATAM e APAC.</div>
+            <div class="cs-text">112 RFPs processados e 13.100 respostas geradas em 6 meses — EMEA, US, Brasil, LATAM e APAC.</div>
           </div>
           <div>
             <div class="cs-lbl">Resultado</div>
             <div class="cs-title">137 dias de trabalho recuperados</div>
-            <div class="cs-text">1.094 horas salvas (13.128 respostas × 5 min) e custo de infraestrutura de apenas $16,24 por RFP processado.</div>
+            <div class="cs-text">1.094h salvas e custo de infraestrutura de $16,24 por RFP processado.</div>
           </div>
         </div>
         <div class="mkt-note">Substituiu plataforma externa <strong>Loopio ($40k/ano)</strong> por solução própria a <strong>$3.600/ano</strong> — redução de <strong>91% no custo anual</strong>.</div>
       </div>
       <div class="case-metrics">
-        <div class="mc primary">
-          <div class="mv">1.094h</div>
-          <div class="ml">horas salvas em 6 meses de operação</div>
-        </div>
-        <div class="mc secondary">
-          <div class="mv">$36.4k</div>
-          <div class="ml">economizado vs. plataforma externa Loopio</div>
-        </div>
-        <div class="mc tertiary">
-          <div class="mv">~10h</div>
-          <div class="ml">de trabalho manual eliminado por RFP</div>
-        </div>
+        <div class="mc primary"><div class="mv">1.094h</div><div class="ml">horas salvas em 6 meses de operação</div></div>
+        <div class="mc secondary"><div class="mv">$36.4k</div><div class="ml">economizado vs. plataforma Loopio</div></div>
+        <div class="mc tertiary"><div class="mv">~10h</div><div class="ml">de trabalho manual eliminado por RFP</div></div>
       </div>
     </div>
     <div class="sfoot">Global Sales Engineering · AI RFP Assistant · 112 RFPs · 6 regiões · 13.1K respostas geradas</div>
   </div>
-  <aside class="notes">João apresenta — ~1 min. "Construímos um assistente de IA interno que responde RFPs completos automaticamente. Em 6 meses: 112 propostas processadas, 13 mil respostas geradas, 1.094 horas salvas. E substituímos uma plataforma de $40k/ano por uma solução própria de $3.600 — com mais controle e mesma qualidade."</aside>
 </section>
 
-<!-- ═══════════════ 05 CASO 3 — LOGÍSTICA ═══════════════ -->
+<!-- ═══════════════ 08 CASO 3 — AGÊNCIA FEDERAL ═══════════════ -->
 <section>
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">07 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">08 / 12</span>
     </div>
     <div class="sh">
-      <h2>De infraestrutura pública americana a segurança de IA</h2>
+      <h2>Infraestrutura pública com segurança de dados</h2>
       <div class="sub">Onde o erro não é uma opção</div>
     </div>
     <div class="case-layout">
       <div>
-        <div class="case-tag"><iconify-icon icon="mdi:shield-check-outline" width="11"></iconify-icon>Agências Federais dos EUA · Segurança de Navegação · Escala Empresarial</div>
-        <div class="case-steps">
-          <div><div class="cs-lbl">Desafio</div><div class="cs-title">Os dois ambientes mais exigentes do mundo digital</div><div class="cs-text">Agências governamentais americanas gerenciando bilhões em infraestrutura pública. Empresas expostas ao vetor de ataque número 1 do mundo corporativo: o navegador — amplificado pela própria IA adotada.</div></div>
-          <div><div class="cs-lbl">Solução</div><div class="cs-title">O mesmo profissional. O mesmo padrão. Dois contextos críticos.</div><div class="cs-text">Sistemas de gestão de infraestrutura adotados por 15+ estados americanos — e proteção com IA em produção real para mais de 20.000 usuários corporativos contra ameaças invisíveis no navegador.</div></div>
-          <div><div class="cs-lbl">Resultado</div><div class="cs-title">Quem opera onde falhar tem consequência real aprende diferente</div><div class="cs-text">Conformidade federal com zero margem a erro. IA aplicada à segurança ativa — protegendo empresas em escala sem que os usuários percebam o risco removido.</div></div>
+        <div class="case-identity">
+          <span class="flag-sm fi fi-us"></span>
+          <span class="case-company">Agência Federal</span>
+          <span style="font-size:10px;color:var(--g400);">Estados Unidos</span>
         </div>
-        <div class="mkt-note">O <strong>navegador é hoje o principal vetor de ataque corporativo</strong> — presente em mais de 80% das violações de dados empresariais, e amplificado pela adoção acelerada de IA. <em style="color:var(--g500)">(Verizon DBIR, 2024)</em></div>
+        <div class="case-tag">
+          <iconify-icon icon="mdi:shield-check-outline" width="11"></iconify-icon>
+          Agências Federais dos EUA · Segurança · Escala Empresarial
+        </div>
+        <div class="case-steps">
+          <div>
+            <div class="cs-lbl">Desafio</div>
+            <div class="cs-title">Os dois ambientes mais exigentes do mundo digital</div>
+            <div class="cs-text">Agências governamentais gerenciando bilhões em infraestrutura pública — e empresas expostas ao vetor de ataque nº1: o navegador.</div>
+          </div>
+          <div>
+            <div class="cs-lbl">Solução</div>
+            <div class="cs-title">O mesmo profissional. O mesmo padrão. Dois contextos críticos.</div>
+            <div class="cs-text">Sistemas de gestão adotados por 15+ estados americanos e proteção com IA para mais de 20.000 usuários corporativos.</div>
+          </div>
+          <div>
+            <div class="cs-lbl">Resultado</div>
+            <div class="cs-title">Conformidade federal com zero margem a erro</div>
+            <div class="cs-text">IA aplicada à segurança ativa — protegendo empresas em escala sem que os usuários percebam o risco removido.</div>
+          </div>
+        </div>
       </div>
       <div class="case-metrics">
         <div class="mc primary"><div class="mv">15+</div><div class="ml">estados americanos atendidos</div></div>
@@ -524,25 +543,28 @@
         <div class="mc tertiary"><div class="mv">$500M+</div><div class="ml">em infraestrutura pública sob gestão</div></div>
       </div>
     </div>
-    <div class="sfoot">Agências Federais dos EUA · Segurança Corporativa · "A maioria aprende em ambientes que toleram erro. Antonio construiu nos que não toleram."</div>
+    <div class="sfoot">Agências Federais dos EUA · Segurança Corporativa</div>
   </div>
-  <aside class="notes">Antonio apresenta — ~1 minuto. Fala-ponte ao final dos 3 casos: "Setores diferentes, problemas diferentes — mesma abordagem: entender as pessoas antes de propor a tecnologia."</aside>
 </section>
 
-<!-- ═══════════════ 06 SERVIÇOS ═══════════════ -->
+<!-- ═══════════════ 09 SERVIÇOS ═══════════════ -->
 <section>
-  <div class="si s7">
+  <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">08 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">09 / 12</span>
     </div>
     <div class="sh">
+      <h2>Nossas linhas de atuação</h2>
     </div>
     <div class="services-bento">
       <div class="sv featured">
         <div class="sv-icon"><iconify-icon icon="mdi:lightbulb-outline" width="17" style="color:var(--blue)"></iconify-icon></div>
         <h3>AI Labs</h3>
-        <p>Workshops de co-criação com equipes. Laboratório de ideias com IA — para descobrir onde a tecnologia gera valor real no seu contexto.</p>
+        <p>Workshops de co-criação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.</p>
       </div>
       <div class="sv">
         <div class="sv-icon"><iconify-icon icon="mdi:chart-line" width="15" style="color:var(--purple-dark)"></iconify-icon></div>
@@ -550,90 +572,120 @@
         <p>Relatórios customizados por setor — dados que informam decisões, não só apresentações.</p>
       </div>
       <div class="sv">
-        <div class="sv-icon"><iconify-icon icon="mdi:robot-outline" width="15" style="color:var(--green-dark)"></iconify-icon></div>
-        <h3>Automação</h3>
-        <p>Redução de processos manuais repetitivos. Mais tempo para o que importa.</p>
-      </div>
-      <div class="sv">
         <div class="sv-icon"><iconify-icon icon="mdi:code-braces" width="15" style="color:var(--blue-dark)"></iconify-icon></div>
         <h3>Desenvolvimento</h3>
-        <p>Soluções proprietárias no seu departamento — software house focada em resultado de negócio.</p>
+        <p>Soluções proprietárias na sua infraestrutura — código seu, sem dependência de SaaS ou fornecedor externo.</p>
       </div>
     </div>
   </div>
-  <aside class="notes">Demo ao vivo por frente (~30s cada): AI Labs — abrir um workshop rápido ou canvas de co-criação com IA; Inteligência de mercado — mostrar exemplo de relatório gerado para um setor; Automação — demonstrar um fluxo automatizado em operação (ex: triagem de leads ou resposta automática); Desenvolvimento — mostrar interface ou MVP de solução proprietária entregue. O objetivo é tangibilizar — não apresentar, demonstrar.</aside>
 </section>
 
-<!-- ═══════════════ 07 IDEIAS POR SETOR ═══════════════ -->
+<!-- ═══════════════ 10 IDEIAS POR SETOR ═══════════════ -->
 <section>
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">09 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">10 / 12</span>
     </div>
     <div class="sh">
       <h2>O que já dá para fazer — no seu setor, agora</h2>
-      <div class="sub">Logística · Varejo · Serviços</div>
+      <div class="sub">Logística · Varejo/E-commerce · Serviços · Compliance</div>
     </div>
     <div class="ideas-cols">
       <div class="ic">
         <div class="ic-head">
-          <div class="ic-icon" style="background:rgba(163,191,250,0.12)"><iconify-icon icon="mdi:truck-outline" width="15" style="color:var(--blue-dark)"></iconify-icon></div>
+          <div class="ic-icon" style="background:rgba(163,191,250,0.12)"><iconify-icon icon="mdi:truck-outline" width="14" style="color:var(--blue-dark)"></iconify-icon></div>
           <h3>Logística</h3>
         </div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Extração automática de notas fiscais — zero entrada manual</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Previsão de atrasos: rota + clima + histórico do motorista</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Alerta de ruptura de estoque antes que aconteça</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Identificação automática dos motivos de devolução por SKU</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Extração automática de notas fiscais</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Previsão de atrasos por rota e histórico</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Alerta de ruptura de estoque antecipado</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--blue)"></div>Identificação de motivos de devolução por SKU</div>
       </div>
       <div class="ic">
         <div class="ic-head">
-          <div class="ic-icon" style="background:rgba(181,234,215,0.15)"><iconify-icon icon="mdi:store-outline" width="15" style="color:var(--green-dark)"></iconify-icon></div>
+          <div class="ic-icon" style="background:rgba(181,234,215,0.15)"><iconify-icon icon="mdi:store-outline" width="14" style="color:var(--green-dark)"></iconify-icon></div>
           <h3>Varejo / E-commerce</h3>
         </div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Monitoramento de preço de concorrentes com alerta automático</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Geração em massa de descrições de produtos para o catálogo</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Monitoramento de preços com alerta automático</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Geração em massa de descrições de produtos</div>
         <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>IA decide quais carrinhos abandonados merecem desconto</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Previsão de demanda que age — o pedido já foi antes do produto acabar</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--green)"></div>Previsão de demanda com pedido automático</div>
       </div>
       <div class="ic">
         <div class="ic-head">
-          <div class="ic-icon" style="background:rgba(215,189,226,0.15)"><iconify-icon icon="mdi:storefront-outline" width="15" style="color:var(--purple-dark)"></iconify-icon></div>
+          <div class="ic-icon" style="background:rgba(215,189,226,0.15)"><iconify-icon icon="mdi:storefront-outline" width="14" style="color:var(--purple-dark)"></iconify-icon></div>
           <h3>Serviços</h3>
         </div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Chatbot treinado no seu cardápio e políticas — responde no WhatsApp 24h</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Análise de avaliações do Google e TripAdvisor para identificar o que afasta clientes</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Previsão de demanda por temporada para escalar equipe com antecedência</div>
-        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Geração automática de conteúdo para redes sociais a partir do calendário</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Chatbot no WhatsApp treinado no seu negócio</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Precificação dinâmica por demanda e sazonalidade</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Previsão de estacionalidade para planejar equipe</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--purple)"></div>Análise de avaliações para detectar o que afasta clientes</div>
+      </div>
+      <div class="ic">
+        <div class="ic-head">
+          <div class="ic-icon" style="background:rgba(252,211,77,0.15)"><iconify-icon icon="mdi:scale-balance" width="14" style="color:var(--amber-dark)"></iconify-icon></div>
+          <h3>Compliance</h3>
+        </div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--amber)"></div>Monitoramento de obrigações regulatórias (LGPD, BACEN, CVM)</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--amber)"></div>Triagem e classificação de documentos jurídicos com IA</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--amber)"></div>Detecção de anomalias em contratos e auditorias</div>
+        <div class="ic-item"><div class="ic-dot" style="background:var(--amber)"></div>Due diligence assistida por IA em M&amp;A e processos societários</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ 08 PROCESSO ═══════════════ -->
+<!-- ═══════════════ 11 PROCESSO + TRIÂNGULO ═══════════════ -->
 <section>
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">10 / 11</span>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
+      </div>
+      <span class="topbar-n">11 / 12</span>
     </div>
     <div class="sh">
       <h2>Do diagnóstico à implementação em 90 dias</h2>
       <div class="sub">Feito para quem toca a operação no dia-a-dia</div>
     </div>
     <div class="process-wrap">
-      <div class="principles-row">
-        <div class="pr">
-          <span class="pr-letter">a</span>
-          <span class="pr-text">Cocriamos soluções junto ao time diretamente envolvido na operação</span>
-        </div>
-        <div class="pr">
-          <span class="pr-letter">b</span>
-          <span class="pr-text">Capacitamos seu time a utilizar as ferramentas com autonomia: sem dependência de fornecedor, sem assinaturas SaaS</span>
-        </div>
-        <div class="pr">
-          <span class="pr-letter">c</span>
-          <span class="pr-text">Entregamos o código documentado e o sistema funcionando dentro da sua infraestrutura</span>
+      <div class="triad-outer">
+        <div class="triad-container">
+          <svg class="triad-svg" viewBox="0 0 380 270" preserveAspectRatio="xMidYMid meet">
+            <!-- Triangle outline -->
+            <polygon points="190,18 30,252 350,252" fill="none" stroke="rgba(163,191,250,0.18)" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <!-- Center to top -->
+            <line x1="190" y1="140" x2="190" y2="58" stroke="rgba(163,191,250,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <!-- Center to bottom-left -->
+            <line x1="190" y1="140" x2="88" y2="222" stroke="rgba(181,234,215,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <!-- Center to bottom-right -->
+            <line x1="190" y1="140" x2="292" y2="222" stroke="rgba(215,189,226,0.4)" stroke-width="1.5" stroke-dasharray="4,3"/>
+          </svg>
+          <!-- Center: Pessoas -->
+          <div class="triad-center">
+            <iconify-icon icon="mdi:account-group-outline" width="20" style="color:var(--blue)"></iconify-icon>
+            <span>Pessoas</span>
+          </div>
+          <!-- Top: Co-criamos -->
+          <div class="triad-v triad-top">
+            <div class="triad-lbl blue">Co-criamos</div>
+            <div class="triad-txt">Junto ao time<br>da operação</div>
+          </div>
+          <!-- Bottom-left: Capacitamos -->
+          <div class="triad-v triad-bl">
+            <div class="triad-lbl green">Capacitamos</div>
+            <div class="triad-txt">Autonomia sem<br>dependência</div>
+          </div>
+          <!-- Bottom-right: Entregamos -->
+          <div class="triad-v triad-br">
+            <div class="triad-lbl purple">Entregamos</div>
+            <div class="triad-txt">Código documentado<br>na sua infra</div>
+          </div>
         </div>
       </div>
       <div class="process-strip">
@@ -670,47 +722,35 @@
     </div>
     <div class="sfoot">Co-criação em cada etapa · time do cliente envolvido · código entregue e documentado</div>
   </div>
-  <aside class="notes">Feito para quem toca a operação — não para comitês. Os três princípios explicam o como: co-criamos, capacitamos, entregamos autonomia. O processo de 5 etapas mostra o caminho até o sistema em produção.</aside>
 </section>
 
-<!-- ═══════════════ 09 FECHAMENTO ═══════════════ -->
-<section class="s11">
+<!-- ═══════════════ 12 FECHAMENTO ═══════════════ -->
+<section style="background: var(--bg) !important;">
   <div class="si">
     <div class="topbar">
-      <div class="logo"><svg viewBox="0 0 64 64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg><span>River Labs</span></div>
-      <span class="topbar-n">11 / 11</span>
-    </div>
-    <div class="sh">
-      <h2>Qual é o momento da sua empresa<br>em relação à tecnologia?</h2>
-    </div>
-    <div class="closing-grid">
-      <div>
-        <div class="poll-opts">
-          <div class="po"><span class="po-letter">A</span><span class="po-text">Ainda estamos avaliando se faz sentido investir</span></div>
-          <div class="po"><span class="po-letter">B</span><span class="po-text">Já usamos algumas ferramentas, mas de forma dispersa</span></div>
-          <div class="po"><span class="po-letter">C</span><span class="po-text">Há uma iniciativa em andamento que precisa de estrutura</span></div>
-          <div class="po"><span class="po-letter">D</span><span class="po-text">Queremos implementar algo novo e não sabemos por onde começar</span></div>
-        </div>
+      <div class="logo">
+        <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+        <span>River Labs</span>
       </div>
-      <div class="closing-right">
-        <div class="ns">
-          <div class="ns-lbl">Vamos conversar?</div>
-          <div class="ns-title">Conversa de diagnóstico — 45 min</div>
-          <div class="ns-desc">Sem compromisso. Só uma conversa honesta sobre onde a tecnologia pode ajudar — e onde não pode.</div>
+      <span class="topbar-n">12 / 12</span>
+    </div>
+    <div class="closing-body">
+      <div class="closing-quote">
+        <p>Nosso objetivo é ser um <em>parceiro contínuo</em> que pense, provoque e co-desenvolva soluções tecnológicas para o seu negócio.</p>
+      </div>
+      <div class="closing-meta">
+        <div class="logo">
+          <svg viewBox="0 0 64 64"><path d="M10 24 Q21 8 32 24 T54 24"/><path d="M10 40 Q21 24 32 40 T54 40"/></svg>
+          <span>River Labs</span>
         </div>
-        <div class="deliverable">
-          <div class="dv-lbl">O que vem depois</div>
-          <div class="dv-item"><iconify-icon icon="mdi:file-document-outline" width="12" style="color:var(--blue-dark)"></iconify-icon><span>Relatório com os principais insights da conversa</span></div>
-          <div class="dv-item"><iconify-icon icon="mdi:clipboard-list-outline" width="12" style="color:var(--blue-dark)"></iconify-icon><span>Pesquisa de mapeamento de gaps para guiar os próximos passos</span></div>
-        </div>
-        <div class="contacts">
-          <div class="ci"><iconify-icon icon="mdi:linkedin" width="13" style="color:var(--g400)"></iconify-icon><span>River Labs no LinkedIn</span></div>
-          <div class="ci"><iconify-icon icon="mdi:web" width="13" style="color:var(--g400)"></iconify-icon><span>riverlabs.com</span></div>
-        </div>
+        <div class="closing-divider"></div>
+        <span class="closing-link">riverlabs.com</span>
+        <div class="closing-divider"></div>
+        <span class="closing-link">LinkedIn · River Labs</span>
       </div>
     </div>
   </div>
-  <aside class="notes">Fechar com a pergunta: "O que ressoa com o que vocês vivem hoje?" Abrir para Q&A com energia — não como formalidade. Não fechar com "obrigado" genérico.</aside>
+  <aside class="notes">Fechar com energia. "O que ressoa com o que vocês vivem hoje?" — abrir para Q&A, não como formalidade.</aside>
 </section>
 
 </div><!-- .slides -->
