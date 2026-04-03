@@ -6,6 +6,16 @@ export type Dict = {
     casestudies: string;
     contact: string;
   };
+  services: {
+    heading: string;
+    sub: string;
+    items: { title: string; desc: string }[];
+  };
+  sectorIdeas: {
+    heading: string;
+    sub: string;
+    sectors: { name: string; items: string[] }[];
+  };
   hero: {
     heading1: string;
     headingItalic: string;
@@ -75,6 +85,66 @@ const en: Dict = {
     services: "Services",
     casestudies: "Case Studies",
     contact: "Contact",
+  },
+  services: {
+    heading: "What we do",
+    sub: "Three lines of work — from strategy to code in production.",
+    items: [
+      {
+        title: "AI Labs",
+        desc: "Co-creation workshops to discover where AI creates real value in your context — with the team directly involved in the operation.",
+      },
+      {
+        title: "Market Intelligence",
+        desc: "Custom sector reports — data that informs decisions, not just presentations.",
+      },
+      {
+        title: "Development",
+        desc: "Proprietary solutions in your infrastructure — your code, no SaaS dependency or external vendor.",
+      },
+    ],
+  },
+  sectorIdeas: {
+    heading: "What's already possible — in your sector, today",
+    sub: "Concrete AI applications for the operations that generate the most data.",
+    sectors: [
+      {
+        name: "Logistics",
+        items: [
+          "Automatic invoice extraction",
+          "Delay forecasting by route and history",
+          "Early out-of-stock alerts",
+          "Return reason analysis by SKU",
+        ],
+      },
+      {
+        name: "Retail / E-commerce",
+        items: [
+          "Price monitoring with automatic alerts",
+          "Bulk product description generation",
+          "AI-driven abandoned cart discount decisions",
+          "Demand forecasting with auto-ordering",
+        ],
+      },
+      {
+        name: "Services",
+        items: [
+          "WhatsApp chatbot trained on your business",
+          "Dynamic pricing by demand and seasonality",
+          "Seasonality forecasting for team planning",
+          "Review analysis to detect what drives churn",
+        ],
+      },
+      {
+        name: "Compliance",
+        items: [
+          "Regulatory obligation monitoring (LGPD, BACEN, CVM)",
+          "AI-powered legal document classification",
+          "Anomaly detection in contracts and audits",
+          "AI-assisted due diligence for M&A",
+        ],
+      },
+    ],
   },
   hero: {
     heading1: "Digital transformation that starts",
@@ -213,6 +283,66 @@ const es: Dict = {
     casestudies: "Casos de Éxito",
     contact: "Contacto",
   },
+  services: {
+    heading: "Lo que hacemos",
+    sub: "Tres líneas de trabajo — de la estrategia al código en producción.",
+    items: [
+      {
+        title: "AI Labs",
+        desc: "Workshops de co-creación para descubrir dónde la IA genera valor real en tu contexto — con el equipo directamente involucrado en la operación.",
+      },
+      {
+        title: "Inteligencia de mercado",
+        desc: "Reportes sectoriales personalizados — datos que informan decisiones, no solo presentaciones.",
+      },
+      {
+        title: "Desarrollo",
+        desc: "Soluciones propietarias en tu infraestructura — tu código, sin dependencia de SaaS ni proveedor externo.",
+      },
+    ],
+  },
+  sectorIdeas: {
+    heading: "Lo que ya es posible — en tu sector, hoy",
+    sub: "Aplicaciones concretas de IA para las operaciones que generan más datos.",
+    sectors: [
+      {
+        name: "Logística",
+        items: [
+          "Extracción automática de facturas",
+          "Pronóstico de retrasos por ruta e historial",
+          "Alertas tempranas de ruptura de stock",
+          "Análisis de motivos de devolución por SKU",
+        ],
+      },
+      {
+        name: "Retail / E-commerce",
+        items: [
+          "Monitoreo de precios con alertas automáticas",
+          "Generación masiva de descripciones de productos",
+          "IA decide descuentos en carritos abandonados",
+          "Pronóstico de demanda con pedido automático",
+        ],
+      },
+      {
+        name: "Servicios",
+        items: [
+          "Chatbot en WhatsApp entrenado en tu negocio",
+          "Precios dinámicos por demanda y estacionalidad",
+          "Pronóstico de estacionalidad para planear equipo",
+          "Análisis de reseñas para detectar causas de churn",
+        ],
+      },
+      {
+        name: "Compliance",
+        items: [
+          "Monitoreo de obligaciones regulatorias",
+          "Clasificación de documentos jurídicos con IA",
+          "Detección de anomalías en contratos y auditorías",
+          "Due diligence asistida por IA en M&A",
+        ],
+      },
+    ],
+  },
   hero: {
     heading1: "Transformación digital que empieza",
     headingItalic: "por las personas,",
@@ -349,6 +479,66 @@ const pt: Dict = {
     services: "Serviços",
     casestudies: "Casos de Sucesso",
     contact: "Contato",
+  },
+  services: {
+    heading: "O que fazemos",
+    sub: "Três linhas de atuação — da estratégia ao código em produção.",
+    items: [
+      {
+        title: "AI Labs",
+        desc: "Workshops de co-criação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.",
+      },
+      {
+        title: "Inteligência de mercado",
+        desc: "Relatórios setoriais customizados — dados que informam decisões, não só apresentações.",
+      },
+      {
+        title: "Desenvolvimento",
+        desc: "Soluções proprietárias na sua infraestrutura — código seu, sem dependência de SaaS ou fornecedor externo.",
+      },
+    ],
+  },
+  sectorIdeas: {
+    heading: "O que já dá pra fazer — no seu setor, agora",
+    sub: "Aplicações concretas de IA para as operações que geram mais dados.",
+    sectors: [
+      {
+        name: "Logística",
+        items: [
+          "Extração automática de notas fiscais",
+          "Previsão de atrasos por rota e histórico",
+          "Alerta de ruptura de estoque antecipado",
+          "Identificação de motivos de devolução por SKU",
+        ],
+      },
+      {
+        name: "Varejo / E-commerce",
+        items: [
+          "Monitoramento de preços com alerta automático",
+          "Geração em massa de descrições de produtos",
+          "IA decide quais carrinhos abandonados merecem desconto",
+          "Previsão de demanda com pedido automático",
+        ],
+      },
+      {
+        name: "Serviços",
+        items: [
+          "Chatbot no WhatsApp treinado no seu negócio",
+          "Precificação dinâmica por demanda e sazonalidade",
+          "Previsão de estacionalidade para planejar equipe",
+          "Análise de avaliações para detectar o que afasta clientes",
+        ],
+      },
+      {
+        name: "Compliance",
+        items: [
+          "Monitoramento de obrigações regulatórias (LGPD, BACEN, CVM)",
+          "Triagem e classificação de documentos jurídicos com IA",
+          "Detecção de anomalias em contratos e auditorias",
+          "Due diligence assistida por IA em M&A",
+        ],
+      },
+    ],
   },
   hero: {
     heading1: "Transformação digital que começa",
