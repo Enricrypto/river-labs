@@ -127,9 +127,10 @@
        SLIDES 05–07 — CASES
     ============================ */
     .case-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; flex: 1; align-items: start; }
-    .case-identity { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .case-identity { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; width: 100%; }
     .case-logo { height: 22px; width: auto; object-fit: contain; opacity: 0.9; max-width: 90px; }
     .case-company { font-family: var(--ff-ui); font-size: 13px; font-weight: 700; color: var(--g800); }
+    .case-identity .flag-sm { margin-left: auto; }
     .case-tag {
       display: inline-flex; align-items: center; gap: 6px;
       background: rgba(163,191,250,0.1); border: 1px solid rgba(163,191,250,0.25);
@@ -404,7 +405,6 @@
           <img class="case-logo" src="https://logo.clearbit.com/washdog.cl" alt="Washdog" onerror="this.style.display='none'">
           <span class="case-company">Washdog</span>
           <span class="flag-sm fi fi-cl"></span>
-          <span style="font-size:10px;color:var(--g400);">Chile</span>
         </div>
         <div class="case-tag">
           <iconify-icon icon="mdi:magnify" width="11"></iconify-icon>
@@ -459,7 +459,6 @@
           <img class="case-logo" src="https://logo.clearbit.com/vtex.com" alt="VTEX" onerror="this.style.display='none'">
           <span class="case-company">VTEX</span>
           <span class="flag-sm fi fi-br"></span>
-          <span style="font-size:10px;color:var(--g400);">Brasil</span>
         </div>
         <div class="case-tag">
           <iconify-icon icon="mdi:robot-outline" width="11"></iconify-icon>
@@ -511,9 +510,9 @@
     <div class="case-layout">
       <div>
         <div class="case-identity">
+          <img class="case-logo" src="https://logo.clearbit.com/usa.gov" alt="U.S. Government" onerror="this.style.display='none'">
+          <span class="case-company">U.S. Government</span>
           <span class="flag-sm fi fi-us"></span>
-          <span class="case-company">Agência Federal</span>
-          <span style="font-size:10px;color:var(--g400);">Estados Unidos</span>
         </div>
         <div class="case-tag">
           <iconify-icon icon="mdi:shield-check-outline" width="11"></iconify-icon>
