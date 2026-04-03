@@ -2,18 +2,18 @@
 
 import type { Dict } from "@/lib/translations";
 
-const CLIENTS = [
-  "Grupo Cataratas",
-  "Bondinho Pão de Açúcar",
-  "Trem do Corcovado",
-  "Píer Mauá",
-  "Matrisoja",
-  "Grupo Ápia",
+const SECTORS = [
+  "Logística",
+  "Varejo",
+  "E-commerce",
+  "Serviços",
+  "Compliance",
+  "Governo",
 ];
 
 export default function SocialProofBar({ dict }: { dict: Dict["proof"] }) {
   // Duplicate for seamless loop
-  const items = [...CLIENTS, ...CLIENTS];
+  const items = [...SECTORS, ...SECTORS];
 
   return (
     <div className="w-full border-b border-gray-100 bg-white overflow-hidden">

@@ -39,16 +39,13 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
           </div>
         </div>
 
-        {/* Bottom stat strip */}
-        <div className="relative z-10 mt-16 md:mt-24 pt-8 border-t border-gray-200/80 grid grid-cols-2 gap-3 md:gap-6 max-w-xs">
-          <div>
-            <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">3</p>
-            <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">semanas ao protótipo</p>
-          </div>
-          <div>
-            <p className="font-serif text-3xl md:text-4xl font-medium text-gray-900">6</p>
-            <p className="text-xs text-gray-400 mt-1 leading-snug uppercase tracking-wide">clientes ativos</p>
-          </div>
+        {/* Approach badges */}
+        <div className="relative z-10 mt-16 md:mt-24 pt-8 border-t border-gray-200/80 flex flex-wrap gap-2">
+          {dict.badges.map((badge, i) => (
+            <span key={i} className="inline-flex items-center px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-medium text-gray-700">
+              {badge}
+            </span>
+          ))}
         </div>
       </div>
     </section>

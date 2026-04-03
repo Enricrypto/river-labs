@@ -13,6 +13,7 @@ export type Dict = {
     sub: string;
     cta1: string;
     cta2: string;
+    badges: string[];
   };
   proof: {
     label: string;
@@ -76,31 +77,32 @@ const en: Dict = {
     contact: "Contact",
   },
   hero: {
-    heading1: "Your operation is leaving",
-    headingItalic: "revenue on the table.",
-    heading2: "We find it — and build the system to capture it.",
-    sub: "Custom AI calibrated on your real financial data. Working prototype in 3 weeks. ROI in 90 days.",
+    heading1: "Digital transformation that starts",
+    headingItalic: "with people,",
+    heading2: "not with the tool.",
+    sub: "We co-create with your team, train for independence, and deliver documented code in your own infrastructure. Diagnosis to deploy in 90 days.",
     cta1: "Get Free Diagnosis",
     cta2: "See Our Work",
+    badges: ["We Co-create", "We Train", "We Deliver"],
   },
   proof: {
-    label: "Trusted by",
+    label: "Sectors we serve",
   },
   problems: {
-    heading: "The losses are invisible until they aren't",
-    sub: "By the time the problem is obvious, you've already left months of revenue behind.",
+    heading: "Why most AI initiatives fail",
+    sub: "Technology isn't the bottleneck. The problem is in how it gets adopted.",
     items: [
       {
-        title: "Pricing that doesn't adapt to demand",
-        desc: "Demand shifts with seasonality, events, and occupancy — but pricing doesn't follow. The margin you could capture stays on the table.",
+        title: "Tools deployed without the people",
+        desc: "Most AI projects fail from lack of team buy-in, not lack of technology. Without co-creation, the system becomes another tool nobody uses.",
       },
       {
         title: "Processes that limit what the team can deliver",
-        desc: "Manual approvals, spreadsheet handoffs, duplicated information across systems. Every step that could be automated is time your team spends on process — not on the business.",
+        desc: "Manual approvals, spreadsheet handoffs, duplicated data across systems. Every step that could be automated is time spent on process — not on the business.",
       },
       {
-        title: "Data you generate but don't use",
-        desc: "Balance sheets, ticketing records, logistics logs — your operation already generates the signal.",
+        title: "Data you generate but never act on",
+        desc: "Your operation already produces the signal. What's missing is turning it into action — without depending on an external vendor to do it.",
       },
     ],
   },
@@ -120,11 +122,11 @@ const en: Dict = {
   },
   methodology: {
     heading: "Diagnosis to implementation in 90 days",
-    sub: "Built for the people who run the operation day-to-day.",
+    sub: "Three principles that guide every project.",
     principles: [
-      "We co-create solutions with the team directly involved in the operation",
-      "We train your team to use the tools independently — no vendor lock-in, no SaaS subscriptions",
-      "We deliver documented code and a working system inside your infrastructure.",
+      "We co-create — alongside the people running the operation, from day one",
+      "We train — your team uses the system independently, no vendor dependency",
+      "We deliver — documented code, running inside your own infrastructure",
     ],
     steps: [
       { title: "Discovery", timeline: "Process map" },
@@ -135,12 +137,12 @@ const en: Dict = {
     ],
   },
   comparison: {
-    heading: "We build systems. We don't write reports.",
+    heading: "A long-term partner. Not a one-off vendor.",
     goodItems: [
-      "Free diagnosis — specific to your financials",
-      "AI systems calibrated on your real documents",
-      "Working prototype in 3 weeks",
-      "Fixed price per milestone, you own the code",
+      "We co-create with your team — we don't outsource the work",
+      "We train for full autonomy — no vendor lock-in",
+      "We deliver documented code running in your infrastructure",
+      "Fixed price per milestone — you own the system",
     ],
   },
   whyus: {
@@ -176,7 +178,7 @@ const en: Dict = {
     items: [
       {
         q: "How does the free diagnosis work?",
-        a: "We review the financial and operational documents you share — balance sheets, ticketing data, logistics records — and build a specific opportunity model for your business. No generic benchmarks. You get a written summary of your 3 biggest levers within 48 hours.",
+        a: "We map your operation, the processes your team handles day-to-day, and the data you already generate. From there, we identify the 3 biggest opportunities for automation or AI in your business. You get a written summary within 48 hours — no generic benchmarks.",
       },
       {
         q: "Do we need to replace our existing systems?",
@@ -188,16 +190,16 @@ const en: Dict = {
       },
       {
         q: "What industries do you know best?",
-        a: "Tourism & hospitality, agribusiness, ports & logistics, and real estate. These sectors make up most of our work because their operations generate rich financial data that AI can directly act on.",
+        a: "Logistics, retail and e-commerce, services, and compliance. Our work adapts to any operation that generates data and involves repeatable processes — these sectors make up most of our projects.",
       },
     ],
   },
   cta: {
-    heading: "Find out what your operation is leaving behind",
-    sub: "Schedule a 45-min diagnosis call — specific, no commitment.",
-    btn1: "Get My Free Diagnosis",
-    btn2: "Book a 15-Min Call",
-    badge: "No commitment. No generic benchmarks.",
+    heading: "Ready for a partner who builds alongside you?",
+    sub: "Schedule a 45-min conversation — no commitment, no generic benchmarks.",
+    btn1: "Start Diagnosis",
+    btn2: "Talk to Us",
+    badge: "No commitment. Your code, your team.",
   },
   footer: {
     copyright: "© 2026 River Labs.",
@@ -212,31 +214,32 @@ const es: Dict = {
     contact: "Contacto",
   },
   hero: {
-    heading1: "Tu operación está dejando",
-    headingItalic: "ingresos sobre la mesa.",
-    heading2: "Los encontramos — y construimos el sistema para capturarlos.",
-    sub: "IA a medida calibrada en tus datos financieros reales. Prototipo funcional en 3 semanas. ROI en 90 días.",
+    heading1: "Transformación digital que empieza",
+    headingItalic: "por las personas,",
+    heading2: "no por la herramienta.",
+    sub: "Cocreamos con tu equipo, capacitamos para la autonomía y entregamos código documentado en tu infraestructura. Del diagnóstico al deploy en 90 días.",
     cta1: "Diagnóstico Gratuito",
     cta2: "Ver Nuestro Trabajo",
+    badges: ["Co-creamos", "Capacitamos", "Entregamos"],
   },
   proof: {
-    label: "Con la confianza de",
+    label: "Sectores que atendemos",
   },
   problems: {
-    heading: "Las pérdidas son invisibles hasta que ya es tarde",
-    sub: "Para cuando el problema es obvio, ya dejaste meses de ingresos atrás.",
+    heading: "Por qué la mayoría de las iniciativas de IA no funcionan",
+    sub: "La tecnología no es el cuello de botella. El problema está en cómo se adopta.",
     items: [
       {
-        title: "Precios que no se adaptan a la demanda",
-        desc: "La demanda varía por estacionalidad, eventos y ocupación — pero el precio no la sigue. El margen que podrías capturar se queda en la mesa.",
+        title: "Herramientas implementadas sin las personas",
+        desc: "La mayoría de los proyectos de IA fallan por falta de compromiso del equipo, no por falta de tecnología. Sin cocreación, el sistema se convierte en otra herramienta que nadie usa.",
       },
       {
         title: "Procesos que limitan lo que el equipo puede entregar",
-        desc: "Aprobaciones manuales, handoffs por planilla, información duplicada entre sistemas. Cada paso que podría automatizarse es tiempo que la operación gasta en proceso — y no en el negocio.",
+        desc: "Aprobaciones manuales, handoffs por planilla, información duplicada. Cada paso que podría automatizarse es tiempo que el equipo gasta en el proceso — no en el negocio.",
       },
       {
-        title: "Datos que generas pero no utilizas",
-        desc: "Balances, registros de ticketing, logs de logística — tu operación ya genera la señal.",
+        title: "Datos que generas pero que no se convierten en acción",
+        desc: "Tu operación ya produce la señal. Lo que falta es convertirla en acción — sin depender de un proveedor externo para eso.",
       },
     ],
   },
@@ -256,11 +259,11 @@ const es: Dict = {
   },
   methodology: {
     heading: "Del diagnóstico a la implementación en 90 días",
-    sub: "Diseñado para quien lleva la operación día a día.",
+    sub: "Tres principios que guían cada proyecto.",
     principles: [
-      "Cocreamos soluciones junto al equipo directamente involucrado en la operación",
-      "Capacitamos a tu equipo para usar las herramientas con autonomía: sin dependencia de proveedor, sin suscripciones SaaS",
-      "Entregamos el código documentado y el sistema funcionando dentro de tu infraestructura.",
+      "Cocreamos — junto al equipo de la operación, desde el inicio hasta el final",
+      "Capacitamos — tu equipo usa el sistema con autonomía, sin depender de nosotros",
+      "Entregamos — código documentado, funcionando dentro de tu infraestructura",
     ],
     steps: [
       { title: "Descubrimiento", timeline: "Mapa de proceso" },
@@ -271,12 +274,12 @@ const es: Dict = {
     ],
   },
   comparison: {
-    heading: "Construimos sistemas. No escribimos reportes.",
+    heading: "Socio de largo plazo. No proveedor puntual.",
     goodItems: [
-      "Diagnóstico gratuito — específico para tus finanzas",
-      "Sistemas de IA calibrados en tus documentos reales",
-      "Prototipo funcional en 3 semanas",
-      "Precio fijo por hito, tú eres dueño del código",
+      "Cocreamos con tu equipo — sin tercerizar el trabajo",
+      "Capacitamos para autonomía total — sin dependencia de proveedor",
+      "Entregamos código documentado funcionando en tu infraestructura",
+      "Precio fijo por hito — tú eres dueño del sistema",
     ],
   },
   whyus: {
@@ -312,7 +315,7 @@ const es: Dict = {
     items: [
       {
         q: "¿Cómo funciona el diagnóstico gratuito?",
-        a: "Revisamos los documentos financieros y operativos que compartes — balances, datos de ticketing, registros logísticos — y construimos un modelo de oportunidades específico para tu negocio. Sin benchmarks genéricos. Recibes un resumen escrito de tus 3 mayores palancas en 48 horas.",
+        a: "Mapeamos tu operación, los procesos que tu equipo gestiona día a día y los datos que ya generas. A partir de ahí, identificamos las 3 mayores oportunidades de automatización o IA para tu negocio. Recibes un resumen escrito en 48 horas — sin benchmarks genéricos.",
       },
       {
         q: "¿Necesitamos reemplazar nuestros sistemas existentes?",
@@ -324,16 +327,16 @@ const es: Dict = {
       },
       {
         q: "¿Qué industrias conocen mejor?",
-        a: "Turismo y hotelería, agronegocios, puertos y logística, y bienes raíces. Estos sectores representan la mayor parte de nuestro trabajo porque sus operaciones generan datos financieros ricos que la IA puede aprovechar directamente.",
+        a: "Logística, retail y e-commerce, servicios y compliance. Nuestro trabajo se adapta a cualquier operación que genere datos e involucre procesos repetibles — estos sectores representan la mayor parte de nuestros proyectos.",
       },
     ],
   },
   cta: {
-    heading: "Descubre qué está dejando atrás tu operación",
-    sub: "Agenda una llamada de diagnóstico de 45 min — específica, sin compromiso.",
-    btn1: "Obtener Mi Diagnóstico Gratuito",
-    btn2: "Agendar Llamada de 15 Min",
-    badge: "Sin compromiso. Sin benchmarks genéricos.",
+    heading: "¿Listo para un socio que co-construya contigo?",
+    sub: "Agenda una conversación de 45 min — sin compromiso, sin benchmarks genéricos.",
+    btn1: "Iniciar Diagnóstico",
+    btn2: "Hablar con Nosotros",
+    badge: "Sin compromiso. Tu código, tu equipo.",
   },
   footer: {
     copyright: "© 2026 River Labs.",
@@ -348,31 +351,32 @@ const pt: Dict = {
     contact: "Contato",
   },
   hero: {
-    heading1: "Sua operação está deixando",
-    headingItalic: "receita para trás.",
-    heading2: "A gente encontra — e constrói o sistema pra capturar.",
-    sub: "IA sob medida, calibrada nos seus dados financeiros reais. Protótipo em 3 semanas. ROI em 90 dias.",
+    heading1: "Transformação digital que começa",
+    headingItalic: "pelas pessoas,",
+    heading2: "não pela ferramenta.",
+    sub: "Co-criamos com sua equipe, capacitamos para autonomia e entregamos código documentado na sua infra. Do diagnóstico ao deploy em 90 dias.",
     cta1: "Diagnóstico Gratuito",
     cta2: "Ver Nosso Trabalho",
+    badges: ["Co-criamos", "Capacitamos", "Entregamos"],
   },
   proof: {
-    label: "Confiado por",
+    label: "Setores que atendemos",
   },
   problems: {
-    heading: "As perdas são invisíveis — até que deixam de ser",
-    sub: "Quando o problema fica óbvio, você já deixou meses de receita para trás.",
+    heading: "Por que a maioria das iniciativas de IA não funciona",
+    sub: "A tecnologia não é o gargalo. O problema está em como ela é adotada.",
     items: [
       {
-        title: "Precificação que não se adapta à demanda",
-        desc: "A demanda varia com sazonalidade, eventos e ocupação — mas o preço não acompanha. A margem que poderia ser capturada fica na mesa.",
+        title: "Ferramentas implantadas sem as pessoas",
+        desc: "A maioria dos projetos de IA falha por falta de engajamento da equipe, não por falta de tecnologia. Sem co-criação, o sistema vira mais uma ferramenta que ninguém usa.",
       },
       {
         title: "Processos que limitam o que a equipe consegue entregar",
-        desc: "Aprovações manuais, handoffs por planilha, informações duplicadas entre sistemas. Cada etapa que poderia ser automatizada é tempo que a operação gasta no processo — e não no negócio.",
+        desc: "Aprovações manuais, handoffs por planilha, informações duplicadas. Cada etapa que poderia ser automatizada é tempo que a equipe gasta no processo — e não no negócio.",
       },
       {
-        title: "Dados que você gera, mas não utiliza",
-        desc: "Balanços, registros de bilheteria, logs de logística — sua operação já gera o sinal.",
+        title: "Dados gerados que não viram decisão",
+        desc: "Sua operação já produz o sinal. O que falta é transformá-lo em ação — sem depender de um fornecedor externo para isso.",
       },
     ],
   },
@@ -392,11 +396,11 @@ const pt: Dict = {
   },
   methodology: {
     heading: "Do diagnóstico à implementação em 90 dias",
-    sub: "Feito para quem toca a operação no dia-a-dia.",
+    sub: "Três princípios que guiam cada projeto.",
     principles: [
-      "Cocriamos soluções junto ao time diretamente envolvido na operação",
-      "Capacitamos seu time a utilizar as ferramentas com autonomia: sem dependência de fornecedor, sem assinaturas SaaS",
-      "Entregamos o código documentado e o sistema funcionando dentro da sua infraestrutura.",
+      "Co-criamos — junto ao time da operação, do início ao fim",
+      "Capacitamos — sua equipe usa o sistema com autonomia, sem depender de nós",
+      "Entregamos — código documentado, rodando dentro da sua infraestrutura",
     ],
     steps: [
       { title: "Descoberta", timeline: "Mapa de processo" },
@@ -407,12 +411,12 @@ const pt: Dict = {
     ],
   },
   comparison: {
-    heading: "Construímos sistemas. Não escrevemos relatórios.",
+    heading: "Parceiro de jornada. Não fornecedor avulso.",
     goodItems: [
-      "Diagnóstico gratuito — específico para o seu negócio",
-      "Sistemas de IA calibrados nos seus documentos reais",
-      "Protótipo funcionando em 3 semanas",
-      "Preço fixo por marco, você é dono do código",
+      "Co-criamos com o time da operação — sem terceirizar",
+      "Capacitamos para autonomia total — sem dependência de fornecedor",
+      "Entregamos código documentado rodando na sua infraestrutura",
+      "Preço fixo por marco — você é dono do sistema",
     ],
   },
   whyus: {
@@ -448,7 +452,7 @@ const pt: Dict = {
     items: [
       {
         q: "Como funciona o diagnóstico gratuito?",
-        a: "Revisamos os documentos financeiros e operacionais que você compartilha — balanços, dados de bilheteria, registros de logística — e construímos um modelo de oportunidades específico para o seu negócio. Sem benchmarks genéricos. Você recebe um resumo escrito das suas 3 maiores alavancas em 48 horas.",
+        a: "Mapeamos sua operação, os processos que seu time toca no dia-a-dia e os dados que você já gera. A partir daí, identificamos as 3 maiores oportunidades de automação ou IA para o seu negócio. Você recebe um resumo escrito em 48 horas — sem benchmarks genéricos.",
       },
       {
         q: "Precisamos substituir nossos sistemas existentes?",
@@ -460,16 +464,16 @@ const pt: Dict = {
       },
       {
         q: "Quais setores vocês conhecem melhor?",
-        a: "Turismo e hospitalidade, agronegócio, portos e logística, e imóveis. Esses setores compõem a maior parte do nosso trabalho porque suas operações geram dados financieros ricos que a IA consegue agir diretamente.",
+        a: "Logística, varejo e e-commerce, serviços e compliance. Nosso trabalho se adapta a qualquer operação que gere dados e envolva processos repetíveis — esses setores representam a maior parte dos nossos projetos.",
       },
     ],
   },
   cta: {
-    heading: "Descubra o que sua operação está deixando para trás",
-    sub: "Agende uma conversa de diagnóstico de 45 min — específica, sem compromisso.",
-    btn1: "Obter Meu Diagnóstico Gratuito",
-    btn2: "Agendar Chamada de 15 Min",
-    badge: "Sem compromisso. Sem benchmarks genéricos.",
+    heading: "Pronto para um parceiro que co-constrói com você?",
+    sub: "Agende uma conversa de 45 min — sem compromisso, sem benchmarks genéricos.",
+    btn1: "Iniciar Diagnóstico",
+    btn2: "Falar com a Gente",
+    badge: "Sem compromisso. Código seu, equipe independente.",
   },
   footer: {
     copyright: "© 2026 River Labs.",
