@@ -14,7 +14,7 @@ export default function CTASection({ dict, lang }: { dict: Dict["cta"]; lang: st
           <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-white mb-5 leading-[1.1]">
             {dict.heading}
           </h2>
-          <p className="text-lg text-gray-400 font-normal leading-relaxed mb-10">
+          <p className="text-lg text-gray-300 font-normal leading-relaxed mb-10">
             {dict.sub}
           </p>
 
@@ -33,7 +33,7 @@ export default function CTASection({ dict, lang }: { dict: Dict["cta"]; lang: st
             </Link>
           </div>
 
-          <p className="text-sm text-gray-600">{dict.badge}</p>
+          <p className="text-sm text-gray-400">{dict.badge}</p>
         </div>
       </div>
     </section>

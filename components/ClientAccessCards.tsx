@@ -19,14 +19,14 @@ export default function ClientAccessCards({ dict }: { dict: Dict["clientCards"] 
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-gray-600 text-xs font-medium uppercase tracking-widest mb-3">
+            <p className="text-gray-400 text-xs font-medium uppercase tracking-widest mb-3">
               {dict.sectionLabel}
             </p>
             <h2 className="font-serif text-2xl md:text-3xl text-white font-medium tracking-tight">
               {dict.heading}
             </h2>
           </div>
-          <p className="hidden md:block text-gray-600 text-sm max-w-xs text-right leading-relaxed">
+          <p className="hidden md:block text-gray-400 text-sm max-w-xs text-right leading-relaxed">
             {dict.subtitle}
           </p>
         </div>
@@ -62,7 +62,7 @@ export default function ClientAccessCards({ dict }: { dict: Dict["clientCards"] 
                     <h3 className="font-serif text-lg md:text-xl text-white font-medium tracking-tight mb-1.5">
                       {c.label}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{clientDict.desc}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">{clientDict.desc}</p>
                   </div>
 
                   <div

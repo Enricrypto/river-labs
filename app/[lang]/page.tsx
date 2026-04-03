@@ -5,7 +5,6 @@ import SocialProofBar from "@/components/SocialProofBar";
 import ProblemSection from "@/components/ProblemSection";
 import ClientAccessCards from "@/components/ClientAccessCards";
 import MethodologySection from "@/components/MethodologySection";
-import ComparisonSection from "@/components/ComparisonSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -27,7 +26,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <ProblemSection dict={dict.problems} />
         <ClientAccessCards dict={dict.clientCards} />
         <MethodologySection dict={dict.methodology} />
-        <ComparisonSection dict={dict.comparison} />
         <FAQSection dict={dict.faq} />
         <CTASection dict={dict.cta} lang={typedLang} />
       </main>
