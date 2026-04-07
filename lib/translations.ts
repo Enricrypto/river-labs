@@ -594,7 +594,7 @@ const pt: Dict = {
     principles: [
       "Co-criamos — junto ao time da operação, do início ao fim",
       "Capacitamos — treinamos sua equipe para usar, entender e evoluir o que foi construído juntos",
-      "Entregamos — código documentado, rodando dentro da sua infraestrutura",
+      "Entregamos — uma ferramenta pronta para ser usada — na sua infraestrutura",
     ],
     steps: [
       { title: "Descoberta", timeline: "Mapa de processo" },
