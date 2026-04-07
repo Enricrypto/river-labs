@@ -960,6 +960,72 @@
         line-height: 14px;
         vertical-align: middle;
       }
+
+      /* ============================
+         PARTNERSHIP CAROUSEL
+      ============================ */
+      .partner-carousel {
+        margin-top: auto;
+        padding-top: 16px;
+        border-top: 1px solid var(--g100);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .partner-carousel-track {
+        display: flex;
+        gap: 60px;
+        animation: scroll-left 40s linear infinite;
+        width: fit-content;
+      }
+
+      .partner-logo {
+        height: 86px;
+        width: 86px;
+        object-fit: contain;
+        object-position: center;
+        opacity: 0.4;
+        filter: grayscale(1);
+        transition:
+          opacity 0.3s,
+          filter 0.3s;
+        flex-shrink: 0;
+      }
+
+      .partner-logo:hover {
+        opacity: 0.7;
+        filter: grayscale(0);
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .partner-carousel::before,
+      .partner-carousel::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 80px;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .partner-carousel::before {
+        left: 0;
+        background: linear-gradient(90deg, var(--white) 0%, transparent 100%);
+      }
+
+      .partner-carousel::after {
+        right: 0;
+        background: linear-gradient(270deg, var(--white) 0%, transparent 100%);
+      }
     </style>
   </head>
   <body>
@@ -1102,7 +1168,7 @@
         </section>
 
         <!-- ═══════════════ 04 STATS ═══════════════ -->
-        <section data-background-color="#111827" style="background: #111827;">
+        <section data-background-color="#111827" style="background: #111827">
           <div class="si">
             <div class="topbar">
               <div class="logo light">
@@ -1214,21 +1280,6 @@
             </div>
             <div class="case-layout">
               <div>
-                <div class="case-identity">
-                  <img
-                    class="case-logo"
-                    src="./Washdog.png"
-                    alt="Washdog"
-                    style="
-                      width: 22px;
-                      height: 22px;
-                      object-fit: cover;
-                      border-radius: 50%;
-                    "
-                  />
-                  <span class="case-company">Washdog</span>
-                  <span class="flag-sm fi fi-cl"></span>
-                </div>
                 <div class="case-tag">
                   <iconify-icon icon="mdi:magnify" width="11"></iconify-icon>
                   Marketing Digital com IA
@@ -1284,6 +1335,36 @@
                 </div>
               </div>
             </div>
+            <div class="partner-carousel">
+              <div class="partner-carousel-track">
+                <img class="partner-logo" src="./Washdog.png" alt="Washdog" />
+                <img class="partner-logo" src="./vtex-logo.png" alt="VTEX" />
+                <img
+                  class="partner-logo"
+                  src="./atakama-logo.jpg"
+                  alt="Atakama"
+                />
+                <img class="partner-logo" src="./aws-logo.png" alt="AWS" />
+                <img
+                  class="partner-logo"
+                  src="./aashtoware-logo.png"
+                  alt="AASHTOWare Bridge"
+                />
+                <img class="partner-logo" src="./Washdog.png" alt="Washdog" />
+                <img class="partner-logo" src="./vtex-logo.png" alt="VTEX" />
+                <img
+                  class="partner-logo"
+                  src="./atakama-logo.jpg"
+                  alt="Atakama"
+                />
+                <img class="partner-logo" src="./aws-logo.png" alt="AWS" />
+                <img
+                  class="partner-logo"
+                  src="./aashtoware-logo.png"
+                  alt="AASHTOWare Bridge"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1308,11 +1389,6 @@
             </div>
             <div class="case-layout">
               <div>
-                <div class="case-identity">
-                  <img class="case-logo" src="./vtex-logo.png" alt="VTEX" />
-                  <span class="case-company">VTEX</span>
-                  <span class="flag-sm fi fi-br"></span>
-                </div>
                 <div class="case-tag">
                   <iconify-icon
                     icon="mdi:robot-outline"
@@ -1372,6 +1448,36 @@
                 </div>
               </div>
             </div>
+            <div class="partner-carousel">
+              <div class="partner-carousel-track">
+                <img class="partner-logo" src="./Washdog.png" alt="Washdog" />
+                <img class="partner-logo" src="./vtex-logo.png" alt="VTEX" />
+                <img
+                  class="partner-logo"
+                  src="./atakama-logo.jpg"
+                  alt="Atakama"
+                />
+                <img class="partner-logo" src="./aws-logo.png" alt="AWS" />
+                <img
+                  class="partner-logo"
+                  src="./aashtoware-logo.png"
+                  alt="AASHTOWare Bridge"
+                />
+                <img class="partner-logo" src="./Washdog.png" alt="Washdog" />
+                <img class="partner-logo" src="./vtex-logo.png" alt="VTEX" />
+                <img
+                  class="partner-logo"
+                  src="./atakama-logo.jpg"
+                  alt="Atakama"
+                />
+                <img class="partner-logo" src="./aws-logo.png" alt="AWS" />
+                <img
+                  class="partner-logo"
+                  src="./aashtoware-logo.png"
+                  alt="AASHTOWare Bridge"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1389,74 +1495,96 @@
               <span class="topbar-n">08 / 13</span>
             </div>
             <div class="sh">
-              <h2>Infraestrutura pública com segurança de dados</h2>
+              <h2>Infraestrutura crítica e defesa contra ameaças de IA</h2>
             </div>
             <div class="case-layout">
               <div>
-                <div class="case-identity">
-                  <img
-                    class="case-logo"
-                    src="./atakama-favicon.png"
-                    alt="Atakama"
-                  />
-                  <span class="case-company">Atakama</span>
-                  <span class="flag-sm fi fi-us"></span>
-                </div>
                 <div class="case-tag">
                   <iconify-icon
                     icon="mdi:shield-check-outline"
                     width="11"
                   ></iconify-icon>
-                  Atakama · Segurança · Escala Empresarial
+                  Governo Federal · Defesa contra IA · AWS Certified
                 </div>
                 <div class="case-steps">
                   <div>
-                    <div class="cs-lbl">Desafio</div>
+                    <div class="cs-lbl">Desafio 1 · Infraestrutura Pública</div>
                     <div class="cs-title">
-                      Os dois ambientes mais exigentes do mundo digital
+                      Bilhões em obras públicas sem margem para erro
                     </div>
                     <div class="cs-text">
-                      Agências governamentais gerenciando bilhões em
-                      infraestrutura pública — e empresas expostas ao vetor de
-                      ataque nº1: o navegador.
+                      Agências estaduais americanas precisam de sistemas de
+                      gestão rodoviária em conformidade federal para administrar
+                      15+ estados em produção.
                     </div>
                   </div>
                   <div>
-                    <div class="cs-lbl">Solução</div>
+                    <div class="cs-lbl">Desafio 2 · Segurança Corporativa</div>
                     <div class="cs-title">
-                      O mesmo profissional. O mesmo padrão. Dois contextos
-                      críticos.
+                      Uma nova geração de ataques potencializados por IA
                     </div>
                     <div class="cs-text">
-                      Sistemas de gestão adotados por 15+ estados americanos e
-                      proteção com IA para mais de 20.000 usuários corporativos.
+                      O navegador é o vetor de ataque nº1. Empresas precisam de
+                      proteção em tempo real contra ameaças de IA, sem fricção
+                      para o usuário final.
                     </div>
                   </div>
                   <div>
                     <div class="cs-lbl">Resultado</div>
                     <div class="cs-title">
-                      Conformidade federal com zero margem a erro
+                      Dois sistemas críticos em produção, zero downtime
                     </div>
                     <div class="cs-text">
-                      IA aplicada à segurança ativa — protegendo empresas em
-                      escala sem que os usuários percebam o risco removido.
+                      Gestão rodoviária adotada como padrão por agências
+                      estaduais americanas. Proteção contra ameaças de IA
+                      operando em tempo real sem fricção para o usuário final.
                     </div>
                   </div>
                 </div>
               </div>
               <div class="case-metrics">
                 <div class="mc primary">
-                  <div class="mv">15+</div>
-                  <div class="ml">estados americanos atendidos</div>
+                  <div class="mv">3x</div>
+                  <div class="ml">arquiteto de soluções AWS</div>
                 </div>
                 <div class="mc secondary">
                   <div class="mv">20k+</div>
-                  <div class="ml">usuários corporativos protegidos</div>
+                  <div class="ml">endpoints contra ameaças de IA</div>
                 </div>
                 <div class="mc tertiary">
                   <div class="mv">$500M+</div>
                   <div class="ml">em infraestrutura pública sob gestão</div>
                 </div>
+              </div>
+            </div>
+            <div class="partner-carousel">
+              <div class="partner-carousel-track">
+                <img class="partner-logo" src="./Washdog.png" alt="Washdog" />
+                <img class="partner-logo" src="./vtex-logo.png" alt="VTEX" />
+                <img
+                  class="partner-logo"
+                  src="./atakama-logo.jpg"
+                  alt="Atakama"
+                />
+                <img class="partner-logo" src="./aws-logo.png" alt="AWS" />
+                <img
+                  class="partner-logo"
+                  src="./aashtoware-logo.png"
+                  alt="AASHTOWare Bridge"
+                />
+                <img class="partner-logo" src="./Washdog.png" alt="Washdog" />
+                <img class="partner-logo" src="./vtex-logo.png" alt="VTEX" />
+                <img
+                  class="partner-logo"
+                  src="./atakama-logo.jpg"
+                  alt="Atakama"
+                />
+                <img class="partner-logo" src="./aws-logo.png" alt="AWS" />
+                <img
+                  class="partner-logo"
+                  src="./aashtoware-logo.png"
+                  alt="AASHTOWare Bridge"
+                />
               </div>
             </div>
           </div>
@@ -1489,7 +1617,9 @@
                 </div>
                 <h3>AI Labs</h3>
                 <p>
-                  Workshops de co-criação e capacitação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.
+                  Workshops de co-criação e capacitação para descobrir onde a IA
+                  gera valor real no seu contexto — com o time diretamente
+                  envolvido na operação.
                 </p>
               </div>
               <div class="sv">
@@ -1502,7 +1632,9 @@
                 </div>
                 <h3>Inteligência de negócios</h3>
                 <p>
-                  Identificamos onde sua operação pode melhorar e desenvolvemos soluções em software e IA para que você tome decisões com base em dados reais do seu negócio.
+                  Identificamos onde sua operação pode melhorar e desenvolvemos
+                  soluções em software e IA para que você tome decisões com base
+                  em dados reais do seu negócio.
                 </p>
               </div>
               <div class="sv">
@@ -1515,7 +1647,9 @@
                 </div>
                 <h3>Desenvolvimento</h3>
                 <p>
-                  Soluções proprietárias que se encaixam nos seus sistemas atuais — sem migrações, sem dependência de SaaS. Com acompanhamento contínuo para evoluir junto com o seu negócio.
+                  Soluções proprietárias que se encaixam nos seus sistemas
+                  atuais — sem migrações, sem dependência de SaaS. Com
+                  acompanhamento contínuo para evoluir junto com o seu negócio.
                 </p>
               </div>
             </div>
@@ -1683,12 +1817,17 @@
                   <!-- Bottom-left: Capacitamos -->
                   <div class="triad-v triad-bl">
                     <div class="triad-lbl green">Capacitamos</div>
-                    <div class="triad-txt">Treinamos o time para usar e evoluir a ferramenta</div>
+                    <div class="triad-txt">
+                      Treinamos o time para usar e evoluir a ferramenta
+                    </div>
                   </div>
                   <!-- Bottom-right: Entregamos -->
                   <div class="triad-v triad-br">
                     <div class="triad-lbl purple">Entregamos</div>
-                    <div class="triad-txt">Uma ferramenta pronta para ser usada — na sua infraestrutura</div>
+                    <div class="triad-txt">
+                      Uma ferramenta pronta para ser usada — na sua
+                      infraestrutura
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1937,8 +2076,8 @@
         transition: "fade",
         transitionSpeed: "fast",
         backgroundTransition: "fade",
-        plugins: [RevealNotes]
-      })
+        plugins: [RevealNotes],
+      });
     </script>
   </body>
 </html>
