@@ -589,7 +589,7 @@ const pt: Dict = {
     sub: "Três princípios que guiam cada projeto.",
     principles: [
       "Co-criamos — junto ao time da operação, do início ao fim",
-      "Capacitamos — sua equipe usa o sistema com autonomia, sem depender de nós",
+      "Capacitamos — sua equipe usa o sistema com autonomia",
       "Entregamos — código documentado, rodando dentro da sua infraestrutura",
     ],
     steps: [
