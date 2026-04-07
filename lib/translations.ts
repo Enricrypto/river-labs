@@ -558,7 +558,7 @@ const pt: Dict = {
     items: [
       {
         title: "Ferramentas implantadas sem as pessoas",
-        desc: "A maioria dos projetos de IA falha por falta de engajamento da equipe, não por falta de tecnologia. Sem co-criação, o sistema vira mais uma ferramenta que ninguém usa.",
+        desc: "A maioria dos projetos de IA falha por falta de engajamento da equipe, não por falta de tecnologia.",
       },
       {
         title: "Processos que limitam o que a equipe consegue entregar",
@@ -566,7 +566,7 @@ const pt: Dict = {
       },
       {
         title: "Dados gerados que não viram decisão",
-        desc: "Sua operação já produz o sinal. O que falta é transformá-lo em ação — sem depender de um fornecedor externo para isso.",
+        desc: "A maioria das empresas gera mais dados do que consegue usar. Mas normalmente estão dispersos, desconectados e não são aproveitados de maneira estratégica.",
       },
     ],
   },
