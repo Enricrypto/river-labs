@@ -326,9 +326,9 @@ _Quatro frentes, uma lógica_
 **Os quatro serviços:**
 
 - **AI Labs:** workshops de co-criação com equipes, laboratório de ideias com IA
-- **Inteligência de mercado:** relatórios customizados por setor
+- **Inteligência de negócios:** identificamos onde sua operação pode melhorar com software e IA
 - **Automação:** redução de processos manuais repetitivos
-- **Desenvolvimento:** soluções proprietárias no seu departamento (software house)
+- **Desenvolvimento:** soluções proprietárias que se encaixam nos sistemas atuais — sem migrações, sem dependência de SaaS, com acompanhamento contínuo
 
 **Como apresentar:**
 

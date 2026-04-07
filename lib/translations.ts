@@ -489,12 +489,12 @@ const pt: Dict = {
         desc: "Workshops de co-criação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.",
       },
       {
-        title: "Inteligência de mercado",
-        desc: "Relatórios setoriais customizados — dados que ajudam com a toma de decisões, não só para apresentações.",
+        title: "Inteligência de negócios",
+        desc: "Identificamos onde sua operação pode melhorar e desenvolvemos soluções em software e IA para que você tome decisões com base em dados reais do seu negócio.",
       },
       {
         title: "Desenvolvimento",
-        desc: "Soluções proprietárias na sua infraestrutura — código seu, sem dependência de SaaS ou fornecedor externo.",
+        desc: "Soluções proprietárias que se encaixam nos seus sistemas atuais — sem migrações, sem dependência de SaaS. Com acompanhamento contínuo para evoluir junto com o seu negócio.",
       },
     ],
   },
