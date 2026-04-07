@@ -44,6 +44,7 @@ export type Dict = {
   methodology: {
     heading: string;
     sub: string;
+    triadHeading: string;
     principles: string[];
     steps: { title: string; timeline: string }[];
   };
@@ -193,6 +194,7 @@ const en: Dict = {
   methodology: {
     heading: "Diagnosis to implementation in 90 days",
     sub: "Three principles that guide every project.",
+    triadHeading: "Our Approach",
     principles: [
       "We co-create — alongside the people running the operation, from day one",
       "We train — your team uses the system independently, no vendor dependency",
@@ -390,6 +392,7 @@ const es: Dict = {
   methodology: {
     heading: "Del diagnóstico a la implementación en 90 días",
     sub: "Tres principios que guían cada proyecto.",
+    triadHeading: "Nuestra Metodología",
     principles: [
       "Cocreamos — junto al equipo de la operación, desde el inicio hasta el final",
       "Capacitamos — tu equipo usa el sistema con autonomía, sin depender de nosotros",
@@ -587,6 +590,7 @@ const pt: Dict = {
   methodology: {
     heading: "Passo a passo da jornada",
     sub: "Três princípios que guiam cada projeto.",
+    triadHeading: "Nossa Abordagem",
     principles: [
       "Co-criamos — junto ao time da operação, do início ao fim",
       "Capacitamos — treinamos sua equipe para usar, entender e evoluir o que foi construído juntos",
