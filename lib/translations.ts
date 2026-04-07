@@ -486,7 +486,7 @@ const pt: Dict = {
     items: [
       {
         title: "AI Labs",
-        desc: "Workshops de co-criação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.",
+        desc: "Workshops de co-criação e capacitação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.",
       },
       {
         title: "Inteligência de negócios",
