@@ -671,29 +671,33 @@
       .ideas-cols {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
-        flex: 1;
+        gap: 16px;
+        max-width: 700px;
+        margin: 0 auto;
       }
       .ic {
         border-radius: 16px;
-        padding: 16px;
+        padding: 24px 16px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
         border: 1px solid var(--g200);
         background: var(--white);
       }
       .ic-head {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 8px;
-        padding-bottom: 8px;
-        border-bottom: 1px solid var(--g100);
+        justify-content: center;
+        gap: 12px;
+        padding: 8px 0;
       }
       .ic-icon {
-        width: 26px;
-        height: 26px;
-        border-radius: 8px;
+        width: 72px;
+        height: 72px;
+        border-radius: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -704,6 +708,8 @@
         font-size: 14px;
         font-weight: 600;
         color: var(--g900);
+        text-align: center;
+        order: -1;
       }
       .ic-item {
         display: flex;
@@ -1546,10 +1552,7 @@
               <span class="topbar-n">10 / 13</span>
             </div>
             <div class="sh">
-              <h2>O que já dá para fazer — no seu setor, agora</h2>
-              <div class="sub">
-                Logística · Varejo/E-commerce · Serviços · Compliance
-              </div>
+              <h2>Setores de atuação</h2>
             </div>
             <div class="ideas-cols">
               <div class="ic">
