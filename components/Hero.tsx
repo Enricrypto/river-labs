@@ -38,15 +38,6 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
             </Link>
           </div>
         </div>
-
-        {/* Approach badges */}
-        <div className="relative z-10 mt-16 md:mt-24 pt-8 border-t border-gray-200/80 flex flex-wrap gap-2">
-          {dict.badges.map((badge, i) => (
-            <span key={i} className="inline-flex items-center px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-medium text-gray-700">
-              {badge}
-            </span>
-          ))}
-        </div>
       </div>
     </section>
   );

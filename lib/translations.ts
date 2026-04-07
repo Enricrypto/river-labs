@@ -360,7 +360,7 @@ const es: Dict = {
     sub: "La tecnología no es el cuello de botella. El problema está en cómo se adopta.",
     items: [
       {
-        title: "Herramientas implementadas sin las personas",
+        title: "Ferramentas implantadas sem as pessoas",
         desc: "La mayoría de los proyectos de IA fallan por falta de compromiso del equipo, no por falta de tecnología. Sin cocreación, el sistema se convierte en otra herramienta que nadie usa.",
       },
       {
@@ -544,7 +544,7 @@ const pt: Dict = {
     heading1: "Transformação digital que começa",
     headingItalic: "pelas pessoas,",
     heading2: "não pela ferramenta.",
-    sub: "Nos dedicamos a identificar, organizar e potencializar o uso de dados gerados pelo seu negócio, e desenvolver soluções tecnológicas customizadas que otimizem sua operação. Do diagnóstico ao deploy em 90 dias.",
+    sub: "Nos dedicamos a identificar, organizar e potencializar o uso de dados gerados pelo seu negócio, e desenvolver soluções tecnológicas customizadas que otimizem sua operação.",
     cta1: "Diagnóstico Gratuito",
     cta2: "Ver Nosso Trabalho",
     badges: ["Co-criamos", "Capacitamos", "Entregamos"],
@@ -554,7 +554,7 @@ const pt: Dict = {
   },
   problems: {
     heading: "Por que a maioria das iniciativas de IA não funciona",
-    sub: "A tecnologia não é o gargalo. O problema está em como ela é adotada.",
+    sub: "A tecnologia não é mais o gargalo. O problema está em como ela é adotada.",
     items: [
       {
         title: "Ferramentas implantadas sem as pessoas",
