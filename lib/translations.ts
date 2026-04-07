@@ -585,7 +585,7 @@ const pt: Dict = {
     cta: "Obtenha Seu Diagnóstico Gratuito",
   },
   methodology: {
-    heading: "Do diagnóstico à implementação em 90 dias",
+    heading: "Passo a passo da jornada",
     sub: "Três princípios que guiam cada projeto.",
     principles: [
       "Co-criamos — junto ao time da operação, do início ao fim",
