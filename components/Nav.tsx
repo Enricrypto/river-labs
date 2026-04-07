@@ -13,7 +13,7 @@ export default function Nav({ dict, lang }: { dict: Dict["nav"]; lang: "en" | "e
 
   const links = [
     { label: dict.services, href: "#services" },
-    { label: dict.casestudies, href: "#case-studies" },
+    { label: dict.casestudies, href: `/${lang}/cases` },
     { label: dict.contact, href: `/${lang}/contact` },
   ];
 

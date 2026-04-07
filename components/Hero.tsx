@@ -31,7 +31,7 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
               {dict.cta1}
             </Link>
             <Link
-              href="#case-studies"
+              href={`/${lang}/cases`}
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-gray-300 text-gray-700 text-base font-medium hover:bg-white transition-colors"
             >
               {dict.cta2}

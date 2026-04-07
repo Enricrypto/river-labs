@@ -83,7 +83,7 @@ export type Dict = {
 const en: Dict = {
   nav: {
     services: "Services",
-    casestudies: "Case Studies",
+    casestudies: "Client Area",
     contact: "Contact",
   },
   services: {
@@ -152,7 +152,7 @@ const en: Dict = {
     heading2: "not with the tool.",
     sub: "We identify, organize, and unlock the value of data your business already generates — and build custom technology solutions that optimize your operations. Diagnosis to deploy in 90 days.",
     cta1: "Get Free Diagnosis",
-    cta2: "See Our Work",
+    cta2: "Client Area",
     badges: ["We Co-create", "We Train", "We Deliver"],
   },
   proof: {
@@ -273,14 +273,14 @@ const en: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs.",
-    links: ["Services", "Case Studies", "Contact"],
+    links: ["Services", "Client Area", "Contact"],
   },
 };
 
 const es: Dict = {
   nav: {
     services: "Servicios",
-    casestudies: "Casos de Éxito",
+    casestudies: "Área de Cliente",
     contact: "Contacto",
   },
   services: {
@@ -349,7 +349,7 @@ const es: Dict = {
     heading2: "no por la herramienta.",
     sub: "Nos dedicamos a identificar, organizar y potenciar el uso de los datos generados por tu negocio, y a desarrollar soluciones tecnológicas personalizadas que optimicen tu operación. Del diagnóstico al deploy en 90 días.",
     cta1: "Diagnóstico Gratuito",
-    cta2: "Ver Nuestro Trabajo",
+    cta2: "Área de Cliente",
     badges: ["Co-creamos", "Capacitamos", "Entregamos"],
   },
   proof: {
@@ -470,14 +470,14 @@ const es: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs.",
-    links: ["Servicios", "Casos de Éxito", "Contacto"],
+    links: ["Servicios", "Área de Cliente", "Contacto"],
   },
 };
 
 const pt: Dict = {
   nav: {
     services: "Serviços",
-    casestudies: "Casos de Sucesso",
+    casestudies: "Área do Cliente",
     contact: "Contato",
   },
   services: {
@@ -546,7 +546,7 @@ const pt: Dict = {
     heading2: "não pela ferramenta.",
     sub: "Nos dedicamos a identificar, organizar e potencializar o uso de dados gerados pelo seu negócio, e desenvolver soluções tecnológicas customizadas que otimizem sua operação.",
     cta1: "Diagnóstico Gratuito",
-    cta2: "Ver Nosso Trabalho",
+    cta2: "Área do Cliente",
     badges: ["Co-criamos", "Capacitamos", "Entregamos"],
   },
   proof: {
@@ -667,7 +667,7 @@ const pt: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs.",
-    links: ["Serviços", "Casos de Sucesso", "Contato"],
+    links: ["Serviços", "Área do Cliente", "Contato"],
   },
 };
 
