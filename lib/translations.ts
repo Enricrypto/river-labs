@@ -589,7 +589,7 @@ const pt: Dict = {
     sub: "Três princípios que guiam cada projeto.",
     principles: [
       "Co-criamos — junto ao time da operação, do início ao fim",
-      "Capacitamos — sua equipe usa o sistema com autonomia",
+      "Capacitamos — treinamos sua equipe para usar, entender e evoluir o que foi construído juntos",
       "Entregamos — código documentado, rodando dentro da sua infraestrutura",
     ],
     steps: [
@@ -604,7 +604,7 @@ const pt: Dict = {
     heading: "Parceiro de jornada. Não fornecedor avulso.",
     goodItems: [
       "Co-criamos com o time da operação — sem terceirizar",
-      "Capacitamos para autonomia total — sem dependência de fornecedor",
+      "Capacitamos o time para operar e evoluir a solução — sem dependência de fornecedor",
       "Entregamos código documentado rodando na sua infraestrutura",
       "Preço fixo por marco — você é dono do sistema",
     ],
