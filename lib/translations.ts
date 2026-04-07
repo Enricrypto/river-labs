@@ -490,7 +490,7 @@ const pt: Dict = {
       },
       {
         title: "Inteligência de mercado",
-        desc: "Relatórios setoriais customizados — dados que informam decisões, não só apresentações.",
+        desc: "Relatórios setoriais customizados — dados que ajudam com a toma de decisões, não só para apresentações.",
       },
       {
         title: "Desenvolvimento",
