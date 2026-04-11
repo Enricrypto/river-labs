@@ -54,7 +54,7 @@ export default function BondinhoPage() {
             Voltar ao site
           </Link>
           <span className="text-white/10">·</span>
-          <span className="text-gray-600 text-xs">Bondinho Pão de Açúcar × River Labs — Acesso restrito</span>
+          <span className="text-gray-600 text-xs">Bondinho Pão de Açúcar × River Labs - Acesso restrito</span>
         </div>
         <BondinhoMarketStudySection />
         <DiagnosticSection steps={STEPS_BONDINHO} accentColor="#F59E0B" />

@@ -41,7 +41,7 @@ const stepsPT: StepDef[] = [
         id: "receita",
         label: "Qual é a faixa de receita bruta anual?",
         type: "choice",
-        options: ["Até R$1M", "R$1M – R$10M", "R$10M – R$50M", "R$50M – R$200M", "Acima de R$200M"],
+        options: ["Até R$1M", "R$1M - R$10M", "R$10M - R$50M", "R$50M - R$200M", "Acima de R$200M"],
         required: true,
       },
     ],
@@ -84,7 +84,7 @@ const stepsPT: StepDef[] = [
         id: "pessoas_afetadas",
         label: "Quantas pessoas estão envolvidas nos processos que você quer melhorar?",
         type: "choice",
-        options: ["1 – 5 pessoas", "5 – 20 pessoas", "20 – 100 pessoas", "Mais de 100 pessoas"],
+        options: ["1 - 5 pessoas", "5 - 20 pessoas", "20 - 100 pessoas", "Mais de 100 pessoas"],
         required: true,
       },
       {
@@ -105,7 +105,7 @@ const stepsPT: StepDef[] = [
         id: "sistemas",
         label: "Quais sistemas ou ferramentas a empresa usa hoje? (selecione todas que se aplicam)",
         type: "multiselect",
-        options: ["ERP — SAP, TOTVS, Omie ou similar", "CRM — Salesforce, HubSpot, RD Station ou similar", "Excel & Google Sheets", "BI — Power BI, Tableau, Looker", "Sistema desenvolvido internamente", "Plataformas de e-commerce", "Ferramentas de comunicação — Slack, Teams", "Poucos sistemas estruturados"],
+        options: ["ERP - SAP, TOTVS, Omie ou similar", "CRM - Salesforce, HubSpot, RD Station ou similar", "Excel & Google Sheets", "BI - Power BI, Tableau, Looker", "Sistema desenvolvido internamente", "Plataformas de e-commerce", "Ferramentas de comunicação - Slack, Teams", "Poucos sistemas estruturados"],
         required: true,
       },
     ],
@@ -113,13 +113,13 @@ const stepsPT: StepDef[] = [
   {
     id: "automacao",
     title: "Experiência com automação",
-    subtitle: "Sem julgamento — o contexto nos ajuda a propor o que realmente faz sentido para a sua realidade.",
+    subtitle: "Sem julgamento - o contexto nos ajuda a propor o que realmente faz sentido para a sua realidade.",
     questions: [
       {
         id: "tentou_antes",
         label: "Sua empresa já tentou alguma solução de automação ou IA antes?",
         type: "choice",
-        options: ["Não, ainda não exploramos esse caminho", "Tentamos, mas sem resultados concretos", "Sim, com resultados parciais — queremos evoluir", "Sim, com bons resultados — queremos expandir"],
+        options: ["Não, ainda não exploramos esse caminho", "Tentamos, mas sem resultados concretos", "Sim, com resultados parciais - queremos evoluir", "Sim, com bons resultados - queremos expandir"],
         required: true,
       },
       {
@@ -155,7 +155,7 @@ const stepsPT: StepDef[] = [
         id: "prazo_resultado",
         label: "Em que prazo você espera ver os primeiros resultados?",
         type: "choice",
-        options: ["1 – 3 meses", "3 – 6 meses", "6 – 12 meses", "Ainda estou explorando"],
+        options: ["1 - 3 meses", "3 - 6 meses", "6 - 12 meses", "Ainda estou explorando"],
         required: true,
       },
       {
@@ -199,7 +199,7 @@ const stepsEN: StepDef[] = [
         id: "receita",
         label: "What is your annual gross revenue range?",
         type: "choice",
-        options: ["Up to $500K", "$500K – $5M", "$5M – $25M", "$25M – $100M", "Above $100M"],
+        options: ["Up to $500K", "$500K - $5M", "$5M - $25M", "$25M - $100M", "Above $100M"],
         required: true,
       },
     ],
@@ -242,7 +242,7 @@ const stepsEN: StepDef[] = [
         id: "pessoas_afetadas",
         label: "How many people are involved in the processes you want to improve?",
         type: "choice",
-        options: ["1 – 5 people", "5 – 20 people", "20 – 100 people", "More than 100 people"],
+        options: ["1 - 5 people", "5 - 20 people", "20 - 100 people", "More than 100 people"],
         required: true,
       },
       {
@@ -263,7 +263,7 @@ const stepsEN: StepDef[] = [
         id: "sistemas",
         label: "What systems or tools does the company use today? (select all that apply)",
         type: "multiselect",
-        options: ["ERP — SAP, Oracle, NetSuite or similar", "CRM — Salesforce, HubSpot, Pipedrive or similar", "Excel & Google Sheets", "BI — Power BI, Tableau, Looker", "Internally developed system", "E-commerce platforms", "Communication tools — Slack, Teams", "Few structured systems"],
+        options: ["ERP - SAP, Oracle, NetSuite or similar", "CRM - Salesforce, HubSpot, Pipedrive or similar", "Excel & Google Sheets", "BI - Power BI, Tableau, Looker", "Internally developed system", "E-commerce platforms", "Communication tools - Slack, Teams", "Few structured systems"],
         required: true,
       },
     ],
@@ -271,13 +271,13 @@ const stepsEN: StepDef[] = [
   {
     id: "automacao",
     title: "Automation experience",
-    subtitle: "No judgment — context helps us propose what truly makes sense for your situation.",
+    subtitle: "No judgment - context helps us propose what truly makes sense for your situation.",
     questions: [
       {
         id: "tentou_antes",
         label: "Has your company tried any automation or AI solution before?",
         type: "choice",
-        options: ["No, we haven't explored that path yet", "We tried, but without concrete results", "Yes, with partial results — we want to evolve", "Yes, with good results — we want to expand"],
+        options: ["No, we haven't explored that path yet", "We tried, but without concrete results", "Yes, with partial results - we want to evolve", "Yes, with good results - we want to expand"],
         required: true,
       },
       {
@@ -313,7 +313,7 @@ const stepsEN: StepDef[] = [
         id: "prazo_resultado",
         label: "In what timeframe do you expect to see the first results?",
         type: "choice",
-        options: ["1 – 3 months", "3 – 6 months", "6 – 12 months", "Still exploring"],
+        options: ["1 - 3 months", "3 - 6 months", "6 - 12 months", "Still exploring"],
         required: true,
       },
       {
@@ -357,7 +357,7 @@ const stepsES: StepDef[] = [
         id: "receita",
         label: "¿Cuál es tu rango de ingresos brutos anuales?",
         type: "choice",
-        options: ["Hasta $500K", "$500K – $5M", "$5M – $25M", "$25M – $100M", "Más de $100M"],
+        options: ["Hasta $500K", "$500K - $5M", "$5M - $25M", "$25M - $100M", "Más de $100M"],
         required: true,
       },
     ],
@@ -400,7 +400,7 @@ const stepsES: StepDef[] = [
         id: "pessoas_afetadas",
         label: "¿Cuántas personas están involucradas en los procesos que quieres mejorar?",
         type: "choice",
-        options: ["1 – 5 personas", "5 – 20 personas", "20 – 100 personas", "Más de 100 personas"],
+        options: ["1 - 5 personas", "5 - 20 personas", "20 - 100 personas", "Más de 100 personas"],
         required: true,
       },
       {
@@ -421,7 +421,7 @@ const stepsES: StepDef[] = [
         id: "sistemas",
         label: "¿Qué sistemas o herramientas usa la empresa hoy? (selecciona todas las que apliquen)",
         type: "multiselect",
-        options: ["ERP — SAP, Oracle, NetSuite o similar", "CRM — Salesforce, HubSpot, Pipedrive o similar", "Excel & Google Sheets", "BI — Power BI, Tableau, Looker", "Sistema desarrollado internamente", "Plataformas de e-commerce", "Herramientas de comunicación — Slack, Teams", "Pocos sistemas estructurados"],
+        options: ["ERP - SAP, Oracle, NetSuite o similar", "CRM - Salesforce, HubSpot, Pipedrive o similar", "Excel & Google Sheets", "BI - Power BI, Tableau, Looker", "Sistema desarrollado internamente", "Plataformas de e-commerce", "Herramientas de comunicación - Slack, Teams", "Pocos sistemas estructurados"],
         required: true,
       },
     ],
@@ -429,13 +429,13 @@ const stepsES: StepDef[] = [
   {
     id: "automacao",
     title: "Experiencia con automatización",
-    subtitle: "Sin juicio — el contexto nos ayuda a proponer lo que realmente tiene sentido para tu realidad.",
+    subtitle: "Sin juicio - el contexto nos ayuda a proponer lo que realmente tiene sentido para tu realidad.",
     questions: [
       {
         id: "tentou_antes",
         label: "¿Tu empresa ya intentó alguna solución de automatización o IA antes?",
         type: "choice",
-        options: ["No, aún no hemos explorado ese camino", "Lo intentamos, pero sin resultados concretos", "Sí, con resultados parciales — queremos evolucionar", "Sí, con buenos resultados — queremos expandir"],
+        options: ["No, aún no hemos explorado ese camino", "Lo intentamos, pero sin resultados concretos", "Sí, con resultados parciales - queremos evolucionar", "Sí, con buenos resultados - queremos expandir"],
         required: true,
       },
       {
@@ -471,7 +471,7 @@ const stepsES: StepDef[] = [
         id: "prazo_resultado",
         label: "¿En qué plazo esperas ver los primeros resultados?",
         type: "choice",
-        options: ["1 – 3 meses", "3 – 6 meses", "6 – 12 meses", "Aún estoy explorando"],
+        options: ["1 - 3 meses", "3 - 6 meses", "6 - 12 meses", "Aún estoy explorando"],
         required: true,
       },
       {

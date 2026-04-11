@@ -54,7 +54,7 @@ export default function CataratosPage() {
             Voltar ao site
           </Link>
           <span className="text-white/10">·</span>
-          <span className="text-gray-600 text-xs">Grupo Cataratas × River Labs — Acesso restrito</span>
+          <span className="text-gray-600 text-xs">Grupo Cataratas × River Labs - Acesso restrito</span>
         </div>
         <CataratAsMarketStudySection />
         <DiagnosticSection steps={STEPS_CATARATAS} accentColor="#C084FC" />

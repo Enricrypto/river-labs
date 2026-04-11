@@ -18,12 +18,12 @@ import Link from "next/link";
 const TOTAL = 6;
 
 const SLIDE_LABELS = [
-  "01 — Visão Geral",
-  "02 — Contexto de Mercado",
-  "03 — Onde o Tempo Vira Dinheiro",
-  "04 — IA & Automação",
-  "05 — Impacto Financeiro",
-  "06 — Por que River Labs",
+  "01 - Visão Geral",
+  "02 - Contexto de Mercado",
+  "03 - Onde o Tempo Vira Dinheiro",
+  "04 - IA & Automação",
+  "05 - Impacto Financeiro",
+  "06 - Por que River Labs",
 ];
 
 /* ─── Shared UI ───────────────────────────────────────── */
@@ -119,7 +119,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          De onde vem (e some) o lucro — Construção Pesada Brasil 2024
+          De onde vem (e some) o lucro - Construção Pesada Brasil 2024
         </p>
         <div className="space-y-3">
           {[
@@ -153,19 +153,19 @@ function Slide02() {
           {
             value: "25%",
             label: "Atraso médio em obras",
-            desc: "Do prazo contratado — padrão nacional",
+            desc: "Do prazo contratado - padrão nacional",
             source: "TCU",
             color: "#A3BFFA",
           },
           {
-            value: "70–80%",
+            value: "70-80%",
             label: "Taxa de perda em licitações",
             desc: "Propostas perdidas por erro documental ou preço",
             source: "TCU / CBIC",
             color: "#D7BDE2",
           },
           {
-            value: "8–12%",
+            value: "8-12%",
             label: "Custo extra por projeto",
             desc: "Da receita gasta em atrasos e correções",
             source: "IBGE PAIC",
@@ -201,13 +201,13 @@ function Slide03() {
       lines: [
         { tree: "├─", text: "250h médio por proposta (est.)", bold: false },
         { tree: "├─", text: "R$120/h × 250h = R$30k por licitação", bold: true },
-        { tree: "├─", text: "70–80% das propostas são perdidas (preço ou documentação)", bold: false },
+        { tree: "├─", text: "70-80% das propostas são perdidas (preço ou documentação)", bold: false },
         { tree: "└─", text: "30 licitações/ano = R$900k em custo total de propostas", bold: true },
       ],
     },
     {
       icon: Wrench,
-      title: "Controle Mensal — Obra R$50M",
+      title: "Controle Mensal - Obra R$50M",
       accent: "#B5EAD7",
       source: "Lei 8.666/93",
       lines: [
@@ -222,8 +222,8 @@ function Slide03() {
       accent: "#D7BDE2",
       source: "estimativa de mercado",
       lines: [
-        { tree: "├─", text: "40–120h por laudo ou memorial técnico", bold: false },
-        { tree: "├─", text: "R$4,8k–14k por documento (a R$120/h)", bold: true },
+        { tree: "├─", text: "40-120h por laudo ou memorial técnico", bold: false },
+        { tree: "├─", text: "R$4,8k-14k por documento (a R$120/h)", bold: true },
         { tree: "└─", text: "Erro em laudo → paralisação, desconto ou revisão do contrato", bold: false },
       ],
     },
@@ -280,8 +280,8 @@ function Slide03() {
       >
         <AlertTriangle className="w-4 h-4 text-pastel-purple mt-0.5 shrink-0" strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
-          <strong className="text-white">30 licitações/ano × R$30k × 70–80% perdidas</strong> ={" "}
-          <strong className="text-pastel-purple">R$630k–720k/ano</strong> em horas de engenharia que não
+          <strong className="text-white">30 licitações/ano × R$30k × 70-80% perdidas</strong> ={" "}
+          <strong className="text-pastel-purple">R$630k-720k/ano</strong> em horas de engenharia que não
           geram nenhum contrato. Esse número é recuperável.
         </p>
       </div>
@@ -545,7 +545,7 @@ function Slide06() {
     },
     {
       number: "04",
-      title: "R$3,2M fixo — 3 agentes + 90 dias",
+      title: "R$3,2M fixo - 3 agentes + 90 dias",
       desc: "Agente de licitações, controle de obra e documentação técnica. Preço fechado, escopo fechado, entrega em 90 dias.",
       color: "#A3BFFA",
     },
@@ -666,7 +666,7 @@ export default function MarketStudySection() {
               Grupo Ápia × River Labs
             </h2>
             <p className="text-gray-500 text-sm mt-3 max-w-md leading-relaxed">
-              Análise de oportunidades de IA & automação com números verificáveis — fontes TCU, IBGE,
+              Análise de oportunidades de IA & automação com números verificáveis - fontes TCU, IBGE,
               Lei 8.666 e com base na própria receita da Ápia.
             </p>
           </div>
@@ -724,7 +724,7 @@ export default function MarketStudySection() {
                 {String(current + 1).padStart(2, "0")}
               </span>
               <div className="h-px w-6" style={{ background: "rgba(255,255,255,0.1)" }} />
-              <span className="text-gray-500 text-sm">{SLIDE_LABELS[current].split("— ")[1]}</span>
+              <span className="text-gray-500 text-sm">{SLIDE_LABELS[current].split("- ")[1]}</span>
             </div>
             <span className="text-gray-700 text-xs">{current + 1} / {TOTAL}</span>
           </div>
@@ -756,7 +756,7 @@ export default function MarketStudySection() {
                 onClick={next}
                 className="hidden md:flex items-center gap-1.5 text-gray-700 hover:text-gray-400 text-xs transition-colors"
               >
-                {SLIDE_LABELS[current + 1].split("— ")[1]}
+                {SLIDE_LABELS[current + 1].split("- ")[1]}
                 <ChevronRight className="w-3 h-3" />
               </button>
             )}

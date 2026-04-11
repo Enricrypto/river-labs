@@ -1,67 +1,82 @@
 import type { Dict } from "@/lib/translations";
 
-const triadColors = [
-  { label: "text-pastel-blue", card: "border-pastel-blue/30 bg-pastel-blue/5" },
-  { label: "text-pastel-green", card: "border-pastel-green/30 bg-pastel-green/5" },
-  { label: "text-pastel-purple", card: "border-pastel-purple/30 bg-pastel-purple/5" },
+const ICONS = [
+  // Co-criamos — two people / handshake
+  (
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  ),
+  // Capacitamos — graduation / upward growth
+  (
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+      <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+    </svg>
+  ),
+  // Entregamos — box / delivery
+  (
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+      <line x1="12" y1="22.08" x2="12" y2="12" />
+    </svg>
+  ),
 ];
 
-const triadLabels = ["Co-criamos", "Capacitamos", "Entregamos"];
+const LABELS = ["Co-criamos", "Capacitamos", "Entregamos"];
 
 export default function ApproachSection({ dict }: { dict: Dict["methodology"] }) {
-  const principles = dict.principles;
-
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto w-full">
-      <div className="max-w-2xl mb-16">
-        <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-gray-900 mb-5">
-          {dict.triadHeading}
-        </h2>
-        <p className="text-lg text-gray-500 font-normal leading-relaxed">
-          {dict.sub}
-        </p>
-      </div>
+    <section className="py-6 px-4 md:px-6 w-full max-w-7xl mx-auto">
+      <div className="w-full bg-[#0F1D56] rounded-4xl md:rounded-5xl relative overflow-hidden">
 
-      {/* Triangle layout */}
-      <div className="flex flex-col items-center gap-6 md:block md:relative md:h-80 max-w-2xl mx-auto">
+        {/* Dot grid */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="approach-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.07)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#approach-dots)" />
+        </svg>
 
-        {/* Top — Co-criamos */}
-        <div className={`w-full max-w-xs rounded-2xl border px-6 py-5 text-center md:absolute md:left-1/2 md:-translate-x-1/2 md:top-0 ${triadColors[0].card}`}>
-          <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${triadColors[0].label}`}>
-            {triadLabels[0]}
-          </p>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            {principles[0].replace(/^Co-criamos\s*—\s*/i, "").replace(/^We co-create\s*—\s*/i, "").replace(/^Cocreamos\s*—\s*/i, "")}
+        {/* Glow blob */}
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-indigo-500 opacity-15 blur-[100px] pointer-events-none" />
+
+        {/* Header */}
+        <div className="relative z-10 px-8 md:px-14 pt-16 md:pt-24 pb-12 max-w-2xl">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-white tracking-tight leading-snug mb-4">
+            {dict.triadHeading}
+          </h2>
+          <p className="text-base text-white/55 font-normal leading-relaxed">
+            {dict.sub}
           </p>
         </div>
 
-        {/* Center node (desktop only) */}
-        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-gray-900 items-center justify-center z-10 shadow-lg">
-          <svg viewBox="0 0 64 64" className="w-6 h-6" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M10 24 Q21 8 32 24 T54 24" />
-            <path d="M10 40 Q21 24 32 40 T54 40" />
-          </svg>
+        {/* 3 principle columns */}
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 border-t border-white/10">
+          {dict.principles.map((principle, idx) => (
+            <div
+              key={idx}
+              className={`px-8 md:px-10 py-10 flex flex-col gap-5 ${idx < 2 ? "border-b md:border-b-0 md:border-r border-white/10" : ""}`}
+            >
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                {ICONS[idx]}
+              </div>
+              <span className="font-mono text-xs font-bold tracking-widest uppercase text-indigo-300">
+                {LABELS[idx]}
+              </span>
+              <p className="text-base text-white/60 font-normal leading-relaxed">
+                {principle.replace(/^(Co-criamos|Capacitamos|Entregamos)\s*-\s*/i, "")}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom left — Capacitamos */}
-        <div className={`w-full max-w-xs rounded-2xl border px-6 py-5 text-center md:absolute md:left-0 md:bottom-0 ${triadColors[1].card}`}>
-          <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${triadColors[1].label}`}>
-            {triadLabels[1]}
-          </p>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            {principles[1].replace(/^Capacitamos\s*—\s*/i, "").replace(/^We train\s*—\s*/i, "")}
-          </p>
-        </div>
-
-        {/* Bottom right — Entregamos */}
-        <div className={`w-full max-w-xs rounded-2xl border px-6 py-5 text-center md:absolute md:right-0 md:bottom-0 ${triadColors[2].card}`}>
-          <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${triadColors[2].label}`}>
-            {triadLabels[2]}
-          </p>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            {principles[2].replace(/^Entregamos\s*—\s*/i, "").replace(/^We deliver\s*—\s*/i, "")}
-          </p>
-        </div>
       </div>
     </section>
   );

@@ -23,12 +23,12 @@ const AMBER = "#F59E0B";
 const TOTAL = 6;
 
 const SLIDE_LABELS = [
-  "01 — Visão Geral",
-  "02 — Contexto de Mercado",
-  "03 — Onde o Tempo Vira Dinheiro",
-  "04 — IA & Automação",
-  "05 — Impacto Financeiro",
-  "06 — Por que River Labs",
+  "01 - Visão Geral",
+  "02 - Contexto de Mercado",
+  "03 - Onde o Tempo Vira Dinheiro",
+  "04 - IA & Automação",
+  "05 - Impacto Financeiro",
+  "06 - Por que River Labs",
 ];
 
 /* ─── Shared UI ───────────────────────────────────────── */
@@ -73,7 +73,7 @@ function Slide01() {
             Grupo Cataratas
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Líder em <span className="text-white font-medium">concessões de turismo sustentável no Brasil</span>, operando AquaRio, BioParque RJ, Paineiras Corcovado, Cataratas do Iguaçu, Marco Três Fronteiras, EcoNoronha e AquaFoz — 5 milhões+ de visitantes/ano.
+            Líder em <span className="text-white font-medium">concessões de turismo sustentável no Brasil</span>, operando AquaRio, BioParque RJ, Paineiras Corcovado, Cataratas do Iguaçu, Marco Três Fronteiras, EcoNoronha e AquaFoz - 5 milhões+ de visitantes/ano.
           </p>
         </div>
         <div>
@@ -124,7 +124,7 @@ function Slide02() {
   return (
     <div className="flex flex-col gap-7 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-        O modelo de concessão gera margens estruturalmente sólidas — mas a escala multi-unidade amplifica qualquer ineficiência. O diferencial competitivo está na{" "}
+        O modelo de concessão gera margens estruturalmente sólidas - mas a escala multi-unidade amplifica qualquer ineficiência. O diferencial competitivo está na{" "}
         <span className="text-white">otimização de fluxo de visitantes, precificação dinâmica e compliance automatizado com o ICMBio</span>.
       </p>
 
@@ -133,7 +133,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          Estrutura de Custos — Urbia Cataratas S.A. (DF 1T25)
+          Estrutura de Custos - Urbia Cataratas S.A. (DF 1T25)
         </p>
         <div className="space-y-3">
           {[
@@ -142,7 +142,7 @@ function Slide02() {
             { label: "Despesas G&A", pct: 8, color: "#374151", text: "~8%", source: "DF 1T25" },
             { label: "Repasses concessão ICMBio", pct: 15, color: AMBER, text: "~15%", source: "DF 1T25 / estimativa" },
             { label: "Margem líquida atual", pct: 18, color: "#6B7280", text: "~18%", source: "DF 1T25" },
-            { label: "Com River Labs (+4–6pp)", pct: 23, color: GREEN, text: "~23%", source: null },
+            { label: "Com River Labs (+4-6pp)", pct: 23, color: GREEN, text: "~23%", source: null },
           ].map(row => (
             <div key={row.label} className="flex items-center gap-3">
               <span className="text-gray-500 text-xs w-36 sm:w-56 shrink-0 flex items-center flex-wrap gap-y-0.5">
@@ -162,8 +162,8 @@ function Slide02() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
-          { value: "10–20%", label: "Perda de conversão", desc: "Visitantes perdidos por filas longas e processo de bilheteria manual nos picos", source: "MTur / estimativa setorial", color: GREEN },
-          { value: "30–40%", label: "Ociosidade off-season", desc: "Capacidade ociosa nas unidades fora dos períodos de alta temporada e feriados", source: "ICMBio RAC 2024 / estimativa", color: SKY },
+          { value: "10-20%", label: "Perda de conversão", desc: "Visitantes perdidos por filas longas e processo de bilheteria manual nos picos", source: "MTur / estimativa setorial", color: GREEN },
+          { value: "30-40%", label: "Ociosidade off-season", desc: "Capacidade ociosa nas unidades fora dos períodos de alta temporada e feriados", source: "ICMBio RAC 2024 / estimativa", color: SKY },
           { value: "30 dias", label: "Ciclo de recebíveis", desc: "Prazo médio de conciliação com parceiros de distribuição e operadoras de turismo", source: "DF 1T25 / estimativa", color: AMBER },
         ].map(p => (
           <div
@@ -192,9 +192,9 @@ function Slide03() {
       accent: GREEN,
       source: "Catho RJ 2026 / ICMBio RAC 2024",
       lines: [
-        { tree: "├─", text: "15–25h/dia (atendente bilheteria + suporte, R$30/h)", bold: false },
+        { tree: "├─", text: "15-25h/dia (atendente bilheteria + suporte, R$30/h)", bold: false },
         { tree: "├─", text: "R$30/h × 20h = R$600/dia em custo de atendimento", bold: true },
-        { tree: "├─", text: "365 dias/ano = custo anual R$164k–R$274k (por unidade)", bold: true },
+        { tree: "├─", text: "365 dias/ano = custo anual R$164k-R$274k (por unidade)", bold: true },
         { tree: "└─", text: "Dias de pico sem controle automático = fila de 2h+ e conversão perdida de R$50k+/dia", bold: false },
       ],
     },
@@ -204,9 +204,9 @@ function Slide03() {
       accent: SKY,
       source: "Catho RJ 2026 / ICMBio RAC 2024",
       lines: [
-        { tree: "├─", text: "25–40h/semana (coordenador operações, R$50/h)", bold: false },
+        { tree: "├─", text: "25-40h/semana (coordenador operações, R$50/h)", bold: false },
         { tree: "├─", text: "R$50/h × 32h = R$1.600/semana por unidade", bold: true },
-        { tree: "├─", text: "7 unidades × 52 semanas = custo grupo R$455k–R$728k/ano", bold: true },
+        { tree: "├─", text: "7 unidades × 52 semanas = custo grupo R$455k-R$728k/ano", bold: true },
         { tree: "└─", text: "Erro de capacidade = superlotação (risco regulatório ICMBio) ou ociosidade (R$30k+/dia perdido)", bold: false },
       ],
     },
@@ -216,9 +216,9 @@ function Slide03() {
       accent: AMBER,
       source: "Lei 9.985/2000 / ICMBio RAC 2024 / Catho RJ 2026",
       lines: [
-        { tree: "├─", text: "20–35h/mês por unidade (analista regulatório, R$60/h)", bold: false },
+        { tree: "├─", text: "20-35h/mês por unidade (analista regulatório, R$60/h)", bold: false },
         { tree: "├─", text: "R$60/h × 27h = R$1.620/mês por unidade", bold: true },
-        { tree: "├─", text: "7 unidades × 12 meses = custo anual R$100k–R$176k (grupo)", bold: true },
+        { tree: "├─", text: "7 unidades × 12 meses = custo anual R$100k-R$176k (grupo)", bold: true },
         { tree: "└─", text: "Não conformidade ICMBio: penalidades contratuais e risco de rescisão de concessão", bold: false },
       ],
     },
@@ -229,7 +229,7 @@ function Slide03() {
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Coordenadores de operações turísticas custam{" "}
         <span className="text-white font-medium">R$50/h no Rio de Janeiro (Catho 2026)</span>. Com 7 unidades operacionais,
-        cada ineficiência de processo é multiplicada — e o impacto na margem do grupo é estrutural.
+        cada ineficiência de processo é multiplicada - e o impacto na margem do grupo é estrutural.
       </p>
 
       <div className="space-y-3">
@@ -270,7 +270,7 @@ function Slide03() {
         <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" style={{ color: GREEN }} strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
           <strong className="text-white">5M visitantes/ano × 15% perda de conversão × R$60 ticket médio</strong> ={" "}
-          <strong style={{ color: GREEN }}>R$45M/ano</strong> em receita potencial não capturada — recuperável com gestão dinâmica de fluxo e bilheteria automatizada.
+          <strong style={{ color: GREEN }}>R$45M/ano</strong> em receita potencial não capturada - recuperável com gestão dinâmica de fluxo e bilheteria automatizada.
         </p>
       </div>
     </div>
@@ -282,7 +282,7 @@ function Slide04() {
   const groups = [
     {
       process: "Vendas de Ingressos",
-      impact: "R$75M+ em receita adicional — +25% yield via precificação dinâmica em todas as unidades",
+      impact: "R$75M+ em receita adicional - +25% yield via precificação dinâmica em todas as unidades",
       color: GREEN,
       items: [
         {
@@ -299,7 +299,7 @@ function Slide04() {
     },
     {
       process: "Planejamento de Capacidade",
-      impact: "R$60M+ em receita adicional — +20% volume via otimização de fluxo (independente da alavanca 1, preço)",
+      impact: "R$60M+ em receita adicional - +20% volume via otimização de fluxo (independente da alavanca 1, preço)",
       color: SKY,
       items: [
         {
@@ -316,7 +316,7 @@ function Slide04() {
     },
     {
       process: "Compliance ICMBio",
-      impact: "Proteção de concessões com R$520M+ ROB — relatórios automáticos e alertas de não conformidade",
+      impact: "Proteção de concessões com R$520M+ ROB - relatórios automáticos e alertas de não conformidade",
       color: AMBER,
       items: [
         {
@@ -378,14 +378,14 @@ function Slide04() {
 function Slide05() {
   const levers = [
     {
-      label: "1. Receita via precificação dinâmica — +25% yield sobre bilheteria atual (grupo)",
-      math: "R$300M base × 25% otimização de yield — impacto em RECEITA via preço, aplicado às 7 unidades",
+      label: "1. Receita via precificação dinâmica - +25% yield sobre bilheteria atual (grupo)",
+      math: "R$300M base × 25% otimização de yield - impacto em RECEITA via preço, aplicado às 7 unidades",
       result: "+R$75M",
       color: GREEN,
     },
     {
-      label: "2. Receita via otimização de fluxo — +20% volume de visitantes",
-      math: "R$300M base × 20% aumento de volume — impacto em RECEITA via capacidade, independente da alavanca 1 (preço)",
+      label: "2. Receita via otimização de fluxo - +20% volume de visitantes",
+      math: "R$300M base × 20% aumento de volume - impacto em RECEITA via capacidade, independente da alavanca 1 (preço)",
       result: "+R$60M",
       color: SKY,
     },
@@ -485,7 +485,7 @@ function Slide06() {
   const commits = [
     {
       number: "01",
-      title: "Piloto no AquaRio — resultado em 1 semana",
+      title: "Piloto no AquaRio - resultado em 1 semana",
       desc: "Automatizamos vendas e planejamento de capacidade para o AquaRio durante 1 semana de pico. Os dados reais provam o modelo antes de qualquer escala para as demais unidades.",
       color: GREEN,
     },
@@ -506,7 +506,7 @@ function Slide06() {
   return (
     <div className="flex flex-col gap-6 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-        O ROB do grupo ICMBio atingiu R$520M em 2024. Com Copa 2026 e crescimento do ecoturismo, o fluxo de visitantes vai aumentar — e a eficiência operacional vai definir quem captura essa demanda.{" "}
+        O ROB do grupo ICMBio atingiu R$520M em 2024. Com Copa 2026 e crescimento do ecoturismo, o fluxo de visitantes vai aumentar - e a eficiência operacional vai definir quem captura essa demanda.{" "}
         <span className="text-white">Quem automatizar agora chega na alta temporada com vantagem real em todas as 7 unidades.</span>
       </p>
 
@@ -538,7 +538,7 @@ function Slide06() {
         <div>
           <p className="text-white text-sm font-medium mb-1">Próximo passo</p>
           <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-            Uma conversa de 45 minutos com o time de operações do Grupo Cataratas. Sem apresentação genérica —
+            Uma conversa de 45 minutos com o time de operações do Grupo Cataratas. Sem apresentação genérica -
             só dados reais de bilheteria, fluxo e compliance para definir o piloto do AquaRio esta semana.
           </p>
         </div>
@@ -596,7 +596,7 @@ export default function CataratosMarketStudySection() {
             Onde a IA gera valor real<br />em concessões de turismo sustentável
           </h2>
           <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
-            Análise personalizada para o Grupo Cataratas — bilheteria, fluxo de visitantes, compliance ICMBio e impacto
+            Análise personalizada para o Grupo Cataratas - bilheteria, fluxo de visitantes, compliance ICMBio e impacto
             financeiro estimado com base nos dados reais do DF 1T25 e benchmarks setoriais.
           </p>
         </div>
@@ -629,7 +629,7 @@ export default function CataratosMarketStudySection() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-gray-600 text-[10px] uppercase tracking-widest mb-1">{current + 1} / {TOTAL}</p>
-              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("— ")[1]}</h3>
+              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("- ")[1]}</h3>
             </div>
             <div className="flex gap-2">
               <button

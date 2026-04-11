@@ -9,7 +9,7 @@ const UI = {
   en: {
     badge: "Get in Touch",
     heading: "Let's talk about your business",
-    sub: "Free diagnosis in 48h. We identify the 3 biggest AI and automation opportunities in your business — no commitment.",
+    sub: "Free diagnosis in 48h. We identify the 3 biggest AI and automation opportunities in your business - no commitment.",
     pills: [
       { title: "Reply within 48h", desc: "No message goes unanswered." },
       { title: "Free diagnosis", desc: "We map your opportunities before any proposal." },
@@ -37,7 +37,7 @@ const UI = {
   es: {
     badge: "Contáctanos",
     heading: "Hablemos de tu negocio",
-    sub: "Diagnóstico gratuito en 48h. Identificamos las 3 mayores oportunidades de IA y automatización en tu negocio — sin compromiso.",
+    sub: "Diagnóstico gratuito en 48h. Identificamos las 3 mayores oportunidades de IA y automatización en tu negocio - sin compromiso.",
     pills: [
       { title: "Respuesta en 48h", desc: "Ningún mensaje queda sin respuesta." },
       { title: "Diagnóstico gratuito", desc: "Mapeamos tus oportunidades antes de cualquier propuesta." },
@@ -65,7 +65,7 @@ const UI = {
   pt: {
     badge: "Fale com a gente",
     heading: "Vamos conversar sobre o seu negócio",
-    sub: "Diagnóstico gratuito em 48h. Identificamos as 3 maiores oportunidades de IA e automação no seu negócio — sem compromisso.",
+    sub: "Diagnóstico gratuito em 48h. Identificamos as 3 maiores oportunidades de IA e automação no seu negócio - sem compromisso.",
     pills: [
       { title: "Resposta em até 48h", desc: "Nenhuma mensagem fica sem resposta." },
       { title: "Diagnóstico gratuito", desc: "Mapeamos suas oportunidades antes de qualquer proposta." },

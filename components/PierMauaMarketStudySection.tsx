@@ -23,12 +23,12 @@ const VIOLET = "#C084FC";
 const TOTAL = 6;
 
 const SLIDE_LABELS = [
-  "01 — Visão Geral",
-  "02 — Contexto de Mercado",
-  "03 — Onde o Tempo Vira Dinheiro",
-  "04 — IA & Automação",
-  "05 — Impacto Financeiro",
-  "06 — Por que River Labs",
+  "01 - Visão Geral",
+  "02 - Contexto de Mercado",
+  "03 - Onde o Tempo Vira Dinheiro",
+  "04 - IA & Automação",
+  "05 - Impacto Financeiro",
+  "06 - Por que River Labs",
 ];
 
 /* ─── Shared UI ───────────────────────────────────────── */
@@ -124,7 +124,7 @@ function Slide02() {
   return (
     <div className="flex flex-col gap-7 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-        Terminais de cruzeiros têm margens altas — mas concentradas na temporada. O jogo se ganha ou se perde na{" "}
+        Terminais de cruzeiros têm margens altas - mas concentradas na temporada. O jogo se ganha ou se perde na{" "}
         <span className="text-white">eficiência operacional fora do pico</span> e na velocidade de captação de eventos.
       </p>
 
@@ -133,7 +133,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          Estrutura de Custos — Píer Mauá 2023 (dados reais do balanço)
+          Estrutura de Custos - Píer Mauá 2023 (dados reais do balanço)
         </p>
         <div className="space-y-3">
           {[
@@ -142,7 +142,7 @@ function Slide02() {
             { label: "Compromisso concedente CDRJ", pct: 22, color: "#374151", text: "~22%", source: "Balanço 2023" },
             { label: "Despesas administrativas", pct: 7, color: CORAL, text: "~7%", source: "Balanço 2023" },
             { label: "Margem líquida atual", pct: 39, color: "#6B7280", text: "~39%", source: "Balanço 2023" },
-            { label: "Com River Labs (+4–6pp)", pct: 44, color: SKY, text: "~44%", source: null },
+            { label: "Com River Labs (+4-6pp)", pct: 44, color: SKY, text: "~44%", source: null },
           ].map(row => (
             <div key={row.label} className="flex items-center gap-3">
               <span className="text-gray-500 text-xs w-36 sm:w-56 shrink-0 flex items-center flex-wrap gap-y-0.5">
@@ -162,9 +162,9 @@ function Slide02() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
-          { value: "50–70%", label: "Ociosidade off-season", desc: "Taxa de capacidade ociosa fora da temporada de cruzeiros", source: "TCU Portos", color: SKY },
-          { value: "20–30%", label: "Atrasos documentais", desc: "Operações com atraso por compliance manual PF/Anvisa/Alfândega", source: "PortosRio", color: CORAL },
-          { value: "5–10%", label: "Custo compliance", desc: "Da receita em conformidade ANTAQ, ISPS Code e Lei 12.815/2013", source: "ANTAQ / ISPS Code", color: VIOLET },
+          { value: "50-70%", label: "Ociosidade off-season", desc: "Taxa de capacidade ociosa fora da temporada de cruzeiros", source: "TCU Portos", color: SKY },
+          { value: "20-30%", label: "Atrasos documentais", desc: "Operações com atraso por compliance manual PF/Anvisa/Alfândega", source: "PortosRio", color: CORAL },
+          { value: "5-10%", label: "Custo compliance", desc: "Da receita em conformidade ANTAQ, ISPS Code e Lei 12.815/2013", source: "ANTAQ / ISPS Code", color: VIOLET },
         ].map(p => (
           <div
             key={p.label}
@@ -192,21 +192,21 @@ function Slide03() {
       accent: SKY,
       source: "Glassdoor portuário RJ",
       lines: [
-        { tree: "├─", text: "30–50h por atracação (coordenação armadoras + CDRJ)", bold: false },
+        { tree: "├─", text: "30-50h por atracação (coordenação armadoras + CDRJ)", bold: false },
         { tree: "├─", text: "R$65/h × 40h = R$2.600 por atracação", bold: true },
-        { tree: "├─", text: "100–150 atracações/ano = custo anual R$195k–487k", bold: true },
+        { tree: "├─", text: "100-150 atracações/ano = custo anual R$195k-487k", bold: true },
         { tree: "└─", text: "Falha no planejamento = atracação perdida (R$500k+ receita)", bold: false },
       ],
     },
     {
       icon: FileCheck,
-      title: "Compliance Documental — PF / Alfândega / Anvisa",
+      title: "Compliance Documental - PF / Alfândega / Anvisa",
       accent: CORAL,
       source: "ANTAQ / estimativa operacional",
       lines: [
-        { tree: "├─", text: "20–40h por navio (analista compliance, R$55/h)", bold: false },
+        { tree: "├─", text: "20-40h por navio (analista compliance, R$55/h)", bold: false },
         { tree: "├─", text: "R$55/h × 30h = R$1.650 por navio", bold: true },
-        { tree: "├─", text: "100–150 navios/ano = custo anual R$110k–330k", bold: true },
+        { tree: "├─", text: "100-150 navios/ano = custo anual R$110k-330k", bold: true },
         { tree: "└─", text: "Não conformidade ANTAQ: multa R$50k+ por ocorrência", bold: false },
       ],
     },
@@ -216,9 +216,9 @@ function Slide03() {
       accent: VIOLET,
       source: "Catho / estimativa de mercado",
       lines: [
-        { tree: "├─", text: "15–25h por proposta (vendas + jurídico, R$60/h)", bold: false },
+        { tree: "├─", text: "15-25h por proposta (vendas + jurídico, R$60/h)", bold: false },
         { tree: "├─", text: "R$60/h × 20h = R$1.200 por proposta", bold: true },
-        { tree: "├─", text: "200–300 propostas/ano = custo anual R$180k–450k", bold: true },
+        { tree: "├─", text: "200-300 propostas/ano = custo anual R$180k-450k", bold: true },
         { tree: "└─", text: "Evento perdido por atraso na resposta = R$200k+ receita média", bold: false },
       ],
     },
@@ -229,7 +229,7 @@ function Slide03() {
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Gerentes de operações portuárias custam{" "}
         <span className="text-white font-medium">R$65/h no Rio de Janeiro (Glassdoor)</span>. Cada hora em
-        burocracia manual é margem perdida — especialmente em operações com janelas de tempo curtas.
+        burocracia manual é margem perdida - especialmente em operações com janelas de tempo curtas.
       </p>
 
       <div className="space-y-3">
@@ -270,7 +270,7 @@ function Slide03() {
         <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" style={{ color: SKY }} strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
           <strong className="text-white">250 propostas de eventos/ano × R$1.200 × 60% não convertidas</strong> ={" "}
-          <strong style={{ color: SKY }}>R$180k/ano</strong> em horas comerciais sem retorno — recuperáveis com automação de propostas.
+          <strong style={{ color: SKY }}>R$180k/ano</strong> em horas comerciais sem retorno - recuperáveis com automação de propostas.
         </p>
       </div>
     </div>
@@ -316,7 +316,7 @@ function Slide04() {
     },
     {
       process: "Eventos & Locação de Espaços",
-      impact: "R$12M+ em receita adicional — +15% conversão de propostas",
+      impact: "R$12M+ em receita adicional - +15% conversão de propostas",
       color: VIOLET,
       items: [
         {
@@ -378,26 +378,26 @@ function Slide04() {
 function Slide05() {
   const levers = [
     {
-      label: "1. Receita adicional de cruzeiros — +20 atracações/ano via otimização de berços",
+      label: "1. Receita adicional de cruzeiros - +20 atracações/ano via otimização de berços",
       math: "20 atracações × R$500k receita média por escala = impacto em RECEITA de cruzeiros",
       result: "+R$10M",
       color: SKY,
     },
     {
-      label: "2. Redução de custos operacionais — planejamento e compliance (–50%)",
+      label: "2. Redução de custos operacionais - planejamento e compliance (-50%)",
       math: "R$1M custos anuais combinados (atracação + compliance) × 50% economia = impacto em CUSTO",
       result: "+R$500k",
       color: SKY,
     },
     {
-      label: "3. Receita adicional de eventos — +15% conversão de propostas",
+      label: "3. Receita adicional de eventos - +15% conversão de propostas",
       math: "250 propostas × 15% conversão extra × R$800k × 40% margem = impacto em RECEITA de eventos",
       result: "+R$12M",
       color: VIOLET,
     },
     {
-      label: "4. Receita off-season via eventos, uso comercial e locações — excluindo cruzeiros (já na alavanca 1)",
-      math: "R$102M receita total × 25% ganho em ocupação fora de temporada (eventos, B2B, locações) — impacto em RECEITA não-cruzeiro, independente da alavanca 1",
+      label: "4. Receita off-season via eventos, uso comercial e locações - excluindo cruzeiros (já na alavanca 1)",
+      math: "R$102M receita total × 25% ganho em ocupação fora de temporada (eventos, B2B, locações) - impacto em RECEITA não-cruzeiro, independente da alavanca 1",
       result: "+R$25,5M",
       color: CORAL,
     },
@@ -502,13 +502,13 @@ function Slide06() {
     {
       number: "02",
       title: "Sucesso atrelado a resultado",
-      desc: "Parte do honorário é vinculada a resultado mensurável — atracações adicionais ou receita de eventos gerada. Se não entregamos, vocês não pagam a parcela de sucesso.",
+      desc: "Parte do honorário é vinculada a resultado mensurável - atracações adicionais ou receita de eventos gerada. Se não entregamos, vocês não pagam a parcela de sucesso.",
       color: VIOLET,
     },
     {
       number: "03",
       title: "Co-criação com o time operacional",
-      desc: "Cada solução é construída com as equipes do Píer Mauá — não para elas. Treinamento de 2h + piloto rodando na operação real antes de qualquer escala.",
+      desc: "Cada solução é construída com as equipes do Píer Mauá - não para elas. Treinamento de 2h + piloto rodando na operação real antes de qualquer escala.",
       color: CORAL,
     },
   ];
@@ -549,7 +549,7 @@ function Slide06() {
         <div>
           <p className="text-white text-sm font-medium mb-1">Próximo passo</p>
           <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-            Uma conversa de 45 minutos com o time operacional e comercial do Píer Mauá. Sem apresentação genérica —
+            Uma conversa de 45 minutos com o time operacional e comercial do Píer Mauá. Sem apresentação genérica -
             só dados reais de atracações, compliance e eventos para definir o piloto desta semana.
           </p>
         </div>
@@ -607,7 +607,7 @@ export default function PierMauaMarketStudySection() {
             Onde a IA gera valor real<br />em terminais de cruzeiros e eventos
           </h2>
           <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
-            Análise personalizada para o Píer Mauá S.A. — operações, compliance, eventos e impacto financeiro
+            Análise personalizada para o Píer Mauá S.A. - operações, compliance, eventos e impacto financeiro
             estimado com base em dados reais do balanço 2023 e benchmarks setoriais.
           </p>
         </div>
@@ -640,7 +640,7 @@ export default function PierMauaMarketStudySection() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-gray-600 text-[10px] uppercase tracking-widest mb-1">{current + 1} / {TOTAL}</p>
-              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("— ")[1]}</h3>
+              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("- ")[1]}</h3>
             </div>
             <div className="flex gap-2">
               <button

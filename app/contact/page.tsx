@@ -73,7 +73,7 @@ export default function ContactPage() {
         </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Left — copy */}
+          {/* Left - copy */}
           <div>
             <span className="text-pastel-blue text-xs font-medium tracking-widest uppercase">
               Fale com a gente
@@ -83,7 +83,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-gray-500 text-base leading-relaxed mb-10">
               Diagnóstico gratuito em 48h. Identificamos as 3 maiores oportunidades de IA
-              e automação no seu negócio — sem compromisso.
+              e automação no seu negócio - sem compromisso.
             </p>
 
             <div className="space-y-5">
@@ -105,7 +105,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — form */}
+          {/* Right - form */}
           <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

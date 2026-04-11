@@ -23,12 +23,12 @@ const VIOLET = "#A78BFA";
 const TOTAL = 6;
 
 const SLIDE_LABELS = [
-  "01 — Visão Geral",
-  "02 — Contexto de Mercado",
-  "03 — Onde o Tempo Vira Dinheiro",
-  "04 — IA & Automação",
-  "05 — Impacto Financeiro",
-  "06 — Por que River Labs",
+  "01 - Visão Geral",
+  "02 - Contexto de Mercado",
+  "03 - Onde o Tempo Vira Dinheiro",
+  "04 - IA & Automação",
+  "05 - Impacto Financeiro",
+  "06 - Por que River Labs",
 ];
 
 /* ─── Shared UI ───────────────────────────────────────── */
@@ -73,7 +73,7 @@ function Slide01() {
             Trem do Corcovado Ltda.
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Concessionária que opera o <span className="text-white font-medium">Trem do Corcovado</span> — 3,8 km de via férrea elétrica no Parque Nacional da Tijuca, transportando turistas até o Cristo Redentor com capacidade para 500 mil passageiros/ano.
+            Concessionária que opera o <span className="text-white font-medium">Trem do Corcovado</span> - 3,8 km de via férrea elétrica no Parque Nacional da Tijuca, transportando turistas até o Cristo Redentor com capacidade para 500 mil passageiros/ano.
           </p>
         </div>
         <div>
@@ -124,7 +124,7 @@ function Slide02() {
   return (
     <div className="flex flex-col gap-7 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-        Atrações turísticas icônicas têm margens estruturalmente altas — mas concentradas em temporada e dependentes de
+        Atrações turísticas icônicas têm margens estruturalmente altas - mas concentradas em temporada e dependentes de
         fluxo externo. O jogo se vence na{" "}
         <span className="text-white">eficiência de bilheteria, ocupação dos trens e redução de downtime operacional</span>.
       </p>
@@ -134,7 +134,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          Estrutura de Custos — Trem do Corcovado (estimativa setorial)
+          Estrutura de Custos - Trem do Corcovado (estimativa setorial)
         </p>
         <div className="space-y-3">
           {[
@@ -143,7 +143,7 @@ function Slide02() {
             { label: "Manutenção de via e trens", pct: 22, color: "#374151", text: "~22%", source: "ANTT Ferrovias" },
             { label: "Outorga ICMBio (fixa + variável)", pct: 12, color: AMBER, text: "~12%", source: "Contrato ICMBio 01/2014" },
             { label: "Margem líquida atual", pct: 20, color: "#6B7280", text: "~20%", source: "SEBRAE Turismo / estimativa" },
-            { label: "Com River Labs (+4–6pp)", pct: 25, color: EMERALD, text: "~25%", source: null },
+            { label: "Com River Labs (+4-6pp)", pct: 25, color: EMERALD, text: "~25%", source: null },
           ].map(row => (
             <div key={row.label} className="flex items-center gap-3">
               <span className="text-gray-500 text-xs w-36 sm:w-56 shrink-0 flex items-center flex-wrap gap-y-0.5">
@@ -163,9 +163,9 @@ function Slide02() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
-          { value: "10–15%", label: "Taxa de no-show", desc: "Bilhetes vendidos mas não utilizados — receita perdida sem possibilidade de reocupação", source: "MTur / RIOTUR 2024", color: EMERALD },
+          { value: "10-15%", label: "Taxa de no-show", desc: "Bilhetes vendidos mas não utilizados - receita perdida sem possibilidade de reocupação", source: "MTur / RIOTUR 2024", color: EMERALD },
           { value: "40%", label: "Ociosidade off-season", desc: "Capacidade ociosa nos trens fora dos períodos de alta temporada turística", source: "ICMBio RAC 2024", color: AMBER },
-          { value: "20–30%", label: "Vendas via bilheteria física", desc: "Parcela da bilheteria ainda processada manualmente, sujeita a filas e erros", source: "FECOMÉRCIO RJ / estimativa", color: VIOLET },
+          { value: "20-30%", label: "Vendas via bilheteria física", desc: "Parcela da bilheteria ainda processada manualmente, sujeita a filas e erros", source: "FECOMÉRCIO RJ / estimativa", color: VIOLET },
         ].map(p => (
           <div
             key={p.label}
@@ -193,9 +193,9 @@ function Slide03() {
       accent: EMERALD,
       source: "Catho RJ / estimativa operacional",
       lines: [
-        { tree: "├─", text: "10–20h/dia (bilheteiro + suporte ao turista, R$25/h)", bold: false },
+        { tree: "├─", text: "10-20h/dia (bilheteiro + suporte ao turista, R$25/h)", bold: false },
         { tree: "├─", text: "R$25/h × 15h = R$375/dia em custo de bilheteria", bold: true },
-        { tree: "├─", text: "365 dias/ano = custo anual R$91k–R$182k", bold: true },
+        { tree: "├─", text: "365 dias/ano = custo anual R$91k-R$182k", bold: true },
         { tree: "└─", text: "Pico sem gestão automática = fila de 1h+ e perda de R$10k+/dia", bold: false },
       ],
     },
@@ -205,9 +205,9 @@ function Slide03() {
       accent: AMBER,
       source: "Catho RJ 2026 / ICMBio RAC 2024",
       lines: [
-        { tree: "├─", text: "20–30h/semana (coordenador operações, R$40/h)", bold: false },
+        { tree: "├─", text: "20-30h/semana (coordenador operações, R$40/h)", bold: false },
         { tree: "├─", text: "R$40/h × 25h = R$1.000/semana em planejamento manual", bold: true },
-        { tree: "├─", text: "52 semanas/ano = custo anual R$41k–R$62k", bold: true },
+        { tree: "├─", text: "52 semanas/ano = custo anual R$41k-R$62k", bold: true },
         { tree: "└─", text: "Erro de lotação = overbooking ou trem vazio (R$5k+ perda/ocorrência)", bold: false },
       ],
     },
@@ -217,9 +217,9 @@ function Slide03() {
       accent: VIOLET,
       source: "ANTT / Catho RJ 2026 / Contrato ICMBio 01/2014",
       lines: [
-        { tree: "├─", text: "15–25h por inspeção mensal (técnico manutenção, R$35/h)", bold: false },
-        { tree: "├─", text: "R$35/h × 20h = R$700/inspeção — 12 inspeções/ano", bold: true },
-        { tree: "├─", text: "Custo anual R$6k–R$10k (direto) + risco de multa/suspensão", bold: true },
+        { tree: "├─", text: "15-25h por inspeção mensal (técnico manutenção, R$35/h)", bold: false },
+        { tree: "├─", text: "R$35/h × 20h = R$700/inspeção - 12 inspeções/ano", bold: true },
+        { tree: "├─", text: "Custo anual R$6k-R$10k (direto) + risco de multa/suspensão", bold: true },
         { tree: "└─", text: "Não conformidade ICMBio: suspensão da concessão (R$1M+ perda/dia parado)", bold: false },
       ],
     },
@@ -230,7 +230,7 @@ function Slide03() {
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Bilheteiros no Rio de Janeiro custam{" "}
         <span className="text-white font-medium">R$25/h (Catho 2026)</span>. Em uma operação de alta frequência como
-        o Trem do Corcovado, cada processo manual é uma janela de receita desperdiçada — especialmente em dias de pico.
+        o Trem do Corcovado, cada processo manual é uma janela de receita desperdiçada - especialmente em dias de pico.
       </p>
 
       <div className="space-y-3">
@@ -270,8 +270,8 @@ function Slide03() {
       >
         <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" style={{ color: EMERALD }} strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
-          <strong className="text-white">500k bilhetes/ano × 10–15% no-show × R$100 médio</strong> ={" "}
-          <strong style={{ color: EMERALD }}>R$5M–R$7,5M/ano</strong> em receita potencial não capturada — recuperável com gestão dinâmica de bilheteria e lista de espera automatizada.
+          <strong className="text-white">500k bilhetes/ano × 10-15% no-show × R$100 médio</strong> ={" "}
+          <strong style={{ color: EMERALD }}>R$5M-R$7,5M/ano</strong> em receita potencial não capturada - recuperável com gestão dinâmica de bilheteria e lista de espera automatizada.
         </p>
       </div>
     </div>
@@ -283,7 +283,7 @@ function Slide04() {
   const groups = [
     {
       process: "Vendas de Bilhetes",
-      impact: "R$7M+ em receita adicional + R$75k em custos de bilheteria — +20% yield e –50% custo operacional",
+      impact: "R$7M+ em receita adicional + R$75k em custos de bilheteria - +20% yield e -50% custo operacional",
       color: EMERALD,
       items: [
         {
@@ -300,7 +300,7 @@ function Slide04() {
     },
     {
       process: "Planejamento Operacional",
-      impact: "R$5,25M+ em receita adicional — +15% ocupação (volume, independente da alavanca 1)",
+      impact: "R$5,25M+ em receita adicional - +15% ocupação (volume, independente da alavanca 1)",
       color: AMBER,
       items: [
         {
@@ -317,7 +317,7 @@ function Slide04() {
     },
     {
       process: "Manutenção & Compliance",
-      impact: "R$1,4M+ em receita protegida — –40% downtime via manutenção preditiva",
+      impact: "R$1,4M+ em receita protegida - -40% downtime via manutenção preditiva",
       color: VIOLET,
       items: [
         {
@@ -379,26 +379,26 @@ function Slide04() {
 function Slide05() {
   const levers = [
     {
-      label: "1. Receita via precificação dinâmica — +20% yield sobre bilheteria atual",
-      math: "R$35M base × 20% otimização de yield — impacto em RECEITA via preço, independente de volume",
+      label: "1. Receita via precificação dinâmica - +20% yield sobre bilheteria atual",
+      math: "R$35M base × 20% otimização de yield - impacto em RECEITA via preço, independente de volume",
       result: "+R$7M",
       color: EMERALD,
     },
     {
-      label: "2. Redução de custo operacional — bilheteria e suporte (–50%)",
-      math: "R$150k custos anuais de bilheteria × 50% economia com automação — impacto em CUSTO operacional",
+      label: "2. Redução de custo operacional - bilheteria e suporte (-50%)",
+      math: "R$150k custos anuais de bilheteria × 50% economia com automação - impacto em CUSTO operacional",
       result: "+R$75k",
       color: EMERALD,
     },
     {
-      label: "3. Receita via otimização de ocupação — +15% volume de passageiros",
-      math: "R$35M base × 15% aumento de volume — impacto em RECEITA via ocupação, independente da alavanca 1 (preço)",
+      label: "3. Receita via otimização de ocupação - +15% volume de passageiros",
+      math: "R$35M base × 15% aumento de volume - impacto em RECEITA via ocupação, independente da alavanca 1 (preço)",
       result: "+R$5,25M",
       color: AMBER,
     },
     {
-      label: "4. Proteção de receita via manutenção preditiva — –40% downtime não planejado",
-      math: "R$35M × 5% perda atual por paradas × 80% redução com alertas preditivos — proteção de RECEITA, independente das alavancas 1 e 3",
+      label: "4. Proteção de receita via manutenção preditiva - -40% downtime não planejado",
+      math: "R$35M × 5% perda atual por paradas × 80% redução com alertas preditivos - proteção de RECEITA, independente das alavancas 1 e 3",
       result: "+R$1,4M",
       color: VIOLET,
     },
@@ -417,7 +417,7 @@ function Slide05() {
             <span className="text-white font-medium">R$35M receita estimada 2025</span>
           </p>
           <p className="text-gray-600 text-xs mt-1">
-            500k = capacidade; ~350k = volume real estimado de vendas <Source label="Preços R$67–R$128 / site oficial" />
+            500k = capacidade; ~350k = volume real estimado de vendas <Source label="Preços R$67-R$128 / site oficial" />
           </p>
         </div>
 
@@ -503,13 +503,13 @@ function Slide06() {
     {
       number: "02",
       title: "Sucesso atrelado a resultado",
-      desc: "Parte do honorário é vinculada a resultado mensurável — passageiros adicionais transportados ou redução de no-show verificável. Se não entregamos, vocês não pagam a parcela de sucesso.",
+      desc: "Parte do honorário é vinculada a resultado mensurável - passageiros adicionais transportados ou redução de no-show verificável. Se não entregamos, vocês não pagam a parcela de sucesso.",
       color: AMBER,
     },
     {
       number: "03",
       title: "100% compliance com ICMBio",
-      desc: "Todas as soluções são construídas dentro das restrições da concessão — relatórios automáticos para auditoria ICMBio incluídos. A tecnologia reforça o compliance, não o compromete.",
+      desc: "Todas as soluções são construídas dentro das restrições da concessão - relatórios automáticos para auditoria ICMBio incluídos. A tecnologia reforça o compliance, não o compromete.",
       color: VIOLET,
     },
   ];
@@ -551,7 +551,7 @@ function Slide06() {
         <div>
           <p className="text-white text-sm font-medium mb-1">Próximo passo</p>
           <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-            Uma conversa de 45 minutos com o time operacional do Trem do Corcovado. Sem apresentação genérica —
+            Uma conversa de 45 minutos com o time operacional do Trem do Corcovado. Sem apresentação genérica -
             só dados reais de bilheteria, lotação e manutenção para definir o piloto desta semana.
           </p>
         </div>
@@ -609,7 +609,7 @@ export default function TremCorcovadoMarketStudySection() {
             Onde a IA gera valor real<br />em turismo ferroviário e atrações icônicas
           </h2>
           <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
-            Análise personalizada para o Trem do Corcovado — bilheteria, operação, manutenção e impacto financeiro
+            Análise personalizada para o Trem do Corcovado - bilheteria, operação, manutenção e impacto financeiro
             estimado com base em benchmarks setoriais e dados do Parque Nacional da Tijuca.
           </p>
         </div>
@@ -642,7 +642,7 @@ export default function TremCorcovadoMarketStudySection() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-gray-600 text-[10px] uppercase tracking-widest mb-1">{current + 1} / {TOTAL}</p>
-              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("— ")[1]}</h3>
+              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("- ")[1]}</h3>
             </div>
             <div className="flex gap-2">
               <button

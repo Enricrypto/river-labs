@@ -20,9 +20,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "River Labs – Automação com IA para Operações que Precisam de Resultado",
+  title: "River Labs - Automação com IA para Operações que Precisam de Resultado",
   description:
-    "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura — sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
+    "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
   alternates: {
     languages: {
       "pt-BR": "/pt",

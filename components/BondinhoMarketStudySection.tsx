@@ -23,12 +23,12 @@ const SKY = "#38BDF8";
 const TOTAL = 6;
 
 const SLIDE_LABELS = [
-  "01 — Visão Geral",
-  "02 — Contexto de Mercado",
-  "03 — Onde o Tempo Vira Dinheiro",
-  "04 — IA & Automação",
-  "05 — Impacto Financeiro",
-  "06 — Por que River Labs",
+  "01 - Visão Geral",
+  "02 - Contexto de Mercado",
+  "03 - Onde o Tempo Vira Dinheiro",
+  "04 - IA & Automação",
+  "05 - Impacto Financeiro",
+  "06 - Por que River Labs",
 ];
 
 /* ─── Shared UI ───────────────────────────────────────── */
@@ -73,7 +73,7 @@ function Slide01() {
             Bondinho Pão de Açúcar
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-            Operadora do <span className="text-white font-medium">primeiro teleférico do Brasil</span>, gerenciando o Parque Bondinho com vistas icônicas, eventos (Sunset DJ, exposições), trilhas e gastronomia — ~1 milhão de visitantes/ano.
+            Operadora do <span className="text-white font-medium">primeiro teleférico do Brasil</span>, gerenciando o Parque Bondinho com vistas icônicas, eventos (Sunset DJ, exposições), trilhas e gastronomia - ~1 milhão de visitantes/ano.
           </p>
         </div>
         <div>
@@ -133,7 +133,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          Estrutura de Custos — Bondinho Pão de Açúcar (balanço 2021)
+          Estrutura de Custos - Bondinho Pão de Açúcar (balanço 2021)
         </p>
         <div className="space-y-3">
           {[
@@ -142,7 +142,7 @@ function Slide02() {
             { label: "Mão de obra (operação + atendimento)", pct: 28, color: "#374151", text: "~28%", source: "Balanço 2021 / estimativa" },
             { label: "Marketing e eventos", pct: 15, color: CORAL, text: "~15%", source: "Balanço 2021 / estimativa" },
             { label: "Margem líquida atual", pct: 22, color: "#6B7280", text: "~22%", source: "SEBRAE Turismo / estimativa" },
-            { label: "Com River Labs (+4–6pp)", pct: 25, color: AMBER, text: "~25%", source: null },
+            { label: "Com River Labs (+4-6pp)", pct: 25, color: AMBER, text: "~25%", source: null },
           ].map(row => (
             <div key={row.label} className="flex items-center gap-3">
               <span className="text-gray-500 text-xs w-36 sm:w-56 shrink-0 flex items-center flex-wrap gap-y-0.5">
@@ -162,9 +162,9 @@ function Slide02() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
-          { value: "15%", label: "Taxa de no-show", desc: "Ingressos vendidos mas não utilizados — receita perdida sem reocupação das cabines", source: "MTur / RIOTUR 2024", color: AMBER },
+          { value: "15%", label: "Taxa de no-show", desc: "Ingressos vendidos mas não utilizados - receita perdida sem reocupação das cabines", source: "MTur / RIOTUR 2024", color: AMBER },
           { value: "40%", label: "Ociosidade off-season", desc: "Capacidade ociosa das cabines fora dos períodos de alta temporada e fins de semana", source: "SEBRAE Turismo / estimativa", color: CORAL },
-          { value: "5–10%", label: "Downtime manutenção", desc: "Tempo de parada operacional por manutenção corretiva não planejada do teleférico", source: "INMETRO / NBR 14543", color: SKY },
+          { value: "5-10%", label: "Downtime manutenção", desc: "Tempo de parada operacional por manutenção corretiva não planejada do teleférico", source: "INMETRO / NBR 14543", color: SKY },
         ].map(p => (
           <div
             key={p.label}
@@ -192,9 +192,9 @@ function Slide03() {
       accent: AMBER,
       source: "Catho RJ 2026 / MTur 2024",
       lines: [
-        { tree: "├─", text: "15–25h/dia (atendente bilheteria + suporte, R$28/h)", bold: false },
+        { tree: "├─", text: "15-25h/dia (atendente bilheteria + suporte, R$28/h)", bold: false },
         { tree: "├─", text: "R$28/h × 20h = R$560/dia em custo de atendimento", bold: true },
-        { tree: "├─", text: "365 dias/ano = custo anual R$153k–R$255k", bold: true },
+        { tree: "├─", text: "365 dias/ano = custo anual R$153k-R$255k", bold: true },
         { tree: "└─", text: "Pico sem controle automático = fila de 2h+ e perda de R$20k+/dia", bold: false },
       ],
     },
@@ -204,9 +204,9 @@ function Slide03() {
       accent: CORAL,
       source: "Catho RJ 2026 / estimativa operacional",
       lines: [
-        { tree: "├─", text: "25–40h por evento (coordenador eventos, R$45/h)", bold: false },
+        { tree: "├─", text: "25-40h por evento (coordenador eventos, R$45/h)", bold: false },
         { tree: "├─", text: "R$45/h × 32h = R$1.440 por evento", bold: true },
-        { tree: "├─", text: "50–100 eventos/ano = custo anual R$56k–R$180k", bold: true },
+        { tree: "├─", text: "50-100 eventos/ano = custo anual R$56k-R$180k", bold: true },
         { tree: "└─", text: "Cancelamento por falha logística = R$100k+ perda (Sunset DJ, exposições)", bold: false },
       ],
     },
@@ -216,9 +216,9 @@ function Slide03() {
       accent: SKY,
       source: "INMETRO / Catho RJ 2026 / Lei 6.606/79",
       lines: [
-        { tree: "├─", text: "20–30h por inspeção mensal (técnico manutenção, R$40/h)", bold: false },
-        { tree: "├─", text: "R$40/h × 25h = R$1.000/inspeção — 12 inspeções/ano", bold: true },
-        { tree: "├─", text: "Custo anual R$9,6k–R$14,4k (direto) + risco de parada", bold: true },
+        { tree: "├─", text: "20-30h por inspeção mensal (técnico manutenção, R$40/h)", bold: false },
+        { tree: "├─", text: "R$40/h × 25h = R$1.000/inspeção - 12 inspeções/ano", bold: true },
+        { tree: "├─", text: "Custo anual R$9,6k-R$14,4k (direto) + risco de parada", bold: true },
         { tree: "└─", text: "Parada não planejada do teleférico = R$50k+/dia de receita perdida", bold: false },
       ],
     },
@@ -229,7 +229,7 @@ function Slide03() {
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Atendentes de turismo no Rio custam{" "}
         <span className="text-white font-medium">R$28/h (Catho 2026)</span>. Em uma atração com 1 milhão de visitantes/ano,
-        cada processo manual é uma janela de receita desperdiçada — especialmente nos picos de fim de semana e alta temporada.
+        cada processo manual é uma janela de receita desperdiçada - especialmente nos picos de fim de semana e alta temporada.
       </p>
 
       <div className="space-y-3">
@@ -270,7 +270,7 @@ function Slide03() {
         <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0" style={{ color: AMBER }} strokeWidth={1.5} />
         <p className="text-gray-400 text-xs leading-relaxed">
           <strong className="text-white">1M ingressos/ano × 15% no-show × R$115 médio</strong> ={" "}
-          <strong style={{ color: AMBER }}>R$17,25M/ano</strong> em receita potencial não capturada — recuperável com gestão dinâmica de bilheteria e lista de espera automatizada.
+          <strong style={{ color: AMBER }}>R$17,25M/ano</strong> em receita potencial não capturada - recuperável com gestão dinâmica de bilheteria e lista de espera automatizada.
         </p>
       </div>
     </div>
@@ -282,7 +282,7 @@ function Slide04() {
   const groups = [
     {
       process: "Vendas de Ingressos",
-      impact: "R$28,75M+ em receita adicional — +25% yield via precificação dinâmica",
+      impact: "R$28,75M+ em receita adicional - +25% yield via precificação dinâmica",
       color: AMBER,
       items: [
         {
@@ -299,7 +299,7 @@ function Slide04() {
     },
     {
       process: "Eventos & Capacidade",
-      impact: "R$2,3M+ em receita adicional de eventos — +20% volume via otimização de capacidade (independente da alavanca 1, preço ingresso)",
+      impact: "R$2,3M+ em receita adicional de eventos - +20% volume via otimização de capacidade (independente da alavanca 1, preço ingresso)",
       color: CORAL,
       items: [
         {
@@ -316,7 +316,7 @@ function Slide04() {
     },
     {
       process: "Manutenção & Compliance",
-      impact: "R$2,875M+ em receita protegida — –50% downtime via manutenção preditiva (independente das alavancas 1 e 2, receita e eventos)",
+      impact: "R$2,875M+ em receita protegida - -50% downtime via manutenção preditiva (independente das alavancas 1 e 2, receita e eventos)",
       color: SKY,
       items: [
         {
@@ -378,20 +378,20 @@ function Slide04() {
 function Slide05() {
   const levers = [
     {
-      label: "1. Receita via precificação dinâmica — +25% yield sobre bilheteria atual",
-      math: "R$115M base × 25% otimização de yield — impacto em RECEITA via preço e ocupação de cabines",
+      label: "1. Receita via precificação dinâmica - +25% yield sobre bilheteria atual",
+      math: "R$115M base × 25% otimização de yield - impacto em RECEITA via preço e ocupação de cabines",
       result: "+R$28,75M",
       color: AMBER,
     },
     {
-      label: "2. Receita adicional de eventos — +20% volume via otimização de capacidade",
-      math: "R$115M base × 10% receita eventos × 20% crescimento — impacto em RECEITA de eventos, independente da alavanca 1 (preço ingresso)",
+      label: "2. Receita adicional de eventos - +20% volume via otimização de capacidade",
+      math: "R$115M base × 10% receita eventos × 20% crescimento - impacto em RECEITA de eventos, independente da alavanca 1 (preço ingresso)",
       result: "+R$2,3M",
       color: CORAL,
     },
     {
-      label: "3. Proteção de receita via manutenção preditiva — –50% downtime não planejado",
-      math: "R$115M × 5% perda atual por paradas × 50% redução com alertas preditivos — proteção de RECEITA, independente das alavancas 1 e 2",
+      label: "3. Proteção de receita via manutenção preditiva - -50% downtime não planejado",
+      math: "R$115M × 5% perda atual por paradas × 50% redução com alertas preditivos - proteção de RECEITA, independente das alavancas 1 e 2",
       result: "+R$2,875M",
       color: SKY,
     },
@@ -410,7 +410,7 @@ function Slide05() {
             <span className="text-white font-medium">R$115M receita de bilheteria estimada 2025</span>
           </p>
           <p className="text-gray-600 text-xs mt-1">
-            R$272M receita real 2020 <Source label="Balanço CCAPA 2020" /> · R$115 ticket médio (faixa R$67–R$128) <Source label="Site oficial Bondinho 2026" />
+            R$272M receita real 2020 <Source label="Balanço CCAPA 2020" /> · R$115 ticket médio (faixa R$67-R$128) <Source label="Site oficial Bondinho 2026" />
           </p>
         </div>
 
@@ -499,13 +499,13 @@ function Slide06() {
     {
       number: "02",
       title: "Sucesso atrelado a resultado",
-      desc: "Parte do honorário é vinculada a resultado mensurável — ocupação adicional das cabines ou receita de eventos gerada. Se não entregamos, vocês não pagam a parcela de sucesso.",
+      desc: "Parte do honorário é vinculada a resultado mensurável - ocupação adicional das cabines ou receita de eventos gerada. Se não entregamos, vocês não pagam a parcela de sucesso.",
       color: CORAL,
     },
     {
       number: "03",
       title: "Compliance INMETRO garantido",
-      desc: "Todas as soluções são construídas dentro das normas de segurança do teleférico — relatórios automáticos para auditoria INMETRO incluídos. A tecnologia reforça a segurança, não a compromete.",
+      desc: "Todas as soluções são construídas dentro das normas de segurança do teleférico - relatórios automáticos para auditoria INMETRO incluídos. A tecnologia reforça a segurança, não a compromete.",
       color: SKY,
     },
   ];
@@ -546,7 +546,7 @@ function Slide06() {
         <div>
           <p className="text-white text-sm font-medium mb-1">Próximo passo</p>
           <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-            Uma conversa de 45 minutos com o time operacional e comercial do Bondinho. Sem apresentação genérica —
+            Uma conversa de 45 minutos com o time operacional e comercial do Bondinho. Sem apresentação genérica -
             só dados reais de bilheteria, eventos e manutenção para definir o piloto desta semana.
           </p>
         </div>
@@ -604,7 +604,7 @@ export default function BondinhoMarketStudySection() {
             Onde a IA gera valor real<br />em atrações turísticas premium e teleféricos
           </h2>
           <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
-            Análise personalizada para o Bondinho Pão de Açúcar — bilheteria, eventos, manutenção e impacto financeiro
+            Análise personalizada para o Bondinho Pão de Açúcar - bilheteria, eventos, manutenção e impacto financeiro
             estimado com base em dados reais do balanço 2020/2021 e benchmarks setoriais.
           </p>
         </div>
@@ -637,7 +637,7 @@ export default function BondinhoMarketStudySection() {
           <div className="flex items-center justify-between mb-6">
             <div>
               <p className="text-gray-600 text-[10px] uppercase tracking-widest mb-1">{current + 1} / {TOTAL}</p>
-              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("— ")[1]}</h3>
+              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("- ")[1]}</h3>
             </div>
             <div className="flex gap-2">
               <button

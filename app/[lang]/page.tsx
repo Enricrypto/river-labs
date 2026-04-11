@@ -2,10 +2,12 @@ import { getDictionary } from "@/lib/translations";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import SocialProofBar from "@/components/SocialProofBar";
+import CasesSection from "@/components/CasesSection";
 import ProblemSection from "@/components/ProblemSection";
+import DifferentiationSection from "@/components/DifferentiationSection";
 import ServicesSection from "@/components/ServicesSection";
 import SectorIdeasSection from "@/components/SectorIdeasSection";
-// import ClientAccessCards from "@/components/ClientAccessCards";
+import TeamSection from "@/components/TeamSection";
 import ApproachSection from "@/components/ApproachSection";
 import MethodologySection from "@/components/MethodologySection";
 import FAQSection from "@/components/FAQSection";
@@ -26,10 +28,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <main>
         <Hero dict={dict.hero} lang={typedLang} />
         <SocialProofBar dict={dict.proof} />
+        <CasesSection dict={dict.cases} />
         <ProblemSection dict={dict.problems} />
+        <DifferentiationSection dict={dict.differentiation} />
         <ServicesSection dict={dict.services} />
         <SectorIdeasSection dict={dict.sectorIdeas} />
-        {/* <ClientAccessCards dict={dict.clientCards} /> */}
+        <TeamSection dict={dict.team} />
         <ApproachSection dict={dict.methodology} />
         <MethodologySection dict={dict.methodology} />
         <FAQSection dict={dict.faq} />

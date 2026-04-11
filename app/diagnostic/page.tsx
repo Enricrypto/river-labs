@@ -56,7 +56,7 @@ const STEPS: StepDef[] = [
         id: "receita",
         label: "Qual é a faixa de receita bruta anual?",
         type: "choice",
-        options: ["Até R$1M", "R$1M – R$10M", "R$10M – R$50M", "R$50M – R$200M", "Acima de R$200M"],
+        options: ["Até R$1M", "R$1M - R$10M", "R$10M - R$50M", "R$50M - R$200M", "Acima de R$200M"],
         required: true,
       },
     ],
@@ -117,7 +117,7 @@ const STEPS: StepDef[] = [
         id: "pessoas_afetadas",
         label: "Quantas pessoas estão envolvidas nos processos que você quer melhorar?",
         type: "choice",
-        options: ["1 – 5 pessoas", "5 – 20 pessoas", "20 – 100 pessoas", "Mais de 100 pessoas"],
+        options: ["1 - 5 pessoas", "5 - 20 pessoas", "20 - 100 pessoas", "Mais de 100 pessoas"],
         required: true,
       },
       {
@@ -139,13 +139,13 @@ const STEPS: StepDef[] = [
         label: "Quais sistemas ou ferramentas a empresa usa hoje? (selecione todas que se aplicam)",
         type: "multiselect",
         options: [
-          "ERP — SAP, TOTVS, Omie ou similar",
-          "CRM — Salesforce, HubSpot, RD Station ou similar",
+          "ERP - SAP, TOTVS, Omie ou similar",
+          "CRM - Salesforce, HubSpot, RD Station ou similar",
           "Excel & Google Sheets",
-          "BI — Power BI, Tableau, Looker",
+          "BI - Power BI, Tableau, Looker",
           "Sistema desenvolvido internamente",
           "Plataformas de e-commerce",
-          "Ferramentas de comunicação — Slack, Teams",
+          "Ferramentas de comunicação - Slack, Teams",
           "Poucos sistemas estruturados",
         ],
         required: true,
@@ -155,7 +155,7 @@ const STEPS: StepDef[] = [
   {
     id: "automacao",
     title: "Experiência com automação",
-    subtitle: "Sem julgamento — o contexto nos ajuda a propor o que realmente faz sentido para a sua realidade.",
+    subtitle: "Sem julgamento - o contexto nos ajuda a propor o que realmente faz sentido para a sua realidade.",
     questions: [
       {
         id: "tentou_antes",
@@ -164,8 +164,8 @@ const STEPS: StepDef[] = [
         options: [
           "Não, ainda não exploramos esse caminho",
           "Tentamos, mas sem resultados concretos",
-          "Sim, com resultados parciais — queremos evoluir",
-          "Sim, com bons resultados — queremos expandir",
+          "Sim, com resultados parciais - queremos evoluir",
+          "Sim, com bons resultados - queremos expandir",
         ],
         required: true,
       },
@@ -216,7 +216,7 @@ const STEPS: StepDef[] = [
         id: "prazo_resultado",
         label: "Em que prazo você espera ver os primeiros resultados?",
         type: "choice",
-        options: ["1 – 3 meses", "3 – 6 meses", "6 – 12 meses", "Ainda estou explorando"],
+        options: ["1 - 3 meses", "3 - 6 meses", "6 - 12 meses", "Ainda estou explorando"],
         required: true,
       },
       {

@@ -5,16 +5,7 @@ export type Dict = {
     services: string;
     casestudies: string;
     contact: string;
-  };
-  services: {
-    heading: string;
-    sub: string;
-    items: { title: string; desc: string }[];
-  };
-  sectorIdeas: {
-    heading: string;
-    sub: string;
-    sectors: { name: string; items: string[] }[];
+    cta?: string;
   };
   hero: {
     heading1: string;
@@ -27,19 +18,45 @@ export type Dict = {
   };
   proof: {
     label: string;
+    sectors: string[];
+  };
+  authority: {
+    heading: string;
+    paragraphs: string[];
+  };
+  cases: {
+    heading: string;
+    sub: string;
+    problemLabel: string;
+    resultLabel: string;
+    items: { tag: string; client: string; context: string; result: string }[];
   };
   problems: {
     heading: string;
     sub: string;
     items: { title: string; desc: string }[];
   };
-  solutions: {
+  differentiation: {
     heading: string;
-    colArea: string;
-    colWhat: string;
-    colImpact: string;
-    rows: { area: string; what: string; impact: string }[];
-    cta: string;
+    intro: string;
+    pivot: string;
+    items: string[];
+    closing: string;
+  };
+  services: {
+    heading: string;
+    sub: string;
+    items: { title: string; desc: string }[];
+  };
+  sectorIdeas: {
+    heading: string;
+    sub: string;
+    sectors: { name: string; items: string[] }[];
+  };
+  team: {
+    heading: string;
+    sub: string;
+    members: { name: string; role: string; bio: string; image: string; objectPosition?: string }[];
   };
   methodology: {
     heading: string;
@@ -78,6 +95,15 @@ export type Dict = {
   footer: {
     copyright: string;
     links: string[];
+    cta: string;
+  };
+  solutions: {
+    heading: string;
+    colArea: string;
+    colWhat: string;
+    colImpact: string;
+    rows: { area: string; what: string; impact: string }[];
+    cta: string;
   };
 };
 
@@ -87,134 +113,177 @@ const en: Dict = {
     casestudies: "Client Area",
     contact: "Contact",
   },
-  services: {
-    heading: "What we do",
-    sub: "Three lines of work — from strategy to code in production.",
+  hero: {
+    heading1: "The AI system that",
+    headingItalic: "replaces the spreadsheets",
+    heading2: "running your operation.",
+    sub: "We build custom operational AI inside your infrastructure - forecasting demand, automating reporting, and eliminating manual workflows. Diagnosis to deploy in 90 days.",
+    cta1: "Get a Free AI Opportunity Diagnosis",
+    cta2: "Learn How We Work",
+    badges: ["We Co-create", "We Train", "You Own the System"],
+  },
+  proof: {
+    label: "Industries we focus on",
+    sectors: ["Tourism", "Transport", "Hospitality", "Events", "Compliance & Legal"],
+  },
+  authority: {
+    heading: "We know what breaks in service operations - and why AI usually doesn't fix it.",
+    paragraphs: [
+      "Most service operations run on data they never fully use. Demand signals sit in ticketing exports. Maintenance risk lives in equipment logs. Research and reporting workflows eat days of expert time that could be spent on higher-value work. The data and processes are there - the system to act on them isn't.",
+      "We design for that gap.",
+      "A document research and report generation system we deployed at Lumina, a fire engineering consultancy in Dubai, reduced their expert reporting workflow from 4-5 days per case to under 3 hours. This is the kind of operational impact we design for: specific to your operation, running in your infrastructure, fully owned by your team. Not a generic tool. Not a SaaS subscription. The system itself.",
+    ],
+  },
+  cases: {
+    heading: "Real systems. Measured results.",
+    sub: "Three projects across three sectors - each one in production, each one with a number attached.",
+    problemLabel: "Problem",
+    resultLabel: "Result",
     items: [
       {
-        title: "AI Labs",
-        desc: "Co-creation workshops to discover where AI creates real value in your context — with the team directly involved in the operation.",
+        tag: "Marketing · SEO",
+        client: "Washdog",
+        context: "New pet car wash entering a saturated market with zero digital presence, no SEO, and no social proof.",
+        result: "First page on Google in under 1 month. 4,000+ organic impressions in month one.",
       },
       {
-        title: "Market Intelligence",
-        desc: "Custom sector reports — data that informs decisions, not just presentations.",
+        tag: "Process Automation · E-commerce",
+        client: "VTEX",
+        context: "Teams spent 10 hours per RFP manually answering ~117 technical and compliance questions - no standardization, across EMEA, US, Brazil, LATAM, and APAC.",
+        result: "1,094 hours saved in 6 months. $36.4k saved vs. external platform. 91% reduction in annual tooling cost.",
       },
       {
-        title: "Development",
-        desc: "Proprietary solutions in your infrastructure — your code, no SaaS dependency or external vendor.",
+        tag: "Document Automation · Engineering",
+        client: "Lumina",
+        context: "Fire engineering consultancy in Dubai. Expert reporting required gathering documents, precise referencing, and structured writing - 4 to 5 days per case.",
+        result: "Under 3 hours per report. System runs in their infrastructure. Team owns it completely.",
+      },
+    ],
+  },
+  problems: {
+    heading: "Why most AI projects in operations don't last",
+    sub: "The problem isn't the technology. It's what happens after the pilot - and who ends up owning the result.",
+    items: [
+      {
+        title: "The signals exist. The system to act on them doesn't.",
+        desc: "Demand spikes, pricing windows, maintenance alerts, staffing gaps - your operation produces these signals every day. But without a system that surfaces them automatically, your team decides by instinct or last year's spreadsheet. The data was always there. The tool to act on it wasn't.",
+      },
+      {
+        title: "Expert time lost to work that shouldn't be manual",
+        desc: "In most service operations, the highest-cost bottleneck isn't strategy - it's assembly. Documents gathered from multiple sources. Reports written by hand from research that took days to organize. Approvals that require someone to manually pull together information that already exists in the system.",
+      },
+      {
+        title: "When the vendor leaves, the system stops.",
+        desc: "Most AI projects fail after the proof of concept - not because the technology didn't work, but because no one on the team was trained to run it. The vendor moves on. The system goes dark. You're back to spreadsheets, with nothing to show for the investment.",
+      },
+    ],
+  },
+  differentiation: {
+    heading: "We build systems your team owns and runs.",
+    intro: "Most AI consultancies deliver prototypes. Or SaaS subscriptions that charge you monthly for your own operational logic - with pricing that scales as your business grows and a vendor relationship you can't exit without losing the system.",
+    pivot: "We do the opposite.",
+    items: [
+      "Runs inside your infrastructure - not ours",
+      "No SaaS pricing tied to your operational logic",
+      "Fully documented and transferable code",
+      "Fixed project price - you own the system completely",
+    ],
+    closing: "When the project ends, you own the system completely. Not a license. Not a dashboard. The system itself - documented, transferable, and built to evolve with your team.",
+  },
+  services: {
+    heading: "What we build",
+    sub: "We're not specialists in one type of AI. We're specialists in service operations - and we build whatever system creates the most value in your context.",
+    items: [
+      {
+        title: "Operational AI Opportunity Diagnosis",
+        desc: "We map your operation with the team running it - not with generic frameworks. You get a prioritized list of the highest-value automation opportunities in your specific workflows: revenue, staffing, marketing, maintenance, compliance, reporting.",
+      },
+      {
+        title: "Custom AI Systems",
+        desc: "We design and build the system for your exact context - demand forecasting, document research automation, revenue analytics, predictive maintenance, compliance reporting, marketing triggers, or anything else your operation needs.",
+      },
+      {
+        title: "Team Training and Full Handoff",
+        desc: "Every project ends with your team trained to operate, modify, and evolve what was built. We transfer the knowledge to run the system - not just the software itself - so the investment lasts.",
       },
     ],
   },
   sectorIdeas: {
-    heading: "What's already possible — in your sector, today",
-    sub: "Concrete AI applications for the operations that generate the most data.",
+    heading: "What these systems look like in practice",
+    sub: "Concrete AI systems designed for the operational problems that repeat most often in service businesses.",
     sectors: [
       {
-        name: "Logistics",
+        name: "Revenue & Demand",
         items: [
-          "Automatic invoice extraction",
-          "Delay forecasting by route and history",
-          "Early out-of-stock alerts",
-          "Return reason analysis by SKU",
+          "Dynamic pricing tied to demand, seasonality, and external events",
+          "Demand forecasting with automatic staffing and supply triggers",
+          "Revenue anomaly detection with real-time alerts",
+          "Booking and conversion recovery based on behavioral signals",
         ],
       },
       {
-        name: "Retail / E-commerce",
+        name: "Operations & Knowledge Work",
         items: [
-          "Price monitoring with automatic alerts",
-          "Bulk product description generation",
-          "AI-driven abandoned cart discount decisions",
-          "Demand forecasting with auto-ordering",
+          "Document research and report generation - multi-day workflows to hours",
+          "Predictive maintenance alerts from equipment logs and service history",
+          "Per-asset cost monitoring with anomaly flagging",
+          "Compliance and audit report automation",
         ],
       },
       {
-        name: "Services",
+        name: "Marketing & Growth",
         items: [
-          "WhatsApp chatbot trained on your business",
-          "Dynamic pricing by demand and seasonality",
-          "Seasonality forecasting for team planning",
-          "Review analysis to detect what drives churn",
+          "Automated marketing triggers based on demand forecasting",
+          "Channel attribution analysis for marketing spend",
+          "Review and feedback analysis to detect recurring service problems",
+          "Customer segmentation and reactivation based on behavior patterns",
         ],
       },
       {
-        name: "Compliance",
+        name: "Compliance & Legal",
         items: [
-          "Regulatory obligation monitoring (LGPD, BACEN, CVM)",
-          "AI-powered legal document classification",
+          "Regulatory obligation monitoring and automated alerts",
+          "AI-powered legal document classification and analysis",
           "Anomaly detection in contracts and audits",
-          "AI-assisted due diligence for M&A",
+          "AI-assisted due diligence for M&A and partnerships",
         ],
       },
     ],
   },
-  hero: {
-    heading1: "Digital transformation that starts",
-    headingItalic: "with people,",
-    heading2: "not with the tool.",
-    sub: "We identify, organize, and unlock the value of data your business already generates — and build custom technology solutions that optimize your operations. Diagnosis to deploy in 90 days.",
-    cta1: "Get Free Diagnosis",
-    cta2: "Client Area",
-    badges: ["We Co-create", "We Train", "We Deliver"],
-  },
-  proof: {
-    label: "Sectors we serve",
-  },
-  problems: {
-    heading: "Why most AI initiatives fail",
-    sub: "Technology isn't the bottleneck. The problem is in how it gets adopted.",
-    items: [
-      {
-        title: "Tools deployed without the people",
-        desc: "Most AI projects fail from lack of team buy-in, not lack of technology. Without co-creation, the system becomes another tool nobody uses.",
-      },
-      {
-        title: "Processes that limit what the team can deliver",
-        desc: "Manual approvals, spreadsheet handoffs, duplicated data across systems. Every step that could be automated is time spent on process — not on the business.",
-      },
-      {
-        title: "Data you generate but never act on",
-        desc: "Your operation already produces the signal. What's missing is turning it into action — without depending on an external vendor to do it.",
-      },
+  team: {
+    heading: "Built by operators who implement the systems themselves.",
+    sub: "River Labs was founded by engineers and operators who have built automation systems across e-commerce, operations, and regulated services. We focus on one thing: turning operational data into systems teams can actually run - not prototypes that disappear after the pilot.",
+    members: [
+      { name: "Leonardo Werner", role: "Culture, People & Governance", bio: "Bio coming soon.", image: "/Leonardo_PP.png" },
+      { name: "João Guilherme Santos", role: "Solutions Architect", bio: "Bio coming soon.", image: "/Joao_PP.png", objectPosition: "center top" },
+      { name: "Antonio Rapozo", role: "Developer & Tech Solutions", bio: "Bio coming soon.", image: "/Antonio_PP.png" },
+      { name: "Enrique Ibarra", role: "Full Stack Engineer", bio: "Bio coming soon.", image: "/Enrique_PP.png" },
     ],
-  },
-  solutions: {
-    heading: "What we build",
-    colArea: "Area",
-    colWhat: "What We Build",
-    colImpact: "Business Impact",
-    rows: [
-      { area: "Revenue", what: "Dynamic pricing + demand forecasting", impact: "8–20% revenue uplift" },
-      { area: "Operations", what: "Process automation + RPA", impact: "40% less process time" },
-      { area: "Logistics", what: "Smart routing + cost optimization", impact: "25–35% lower costs" },
-      { area: "Intelligence", what: "Real-time data platforms + dashboards", impact: "Decisions, not guesses" },
-      { area: "Compliance", what: "Automated reporting + audit trails", impact: "Zero manual overhead" },
-    ],
-    cta: "Get Your Free Diagnosis",
   },
   methodology: {
-    heading: "Diagnosis to implementation in 90 days",
-    sub: "Three principles that guide every project.",
+    heading: "How we work",
+    sub: "Three principles that don't change, regardless of what we build.",
     triadHeading: "Our Approach",
     principles: [
-      "We co-create — alongside the people running the operation, from day one",
-      "We train — your team uses the system independently, no vendor dependency",
-      "We deliver — documented code, running inside your own infrastructure",
+      "We co-create - with the team running the operation, from the first conversation. Not behind a slide deck. Not handed over at the end.",
+      "We train - your team learns to operate, modify, and evolve what was built. No permanent dependency on River Labs to keep the system running.",
+      "We deliver - documented code inside your own infrastructure. You own the system. Not a license to use it. The system itself.",
     ],
     steps: [
-      { title: "Discovery", timeline: "Process map" },
-      { title: "Diagnosis", timeline: "Case matrix" },
-      { title: "Solution design", timeline: "Architecture plan" },
-      { title: "Pilot", timeline: "Prototype + metrics" },
-      { title: "Deploy & Optimization", timeline: "System in production" },
+      { title: "Discovery", timeline: "Map your processes, data sources, and operational constraints" },
+      { title: "Diagnosis", timeline: "Identify where AI creates the highest measurable value" },
+      { title: "Solution Design", timeline: "Define architecture and agree on success metrics before building" },
+      { title: "Pilot", timeline: "Build a working system and validate it with your team in production" },
+      { title: "Deploy and Handoff", timeline: "Ship to production and transfer full ownership to your team" },
     ],
   },
   comparison: {
     heading: "A long-term partner. Not a one-off vendor.",
     goodItems: [
-      "We co-create with your team — we don't outsource the work",
-      "We train for full autonomy — no vendor lock-in",
+      "We co-create with your team - we don't outsource the work",
+      "We train for full autonomy - no vendor lock-in",
       "We deliver documented code running in your infrastructure",
-      "Fixed price per milestone — you own the system",
+      "Fixed price per milestone - you own the system",
     ],
   },
   whyus: {
@@ -222,7 +291,7 @@ const en: Dict = {
     features: [
       {
         title: "Grounded in your real documents",
-        desc: "We start from your balance sheets, DFs, ticketing exports, and logistics logs — not industry benchmarks. Every opportunity we identify is traceable back to a source.",
+        desc: "We start from your balance sheets, DFs, ticketing exports, and logistics logs - not industry benchmarks.",
       },
       {
         title: "You own the system",
@@ -237,45 +306,64 @@ const en: Dict = {
     subtitle: "Each study is built from public data, sector research, and financial disclosures.",
     restricted: "Restricted access",
     clients: [
-      { desc: "Heavy construction, public tenders, and contract management — market study and custom diagnosis." },
-      { desc: "Soy trading, crop planning, and logistics compliance — AI-powered financial impact analysis." },
-      { desc: "Cruise terminal, events, and port compliance — study based on public financial disclosures and sector research." },
-      { desc: "Ticketing, railway operations, and ICMBio compliance — revenue analysis and predictive maintenance." },
-      { desc: "Cable car, events, and gastronomy — dynamic ticketing analysis and predictive maintenance." },
-      { desc: "7 ecotourism units (AquaRio, BioParque, Cataratas, Noronha) — flow analysis and ICMBio compliance." },
+      { desc: "Heavy construction, public tenders, and contract management - market study and custom diagnosis." },
+      { desc: "Soy trading, crop planning, and logistics compliance - AI-powered financial impact analysis." },
+      { desc: "Cruise terminal, events, and port compliance - study based on public financial disclosures and sector research." },
+      { desc: "Ticketing, railway operations, and ICMBio compliance - revenue analysis and predictive maintenance." },
+      { desc: "Cable car, events, and gastronomy - dynamic ticketing analysis and predictive maintenance." },
+      { desc: "7 ecotourism units (AquaRio, BioParque, Cataratas, Noronha) - flow analysis and ICMBio compliance." },
     ],
   },
   faq: {
     heading: "Common questions",
     items: [
       {
-        q: "How does the free diagnosis work?",
-        a: "We map your operation, the processes your team handles day-to-day, and the data you already generate. From there, we identify the 3 biggest opportunities for automation or AI in your business. You get a written summary within 48 hours — no generic benchmarks.",
+        q: "What does the free AI Opportunity Diagnosis actually deliver?",
+        a: "A 45-minute conversation where we map your operation - the processes your team runs every day, the data you already generate, and where the biggest gaps are. You receive a short written report identifying the three highest-value automation opportunities in your operation, with enough detail to decide whether and how to act on them. No generic benchmarks. No follow-up pitch required.",
       },
       {
-        q: "Do we need to replace our existing systems?",
-        a: "No. We integrate with what you have — ERP, CRM, custom APIs. The goal is to add intelligence to your current infrastructure, not force a migration.",
+        q: "Do you only work with tourism or LATAM companies?",
+        a: "No. Tourism and service operations in LATAM make up a core part of our work, but our systems are built for any operation with complex, data-generating workflows - regardless of geography. A system we built for Lumina, a fire engineering consultancy in Dubai, reduced a multi-day expert reporting workflow to under 3 hours. The common thread is operational complexity and the need for a system the team owns and runs independently.",
       },
       {
-        q: "Do you replace our IT or data team?",
-        a: "No — we work alongside them. We handle the AI architecture and model building; your team handles infrastructure access and deployment approvals. Knowledge transfer is part of every project.",
+        q: "Do we need to replace our current systems?",
+        a: "No. We integrate with what you already have - ticketing platforms, ERPs, document management systems, custom APIs, legacy databases. The goal is to add automated decision-making to your current infrastructure, not force a migration.",
       },
       {
-        q: "What industries do you know best?",
-        a: "Logistics, retail and e-commerce, services, and compliance. Our work adapts to any operation that generates data and involves repeatable processes — these sectors make up most of our projects.",
+        q: "What happens after delivery? Do we need River Labs to maintain it?",
+        a: "No - and that's a core design principle of every project we take on. Every system includes full documentation and team training so your operation can maintain and evolve it independently. We don't design for dependency.",
+      },
+      {
+        q: "How is this different from buying an AI tool or SaaS platform?",
+        a: "Off-the-shelf AI tools are built for the average operation. Your operation isn't average - it has specific data, specific workflows, and specific constraints that generic tools don't account for. We build a system for your exact context, running in your infrastructure, with no monthly fee and no vendor to call when something breaks. Your team runs it.",
       },
     ],
   },
   cta: {
-    heading: "Ready for a partner who builds alongside you?",
-    sub: "Schedule a 45-min conversation — no commitment, no generic benchmarks.",
-    btn1: "Start Diagnosis",
-    btn2: "Talk to Us",
-    badge: "No commitment. Your code, your team.",
+    heading: "Find out exactly where your operation is leaving value on the table.",
+    sub: "One 45-minute conversation. We map your operation and send you a short written report with the three highest-value automation opportunities in your context - specific to your workflows, your data, and your team. We run a limited number of diagnoses each month to go deep on each one.",
+    btn1: "Book a Free AI Opportunity Diagnosis",
+    btn2: "Talk to Our Team",
+    badge: "No commitment. No SaaS. Your team owns what we build.",
   },
   footer: {
     copyright: "© 2026 River Labs.",
     links: ["Services", "Client Area", "Contact"],
+    cta: "Start Free Diagnosis",
+  },
+  solutions: {
+    heading: "What we build",
+    colArea: "Area",
+    colWhat: "What We Build",
+    colImpact: "Business Impact",
+    rows: [
+      { area: "Revenue", what: "Dynamic pricing + demand forecasting", impact: "8-20% revenue uplift" },
+      { area: "Operations", what: "Process automation + RPA", impact: "40% less process time" },
+      { area: "Logistics", what: "Smart routing + cost optimization", impact: "25-35% lower costs" },
+      { area: "Intelligence", what: "Real-time data platforms + dashboards", impact: "Decisions, not guesses" },
+      { area: "Compliance", what: "Automated reporting + audit trails", impact: "Zero manual overhead" },
+    ],
+    cta: "Get Your Free Diagnosis",
   },
 };
 
@@ -285,134 +373,177 @@ const es: Dict = {
     casestudies: "Área de Cliente",
     contact: "Contacto",
   },
-  services: {
-    heading: "Lo que hacemos",
-    sub: "Tres líneas de trabajo — de la estrategia al código en producción.",
+  hero: {
+    heading1: "El sistema de IA que",
+    headingItalic: "reemplaza las planillas",
+    heading2: "que operan tu negocio.",
+    sub: "Construimos IA operacional personalizada dentro de tu infraestructura - forecasting de demanda, automatización de reportes y eliminación de flujos manuales. Del diagnóstico al deploy en 90 días.",
+    cta1: "Diagnóstico Gratuito de IA",
+    cta2: "Conoce cómo trabajamos",
+    badges: ["Co-creamos", "Capacitamos", "Tú eres dueño del sistema"],
+  },
+  proof: {
+    label: "Industrias en las que nos enfocamos",
+    sectors: ["Turismo", "Transporte", "Hospitalidad", "Eventos", "Compliance & Legal"],
+  },
+  authority: {
+    heading: "Sabemos qué falla en las operaciones de servicio - y por qué la IA normalmente no lo resuelve.",
+    paragraphs: [
+      "La mayoría de las operaciones de servicio trabajan con datos que nunca aprovechan del todo. Las señales de demanda quedan en exportaciones de boletería. El riesgo de mantenimiento vive en los registros de equipos. Los flujos de investigación y reportes consumen días de tiempo de expertos que podrían dedicarse a trabajo de mayor valor. Los datos y los procesos están ahí - el sistema para actuar sobre ellos, no.",
+      "Diseñamos para esa brecha.",
+      "Un sistema de investigación documental y generación de informes que implementamos en Lumina, una consultora de ingeniería contra incendios en Dubai, redujo su flujo de trabajo de informes especializados de 4-5 días por caso a menos de 3 horas. Este es el tipo de impacto operativo que diseñamos: específico a tu operación, corriendo en tu infraestructura, completamente en propiedad de tu equipo. No una herramienta genérica. No una suscripción SaaS. El sistema mismo.",
+    ],
+  },
+  cases: {
+    heading: "Sistemas reales. Resultados medidos.",
+    sub: "Tres proyectos en tres sectores - cada uno en producción, cada uno con un número concreto.",
+    problemLabel: "Problema",
+    resultLabel: "Resultado",
     items: [
       {
-        title: "AI Labs",
-        desc: "Workshops de co-creación para descubrir dónde la IA genera valor real en tu contexto — con el equipo directamente involucrado en la operación.",
+        tag: "Marketing · SEO",
+        client: "Washdog",
+        context: "Nueva empresa de lavado de mascotas entrando en un mercado saturado, sin presencia digital, sin SEO y sin prueba social.",
+        result: "Primera página en Google en menos de 1 mes. Más de 4.000 impresiones orgánicas en el primer mes.",
       },
       {
-        title: "Inteligencia de mercado",
-        desc: "Reportes sectoriales personalizados — datos que informan decisiones, no solo presentaciones.",
+        tag: "Automatización · E-commerce",
+        client: "VTEX",
+        context: "Los equipos dedicaban 10 horas por RFP respondiendo manualmente ~117 preguntas técnicas y de compliance - sin estandarización, en EMEA, EE.UU., Brasil, LATAM y APAC.",
+        result: "1.094 horas ahorradas en 6 meses. $36,4k ahorrado vs. plataforma externa. 91% de reducción en el costo anual de herramientas.",
       },
       {
-        title: "Desarrollo",
-        desc: "Soluciones propietarias en tu infraestructura — tu código, sin dependencia de SaaS ni proveedor externo.",
+        tag: "Automatización · Ingeniería",
+        client: "Lumina",
+        context: "Consultora de ingeniería contra incendios en Dubai. La elaboración de informes requería recopilar documentos, referencias precisas y redacción estructurada - 4 a 5 días por caso.",
+        result: "Menos de 3 horas por informe. El sistema corre en su infraestructura. El equipo lo posee completamente.",
+      },
+    ],
+  },
+  problems: {
+    heading: "Por qué la mayoría de los proyectos de IA en operaciones no duran",
+    sub: "El problema no es la tecnología. Es lo que pasa después del piloto - y quién termina siendo dueño del resultado.",
+    items: [
+      {
+        title: "Las señales existen. El sistema para actuar sobre ellas, no.",
+        desc: "Picos de demanda, ventanas de precios, alertas de mantenimiento, brechas de personal - tu operación produce estas señales todos los días. Pero sin un sistema que las visibilice automáticamente, tu equipo decide por instinto o por la planilla del año pasado. Los datos siempre estuvieron. La herramienta para actuar sobre ellos, no.",
+      },
+      {
+        title: "Tiempo de expertos perdido en trabajo que no debería ser manual",
+        desc: "En la mayoría de las operaciones de servicio, el cuello de botella más costoso no es la estrategia - es el ensamblaje. Documentos reunidos de múltiples fuentes. Reportes escritos a mano a partir de investigaciones que tardaron días en organizarse. Aprobaciones que requieren que alguien junte manualmente información que ya existe en el sistema.",
+      },
+      {
+        title: "Cuando el proveedor se va, el sistema se apaga.",
+        desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto - no porque la tecnología no funcionó, sino porque nadie del equipo fue capacitado para operarla. El proveedor se va. El sistema se apaga. Vuelves a las planillas sin nada que mostrar por la inversión.",
+      },
+    ],
+  },
+  differentiation: {
+    heading: "Construimos sistemas que tu equipo posee y opera.",
+    intro: "La mayoría de las consultoras de IA entregan prototipos. O suscripciones SaaS que te cobran mensualmente por acceder a tu propia lógica operativa - con precios que escalan a medida que crece tu negocio y una relación con el proveedor de la que no puedes salir sin perder el sistema.",
+    pivot: "Nosotros hacemos lo opuesto.",
+    items: [
+      "Corre dentro de tu infraestructura - no la nuestra",
+      "Sin precios SaaS atados a tu lógica operativa",
+      "Código completamente documentado y transferible",
+      "Precio fijo por proyecto - tú eres dueño del sistema",
+    ],
+    closing: "Cuando el proyecto termina, eres dueño del sistema por completo. No una licencia. No un dashboard. El sistema mismo - documentado, transferible, y construido para evolucionar con tu equipo.",
+  },
+  services: {
+    heading: "Lo que construimos",
+    sub: "No somos especialistas en un tipo de IA. Somos especialistas en operaciones de servicio - y construimos el sistema que genera más valor en tu contexto.",
+    items: [
+      {
+        title: "Diagnóstico de Oportunidades de IA",
+        desc: "Mapeamos tu operación con el equipo que la opera - no con marcos genéricos. Obtienes una lista priorizada de las oportunidades de automatización de mayor valor en tus flujos: ingresos, staffing, marketing, mantenimiento, compliance, reportes.",
+      },
+      {
+        title: "Sistemas de IA Personalizados",
+        desc: "Diseñamos y construimos el sistema para tu contexto exacto - forecasting de demanda, automatización de investigación documental, analítica de ingresos, mantenimiento predictivo, reportes de compliance, disparadores de marketing, o lo que tu operación necesite.",
+      },
+      {
+        title: "Capacitación del Equipo y Entrega Total",
+        desc: "Todo proyecto termina con tu equipo capacitado para operar, modificar y evolucionar lo que fue construido. Transferimos el conocimiento para operar el sistema - no solo el software - para que la inversión perdure.",
       },
     ],
   },
   sectorIdeas: {
-    heading: "Lo que ya es posible — en tu sector, hoy",
-    sub: "Aplicaciones concretas de IA para las operaciones que generan más datos.",
+    heading: "Cómo lucen estos sistemas en la práctica",
+    sub: "Sistemas de IA concretos diseñados para los problemas operativos que se repiten con más frecuencia en los negocios de servicio.",
     sectors: [
       {
-        name: "Logística",
+        name: "Ingresos y Demanda",
         items: [
-          "Extracción automática de facturas",
-          "Pronóstico de retrasos por ruta e historial",
-          "Alertas tempranas de ruptura de stock",
-          "Análisis de motivos de devolución por SKU",
+          "Precios dinámicos ligados a demanda, estacionalidad y eventos externos",
+          "Forecasting de demanda con disparadores automáticos de staffing e insumos",
+          "Detección de anomalías de ingresos con alertas en tiempo real",
+          "Recuperación de reservas y conversiones basada en señales de comportamiento",
         ],
       },
       {
-        name: "Retail / E-commerce",
+        name: "Operaciones y Trabajo de Conocimiento",
         items: [
-          "Monitoreo de precios con alertas automáticas",
-          "Generación masiva de descripciones de productos",
-          "IA decide descuentos en carritos abandonados",
-          "Pronóstico de demanda con pedido automático",
+          "Investigación documental y generación de informes - flujos de días a horas",
+          "Alertas predictivas de mantenimiento desde registros de equipos e historial",
+          "Monitoreo de costos por activo con detección de anomalías",
+          "Automatización de informes de compliance y auditoría",
         ],
       },
       {
-        name: "Servicios",
+        name: "Marketing y Crecimiento",
         items: [
-          "Chatbot en WhatsApp entrenado en tu negocio",
-          "Precios dinámicos por demanda y estacionalidad",
-          "Pronóstico de estacionalidad para planear equipo",
-          "Análisis de reseñas para detectar causas de churn",
+          "Disparadores automáticos de marketing basados en forecasting de demanda",
+          "Análisis de atribución de canales para inversión en marketing",
+          "Análisis de reseñas y feedback para detectar problemas recurrentes",
+          "Segmentación de clientes y reactivación basada en patrones de comportamiento",
         ],
       },
       {
-        name: "Compliance",
+        name: "Compliance & Legal",
         items: [
-          "Monitoreo de obligaciones regulatorias",
-          "Clasificación de documentos jurídicos con IA",
+          "Monitoreo de obligaciones regulatorias y alertas automáticas",
+          "Clasificación y análisis de documentos jurídicos con IA",
           "Detección de anomalías en contratos y auditorías",
-          "Due diligence asistida por IA en M&A",
+          "Due diligence asistida por IA para M&A y alianzas",
         ],
       },
     ],
   },
-  hero: {
-    heading1: "Transformación digital que empieza",
-    headingItalic: "por las personas,",
-    heading2: "no por la herramienta.",
-    sub: "Nos dedicamos a identificar, organizar y potenciar el uso de los datos generados por tu negocio, y a desarrollar soluciones tecnológicas personalizadas que optimicen tu operación. Del diagnóstico al deploy en 90 días.",
-    cta1: "Diagnóstico Gratuito",
-    cta2: "Área de Cliente",
-    badges: ["Co-creamos", "Capacitamos", "Entregamos"],
-  },
-  proof: {
-    label: "Sectores que atendemos",
-  },
-  problems: {
-    heading: "Por qué la mayoría de las iniciativas de IA no funcionan",
-    sub: "La tecnología no es el cuello de botella. El problema está en cómo se adopta.",
-    items: [
-      {
-        title: "Ferramentas implantadas sem as pessoas",
-        desc: "La mayoría de los proyectos de IA fallan por falta de compromiso del equipo, no por falta de tecnología. Sin cocreación, el sistema se convierte en otra herramienta que nadie usa.",
-      },
-      {
-        title: "Procesos que limitan lo que el equipo puede entregar",
-        desc: "Aprobaciones manuales, handoffs por planilla, información duplicada. Cada paso que podría automatizarse es tiempo que el equipo gasta en el proceso — no en el negocio.",
-      },
-      {
-        title: "Datos que generas pero que no se convierten en acción",
-        desc: "Tu operación ya produce la señal. Lo que falta es convertirla en acción — sin depender de un proveedor externo para eso.",
-      },
+  team: {
+    heading: "Construido por operadores que implementan los sistemas ellos mismos.",
+    sub: "River Labs fue fundado por ingenieros y operadores que han construido sistemas de automatización en e-commerce, operaciones y servicios regulados. Nos enfocamos en una cosa: convertir datos operativos en sistemas que los equipos puedan realmente operar - no prototipos que desaparecen después del piloto.",
+    members: [
+      { name: "Leonardo Werner", role: "Cultura, Personas & Gobernanza", bio: "Bio próximamente.", image: "/Leonardo_PP.png" },
+      { name: "João Guilherme Santos", role: "Arquitecto de Soluciones", bio: "Bio próximamente.", image: "/Joao_PP.png", objectPosition: "center top" },
+      { name: "Antonio Rapozo", role: "Desarrollador & Soluciones Tech", bio: "Bio próximamente.", image: "/Antonio_PP.png" },
+      { name: "Enrique Ibarra", role: "Full Stack Engineer", bio: "Bio próximamente.", image: "/Enrique_PP.png" },
     ],
-  },
-  solutions: {
-    heading: "Lo que construimos",
-    colArea: "Área",
-    colWhat: "Qué Construimos",
-    colImpact: "Impacto en el Negocio",
-    rows: [
-      { area: "Ingresos", what: "Precios dinámicos + pronóstico de demanda", impact: "8–20% más ingresos" },
-      { area: "Operaciones", what: "Automatización de procesos + RPA", impact: "40% menos tiempo de proceso" },
-      { area: "Logística", what: "Rutas inteligentes + optimización de costos", impact: "25–35% menos costos" },
-      { area: "Inteligencia", what: "Plataformas de datos + dashboards en tiempo real", impact: "Decisiones, no suposiciones" },
-      { area: "Compliance", what: "Reportes automáticos + trazabilidad de auditoría", impact: "Cero carga manual" },
-    ],
-    cta: "Obtén Tu Diagnóstico Gratuito",
   },
   methodology: {
-    heading: "Del diagnóstico a la implementación en 90 días",
-    sub: "Tres principios que guían cada proyecto.",
+    heading: "Cómo trabajamos",
+    sub: "Tres principios que no cambian, independientemente de lo que construyamos.",
     triadHeading: "Nuestra Metodología",
     principles: [
-      "Cocreamos — junto al equipo de la operación, desde el inicio hasta el final",
-      "Capacitamos — tu equipo usa el sistema con autonomía, sin depender de nosotros",
-      "Entregamos — código documentado, funcionando dentro de tu infraestructura",
+      "Cocreamos - con el equipo que opera el negocio, desde la primera conversación. No detrás de un slide. No entregado al final.",
+      "Capacitamos - tu equipo aprende a operar, modificar y evolucionar lo construido. Sin dependencia permanente de River Labs para mantener el sistema.",
+      "Entregamos - código documentado dentro de tu propia infraestructura. Tú eres dueño del sistema. No una licencia para usarlo. El sistema mismo.",
     ],
     steps: [
-      { title: "Descubrimiento", timeline: "Mapa de proceso" },
-      { title: "Diagnóstico", timeline: "Matriz de casos" },
-      { title: "Diseño de solución", timeline: "Plan de arquitectura" },
-      { title: "Piloto", timeline: "Prototipo + métricas" },
-      { title: "Deploy & Optimización", timeline: "Sistema en producción" },
+      { title: "Descubrimiento", timeline: "Mapea tus procesos, fuentes de datos y restricciones operativas" },
+      { title: "Diagnóstico", timeline: "Identifica dónde la IA crea el mayor valor medible" },
+      { title: "Diseño de Solución", timeline: "Define arquitectura y acuerda métricas de éxito antes de construir" },
+      { title: "Piloto", timeline: "Construye un sistema funcional y valídalo con tu equipo en producción" },
+      { title: "Deploy y Entrega", timeline: "Lanza a producción y transfiere la propiedad total a tu equipo" },
     ],
   },
   comparison: {
     heading: "Socio de largo plazo. No proveedor puntual.",
     goodItems: [
-      "Cocreamos con tu equipo — sin tercerizar el trabajo",
-      "Capacitamos para autonomía total — sin dependencia de proveedor",
+      "Cocreamos con tu equipo - sin tercerizar el trabajo",
+      "Capacitamos para autonomía total - sin dependencia de proveedor",
       "Entregamos código documentado funcionando en tu infraestructura",
-      "Precio fijo por hito — tú eres dueño del sistema",
+      "Precio fijo por hito - tú eres dueño del sistema",
     ],
   },
   whyus: {
@@ -420,11 +551,11 @@ const es: Dict = {
     features: [
       {
         title: "Basado en tus documentos reales",
-        desc: "Empezamos desde tus balances, DFs, exportaciones de ticketing y logs de logística — no benchmarks de industria. Cada oportunidad que identificamos es rastreable a una fuente.",
+        desc: "Empezamos desde tus balances, DFs, exportaciones de ticketing y logs de logística - no benchmarks de industria.",
       },
       {
         title: "Tú eres dueño del sistema",
-        desc: "Sin dependencia de proveedores, sin suscripciones SaaS. Agentes personalizados construidos para correr en tu propia infraestructura, completamente documentados y transferibles.",
+        desc: "Sin dependencia de proveedores, sin suscripciones SaaS. Agentes personalizados construidos para correr en tu propia infraestructura.",
       },
     ],
     cta: "Habla con nosotros",
@@ -435,45 +566,64 @@ const es: Dict = {
     subtitle: "Cada estudio está construido a partir de datos públicos, investigación sectorial y divulgaciones financieras.",
     restricted: "Acceso restringido",
     clients: [
-      { desc: "Construcción pesada, licitaciones y gestión de contratos — estudio de mercado y diagnóstico personalizado." },
-      { desc: "Trading de soja, planificación de cosecha y compliance logístico — análisis de impacto financiero con IA." },
-      { desc: "Terminal de cruceros, eventos y compliance portuario — estudio basado en divulgaciones financieras públicas e investigación sectorial." },
-      { desc: "Boletería, operación ferroviaria y compliance ICMBio — análisis de ingresos y mantenimiento predictivo." },
-      { desc: "Teleférico, eventos y gastronomía — análisis de boletería dinámica y mantenimiento predictivo." },
-      { desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) — análisis de flujo y compliance ICMBio." },
+      { desc: "Construcción pesada, licitaciones y gestión de contratos - estudio de mercado y diagnóstico personalizado." },
+      { desc: "Trading de soja, planificación de cosecha y compliance logístico - análisis de impacto financiero con IA." },
+      { desc: "Terminal de cruceros, eventos y compliance portuario - estudio basado en divulgaciones financieras públicas." },
+      { desc: "Boletería, operación ferroviaria y compliance ICMBio - análisis de ingresos y mantenimiento predictivo." },
+      { desc: "Teleférico, eventos y gastronomía - análisis de boletería dinámica y mantenimiento predictivo." },
+      { desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) - análisis de flujo y compliance ICMBio." },
     ],
   },
   faq: {
     heading: "Preguntas frecuentes",
     items: [
       {
-        q: "¿Cómo funciona el diagnóstico gratuito?",
-        a: "Mapeamos tu operación, los procesos que tu equipo gestiona día a día y los datos que ya generas. A partir de ahí, identificamos las 3 mayores oportunidades de automatización o IA para tu negocio. Recibes un resumen escrito en 48 horas — sin benchmarks genéricos.",
+        q: "¿Qué entrega concretamente el Diagnóstico Gratuito de IA?",
+        a: "Una conversación de 45 minutos donde mapeamos tu operación - los procesos que tu equipo realiza día a día, los datos que ya generas y dónde están las brechas más grandes. Recibes un informe escrito identificando las tres oportunidades de automatización de mayor valor en tu operación, con suficiente detalle para decidir si y cómo actuar. Sin benchmarks genéricos. Sin pitch de seguimiento.",
       },
       {
-        q: "¿Necesitamos reemplazar nuestros sistemas existentes?",
-        a: "No. Nos integramos con lo que tienes — ERP, CRM, APIs personalizadas. El objetivo es agregar inteligencia a tu infraestructura actual, no forzar una migración.",
+        q: "¿Solo trabajan con empresas de turismo o de LATAM?",
+        a: "No. El turismo y las operaciones de servicio en LATAM son una parte central de nuestro trabajo, pero nuestros sistemas están construidos para cualquier operación con flujos complejos que generan datos - independientemente de la geografía. Un sistema que construimos para Lumina, una consultora de ingeniería contra incendios en Dubai, redujo un flujo de trabajo de varios días a menos de 3 horas. El hilo conductor es la complejidad operativa y la necesidad de un sistema que el equipo posea y opere de forma independiente.",
       },
       {
-        q: "¿Reemplazan a nuestro equipo de IT o datos?",
-        a: "No — trabajamos junto a ellos. Nosotros manejamos la arquitectura de IA y la construcción de modelos; tu equipo maneja el acceso a infraestructura y las aprobaciones de despliegue. La transferencia de conocimiento es parte de cada proyecto.",
+        q: "¿Necesitamos reemplazar nuestros sistemas actuales?",
+        a: "No. Nos integramos con lo que ya tienes - plataformas de boletería, ERPs, sistemas de gestión documental, APIs personalizadas, bases de datos legacy. El objetivo es agregar toma de decisiones automatizada a tu infraestructura actual, no forzar una migración.",
       },
       {
-        q: "¿Qué industrias conocen mejor?",
-        a: "Logística, retail y e-commerce, servicios y compliance. Nuestro trabajo se adapta a cualquier operación que genere datos e involucre procesos repetibles — estos sectores representan la mayor parte de nuestros proyectos.",
+        q: "¿Qué pasa después de la entrega? ¿Necesitamos a River Labs para mantenerlo?",
+        a: "No - y ese es un principio de diseño central en cada proyecto que tomamos. Cada sistema incluye documentación completa y capacitación del equipo para que tu operación pueda mantenerlo y evolucionarlo de forma independiente. No diseñamos para la dependencia.",
+      },
+      {
+        q: "¿En qué se diferencia esto de comprar una herramienta de IA o plataforma SaaS?",
+        a: "Las herramientas de IA genéricas están construidas para la operación promedio. Tu operación no es promedio - tiene datos específicos, flujos específicos y restricciones específicas que las herramientas genéricas no contemplan. Construimos un sistema para tu contexto exacto, corriendo en tu infraestructura, sin tarifa mensual y sin proveedor al que llamar cuando algo falla. Tu equipo lo opera.",
       },
     ],
   },
   cta: {
-    heading: "¿Listo para un socio que co-construya contigo?",
-    sub: "Agenda una conversación de 45 min — sin compromiso, sin benchmarks genéricos.",
-    btn1: "Iniciar Diagnóstico",
-    btn2: "Hablar con Nosotros",
-    badge: "Sin compromiso. Tu código, tu equipo.",
+    heading: "Descubre exactamente dónde tu operación está dejando valor sobre la mesa.",
+    sub: "Una conversación de 45 minutos. Mapeamos tu operación y te enviamos un informe escrito con las tres oportunidades de automatización de mayor valor en tu contexto - específicas a tus flujos, tus datos y tu equipo. Realizamos un número limitado de diagnósticos cada mes para profundizar en cada uno.",
+    btn1: "Reserva tu Diagnóstico Gratuito de IA",
+    btn2: "Habla con Nuestro Equipo",
+    badge: "Sin compromiso. Sin SaaS. Tu equipo es dueño de lo que construimos.",
   },
   footer: {
     copyright: "© 2026 River Labs.",
     links: ["Servicios", "Área de Cliente", "Contacto"],
+    cta: "Diagnóstico Gratuito",
+  },
+  solutions: {
+    heading: "Lo que construimos",
+    colArea: "Área",
+    colWhat: "Qué Construimos",
+    colImpact: "Impacto en el Negocio",
+    rows: [
+      { area: "Ingresos", what: "Precios dinámicos + pronóstico de demanda", impact: "8-20% más ingresos" },
+      { area: "Operaciones", what: "Automatización de procesos + RPA", impact: "40% menos tiempo de proceso" },
+      { area: "Logística", what: "Rutas inteligentes + optimización de costos", impact: "25-35% menos costos" },
+      { area: "Inteligencia", what: "Plataformas de datos + dashboards en tiempo real", impact: "Decisiones, no suposiciones" },
+      { area: "Compliance", what: "Reportes automáticos + trazabilidad de auditoría", impact: "Cero carga manual" },
+    ],
+    cta: "Obtén Tu Diagnóstico Gratuito",
   },
 };
 
@@ -482,135 +632,168 @@ const pt: Dict = {
     services: "Serviços",
     casestudies: "Área do Cliente",
     contact: "Contato",
+    cta: "Diagnóstico Gratuito",
   },
-  services: {
-    heading: "O que fazemos",
-    sub: "Três linhas de atuação — da estratégia ao código em produção.",
+  hero: {
+    heading1: "A IA não vai substituir tudo,",
+    headingItalic: "mas tem a capacidade de melhorar",
+    heading2: "fluxos de trabalho.",
+    sub: "Trabalhamos nessa interseção: reduzindo custos, retrabalho e propensão a erros manuais",
+    cta1: "Diagnóstico Gratuito de IA",
+    cta2: "Veja como trabalhamos",
+    badges: ["Co-criamos", "Capacitamos", "Você é dono do sistema"],
+  },
+  proof: {
+    label: "Indústrias em que nos focamos",
+    sectors: ["Turismo", "Transporte", "Hospitalidade", "Eventos", "Compliance & Legal"],
+  },
+  authority: {
+    heading: "Sabemos o que quebra em operações de serviço - e por que a IA normalmente não resolve.",
+    paragraphs: [
+      "A maioria das operações de serviço trabalha com dados que nunca aproveita totalmente. Sinais de demanda ficam presos em exportações de bilheteria. O risco de manutenção vive nos registros de equipamentos. Fluxos de pesquisa e elaboração de relatórios consomem dias de tempo de especialistas que poderiam ser usados em trabalho de maior valor. Os dados e os processos estão lá - o sistema para agir sobre eles, não.",
+      "Desenhamos para essa lacuna.",
+      "Um sistema de pesquisa documental e geração de relatórios que implementamos na Lumina, uma consultoria de engenharia de incêndio em Dubai, reduziu o fluxo de trabalho de relatórios especializados de 4-5 dias por caso para menos de 3 horas. É esse o tipo de impacto operacional que projetamos: específico à sua operação, rodando na sua infraestrutura, completamente de propriedade da sua equipe. Não uma ferramenta genérica. Não uma assinatura SaaS. O sistema em si.",
+    ],
+  },
+  cases: {
+    heading: "Sistemas reais. Resultados medidos.",
+    sub: "Três soluções para três setores distintos",
+    problemLabel: "Problema",
+    resultLabel: "Resultado",
     items: [
       {
-        title: "AI Labs",
-        desc: "Workshops de co-criação e capacitação para descobrir onde a IA gera valor real no seu contexto — com o time diretamente envolvido na operação.",
+        tag: "Marketing · SEO",
+        client: "Washdog",
+        context: "Novo negócio de lavagem de pets entrando em um mercado saturado, sem presença digital, sem SEO e sem prova social.",
+        result: "Primeira página no Google em menos de 1 mês e mais de 4.000 impressões orgânicas. Terceiro em buscas com AI (ChatGPT e Claude Code).",
       },
       {
-        title: "Inteligência de negócios",
-        desc: "Identificamos onde sua operação pode melhorar e desenvolvemos soluções em software e IA para que você tome decisões com base em dados reais do seu negócio.",
+        tag: "Automação · E-commerce",
+        client: "VTEX",
+        context: "As equipes gastavam 10 horas por RFP respondendo manualmente ~117 questões técnicas e de compliance - sem padronização, em EMEA, EUA, Brasil, LATAM e APAC.",
+        result: "1.094 horas economizadas em 6 meses. $36,4k economizado vs. plataforma externa. 91% de redução no custo anual de ferramentas.",
       },
       {
-        title: "Desenvolvimento",
-        desc: "Soluções proprietárias que se encaixam nos seus sistemas atuais — sem migrações, sem dependência de SaaS. Com acompanhamento contínuo para evoluir junto com o seu negócio.",
+        tag: "Automação · Engenharia",
+        client: "Lumina",
+        context: "Consultoria de engenharia de incêndio em Dubai. O processo de elaboração de relatórios especializados - coleta de documentos, referenciamento preciso e escrita estruturada - levava de 4 a 5 dias por caso.",
+        result: "Menos de 3 horas por relatório. O sistema roda na infraestrutura deles. A equipe é dona do sistema.",
+      },
+    ],
+  },
+  problems: {
+    heading: "Por que a maioria dos projetos de IA em operações não dura?",
+    sub: "O problema não é a tecnologia. É o que acontece depois do piloto - e quem acaba sendo dono do resultado.",
+    items: [
+      {
+        title: "Os dados existem, mas estão fragmentados.",
+        desc: "Picos de demanda, janelas de precificação, alertas de manutenção, lacunas de equipe - a sua operação produz esses sinais todo dia. Mas sem um sistema que os evidencie automaticamente, seu time decide por instinto ou pela planilha do ano passado. Os dados sempre estiveram lá. A ferramenta para agir sobre eles, não.",
+      },
+      {
+        title: "Trabalho e retrabalho em tarefas que poderiam ser automatizadas.",
+        desc: "Na maioria das operações de serviço, o gargalo mais caro não é a estratégia - é a montagem. Documentos reunidos de múltiplas fontes. Relatórios escritos à mão a partir de pesquisas que levaram dias para organizar. Aprovações que exigem que alguém junte manualmente informações que já existem no sistema.",
+      },
+      {
+        title: "Sistemas e ferramentas complexas demais para usar.",
+        desc: "A maioria dos projetos de IA falha depois da prova de conceito - não porque a tecnologia não funcionou, mas porque ninguém da equipe foi treinado para operá-la. O fornecedor vai embora. O sistema para. Você volta para as planilhas sem nada para mostrar pelo investimento.",
+      },
+    ],
+  },
+  differentiation: {
+    heading: "Você apresenta o desafio, nós desenvolvemos a solução de maneira ágil e pensando sempre na experiência de uso para sua equipe.",
+    intro: "A maioria das consultorias de IA entrega protótipos. Ou assinaturas SaaS que cobram mensalmente pelo acesso à sua própria lógica operacional - com preços que escalam à medida que seu negócio cresce e uma relação com o fornecedor da qual você não consegue sair sem perder o sistema.",
+    pivot: "Fazemos o oposto.",
+    items: [
+      "Roda dentro da sua infraestrutura - não da nossa",
+      "Sem preços SaaS atrelados à sua lógica operacional",
+      "Código completamente documentado e transferível",
+      "Preço fixo por projeto - você é dono do sistema",
+    ],
+    closing: "Quando o projeto termina, você é dono do sistema por completo. Não uma licença. Não um dashboard. O sistema em si - documentado, transferível, e construído para evoluir com a sua equipe.",
+  },
+  services: {
+    heading: "Construímos soluções específicas para o seu contexto.",
+    sub: "Não somos especialistas em um tipo de IA. Somos especialistas em operações de serviço - e construímos o sistema que gera mais valor no seu contexto.",
+    items: [
+      {
+        title: "Diagnóstico de Oportunidades de IA",
+        desc: "Mapeamos sua operação com o time que a opera, e geramos uma lista com as principais oportunidades em desenvolver soluções que otimizem o dia-a-dia do marketing, manutenção, financeiro e compliance.",
+      },
+      {
+        title: "Sistemas de IA Personalizados",
+        desc: "Projetamos e construímos o sistema para o seu contexto exato - previsão de demanda, automação de pesquisa documental, analytics de receita, manutenção preditiva, relatórios de compliance, gatilhos de marketing, ou o que sua operação precisar.",
+      },
+      {
+        title: "Treinamento da Equipe e Entrega Total",
+        desc: "Todo projeto termina com sua equipe treinada para operar, modificar e evoluir o que foi construído. Transferimos o conhecimento para operar o sistema - não apenas o software - para que o investimento dure.",
       },
     ],
   },
   sectorIdeas: {
-    heading: "O que já dá pra fazer — no seu setor, agora",
-    sub: "Aplicações concretas de IA para as operações que geram mais dados.",
+    heading: "Como essas soluções se parecem na prática?",
+    sub: "Sistemas de IA concretos projetados para os problemas operacionais que se repetem com mais frequência em negócios de serviço.",
     sectors: [
       {
-        name: "Logística",
+        name: "Receita e Demanda",
         items: [
-          "Extração automática de notas fiscais",
-          "Previsão de atrasos por rota e histórico",
-          "Alerta de ruptura de estoque antecipado",
-          "Identificação de motivos de devolução por SKU",
+          "Precificação dinâmica ligada a demanda, sazonalidade e eventos externos",
+          "Previsão de demanda com gatilhos automáticos de equipe e suprimentos",
+          "Detecção de anomalias de receita com alertas em tempo real",
         ],
       },
       {
-        name: "Varejo / E-commerce",
+        name: "Marketing",
         items: [
-          "Monitoramento de preços com alerta automático",
-          "Geração em massa de descrições de produtos",
-          "IA decide quais carrinhos abandonados merecem desconto",
-          "Previsão de demanda com pedido automático",
+          "Gatilhos automáticos de marketing baseados em previsão de demanda",
+          "Análise de atribuição de canais para investimento em marketing",
+          "Análise de avaliações e feedbacks para detectar problemas recorrentes",
         ],
       },
       {
-        name: "Serviços",
+        name: "Compliance & Legal",
         items: [
-          "Chatbot no WhatsApp treinado no seu negócio",
-          "Precificação dinâmica por demanda e sazonalidade",
-          "Previsão de estacionalidade para planejar equipe",
-          "Análise de avaliações para detectar o que afasta clientes",
-        ],
-      },
-      {
-        name: "Compliance",
-        items: [
-          "Monitoramento de obrigações regulatórias (LGPD, BACEN, CVM)",
-          "Triagem e classificação de documentos jurídicos com IA",
+          "Monitoramento de obrigações regulatórias e alertas automáticos",
+          "Classificação e análise de documentos jurídicos com IA",
           "Detecção de anomalias em contratos e auditorias",
-          "Due diligence assistida por IA em M&A",
+          "Due diligence assistida por IA para M&A e parcerias",
         ],
       },
     ],
   },
-  hero: {
-    heading1: "Transformação digital que começa",
-    headingItalic: "pelas pessoas,",
-    heading2: "não pela ferramenta.",
-    sub: "Nos dedicamos a identificar, organizar e potencializar o uso de dados gerados pelo seu negócio, e desenvolver soluções tecnológicas customizadas que otimizem sua operação.",
-    cta1: "Diagnóstico Gratuito",
-    cta2: "Área do Cliente",
-    badges: ["Co-criamos", "Capacitamos", "Entregamos"],
-  },
-  proof: {
-    label: "Setores que atendemos",
-  },
-  problems: {
-    heading: "Por que a maioria das iniciativas de IA não funciona",
-    sub: "A tecnologia não é mais o gargalo. O problema está em como ela é adotada.",
-    items: [
-      {
-        title: "Ferramentas implantadas sem as pessoas",
-        desc: "A maioria dos projetos de IA falha por falta de engajamento da equipe, não por falta de tecnologia.",
-      },
-      {
-        title: "Processos que limitam o que a equipe consegue entregar",
-        desc: "Aprovações manuais, handoffs por planilha, informações duplicadas. Cada etapa que poderia ser automatizada é tempo que a equipe gasta no processo — e não no negócio.",
-      },
-      {
-        title: "Dados gerados que não viram decisão",
-        desc: "A maioria das empresas gera mais dados do que consegue usar. Mas normalmente estão dispersos, desconectados e não são aproveitados de maneira estratégica.",
-      },
+  team: {
+    heading: "Construído por operadores que implementam os sistemas eles mesmos.",
+    sub: "A River Labs foi fundada por quatro profissionais que desenvolveram para empresas globais de diferentes setores e indústrias. O foco é único: melhorar o fluxo de trabalho das pessoas por meio de soluções tecnológicas.",
+    members: [
+      { name: "Leonardo Werner", role: "Cultura, Pessoas & Governança", bio: "Bio em breve.", image: "/Leonardo_PP.png" },
+      { name: "João Guilherme Santos", role: "Arquiteto de Soluções", bio: "Bio em breve.", image: "/Joao_PP.png", objectPosition: "center top" },
+      { name: "Antonio Rapozo", role: "Desenvolvedor & Soluções Tech", bio: "Bio em breve.", image: "/Antonio_PP.png" },
+      { name: "Enrique Ibarra", role: "Engenheiro Full Stack", bio: "Bio em breve.", image: "/Enrique_PP.png" },
     ],
-  },
-  solutions: {
-    heading: "O que construímos",
-    colArea: "Área",
-    colWhat: "O que Construímos",
-    colImpact: "Impacto no Negócio",
-    rows: [
-      { area: "Receita", what: "Precificação dinâmica + previsão de demanda", impact: "8–20% de aumento de receita" },
-      { area: "Operações", what: "Automação de processos + RPA", impact: "40% menos tempo de processo" },
-      { area: "Logística", what: "Roteirização inteligente + otimização de custos", impact: "25–35% menos custos" },
-      { area: "Inteligência", what: "Plataformas de dados + dashboards em tempo real", impact: "Decisões, não suposições" },
-      { area: "Compliance", what: "Relatórios automáticos + trilha de auditoria", impact: "Zero overhead manual" },
-    ],
-    cta: "Obtenha Seu Diagnóstico Gratuito",
   },
   methodology: {
-    heading: "Passo a passo da jornada",
-    sub: "Três princípios que guiam cada projeto.",
+    heading: "Como trabalhamos",
+    sub: "Três princípios que não mudam, independentemente do que construímos.",
     triadHeading: "Nossa Abordagem",
     principles: [
-      "Co-criamos — junto ao time da operação, do início ao fim",
-      "Capacitamos — treinamos sua equipe para usar, entender e evoluir o que foi construído juntos",
-      "Entregamos — uma ferramenta pronta para ser usada — na sua infraestrutura",
+      "Co-criamos - com o time que opera o negócio, desde a primeira conversa. Não atrás de um slide. Não entregue no final.",
+      "Capacitamos - sua equipe aprende a operar, modificar e evoluir o que foi construído. Sem dependência permanente da River Labs para manter o sistema.",
+      "Entregamos - código documentado dentro da sua própria infraestrutura. Você é dono do sistema. Não uma licença para usá-lo. O sistema em si.",
     ],
     steps: [
-      { title: "Descoberta", timeline: "Mapa de processo" },
-      { title: "Diagnóstico", timeline: "Matriz de casos" },
-      { title: "Design da solução", timeline: "Plano de arquitetura" },
-      { title: "Piloto", timeline: "Protótipo + métricas" },
-      { title: "Deploy & Otimização", timeline: "Sistema em produção" },
+      { title: "Descoberta", timeline: "Mapeamos seus processos, fontes de dados e restrições operacionais" },
+      { title: "Diagnóstico", timeline: "Identificamos onde a IA cria o maior valor mensurável" },
+      { title: "Design da Solução", timeline: "Definimos a arquitetura e métricas de sucesso antes de construir" },
+      { title: "Piloto", timeline: "Construímos uma solução funcional para validação com sua equipe" },
+      { title: "Deploy e Entrega", timeline: "Lançamos em produção e transferimos a propriedade total da solução para sua empresa." },
     ],
   },
   comparison: {
     heading: "Parceiro de jornada. Não fornecedor avulso.",
     goodItems: [
-      "Co-criamos com o time da operação — sem terceirizar",
-      "Capacitamos o time para operar e evoluir a solução — sem dependência de fornecedor",
+      "Co-criamos com o time da operação - sem terceirizar",
+      "Capacitamos o time para operar e evoluir a solução - sem dependência de fornecedor",
       "Entregamos código documentado rodando na sua infraestrutura",
-      "Preço fixo por marco — você é dono do sistema",
+      "Preço fixo por marco - você é dono do sistema",
     ],
   },
   whyus: {
@@ -618,11 +801,11 @@ const pt: Dict = {
     features: [
       {
         title: "Baseado nos seus documentos reais",
-        desc: "Começamos pelos seus balanços, DFs, exportações de bilheteria e logs de logística — não benchmarks de setor. Cada oportunidade que identificamos é rastreável a uma fonte.",
+        desc: "Começamos pelos seus balanços, DFs, exportações de bilheteria e logs de logística - não benchmarks de setor.",
       },
       {
         title: "Você é dono do sistema",
-        desc: "Sem dependência de fornecedor, sem assinaturas SaaS. Agentes sob medida construídos para rodar na sua própria infraestrutura, totalmente documentados e transferíveis.",
+        desc: "Sem dependência de fornecedor, sem assinaturas SaaS. Agentes sob medida construídos para rodar na sua própria infraestrutura.",
       },
     ],
     cta: "Fale com a gente",
@@ -633,45 +816,64 @@ const pt: Dict = {
     subtitle: "Cada estudo é construído a partir de dados públicos, pesquisa setorial e divulgações financeiras.",
     restricted: "Acesso restrito",
     clients: [
-      { desc: "Construção pesada, licitações e gestão de contratos — estudo de mercado e diagnóstico personalizado." },
-      { desc: "Trading de soja, planejamento de safra e compliance logístico — análise de impacto financeiro com IA." },
-      { desc: "Terminal de cruzeiros, eventos e compliance portuário — estudo baseado em divulgações financeiras públicas e pesquisa setorial." },
-      { desc: "Bilheteria, operação ferroviária e compliance ICMBio — análise de receita e manutenção preditiva." },
-      { desc: "Teleférico, eventos e gastronomia — análise de bilheteria dinâmica e manutenção preditiva." },
-      { desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) — análise de fluxo e compliance ICMBio." },
+      { desc: "Construção pesada, licitações e gestão de contratos - estudo de mercado e diagnóstico personalizado." },
+      { desc: "Trading de soja, planejamento de safra e compliance logístico - análise de impacto financeiro com IA." },
+      { desc: "Terminal de cruzeiros, eventos e compliance portuário - estudo baseado em divulgações financeiras públicas." },
+      { desc: "Bilheteria, operação ferroviária e compliance ICMBio - análise de receita e manutenção preditiva." },
+      { desc: "Teleférico, eventos e gastronomia - análise de bilheteria dinâmica e manutenção preditiva." },
+      { desc: "7 unidades de ecoturismo (AquaRio, BioParque, Cataratas, Noronha) - análise de fluxo e compliance ICMBio." },
     ],
   },
   faq: {
     heading: "Perguntas frequentes",
     items: [
       {
-        q: "Como funciona o diagnóstico gratuito?",
-        a: "Mapeamos sua operação, os processos que seu time toca no dia-a-dia e os dados que você já gera. A partir daí, identificamos as 3 maiores oportunidades de automação ou IA para o seu negócio. Você recebe um resumo escrito em 48 horas — sem benchmarks genéricos.",
+        q: "O que o Diagnóstico Gratuito de IA entrega concretamente?",
+        a: "Uma conversa de 45 minutos onde mapeamos sua operação - os processos que sua equipe realiza dia a dia, os dados que você já gera e onde estão as maiores lacunas. Você recebe um relatório escrito identificando as três oportunidades de automação de maior valor na sua operação, com detalhes suficientes para decidir se e como agir. Sem benchmarks genéricos. Sem pitch de follow-up.",
       },
       {
-        q: "Precisamos substituir nossos sistemas existentes?",
-        a: "Não. Integramos com o que você tem — ERP, CRM, APIs personalizadas. O objetivo é adicionar inteligência à sua infraestrutura atual, sem forçar uma migração.",
+        q: "Vocês só trabalham com empresas de turismo ou da LATAM?",
+        a: "Não. Turismo e operações de serviço na LATAM são uma parte central do nosso trabalho, mas nossos sistemas são construídos para qualquer operação com fluxos complexos que geram dados - independentemente da geografia. Um sistema que construímos para a Lumina, uma consultoria de engenharia de incêndio em Dubai, reduziu um fluxo de trabalho de vários dias para menos de 3 horas. O denominador comum é a complexidade operacional e a necessidade de um sistema que a equipe possua e opere de forma independente.",
       },
       {
-        q: "Vocês substituem nossa equipe de TI ou dados?",
-        a: "Não — trabalhamos junto com eles. A gente cuida da arquitetura de IA e construção dos modelos; sua equipe cuida do acesso à infraestrutura e aprovações de deploy. Transferência de conhecimento faz parte de todo projeto.",
+        q: "Precisamos substituir nossos sistemas atuais?",
+        a: "Não. Integramos com o que você já tem - plataformas de bilheteria, ERPs, sistemas de gestão documental, APIs personalizadas, bancos de dados legados. O objetivo é adicionar tomada de decisão automatizada à sua infraestrutura atual, sem forçar uma migração.",
       },
       {
-        q: "Quais setores vocês conhecem melhor?",
-        a: "Logística, varejo e e-commerce, serviços e compliance. Nosso trabalho se adapta a qualquer operação que gere dados e envolva processos repetíveis — esses setores representam a maior parte dos nossos projetos.",
+        q: "O que acontece após a entrega de uma ferramenta desenvolvida por vocês? Precisamos da River Labs para manter?",
+        a: "Não - e esse é um princípio de design central em cada projeto que assumimos. Todo sistema inclui documentação completa e treinamento da equipe para que sua operação possa mantê-lo e evoluí-lo de forma independente. Não projetamos para dependência.",
+      },
+      {
+        q: "Como isso é diferente de comprar uma ferramenta de IA ou plataforma SaaS?",
+        a: "Ferramentas de IA genéricas são construídas para a operação média. A sua operação não é média - ela tem dados específicos, fluxos específicos e restrições específicas que ferramentas genéricas não contemplam. Construímos um sistema para o seu contexto exato, rodando na sua infraestrutura, sem mensalidade e sem fornecedor para ligar quando algo quebra. Sua equipe opera.",
       },
     ],
   },
   cta: {
-    heading: "Pronto para um parceiro que co-constrói com você?",
-    sub: "Agende uma conversa de 45 min — sem compromisso, sem benchmarks genéricos.",
-    btn1: "Iniciar Diagnóstico",
-    btn2: "Falar com a Gente",
-    badge: "Sem compromisso. Código seu, equipe independente.",
+    heading: "Descubra exatamente onde sua operação está deixando valor na mesa.",
+    sub: "Uma conversa de 45 minutos. Mapeamos sua operação que identifica as principais áreas onde a tecnologia pode agregar valor no seu contexto.",
+    btn1: "Agende seu Diagnóstico Gratuito de IA",
+    btn2: "Fale com Nossa Equipe",
+    badge: "Sem compromisso. Sem SaaS. Sua equipe é dona do que construímos.",
   },
   footer: {
     copyright: "© 2026 River Labs.",
     links: ["Serviços", "Área do Cliente", "Contato"],
+    cta: "Diagnóstico Gratuito",
+  },
+  solutions: {
+    heading: "O que construímos",
+    colArea: "Área",
+    colWhat: "O que Construímos",
+    colImpact: "Impacto no Negócio",
+    rows: [
+      { area: "Receita", what: "Precificação dinâmica + previsão de demanda", impact: "8-20% de aumento de receita" },
+      { area: "Operações", what: "Automação de processos + RPA", impact: "40% menos tempo de processo" },
+      { area: "Logística", what: "Roteirização inteligente + otimização de custos", impact: "25-35% menos custos" },
+      { area: "Inteligência", what: "Plataformas de dados + dashboards em tempo real", impact: "Decisões, não suposições" },
+      { area: "Compliance", what: "Relatórios automáticos + trilha de auditoria", impact: "Zero overhead manual" },
+    ],
+    cta: "Obtenha Seu Diagnóstico Gratuito",
   },
 };
 

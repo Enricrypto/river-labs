@@ -67,7 +67,7 @@ function buildHtml(steps: Step[], answers: Record<string, AnswerValue>): string 
         Nova resposta recebida
       </h1>
       <p style="margin: 8px 0 0; color: #9CA3AF; font-size: 14px;">
-        ${answers["nome"] ?? "Anônimo"} · ${answers["empresa_nome"] ?? "—"} · ${answers["email"] ?? "—"}
+        ${answers["nome"] ?? "Anônimo"} · ${answers["empresa_nome"] ?? "-"} · ${answers["email"] ?? "-"}
         ${answers["whatsapp"] ? ` · ${answers["whatsapp"]}` : ""}
       </p>
     </div>
@@ -93,7 +93,7 @@ export async function POST(req: Request) {
   const { error } = await resend.emails.send({
     from: "Diagnóstico River Labs <onboarding@resend.dev>",
     to: "eibarraf@gmail.com",
-    subject: `Diagnóstico: ${nome} — ${empresa}`,
+    subject: `Diagnóstico: ${nome} - ${empresa}`,
     html,
   });
 

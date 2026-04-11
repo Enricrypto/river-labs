@@ -1,5 +1,6 @@
 interface LogoProps {
   size?: "sm" | "md" | "lg";
+  variant?: "dark" | "light";
 }
 
 const sizes = {
@@ -8,12 +9,13 @@ const sizes = {
   lg: { svg: "w-14 h-14", text: "text-5xl", gap: "gap-5" },
 };
 
-export default function Logo({ size = "sm" }: LogoProps) {
+export default function Logo({ size = "sm", variant = "dark" }: LogoProps) {
   const s = sizes[size];
+  const color = variant === "light" ? "text-white" : "text-black";
   return (
     <div className={`flex items-center ${s.gap}`}>
       <svg
-        className={`${s.svg} text-black shrink-0`}
+        className={`${s.svg} ${color} shrink-0`}
         viewBox="0 0 64 64"
         fill="none"
         stroke="currentColor"
@@ -25,7 +27,7 @@ export default function Logo({ size = "sm" }: LogoProps) {
         <path d="M 10 40 Q 21 24, 32 40 T 54 40" />
       </svg>
       <span
-        className={`${s.text} font-medium tracking-tight text-black`}
+        className={`${s.text} font-medium tracking-tight ${color}`}
         style={{ fontFamily: "var(--font-jakarta)" }}
       >
         River Labs

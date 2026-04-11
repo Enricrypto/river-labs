@@ -22,12 +22,12 @@ const AMBER = "#FCD34D";
 const TOTAL = 6;
 
 const SLIDE_LABELS = [
-  "01 — Visão Geral",
-  "02 — Contexto de Mercado",
-  "03 — Onde o Tempo Vira Dinheiro",
-  "04 — IA & Automação",
-  "05 — Impacto Financeiro",
-  "06 — Por que River Labs",
+  "01 - Visão Geral",
+  "02 - Contexto de Mercado",
+  "03 - Onde o Tempo Vira Dinheiro",
+  "04 - IA & Automação",
+  "05 - Impacto Financeiro",
+  "06 - Por que River Labs",
 ];
 
 /* ─── Shared UI ───────────────────────────────────────── */
@@ -73,7 +73,7 @@ function Slide01() {
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
             Empresa de médio porte no <span className="text-white font-medium">agro-soja do Centro-Oeste</span>, operando
-            em produção, trading e logística de grãos a partir de Sorriso/MT — capital mundial da soja.
+            em produção, trading e logística de grãos a partir de Sorriso/MT - capital mundial da soja.
           </p>
         </div>
         <div>
@@ -99,8 +99,8 @@ function Slide01() {
       <div className="w-full md:w-80 grid grid-cols-2 gap-3">
         {[
           { value: "R$\u00a0200M", label: "Receita Bruta Est. 2025", accent: TEAL },
-          { value: "5–10k", label: "Hectares Plantados", accent: GREEN },
-          { value: "150–300", label: "Funcionários", accent: AMBER },
+          { value: "5-10k", label: "Hectares Plantados", accent: GREEN },
+          { value: "150-300", label: "Funcionários", accent: AMBER },
           { value: "~2012", label: "Ano de Fundação", accent: TEAL },
         ].map(s => (
           <div
@@ -133,7 +133,7 @@ function Slide02() {
         style={{ border: "1px solid rgba(255,255,255,0.07)", background: "rgba(255,255,255,0.02)" }}
       >
         <p className="text-gray-600 text-xs uppercase tracking-widest mb-5">
-          Estrutura de Custos — Trading de Soja MT 2025
+          Estrutura de Custos - Trading de Soja MT 2025
         </p>
         <div className="space-y-3">
           {[
@@ -166,21 +166,21 @@ function Slide02() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[
           {
-            value: "5–10%",
+            value: "5-10%",
             label: "Perdas pós-colheita",
             desc: "Volume perdido por armazenagem inadequada",
             source: "Embrapa",
             color: TEAL,
           },
           {
-            value: "15–20%",
+            value: "15-20%",
             label: "Erro em previsão de yield",
             desc: "Imprecisão no planejamento manual de safra",
             source: "TCU Logística Agro 2024",
             color: GREEN,
           },
           {
-            value: "8–12%",
+            value: "8-12%",
             label: "Custo compliance",
             desc: "Da receita em conformidade Conab + Lei 14.133",
             source: "IBGE Agro 2025",
@@ -214,8 +214,8 @@ function Slide03() {
       accent: TEAL,
       source: "TCU / Glassdoor 2026",
       lines: [
-        { tree: "├─", text: "40–60h por planejamento (equipe de 5 × 2 semanas)", bold: false },
-        { tree: "├─", text: "R$45/h × 50h = R$2.250–3.000 por safra", bold: true },
+        { tree: "├─", text: "40-60h por planejamento (equipe de 5 × 2 semanas)", bold: false },
+        { tree: "├─", text: "R$45/h × 50h = R$2.250-3.000 por safra", bold: true },
         { tree: "├─", text: "Frequência: semestral (duas safras/ano)", bold: false },
         { tree: "└─", text: "Erro de yield → perda R$500k+ em vendas não planejadas", bold: true },
       ],
@@ -226,10 +226,10 @@ function Slide03() {
       accent: GREEN,
       source: "Catho / estimativa de mercado",
       lines: [
-        { tree: "├─", text: "20–30h por proposta (vendas + jurídico)", bold: false },
+        { tree: "├─", text: "20-30h por proposta (vendas + jurídico)", bold: false },
         { tree: "├─", text: "R$60/h × 25h = R$1.500 por proposta", bold: true },
-        { tree: "├─", text: "10–20 propostas/mês = custo anual R$144k–432k", bold: true },
-        { tree: "└─", text: "Proposta perdida por atraso = R$1–5M valor médio de contrato", bold: false },
+        { tree: "├─", text: "10-20 propostas/mês = custo anual R$144k-432k", bold: true },
+        { tree: "└─", text: "Proposta perdida por atraso = R$1-5M valor médio de contrato", bold: false },
       ],
     },
     {
@@ -238,9 +238,9 @@ function Slide03() {
       accent: AMBER,
       source: "Lei 10.925/2004 / Conab",
       lines: [
-        { tree: "├─", text: "15–25h por remessa (logístico sênior, R$50/h)", bold: false },
+        { tree: "├─", text: "15-25h por remessa (logístico sênior, R$50/h)", bold: false },
         { tree: "├─", text: "R$50/h × 20h = R$1.000 por remessa", bold: true },
-        { tree: "├─", text: "50–100 remessas/ano = R$37k–125k em custo anual", bold: true },
+        { tree: "├─", text: "50-100 remessas/ano = R$37k-125k em custo anual", bold: true },
         { tree: "└─", text: "Multa Conab por não conformidade: R$10k+ por ocorrência", bold: false },
       ],
     },
@@ -250,8 +250,8 @@ function Slide03() {
     <div className="flex flex-col gap-5 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         Analistas agro custam{" "}
-        <span className="text-white font-medium">R$45–60/h (Glassdoor 2026)</span>. Cada hora em
-        burocracia manual é margem que não volta — e no agro, cada semana conta.
+        <span className="text-white font-medium">R$45-60/h (Glassdoor 2026)</span>. Cada hora em
+        burocracia manual é margem que não volta - e no agro, cada semana conta.
       </p>
 
       <div className="space-y-3">
@@ -433,26 +433,26 @@ function Slide05() {
       color: TEAL,
     },
     {
-      label: "2. Redução custo de elaboração de propostas (–80% tempo)",
+      label: "2. Redução custo de elaboração de propostas (-80% tempo)",
       math: "200 propostas × R$1.500 × 80% economia",
       result: "+R$240k",
       color: TEAL,
     },
     {
       label: "3. Compliance logístico e frete (validador Conab + roteirização)",
-      math: "R$80k (validador Conab –70% tempo) + R$150k (frete –20% custo)",
+      math: "R$80k (validador Conab -70% tempo) + R$150k (frete -20% custo)",
       result: "+R$230k",
       color: GREEN,
     },
     {
       label: "4. Receita adicional por melhor planejamento de yield (+5pp)",
-      math: "R$120M receita × 5% em contratos antecipados e produção não desperdiçada — impacto em RECEITA",
+      math: "R$120M receita × 5% em contratos antecipados e produção não desperdiçada - impacto em RECEITA",
       result: "+R$6M",
       color: AMBER,
     },
     {
-      label: "5. Redução de custos operacionais de safra — planejamento e insumos",
-      math: "R$250k (horas analista –50%, 2 safras/ano) + R$300k (insumos –15%) — impacto em CUSTO, independente da alavanca 4",
+      label: "5. Redução de custos operacionais de safra - planejamento e insumos",
+      math: "R$250k (horas analista -50%, 2 safras/ano) + R$300k (insumos -15%) - impacto em CUSTO, independente da alavanca 4",
       result: "+R$550k",
       color: GREEN,
     },
@@ -471,7 +471,7 @@ function Slide05() {
             <span className="text-white font-medium">R$120M receita estimada</span>
           </p>
           <p className="text-gray-600 text-xs mt-1">
-            Custo analista: R$45–60/h <Source label="Glassdoor 2026" /> · Volume e conversão: <Source label="CNA / estimativa de mercado" />
+            Custo analista: R$45-60/h <Source label="Glassdoor 2026" /> · Volume e conversão: <Source label="CNA / estimativa de mercado" />
           </p>
         </div>
 
@@ -557,13 +557,13 @@ function Slide06() {
     {
       number: "02",
       title: "Sucesso atrelado a resultado",
-      desc: "Parte do nosso honorário é vinculada a resultado mensurável — economia real ou receita adicional gerada. Se não entregar, vocês não pagam a parcela de sucesso.",
+      desc: "Parte do nosso honorário é vinculada a resultado mensurável - economia real ou receita adicional gerada. Se não entregar, vocês não pagam a parcela de sucesso.",
       color: GREEN,
     },
     {
       number: "03",
       title: "Co-criação com o time de campo",
-      desc: "Cada solução é construída com as equipes da Matrisoja — não para elas. O piloto é testado na operação real antes de qualquer escala.",
+      desc: "Cada solução é construída com as equipes da Matrisoja - não para elas. O piloto é testado na operação real antes de qualquer escala.",
       color: AMBER,
     },
   ];
@@ -572,7 +572,7 @@ function Slide06() {
     <div className="flex flex-col gap-6 md:min-h-100">
       <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
         A safra 2026/27 começa em 3 meses. Tradings globais como Cargill e ADM já usam IA para yield e
-        pricing — <span className="text-white">quem fica manual perde margem por padrão.</span>
+        pricing - <span className="text-white">quem fica manual perde margem por padrão.</span>
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -603,7 +603,7 @@ function Slide06() {
         <div>
           <p className="text-white text-sm font-medium mb-1">Próximo passo</p>
           <p className="text-gray-400 text-xs leading-relaxed max-w-md">
-            Uma conversa de 45 minutos com o time comercial e operacional da Matrisoja. Sem apresentação genérica —
+            Uma conversa de 45 minutos com o time comercial e operacional da Matrisoja. Sem apresentação genérica -
             só dados reais e 1 caso de uso para testar ainda esta semana.
           </p>
         </div>
@@ -662,7 +662,7 @@ const [animating, setAnimating] = useState(false);
             Onde a IA gera valor real<br />no agronegócio da soja
           </h2>
           <p className="text-gray-500 text-sm max-w-xl leading-relaxed">
-            Análise personalizada para a Matrisoja Agroindustrial — processos, custos, oportunidades e impacto
+            Análise personalizada para a Matrisoja Agroindustrial - processos, custos, oportunidades e impacto
             financeiro estimado com base em dados públicos do setor.
           </p>
         </div>
@@ -700,7 +700,7 @@ const [animating, setAnimating] = useState(false);
               <p className="text-gray-600 text-[10px] uppercase tracking-widest mb-1">
                 {current + 1} / {TOTAL}
               </p>
-              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("— ")[1]}</h3>
+              <h3 className="text-white font-medium text-lg">{SLIDE_LABELS[current].split("- ")[1]}</h3>
             </div>
             <div className="flex gap-2">
               <button

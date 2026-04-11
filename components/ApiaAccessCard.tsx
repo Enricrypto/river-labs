@@ -31,7 +31,7 @@ export default function ApiaAccessCard() {
                   Grupo Ápia × River Labs
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed max-w-md">
-                  Estudo de mercado completo e diagnóstico personalizado — material exclusivo preparado para o Grupo Ápia.
+                  Estudo de mercado completo e diagnóstico personalizado - material exclusivo preparado para o Grupo Ápia.
                 </p>
               </div>
             </div>

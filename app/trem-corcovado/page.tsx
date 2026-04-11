@@ -54,7 +54,7 @@ export default function TremCorcovadoPage() {
             Voltar ao site
           </Link>
           <span className="text-white/10">·</span>
-          <span className="text-gray-600 text-xs">Trem do Corcovado × River Labs — Acesso restrito</span>
+          <span className="text-gray-600 text-xs">Trem do Corcovado × River Labs - Acesso restrito</span>
         </div>
         <TremCorcovadoMarketStudySection />
         <DiagnosticSection steps={STEPS_TREM_CORCOVADO} accentColor="#34D399" />

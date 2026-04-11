@@ -64,7 +64,7 @@ export default function ApiaPage() {
           </Link>
           <span className='text-white/10'>·</span>
           <span className='text-gray-600 text-xs'>
-            Grupo Ápia × River Labs — Acesso restrito
+            Grupo Ápia × River Labs - Acesso restrito
           </span>
         </div>
         <MarketStudySection />

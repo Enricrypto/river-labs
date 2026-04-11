@@ -38,7 +38,7 @@ export async function POST(req: Request) {
     from: "Contato River Labs <onboarding@resend.dev>",
     to: "eibarraf@gmail.com",
     replyTo: email,
-    subject: `Contato: ${name}${company ? ` — ${company}` : ""}`,
+    subject: `Contato: ${name}${company ? ` - ${company}` : ""}`,
     html,
   });
 
