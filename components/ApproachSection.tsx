@@ -31,7 +31,7 @@ const LABELS = ["Co-criamos", "Capacitamos", "Entregamos"];
 
 export default function ApproachSection({ dict }: { dict: Dict["methodology"] }) {
   return (
-    <section className="py-6 px-4 md:px-6 w-full max-w-7xl mx-auto">
+    <section id="howwework" className="py-6 px-4 md:px-6 w-full max-w-7xl mx-auto">
       <div className="w-full bg-[#0F1D56] rounded-4xl md:rounded-5xl relative overflow-hidden">
 
         {/* Dot grid */}

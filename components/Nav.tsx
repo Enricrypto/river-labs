@@ -13,8 +13,10 @@ export default function Nav({ dict, lang }: { dict: Dict["nav"]; lang: "en" | "e
 
   const links = [
     { label: dict.services, href: "#services" },
+    { label: dict.howwework, href: "#howwework" },
+    { label: dict.team, href: "#team" },
+    { label: dict.faq, href: "#faq" },
     { label: dict.casestudies, href: `/${lang}/cases` },
-    { label: dict.contact, href: `/${lang}/contact` },
   ];
 
   function switchLang(newLang: string) {

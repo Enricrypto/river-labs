@@ -109,7 +109,7 @@ export default function TeamSection({ dict }: { dict: Dict["team"] }) {
       : "Full bio";
 
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto w-full border-t border-gray-100">
+    <section id="team" className="py-24 px-6 max-w-7xl mx-auto w-full border-t border-gray-100">
       <div className="max-w-2xl mb-12">
         <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-gray-900 mb-5 leading-snug">
           {dict.heading}

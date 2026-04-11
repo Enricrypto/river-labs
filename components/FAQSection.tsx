@@ -4,7 +4,7 @@ import type { Dict } from "@/lib/translations";
 
 export default function FAQSection({ dict }: { dict: Dict["faq"] }) {
   return (
-    <section className="py-24 px-6 max-w-3xl mx-auto w-full border-t border-gray-100">
+    <section id="faq" className="py-24 px-6 max-w-3xl mx-auto w-full border-t border-gray-100">
       <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight text-gray-900 mb-12 text-center">
         {dict.heading}
       </h2>

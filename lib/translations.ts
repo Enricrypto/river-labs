@@ -5,6 +5,9 @@ export type Dict = {
     services: string;
     casestudies: string;
     contact: string;
+    howwework: string;
+    team: string;
+    faq: string;
     cta?: string;
   };
   hero: {
@@ -112,6 +115,10 @@ const en: Dict = {
     services: "Services",
     casestudies: "Client Area",
     contact: "Contact",
+    howwework: "How We Work",
+    team: "Team",
+    faq: "FAQ",
+    cta: "Free Diagnosis",
   },
   hero: {
     heading1: "The AI system that",
@@ -372,6 +379,10 @@ const es: Dict = {
     services: "Servicios",
     casestudies: "Área de Cliente",
     contact: "Contacto",
+    howwework: "Cómo Trabajamos",
+    team: "Equipo",
+    faq: "FAQ",
+    cta: "Diagnóstico Gratuito",
   },
   hero: {
     heading1: "El sistema de IA que",
@@ -632,6 +643,9 @@ const pt: Dict = {
     services: "Serviços",
     casestudies: "Área do Cliente",
     contact: "Contato",
+    howwework: "Como Trabalhamos",
+    team: "Equipe",
+    faq: "FAQ",
     cta: "Diagnóstico Gratuito",
   },
   hero: {
@@ -852,7 +866,7 @@ const pt: Dict = {
   cta: {
     heading: "Descubra exatamente onde sua operação está deixando valor na mesa.",
     sub: "Uma conversa de 45 minutos. Mapeamos sua operação que identifica as principais áreas onde a tecnologia pode agregar valor no seu contexto.",
-    btn1: "Agende seu Diagnóstico Gratuito de IA",
+    btn1: "Agende seu Diagnóstico Gratuito",
     btn2: "Fale com Nossa Equipe",
     badge: "Sem compromisso. Sem SaaS. Sua equipe é dona do que construímos.",
   },
