@@ -7,7 +7,7 @@ export default function SocialProofBar({ dict }: { dict: Dict["proof"] }) {
 
   return (
     <div className="w-full border-b border-gray-100 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center gap-6">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
         <span className="text-xs font-mono font-medium text-gray-400 uppercase tracking-widest shrink-0">
           {dict.label}
         </span>

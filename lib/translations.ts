@@ -56,7 +56,7 @@ export type Dict = {
   team: {
     heading: string;
     sub: string;
-    members: { name: string; role: string; bio: string; image: string; objectPosition?: string }[];
+    members: { name: string; role: string; bio: string; fullBio?: string; image: string; objectPosition?: string }[];
   };
   methodology: {
     heading: string;
@@ -254,7 +254,7 @@ const en: Dict = {
     heading: "Built by operators who implement the systems themselves.",
     sub: "River Labs was founded by engineers and operators who have built automation systems across e-commerce, operations, and regulated services. We focus on one thing: turning operational data into systems teams can actually run - not prototypes that disappear after the pilot.",
     members: [
-      { name: "Leonardo Werner", role: "Culture, People & Governance", bio: "Bio coming soon.", image: "/Leonardo_PP.png" },
+      { name: "Leonardo Werner", role: "Culture, People & Governance", bio: "Bio coming soon.", fullBio: "Leonardo Werner works at the intersection of ethics, organizational culture, and corporate governance. He is a senior consultant at Principia Advisory and visiting professor at PUC-Rio and EAE Business School in Barcelona, where he teaches business ethics in undergraduate and graduate programs.\n\nHis projects have global reach and focus on helping organizations build initiatives that align culture, strategy, and emerging technologies from an ethical perspective. He is also a fellow at FreedomLab, a Dutch think tank, where he writes about the impact of digital technologies on individuals and society.\n\nBefore dedicating himself to ethics and governance consulting, he worked in corporate intelligence, compliance (KYC/AML), and reputational due diligence, with a focus on clients operating in Latin America.", image: "/Leonardo_PP.png" },
       { name: "João Guilherme Santos", role: "Solutions Architect", bio: "Bio coming soon.", image: "/Joao_PP.png", objectPosition: "center top" },
       { name: "Antonio Rapozo", role: "Developer & Tech Solutions", bio: "Bio coming soon.", image: "/Antonio_PP.png" },
       { name: "Enrique Ibarra", role: "Full Stack Engineer", bio: "Bio coming soon.", image: "/Enrique_PP.png" },
@@ -514,7 +514,7 @@ const es: Dict = {
     heading: "Construido por operadores que implementan los sistemas ellos mismos.",
     sub: "River Labs fue fundado por ingenieros y operadores que han construido sistemas de automatización en e-commerce, operaciones y servicios regulados. Nos enfocamos en una cosa: convertir datos operativos en sistemas que los equipos puedan realmente operar - no prototipos que desaparecen después del piloto.",
     members: [
-      { name: "Leonardo Werner", role: "Cultura, Personas & Gobernanza", bio: "Bio próximamente.", image: "/Leonardo_PP.png" },
+      { name: "Leonardo Werner", role: "Cultura, Personas & Gobernanza", bio: "Bio próximamente.", fullBio: "Leonardo Werner trabaja en la intersección entre ética, cultura organizacional y gobernanza corporativa. Es consultor sénior en Principia Advisory y profesor invitado de la PUC-Rio y de la EAE Business School, en Barcelona, donde imparte ética empresarial en cursos de grado y posgrado.\n\nSus proyectos tienen alcance global y se centran en ayudar a las organizaciones a construir iniciativas que alineen cultura, estrategia y tecnologías emergentes desde una perspectiva ética. También es fellow del FreedomLab, think tank holandés, donde escribe sobre el impacto de las tecnologías digitales para individuos y sociedad.\n\nAntes de dedicarse a la consultoría en ética y gobernanza, trabajó en inteligencia corporativa, compliance (KYC/AML) y due diligence reputacional, con foco en clientes con operaciones en América Latina.", image: "/Leonardo_PP.png" },
       { name: "João Guilherme Santos", role: "Arquitecto de Soluciones", bio: "Bio próximamente.", image: "/Joao_PP.png", objectPosition: "center top" },
       { name: "Antonio Rapozo", role: "Desarrollador & Soluciones Tech", bio: "Bio próximamente.", image: "/Antonio_PP.png" },
       { name: "Enrique Ibarra", role: "Full Stack Engineer", bio: "Bio próximamente.", image: "/Enrique_PP.png" },
@@ -764,7 +764,7 @@ const pt: Dict = {
     heading: "Construído por operadores que implementam os sistemas eles mesmos.",
     sub: "A River Labs foi fundada por quatro profissionais que desenvolveram para empresas globais de diferentes setores e indústrias. O foco é único: melhorar o fluxo de trabalho das pessoas por meio de soluções tecnológicas.",
     members: [
-      { name: "Leonardo Werner", role: "Cultura, Pessoas & Governança", bio: "Bio em breve.", image: "/Leonardo_PP.png" },
+      { name: "Leonardo Werner", role: "Cultura, Pessoas & Governança", bio: "Bio em breve.", fullBio: "Leonardo Werner trabalha na interseção entre ética, cultura organizacional e governança corporativa. É consultor sênior na Principia Advisory e professor convidado da PUC-Rio e da EAE Business School, em Barcelona, onde leciona ética empresarial em cursos de graduação e pós-graduação.\n\nSeus projetos têm alcance global e se concentram em ajudar organizações a construir iniciativas que alinhem cultura, estratégia e tecnologias emergentes a partir de uma perspectiva ética. É também fellow do FreedomLab, think tank holandês, onde escreve sobre os impactos das tecnologias digitais para indivíduos e sociedade.\n\nAntes de se dedicar à consultoria em ética e governança, atuou em inteligência corporativa, compliance (KYC/AML) e due diligence reputacional, com foco em clientes com operações na América Latina.", image: "/Leonardo_PP.png" },
       { name: "João Guilherme Santos", role: "Arquiteto de Soluções", bio: "Bio em breve.", image: "/Joao_PP.png", objectPosition: "center top" },
       { name: "Antonio Rapozo", role: "Desenvolvedor & Soluções Tech", bio: "Bio em breve.", image: "/Antonio_PP.png" },
       { name: "Enrique Ibarra", role: "Engenheiro Full Stack", bio: "Bio em breve.", image: "/Enrique_PP.png" },
