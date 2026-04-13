@@ -35,8 +35,8 @@ export async function POST(req: Request) {
 </html>`;
 
   const { error } = await resend.emails.send({
-    from: "Contato River Labs <onboarding@resend.dev>",
-    to: "eibarraf@gmail.com",
+    from: "Contato River Labs <contato@riverlabs-ai.com>",
+    to: "contato@riverlabs-ai.com",
     replyTo: email,
     subject: `Contato: ${name}${company ? ` - ${company}` : ""}`,
     html,
