@@ -33,13 +33,15 @@ function MemberCard({
   member,
   idx,
   bioLabel,
+  open,
+  onToggle,
 }: {
   member: Dict["team"]["members"][number];
   idx: number;
   bioLabel: string;
+  open: boolean;
+  onToggle: () => void;
 }) {
-  const [open, setOpen] = useState(false);
-
   return (
     <div
       className="relative overflow-hidden border border-indigo-100 rounded-2xl p-6 flex flex-col items-center gap-4"
@@ -69,7 +71,7 @@ function MemberCard({
       {member.fullBio && (
         <div className="relative z-10 w-full">
           <button
-            onClick={() => setOpen((v) => !v)}
+            onClick={onToggle}
             className="flex items-center gap-1 mx-auto text-xs font-mono font-medium text-indigo-500 hover:text-indigo-700 transition-colors"
           >
             {bioLabel}
@@ -100,6 +102,8 @@ function MemberCard({
 }
 
 export default function TeamSection({ dict }: { dict: Dict["team"] }) {
+  const [open, setOpen] = useState(false);
+
   // Derive bio label from first member's locale hint — fall back to English
   const bioLabel =
     dict.members[0]?.bio === "Bio em breve."
@@ -121,7 +125,7 @@ export default function TeamSection({ dict }: { dict: Dict["team"] }) {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {dict.members.map((member, idx) => (
-          <MemberCard key={idx} member={member} idx={idx} bioLabel={bioLabel} />
+          <MemberCard key={idx} member={member} idx={idx} bioLabel={bioLabel} open={open} onToggle={() => setOpen((v) => !v)} />
         ))}
       </div>
     </section>
