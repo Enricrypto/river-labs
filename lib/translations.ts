@@ -414,10 +414,6 @@ const en: Dict = {
         q: "What happens after delivery? Do we need River Labs to maintain it?",
         a: "No - and that's a core design principle of every project we take on. Every system includes full documentation and team training so your operation can maintain and evolve it independently. We don't design for dependency."
       },
-      {
-        q: "How is this different from buying an AI tool or SaaS platform?",
-        a: "Off-the-shelf AI tools are built for the average operation. Your operation isn't average - it has specific data, specific workflows, and specific constraints that generic tools don't account for. We build a system for your exact context, running in your infrastructure, with no monthly fee and no vendor to call when something breaks. Your team runs it."
-      }
     ]
   },
   cta: {
@@ -771,10 +767,6 @@ const es: Dict = {
         q: "¿Qué pasa después de la entrega? ¿Necesitamos a River Labs para mantenerlo?",
         a: "No - y ese es un principio de diseño central en cada proyecto que tomamos. Cada sistema incluye documentación completa y capacitación del equipo para que tu operación pueda mantenerlo y evolucionarlo de forma independiente. No diseñamos para la dependencia."
       },
-      {
-        q: "¿En qué se diferencia esto de comprar una herramienta de IA o plataforma SaaS?",
-        a: "Las herramientas de IA genéricas están construidas para la operación promedio. Tu operación no es promedio - tiene datos específicos, flujos específicos y restricciones específicas que las herramientas genéricas no contemplan. Construimos un sistema para tu contexto exacto, corriendo en tu infraestructura, sin tarifa mensual y sin proveedor al que llamar cuando algo falla. Tu equipo lo opera."
-      }
     ]
   },
   cta: {
