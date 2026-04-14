@@ -326,11 +326,7 @@ const en: Dict = {
     items: [
       {
         q: "What does the free AI Opportunity Diagnosis actually deliver?",
-        a: "A 45-minute conversation where we map your operation - the processes your team runs every day, the data you already generate, and where the biggest gaps are. You receive a short written report identifying the three highest-value automation opportunities in your operation, with enough detail to decide whether and how to act on them. No generic benchmarks. No follow-up pitch required.",
-      },
-      {
-        q: "Do you only work with tourism or LATAM companies?",
-        a: "No. Tourism and service operations in LATAM make up a core part of our work, but our systems are built for any operation with complex, data-generating workflows - regardless of geography. A system we built for Lumina, a fire engineering consultancy in Dubai, reduced a multi-day expert reporting workflow to under 3 hours. The common thread is operational complexity and the need for a system the team owns and runs independently.",
+        a: "After completing the questionnaire, the diagnosis is delivered to your inbox as a written report. It identifies three opportunities and action points that can improve operational flow within your area or organization.",
       },
       {
         q: "Do we need to replace our current systems?",
@@ -590,11 +586,7 @@ const es: Dict = {
     items: [
       {
         q: "¿Qué entrega concretamente el Diagnóstico Gratuito de IA?",
-        a: "Una conversación de 45 minutos donde mapeamos tu operación - los procesos que tu equipo realiza día a día, los datos que ya generas y dónde están las brechas más grandes. Recibes un informe escrito identificando las tres oportunidades de automatización de mayor valor en tu operación, con suficiente detalle para decidir si y cómo actuar. Sin benchmarks genéricos. Sin pitch de seguimiento.",
-      },
-      {
-        q: "¿Solo trabajan con empresas de turismo o de LATAM?",
-        a: "No. El turismo y las operaciones de servicio en LATAM son una parte central de nuestro trabajo, pero nuestros sistemas están construidos para cualquier operación con flujos complejos que generan datos - independientemente de la geografía. Un sistema que construimos para Lumina, una consultora de ingeniería contra incendios en Dubai, redujo un flujo de trabajo de varios días a menos de 3 horas. El hilo conductor es la complejidad operativa y la necesidad de un sistema que el equipo posea y opere de forma independiente.",
+        a: "Después de responder el cuestionario, el diagnóstico se envía a tu bandeja de entrada en formato de informe. Identifica tres oportunidades y puntos de acción que pueden mejorar el flujo operativo dentro de tu área u organización.",
       },
       {
         q: "¿Necesitamos reemplazar nuestros sistemas actuales?",
@@ -843,11 +835,7 @@ const pt: Dict = {
     items: [
       {
         q: "O que o Diagnóstico Gratuito de IA entrega concretamente?",
-        a: "Uma conversa de 45 minutos onde mapeamos sua operação - os processos que sua equipe realiza dia a dia, os dados que você já gera e onde estão as maiores lacunas. Você recebe um relatório escrito identificando as três oportunidades de automação de maior valor na sua operação, com detalhes suficientes para decidir se e como agir. Sem benchmarks genéricos. Sem pitch de follow-up.",
-      },
-      {
-        q: "Vocês só trabalham com empresas de turismo ou da LATAM?",
-        a: "Não. Turismo e operações de serviço na LATAM são uma parte central do nosso trabalho, mas nossos sistemas são construídos para qualquer operação com fluxos complexos que geram dados - independentemente da geografia. Um sistema que construímos para a Lumina, uma consultoria de engenharia de incêndio em Dubai, reduziu um fluxo de trabalho de vários dias para menos de 3 horas. O denominador comum é a complexidade operacional e a necessidade de um sistema que a equipe possua e opere de forma independente.",
+        a: "Após responder ao questionário, o diagnóstico é enviado para a sua caixa de e-mail em formato de relatório. Ele identifica três oportunidades e pontos de ação que podem melhorar o fluxo operacional dentro da sua área ou organização.",
       },
       {
         q: "Precisamos substituir nossos sistemas atuais?",
