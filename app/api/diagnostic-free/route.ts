@@ -91,8 +91,8 @@ export async function POST(req: Request) {
   const empresa = answers["empresa_nome"] ?? "sem empresa";
 
   const { error } = await resend.emails.send({
-    from: "Diagnóstico River Labs <onboarding@resend.dev>",
-    to: "eibarraf@gmail.com",
+    from: "Diagnóstico River Labs <contato@riverlabs-ai.com>",
+    to: "contato@riverlabs-ai.com",
     subject: `[Diagnóstico] ${nome} - ${empresa}`,
     html,
   });
