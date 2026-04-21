@@ -1,7 +1,15 @@
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: "smtp.office365.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.MICROSOFT_USER,
+    pass: process.env.MICROSOFT_PASSWORD,
+  },
+});
 
 export async function POST(req: Request) {
   const { name, email, company, message } = await req.json();
@@ -34,17 +42,13 @@ export async function POST(req: Request) {
 </body>
 </html>`;
 
-  const { error } = await resend.emails.send({
-    from: "Contato River Labs <contato@riverlabs-ai.com>",
+  await transporter.sendMail({
+    from: `"Contato River Labs" <${process.env.MICROSOFT_USER}>`,
     to: "contato@riverlabs-ai.com",
     replyTo: email,
     subject: `Contato: ${name}${company ? ` - ${company}` : ""}`,
     html,
   });
-
-  if (error) {
-    return NextResponse.json({ error }, { status: 500 });
-  }
 
   return NextResponse.json({ ok: true });
 }
