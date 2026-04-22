@@ -203,10 +203,6 @@ const en: Dict = {
         title: "When the project ends, the system stops — because the organization never changed around it.",
         desc: "Most AI projects fail after the proof of concept — not because the technology broke, but because leaders kept operating the same way. The vendor built the tool. Nobody redesigned the decisions the tool was supposed to inform. When the project closed, the system went dark. You were back to spreadsheets, with nothing to show for the investment."
       },
-      {
-        title: "Your AI pilot worked. Your operation didn't change.",
-        desc: "The highest-return AI use cases aren't faster emails or summarized documents. They're underwriting redesigned end-to-end. Hiring to onboarding handled by agents that coordinate the process — not assist humans doing it. Companies that capture real value aren't automating tasks inside existing workflows. They're redesigning the workflow around AI doing the work. Most pilots skip this step entirely."
-      }
     ]
   },
   differentiation: {
@@ -560,10 +556,6 @@ const es: Dict = {
         title: "Cuando el proyecto termina, el sistema se apaga — porque la organización nunca cambió a su alrededor.",
         desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto — no porque la tecnología falló, sino porque los líderes siguieron operando de la misma manera. El proveedor construyó la herramienta. Nadie rediseñó las decisiones que la herramienta debía informar. Cuando el proyecto cerró, el sistema se apagó. Volviste a las planillas sin nada que mostrar por la inversión."
       },
-      {
-        title: "Tu piloto de IA funcionó. Tu operación no cambió.",
-        desc: "Los casos de uso de mayor retorno no son emails más rápidos ni documentos resumidos. Son procesos de contratación gestionados por agentes de punta a punta. Operaciones de compliance rediseñadas en vez de solo monitoreadas. Las empresas que capturan valor real no están automatizando tareas dentro de flujos existentes — están rediseñando el flujo alrededor de la IA realizando el trabajo. La mayoría de los pilotos se salta este paso por completo."
-      }
     ]
   },
   differentiation: {
@@ -920,10 +912,6 @@ const pt: Dict = {
         title: "Quando o projeto termina, o sistema para — porque a organização nunca mudou ao redor dele.",
         desc: "A maioria dos projetos de IA falha depois da prova de conceito — não porque a tecnologia quebrou, mas porque os líderes continuaram operando da mesma forma. O fornecedor construiu a ferramenta. Ninguém redesenhou as decisões que ela deveria informar. Quando o projeto fechou, o sistema apagou. Você voltou para as planilhas sem nada para mostrar pelo investimento."
       },
-      {
-        title: "Seu piloto de IA funcionou. Sua operação não mudou.",
-        desc: "Os casos de uso de maior retorno não são e-mails mais rápidos ou documentos resumidos. São processos de contratação gerenciados por agentes de ponta a ponta. Operações de compliance redesenhadas em vez de apenas monitoradas. Empresas que capturam valor real não estão automatizando tarefas dentro de fluxos existentes — estão redesenhando o fluxo ao redor da IA realizando o trabalho. A maioria dos pilotos pula essa etapa inteiramente."
-      }
     ]
   },
   differentiation: {
