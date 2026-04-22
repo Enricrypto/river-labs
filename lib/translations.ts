@@ -131,7 +131,7 @@ const en: Dict = {
     heading1: "The AI system that",
     headingItalic: "replaces the spreadsheets",
     heading2: "running your operation.",
-    sub: "We map your operation, find where work is structured around humans doing the steps, and build the system that redesigns it — running inside your infrastructure, owned by your team.",
+    sub: "We map your operation, find where work is structured around humans doing the steps, and build the system that redesigns it - running inside your infrastructure, owned by your team.",
     cta1: "Get a Free AI Opportunity Diagnosis",
     cta2: "Learn How We Work",
     badges: ["We Co-create", "We Train", "You Own the System", "Workflow Redesigned. Not Just Automated."]
@@ -148,10 +148,10 @@ const en: Dict = {
   },
   authority: {
     heading:
-      "We know what breaks in service operations — and why most AI projects fix the wrong thing.",
+      "We know what breaks in service operations - and why most AI projects fix the wrong thing.",
     paragraphs: [
       "Most service operations run on data they never fully use. Demand signals sit in ticketing exports. Maintenance risk lives in equipment logs. Research and reporting workflows eat days of expert time that could be spent on higher-value work. The data and processes are there - the system to act on them isn't.",
-      "The mistake isn't implementing AI. It's implementing AI inside workflows designed for humans to do the steps. We design for the structural gap — where work needs to be rebuilt, not just automated.",
+      "The mistake isn't implementing AI. It's implementing AI inside workflows designed for humans to do the steps. We design for the structural gap - where work needs to be rebuilt, not just automated.",
       "A document research and report generation system we deployed at Lumina, a fire engineering consultancy in Dubai, reduced their expert reporting workflow from 4-5 days per case to under 3 hours. This is the kind of operational impact we design for: specific to your operation, running in your infrastructure, fully owned by your team. Not a generic tool. Not a SaaS subscription. The system itself."
     ]
   },
@@ -189,7 +189,7 @@ const en: Dict = {
   },
   problems: {
     heading: "AI doesn't fail. The way work is designed around it does.",
-    sub: "The problem isn't the technology. It's that most companies are automating the wrong thing — tasks inside broken workflows, instead of redesigning the workflows themselves.",
+    sub: "The problem isn't the technology. It's that most companies are automating the wrong thing - tasks inside broken workflows, instead of redesigning the workflows themselves.",
     items: [
       {
         title: "The signals exist. The system to act on them doesn't.",
@@ -200,8 +200,8 @@ const en: Dict = {
         desc: "In most service operations, the highest-cost bottleneck isn't strategy - it's assembly. Documents gathered from multiple sources. Reports written by hand from research that took days to organize. Approvals that require someone to manually pull together information that already exists in the system."
       },
       {
-        title: "When the project ends, the system stops — because the organization never changed around it.",
-        desc: "Most AI projects fail after the proof of concept — not because the technology broke, but because leaders kept operating the same way. The vendor built the tool. Nobody redesigned the decisions the tool was supposed to inform. When the project closed, the system went dark. You were back to spreadsheets, with nothing to show for the investment."
+        title: "When the project ends, the system stops - because the organization never changed around it.",
+        desc: "Most AI projects fail after the proof of concept - not because the technology broke, but because leaders kept operating the same way. The vendor built the tool. Nobody redesigned the decisions the tool was supposed to inform. When the project closed, the system went dark. You were back to spreadsheets, with nothing to show for the investment."
       },
     ]
   },
@@ -223,15 +223,15 @@ const en: Dict = {
     items: [
       {
         title: "Workflow Redesign Diagnosis",
-        desc: "We map your operation to find where work is still built around humans coordinating the steps. You get a prioritized list of where redesigning the workflow around AI — not just automating tasks inside it — creates the highest measurable impact."
+        desc: "We map your operation to find where work is still built around humans coordinating the steps. You get a prioritized list of where redesigning the workflow around AI - not just automating tasks inside it - creates the highest measurable impact."
       },
       {
         title: "Custom AI Systems",
         desc: "We design and build the system for your exact context - demand forecasting, document research automation, revenue analytics, predictive maintenance, compliance reporting, marketing triggers, or anything else your operation needs."
       },
       {
-        title: "Capability Transfer — Your Team Runs It",
-        desc: "Every project ends with your team able to operate, modify, and evolve what was built — without us. Not a training session. A transfer of how to think about, maintain, and grow the system as your operation changes."
+        title: "Capability Transfer - Your Team Runs It",
+        desc: "Every project ends with your team able to operate, modify, and evolve what was built - without us. Not a training session. A transfer of how to think about, maintain, and grow the system as your operation changes."
       }
     ]
   },
@@ -293,7 +293,7 @@ const en: Dict = {
         name: "João Guilherme Santos",
         role: "Solutions Architect",
         bio: "Bio coming soon.",
-        fullBio: "João Guilherme is a mechanical-aeronautical engineer graduated from the Instituto Tecnológico de Aeronáutica (ITA). During his studies, he developed a strong foundation in analytical reasoning, complex problem-solving, and systems thinking — competencies he now applies directly to the design of technology solutions. Complementing his technical background, he holds a postgraduate degree in e-commerce and digital business, which allows him to connect engineering fundamentals with modern digital business strategies.\n\nWith over 5 years of experience at VTEX, João began his career as a trainee and, for the past 4 years, has worked as a Solution Engineer, leading the design of solution architectures for e-commerce operations. Based in Barcelona for the past two years, his work is strongly focused on enterprise clients across Europe, where he works directly with companies from different industries and levels of complexity. Throughout this period, he has participated in strategic architecture definition processes for large organizations, including global groups such as City Football Group, contributing to the development of scalable, integrated solutions aligned with business objectives.\n\nHis experience combines technical depth with a practical, results-oriented perspective, enabling him to translate complex challenges into robust and viable architectures. João works at the intersection of technology and business, supporting companies in defining digital strategies, integrating systems, and evolving their commerce platforms — always with a focus on performance, scalability, and user experience.",
+        fullBio: "João Guilherme is a mechanical-aeronautical engineer graduated from the Instituto Tecnológico de Aeronáutica (ITA). During his studies, he developed a strong foundation in analytical reasoning, complex problem-solving, and systems thinking - competencies he now applies directly to the design of technology solutions. Complementing his technical background, he holds a postgraduate degree in e-commerce and digital business, which allows him to connect engineering fundamentals with modern digital business strategies.\n\nWith over 5 years of experience at VTEX, João began his career as a trainee and, for the past 4 years, has worked as a Solution Engineer, leading the design of solution architectures for e-commerce operations. Based in Barcelona for the past two years, his work is strongly focused on enterprise clients across Europe, where he works directly with companies from different industries and levels of complexity. Throughout this period, he has participated in strategic architecture definition processes for large organizations, including global groups such as City Football Group, contributing to the development of scalable, integrated solutions aligned with business objectives.\n\nHis experience combines technical depth with a practical, results-oriented perspective, enabling him to translate complex challenges into robust and viable architectures. João works at the intersection of technology and business, supporting companies in defining digital strategies, integrating systems, and evolving their commerce platforms - always with a focus on performance, scalability, and user experience.",
         image: "/Joao_PP.png",
         objectPosition: "center top"
       },
@@ -302,7 +302,7 @@ const en: Dict = {
         role: "Developer & Tech Solutions",
         bio: "Bio coming soon.",
         fullBio:
-          "Antonio Rapozo is a senior full-stack engineer with over 8 years of experience building mission-critical systems for the government, transportation, and energy sectors. Over the past 4 years, he has developed bridge inspection and infrastructure asset management platforms used by more than 15 state Departments of Transportation in the US, processing data related to over $500 million in annual investments.\n\nHe currently works on a browser security platform for managed service providers (MSPs), focused on protection against emerging AI threats, phishing, malware, and DNS filtering. His work transforms the browser — today the most vulnerable access point in organizations — into a secure, manageable workspace with advanced security controls, credential analysis, and productivity monitoring.\n\nHis technical expertise spans Vue.js, React, C#, .NET, TypeScript, and AWS, with dual AWS Solutions Architect certification. He integrates AI into production systems using OpenAI, LangChain, and Semantic Kernel, and is the creator of MemoryKit — an open-source .NET library implementing a neuroscience-inspired memory architecture for AI applications.\n\nWith a background in mechanical engineering from CEFET/RJ, a double-degree program in Germany (Deggendorf/IIK Düsseldorf), and a Machine Learning certification from Stanford, Antonio brings a rare combination of technical depth, architectural vision, and experience in complex regulatory environments. He is Brazilian, multilingual (Portuguese, English, German, Spanish), and has worked remotely with distributed teams since 2020.\n\nHis focus is on building scalable solutions that connect high-level software engineering with real business needs — from American government infrastructure to the next generation of intelligent agents.",
+          "Antonio Rapozo is a senior full-stack engineer with over 8 years of experience building mission-critical systems for the government, transportation, and energy sectors. Over the past 4 years, he has developed bridge inspection and infrastructure asset management platforms used by more than 15 state Departments of Transportation in the US, processing data related to over $500 million in annual investments.\n\nHe currently works on a browser security platform for managed service providers (MSPs), focused on protection against emerging AI threats, phishing, malware, and DNS filtering. His work transforms the browser - today the most vulnerable access point in organizations - into a secure, manageable workspace with advanced security controls, credential analysis, and productivity monitoring.\n\nHis technical expertise spans Vue.js, React, C#, .NET, TypeScript, and AWS, with dual AWS Solutions Architect certification. He integrates AI into production systems using OpenAI, LangChain, and Semantic Kernel, and is the creator of MemoryKit - an open-source .NET library implementing a neuroscience-inspired memory architecture for AI applications.\n\nWith a background in mechanical engineering from CEFET/RJ, a double-degree program in Germany (Deggendorf/IIK Düsseldorf), and a Machine Learning certification from Stanford, Antonio brings a rare combination of technical depth, architectural vision, and experience in complex regulatory environments. He is Brazilian, multilingual (Portuguese, English, German, Spanish), and has worked remotely with distributed teams since 2020.\n\nHis focus is on building scalable solutions that connect high-level software engineering with real business needs - from American government infrastructure to the next generation of intelligent agents.",
         image: "/Antonio_PP.png"
       },
       {
@@ -310,7 +310,7 @@ const en: Dict = {
         role: "Full Stack Engineer",
         bio: "Bio coming soon.",
         fullBio:
-          "Enrique Ibarra works at the intersection of artificial intelligence and digital development, with a focus on turning technology into practical solutions for businesses. He builds and implements systems that improve processes, reduce costs, and increase efficiency through automation and the intelligent use of data.\n\nHis projects have international reach, including initiatives in Europe, Latin America, and the Middle East, and focus on applying AI strategically — helping organizations adopt new technologies without unnecessary complexity. His approach combines structured thinking with a practical mindset, always looking for the right questions and solutions that actually work day-to-day across different industries.\n\nThroughout his career, he has also developed expertise in Web3 and application development, working with digital products and new forms of technological infrastructure. His focus is on building useful, well-designed solutions aligned with real business needs.",
+          "Enrique Ibarra works at the intersection of artificial intelligence and digital development, with a focus on turning technology into practical solutions for businesses. He builds and implements systems that improve processes, reduce costs, and increase efficiency through automation and the intelligent use of data.\n\nHis projects have international reach, including initiatives in Europe, Latin America, and the Middle East, and focus on applying AI strategically - helping organizations adopt new technologies without unnecessary complexity. His approach combines structured thinking with a practical mindset, always looking for the right questions and solutions that actually work day-to-day across different industries.\n\nThroughout his career, he has also developed expertise in Web3 and application development, working with digital products and new forms of technological infrastructure. His focus is on building useful, well-designed solutions aligned with real business needs.",
         image: "/Enrique_PP.png"
       }
     ]
@@ -417,7 +417,7 @@ const en: Dict = {
       },
       {
         q: "How do you handle AI errors and quality control?",
-        a: "Every system we build includes validation layers specific to your context — not generic guardrails. When the system flags a decision for human review, your team reviews it. Confidence thresholds are set with your team during the pilot. We design for appropriate human oversight, not full automation of decisions that require judgment."
+        a: "Every system we build includes validation layers specific to your context - not generic guardrails. When the system flags a decision for human review, your team reviews it. Confidence thresholds are set with your team during the pilot. We design for appropriate human oversight, not full automation of decisions that require judgment."
       },
     ]
   },
@@ -483,8 +483,8 @@ const es: Dict = {
   hero: {
     heading1: "El sistema de IA que",
     headingItalic: "reemplaza cómo opera tu negocio",
-    heading2: "— no solo cómo procesa tareas.",
-    sub: "Mapeamos tu operación, identificamos dónde el trabajo está estructurado de forma incorrecta, y construimos el sistema que lo rediseña — corriendo dentro de tu infraestructura, en propiedad de tu equipo.",
+    heading2: "- no solo cómo procesa tareas.",
+    sub: "Mapeamos tu operación, identificamos dónde el trabajo está estructurado de forma incorrecta, y construimos el sistema que lo rediseña - corriendo dentro de tu infraestructura, en propiedad de tu equipo.",
     cta1: "Diagnóstico Gratuito de IA",
     cta2: "Conoce cómo trabajamos",
     badges: ["Co-creamos", "Capacitamos", "Tú eres dueño del sistema", "Flujo rediseñado. No solo automatizado."]
@@ -501,10 +501,10 @@ const es: Dict = {
   },
   authority: {
     heading:
-      "Sabemos qué falla en las operaciones de servicio — y por qué la mayoría de los proyectos de IA resuelven el problema equivocado.",
+      "Sabemos qué falla en las operaciones de servicio - y por qué la mayoría de los proyectos de IA resuelven el problema equivocado.",
     paragraphs: [
       "La mayoría de las operaciones de servicio trabajan con datos que nunca aprovechan del todo. Las señales de demanda quedan en exportaciones de boletería. El riesgo de mantenimiento vive en los registros de equipos. Los flujos de investigación y reportes consumen días de tiempo de expertos que podrían dedicarse a trabajo de mayor valor. Los datos y los procesos están ahí - el sistema para actuar sobre ellos, no.",
-      "El error no es implementar IA. Es implementar IA dentro de flujos de trabajo diseñados para que los humanos hagan los pasos. Diseñamos para la brecha estructural — donde el trabajo necesita ser reconstruido, no solo automatizado.",
+      "El error no es implementar IA. Es implementar IA dentro de flujos de trabajo diseñados para que los humanos hagan los pasos. Diseñamos para la brecha estructural - donde el trabajo necesita ser reconstruido, no solo automatizado.",
       "Un sistema de investigación documental y generación de informes que implementamos en Lumina, una consultora de ingeniería contra incendios en Dubai, redujo su flujo de trabajo de informes especializados de 4-5 días por caso a menos de 3 horas. Este es el tipo de impacto operativo que diseñamos: específico a tu operación, corriendo en tu infraestructura, completamente en propiedad de tu equipo. No una herramienta genérica. No una suscripción SaaS. El sistema mismo."
     ]
   },
@@ -542,7 +542,7 @@ const es: Dict = {
   },
   problems: {
     heading: "La IA no falla. La forma en que el trabajo está diseñado a su alrededor sí.",
-    sub: "El problema no es la tecnología. Es que la mayoría de las empresas está automatizando lo incorrecto — tareas dentro de flujos de trabajo rotos, en vez de rediseñar los flujos mismos.",
+    sub: "El problema no es la tecnología. Es que la mayoría de las empresas está automatizando lo incorrecto - tareas dentro de flujos de trabajo rotos, en vez de rediseñar los flujos mismos.",
     items: [
       {
         title: "Las señales existen. El sistema para actuar sobre ellas, no.",
@@ -553,8 +553,8 @@ const es: Dict = {
         desc: "En la mayoría de las operaciones de servicio, el cuello de botella más costoso no es la estrategia - es el ensamblaje. Documentos reunidos de múltiples fuentes. Reportes escritos a mano a partir de investigaciones que tardaron días en organizarse. Aprobaciones que requieren que alguien junte manualmente información que ya existe en el sistema."
       },
       {
-        title: "Cuando el proyecto termina, el sistema se apaga — porque la organización nunca cambió a su alrededor.",
-        desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto — no porque la tecnología falló, sino porque los líderes siguieron operando de la misma manera. El proveedor construyó la herramienta. Nadie rediseñó las decisiones que la herramienta debía informar. Cuando el proyecto cerró, el sistema se apagó. Volviste a las planillas sin nada que mostrar por la inversión."
+        title: "Cuando el proyecto termina, el sistema se apaga - porque la organización nunca cambió a su alrededor.",
+        desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto - no porque la tecnología falló, sino porque los líderes siguieron operando de la misma manera. El proveedor construyó la herramienta. Nadie rediseñó las decisiones que la herramienta debía informar. Cuando el proyecto cerró, el sistema se apagó. Volviste a las planillas sin nada que mostrar por la inversión."
       },
     ]
   },
@@ -577,15 +577,15 @@ const es: Dict = {
     items: [
       {
         title: "Diagnóstico de Rediseño de Flujo",
-        desc: "Mapeamos tu operación para encontrar dónde el trabajo todavía está construido alrededor de humanos coordinando los pasos. Obtienes una lista priorizada de dónde rediseñar el flujo alrededor de la IA — no solo automatizar tareas dentro de él — crea el mayor impacto medible."
+        desc: "Mapeamos tu operación para encontrar dónde el trabajo todavía está construido alrededor de humanos coordinando los pasos. Obtienes una lista priorizada de dónde rediseñar el flujo alrededor de la IA - no solo automatizar tareas dentro de él - crea el mayor impacto medible."
       },
       {
         title: "Sistemas de IA Personalizados",
         desc: "Diseñamos y construimos el sistema para tu contexto exacto - forecasting de demanda, automatización de investigación documental, analítica de ingresos, mantenimiento predictivo, reportes de compliance, disparadores de marketing, o lo que tu operación necesite."
       },
       {
-        title: "Transferencia de Capacidad — Tu Equipo Lo Opera",
-        desc: "Todo proyecto termina con tu equipo capaz de operar, modificar y evolucionar lo construido — sin nosotros. No una capacitación. Una transferencia de cómo pensar, mantener y hacer crecer el sistema a medida que tu operación cambia."
+        title: "Transferencia de Capacidad - Tu Equipo Lo Opera",
+        desc: "Todo proyecto termina con tu equipo capaz de operar, modificar y evolucionar lo construido - sin nosotros. No una capacitación. Una transferencia de cómo pensar, mantener y hacer crecer el sistema a medida que tu operación cambia."
       }
     ]
   },
@@ -648,7 +648,7 @@ const es: Dict = {
         name: "João Guilherme Santos",
         role: "Arquitecto de Soluciones",
         bio: "Bio próximamente.",
-        fullBio: "João Guilherme es ingeniero mecánico-aeronáutico egresado del Instituto Tecnológico de Aeronáutica (ITA). Durante su formación, desarrolló una base sólida en razonamiento analítico, resolución de problemas complejos y pensamiento sistémico — competencias que hoy aplica directamente en la concepción de soluciones tecnológicas. Complementando su formación técnica, cuenta con un posgrado en e-commerce y negocios digitales, lo que le permite conectar fundamentos de ingeniería con estrategias modernas de negocios digitales.\n\nCon más de 5 años de experiencia en VTEX, João inició su trayectoria como trainee y, hace 4 años, se desempeña como Solution Engineer, liderando el diseño de arquitecturas de solución para operaciones de e-commerce. Radicado en Barcelona desde hace dos años, su trabajo está fuertemente orientado a clientes enterprise de Europa, donde trabaja directamente con empresas de distintas industrias y niveles de complejidad. A lo largo de este período, participó en procesos estratégicos de definición de arquitectura para grandes organizaciones, incluidos grupos globales como City Football Group, contribuyendo a la construcción de soluciones escalables, integradas y alineadas a los objetivos de negocio.\n\nSu experiencia combina profundidad técnica con una visión práctica y orientada a resultados, permitiéndole traducir desafíos complejos en arquitecturas robustas y viables. João actúa en la intersección entre tecnología y negocio, apoyando a empresas en la definición de estrategias digitales, integración de sistemas y evolución de sus plataformas de comercio, siempre con foco en performance, escalabilidad y experiencia del usuario.",
+        fullBio: "João Guilherme es ingeniero mecánico-aeronáutico egresado del Instituto Tecnológico de Aeronáutica (ITA). Durante su formación, desarrolló una base sólida en razonamiento analítico, resolución de problemas complejos y pensamiento sistémico - competencias que hoy aplica directamente en la concepción de soluciones tecnológicas. Complementando su formación técnica, cuenta con un posgrado en e-commerce y negocios digitales, lo que le permite conectar fundamentos de ingeniería con estrategias modernas de negocios digitales.\n\nCon más de 5 años de experiencia en VTEX, João inició su trayectoria como trainee y, hace 4 años, se desempeña como Solution Engineer, liderando el diseño de arquitecturas de solución para operaciones de e-commerce. Radicado en Barcelona desde hace dos años, su trabajo está fuertemente orientado a clientes enterprise de Europa, donde trabaja directamente con empresas de distintas industrias y niveles de complejidad. A lo largo de este período, participó en procesos estratégicos de definición de arquitectura para grandes organizaciones, incluidos grupos globales como City Football Group, contribuyendo a la construcción de soluciones escalables, integradas y alineadas a los objetivos de negocio.\n\nSu experiencia combina profundidad técnica con una visión práctica y orientada a resultados, permitiéndole traducir desafíos complejos en arquitecturas robustas y viables. João actúa en la intersección entre tecnología y negocio, apoyando a empresas en la definición de estrategias digitales, integración de sistemas y evolución de sus plataformas de comercio, siempre con foco en performance, escalabilidad y experiencia del usuario.",
         image: "/Joao_PP.png",
         objectPosition: "center top"
       },
@@ -657,7 +657,7 @@ const es: Dict = {
         role: "Desarrollador & Soluciones Tech",
         bio: "Bio próximamente.",
         fullBio:
-          "Antonio Rapozo es ingeniero full-stack sénior con más de 8 años de experiencia construyendo sistemas de misión crítica para los sectores de gobierno, transporte y energía. En los últimos 4 años, desarrolló plataformas de inspección de puentes y gestión de activos de infraestructura utilizadas por más de 15 Departamentos de Transporte estatales en EE. UU., procesando datos relacionados con más de 500 millones de dólares en inversiones anuales.\n\nActualmente trabaja en una plataforma de seguridad de navegadores para proveedores de servicios gestionados (MSPs), con foco en la protección contra amenazas emergentes de IA, phishing, malware y filtrado DNS. Su trabajo transforma el navegador — hoy el punto de acceso más vulnerable en las organizaciones — en un workspace seguro y gestionable, con controles avanzados de seguridad, análisis de credenciales y monitoreo de productividad.\n\nSu expertise técnico abarca Vue.js, React, C#, .NET, TypeScript y AWS, con doble certificación AWS Solutions Architect. Integra IA en sistemas de producción con OpenAI, LangChain y Semantic Kernel, y es creador de MemoryKit — biblioteca open-source en .NET que implementa una arquitectura de memoria inspirada en neurociencia para aplicaciones de IA.\n\nCon formación en ingeniería mecánica por el CEFET/RJ, programa de doble titulación en Alemania (Deggendorf/IIK Düsseldorf) y certificación en Machine Learning por Stanford, Antonio aporta una combinación poco común de profundidad técnica, visión arquitectónica y experiencia en entornos regulatorios complejos. Es brasileño, multilingüe (portugués, inglés, alemán, español) y trabaja de forma remota con equipos distribuidos desde 2020.\n\nSu foco está en construir soluciones escalables que conecten la ingeniería de software de alto nivel con las necesidades reales del negocio — desde la infraestructura gubernamental estadounidense hasta la próxima generación de agentes inteligentes.",
+          "Antonio Rapozo es ingeniero full-stack sénior con más de 8 años de experiencia construyendo sistemas de misión crítica para los sectores de gobierno, transporte y energía. En los últimos 4 años, desarrolló plataformas de inspección de puentes y gestión de activos de infraestructura utilizadas por más de 15 Departamentos de Transporte estatales en EE. UU., procesando datos relacionados con más de 500 millones de dólares en inversiones anuales.\n\nActualmente trabaja en una plataforma de seguridad de navegadores para proveedores de servicios gestionados (MSPs), con foco en la protección contra amenazas emergentes de IA, phishing, malware y filtrado DNS. Su trabajo transforma el navegador - hoy el punto de acceso más vulnerable en las organizaciones - en un workspace seguro y gestionable, con controles avanzados de seguridad, análisis de credenciales y monitoreo de productividad.\n\nSu expertise técnico abarca Vue.js, React, C#, .NET, TypeScript y AWS, con doble certificación AWS Solutions Architect. Integra IA en sistemas de producción con OpenAI, LangChain y Semantic Kernel, y es creador de MemoryKit - biblioteca open-source en .NET que implementa una arquitectura de memoria inspirada en neurociencia para aplicaciones de IA.\n\nCon formación en ingeniería mecánica por el CEFET/RJ, programa de doble titulación en Alemania (Deggendorf/IIK Düsseldorf) y certificación en Machine Learning por Stanford, Antonio aporta una combinación poco común de profundidad técnica, visión arquitectónica y experiencia en entornos regulatorios complejos. Es brasileño, multilingüe (portugués, inglés, alemán, español) y trabaja de forma remota con equipos distribuidos desde 2020.\n\nSu foco está en construir soluciones escalables que conecten la ingeniería de software de alto nivel con las necesidades reales del negocio - desde la infraestructura gubernamental estadounidense hasta la próxima generación de agentes inteligentes.",
         image: "/Antonio_PP.png"
       },
       {
@@ -773,7 +773,7 @@ const es: Dict = {
       },
       {
         q: "¿Cómo manejan los errores de la IA y el control de calidad?",
-        a: "Cada sistema que construimos incluye capas de validación específicas a tu contexto — no guardrails genéricos. Cuando el sistema marca una decisión para revisión humana, tu equipo la revisa. Los umbrales de confianza se definen con tu equipo durante el piloto. Diseñamos para supervisión humana adecuada, no automatización total de decisiones que requieren juicio."
+        a: "Cada sistema que construimos incluye capas de validación específicas a tu contexto - no guardrails genéricos. Cuando el sistema marca una decisión para revisión humana, tu equipo la revisa. Los umbrales de confianza se definen con tu equipo durante el piloto. Diseñamos para supervisión humana adecuada, no automatización total de decisiones que requieren juicio."
       },
     ]
   },
@@ -839,8 +839,8 @@ const pt: Dict = {
   hero: {
     heading1: "O sistema de IA que",
     headingItalic: "substitui como sua operação funciona",
-    heading2: "— não apenas como ela processa tarefas.",
-    sub: "Mapeamos sua operação, identificamos onde o trabalho está estruturado de forma errada, e construímos o sistema que o redesenha — rodando na sua infraestrutura, de propriedade da sua equipe.",
+    heading2: "- não apenas como ela processa tarefas.",
+    sub: "Mapeamos sua operação, identificamos onde o trabalho está estruturado de forma errada, e construímos o sistema que o redesenha - rodando na sua infraestrutura, de propriedade da sua equipe.",
     cta1: "Diagnóstico Gratuito de IA",
     cta2: "Veja como trabalhamos",
     badges: ["Co-criamos", "Capacitamos", "Você é dono do sistema", "Fluxo redesenhado. Não apenas automatizado."]
@@ -857,10 +857,10 @@ const pt: Dict = {
   },
   authority: {
     heading:
-      "Sabemos o que quebra em operações de serviço — e por que a maioria dos projetos de IA resolve o problema errado.",
+      "Sabemos o que quebra em operações de serviço - e por que a maioria dos projetos de IA resolve o problema errado.",
     paragraphs: [
       "A maioria das operações de serviço trabalha com dados que nunca aproveita totalmente. Sinais de demanda ficam presos em exportações de bilheteria. O risco de manutenção vive nos registros de equipamentos. Fluxos de pesquisa e elaboração de relatórios consomem dias de tempo de especialistas que poderiam ser usados em trabalho de maior valor. Os dados e os processos estão lá - o sistema para agir sobre eles, não.",
-      "O erro não é implementar IA. É implementar IA dentro de fluxos de trabalho desenhados para humanos realizarem as etapas. Desenhamos para a lacuna estrutural — onde o trabalho precisa ser reconstruído, não apenas automatizado.",
+      "O erro não é implementar IA. É implementar IA dentro de fluxos de trabalho desenhados para humanos realizarem as etapas. Desenhamos para a lacuna estrutural - onde o trabalho precisa ser reconstruído, não apenas automatizado.",
       "Um sistema de pesquisa documental e geração de relatórios que implementamos na Lumina, uma consultoria de engenharia de incêndio em Dubai, reduziu o fluxo de trabalho de relatórios especializados de 4-5 dias por caso para menos de 3 horas. É esse o tipo de impacto operacional que projetamos: específico à sua operação, rodando na sua infraestrutura, completamente de propriedade da sua equipe. Não uma ferramenta genérica. Não uma assinatura SaaS. O sistema em si."
     ]
   },
@@ -898,7 +898,7 @@ const pt: Dict = {
   },
   problems: {
     heading: "A IA não falha. A forma como o trabalho é estruturado ao redor dela sim.",
-    sub: "O problema não é a tecnologia. É que a maioria das empresas está automatizando a coisa errada — tarefas dentro de fluxos de trabalho quebrados, em vez de redesenhar os próprios fluxos.",
+    sub: "O problema não é a tecnologia. É que a maioria das empresas está automatizando a coisa errada - tarefas dentro de fluxos de trabalho quebrados, em vez de redesenhar os próprios fluxos.",
     items: [
       {
         title: "Os dados existem, mas estão fragmentados.",
@@ -909,8 +909,8 @@ const pt: Dict = {
         desc: "Na maioria das operações de serviço, o gargalo mais caro não é a estratégia - é a montagem. Documentos reunidos de múltiplas fontes. Relatórios escritos à mão a partir de pesquisas que levaram dias para organizar. Aprovações que exigem que alguém junte manualmente informações que já existem no sistema."
       },
       {
-        title: "Quando o projeto termina, o sistema para — porque a organização nunca mudou ao redor dele.",
-        desc: "A maioria dos projetos de IA falha depois da prova de conceito — não porque a tecnologia quebrou, mas porque os líderes continuaram operando da mesma forma. O fornecedor construiu a ferramenta. Ninguém redesenhou as decisões que ela deveria informar. Quando o projeto fechou, o sistema apagou. Você voltou para as planilhas sem nada para mostrar pelo investimento."
+        title: "Quando o projeto termina, o sistema para - porque a organização nunca mudou ao redor dele.",
+        desc: "A maioria dos projetos de IA falha depois da prova de conceito - não porque a tecnologia quebrou, mas porque os líderes continuaram operando da mesma forma. O fornecedor construiu a ferramenta. Ninguém redesenhou as decisões que ela deveria informar. Quando o projeto fechou, o sistema apagou. Você voltou para as planilhas sem nada para mostrar pelo investimento."
       },
     ]
   },
@@ -934,15 +934,15 @@ const pt: Dict = {
     items: [
       {
         title: "Diagnóstico de Redesenho de Fluxo",
-        desc: "Mapeamos sua operação para encontrar onde o trabalho ainda está construído ao redor de humanos coordenando as etapas. Você recebe uma lista priorizada de onde redesenhar o fluxo ao redor da IA — não apenas automatizar tarefas dentro dele — cria o maior impacto mensurável."
+        desc: "Mapeamos sua operação para encontrar onde o trabalho ainda está construído ao redor de humanos coordenando as etapas. Você recebe uma lista priorizada de onde redesenhar o fluxo ao redor da IA - não apenas automatizar tarefas dentro dele - cria o maior impacto mensurável."
       },
       {
         title: "Sistemas de IA Personalizados",
         desc: "Projetamos e construímos o sistema para o seu contexto exato - previsão de demanda, automação de pesquisa documental, analytics de receita, manutenção preditiva, relatórios de compliance, gatilhos de marketing, ou o que sua operação precisar."
       },
       {
-        title: "Transferência de Capacidade — Sua Equipe Opera",
-        desc: "Todo projeto termina com sua equipe capaz de operar, modificar e evoluir o que foi construído — sem nós. Não um treinamento. Uma transferência de como pensar, manter e desenvolver o sistema à medida que sua operação muda."
+        title: "Transferência de Capacidade - Sua Equipe Opera",
+        desc: "Todo projeto termina com sua equipe capaz de operar, modificar e evoluir o que foi construído - sem nós. Não um treinamento. Uma transferência de como pensar, manter e desenvolver o sistema à medida que sua operação muda."
       }
     ]
   },
@@ -1003,7 +1003,7 @@ const pt: Dict = {
         role: "Desenvolvedor & Soluções Tech",
         bio: "Bio em breve.",
         fullBio:
-          "Antonio Rapozo é engenheiro full-stack sênior com mais de 8 anos de experiência construindo sistemas de missão crítica para os setores de governo, transportes e energia. Nos últimos 4 anos, desenvolveu plataformas de inspeção de pontes e gestão de ativos de infraestrutura utilizadas por mais de 15 Departamentos de Transporte estaduais nos EUA, processando dados referentes a mais de US$ 500 milhões em investimentos anuais.\n\nAtualmente, atua no desenvolvimento de uma plataforma de segurança de navegadores voltada para provedores de serviços gerenciados (MSPs), trabalhando na proteção contra ameaças emergentes de IA, phishing, malware e filtragem DNS. Seu trabalho transforma o navegador — hoje o ponto de acesso mais vulnerável nas organizações — em um workspace seguro e gerenciável, com controles avançados de segurança, análise de credenciais e monitoramento de produtividade.\n\nSua expertise técnica abrange Vue.js, React, C#, .NET, TypeScript e AWS, com dupla certificação AWS Solutions Architect. Integra inteligência artificial em sistemas de produção utilizando OpenAI, LangChain e Semantic Kernel, e é criador do MemoryKit — biblioteca open-source em .NET que implementa uma arquitetura de memória inspirada em neurociência para aplicações de IA.\n\nCom formação em engenharia mecânica pelo CEFET/RJ, programa de duplo diploma na Alemanha (Deggendorf/IIK Düsseldorf) e certificação em Machine Learning por Stanford, Antonio traz uma combinação rara de profundidade técnica, visão arquitetural e experiência em ambientes regulatórios complexos. É brasileiro, multilíngue (português, inglês, alemão, espanhol) e atua remotamente com equipes distribuídas desde 2020.\n\nSeu foco está em construir soluções escaláveis que conectam engenharia de software de alto nível com as necessidades reais de negócio — da infraestrutura governamental americana à próxima geração de agentes inteligentes.",
+          "Antonio Rapozo é engenheiro full-stack sênior com mais de 8 anos de experiência construindo sistemas de missão crítica para os setores de governo, transportes e energia. Nos últimos 4 anos, desenvolveu plataformas de inspeção de pontes e gestão de ativos de infraestrutura utilizadas por mais de 15 Departamentos de Transporte estaduais nos EUA, processando dados referentes a mais de US$ 500 milhões em investimentos anuais.\n\nAtualmente, atua no desenvolvimento de uma plataforma de segurança de navegadores voltada para provedores de serviços gerenciados (MSPs), trabalhando na proteção contra ameaças emergentes de IA, phishing, malware e filtragem DNS. Seu trabalho transforma o navegador - hoje o ponto de acesso mais vulnerável nas organizações - em um workspace seguro e gerenciável, com controles avançados de segurança, análise de credenciais e monitoramento de produtividade.\n\nSua expertise técnica abrange Vue.js, React, C#, .NET, TypeScript e AWS, com dupla certificação AWS Solutions Architect. Integra inteligência artificial em sistemas de produção utilizando OpenAI, LangChain e Semantic Kernel, e é criador do MemoryKit - biblioteca open-source em .NET que implementa uma arquitetura de memória inspirada em neurociência para aplicações de IA.\n\nCom formação em engenharia mecânica pelo CEFET/RJ, programa de duplo diploma na Alemanha (Deggendorf/IIK Düsseldorf) e certificação em Machine Learning por Stanford, Antonio traz uma combinação rara de profundidade técnica, visão arquitetural e experiência em ambientes regulatórios complexos. É brasileiro, multilíngue (português, inglês, alemão, espanhol) e atua remotamente com equipes distribuídas desde 2020.\n\nSeu foco está em construir soluções escaláveis que conectam engenharia de software de alto nível com as necessidades reais de negócio - da infraestrutura governamental americana à próxima geração de agentes inteligentes.",
         image: "/Antonio_PP.png"
       },
       {
@@ -1119,7 +1119,7 @@ const pt: Dict = {
       },
       {
         q: "Como vocês lidam com erros da IA e controle de qualidade?",
-        a: "Todo sistema que construímos inclui camadas de validação específicas ao seu contexto — não guardrails genéricos. Quando o sistema sinaliza uma decisão para revisão humana, sua equipe a revisa. Os limites de confiança são definidos com sua equipe durante o piloto. Projetamos para supervisão humana adequada, não automação total de decisões que exigem julgamento."
+        a: "Todo sistema que construímos inclui camadas de validação específicas ao seu contexto - não guardrails genéricos. Quando o sistema sinaliza uma decisão para revisão humana, sua equipe a revisa. Os limites de confiança são definidos com sua equipe durante o piloto. Projetamos para supervisão humana adequada, não automação total de decisões que exigem julgamento."
       }
     ]
   },
