@@ -131,10 +131,10 @@ const en: Dict = {
     heading1: "The AI system that",
     headingItalic: "replaces the spreadsheets",
     heading2: "running your operation.",
-    sub: "We build custom operational AI inside your infrastructure - forecasting demand, automating reporting, and eliminating manual workflows. Diagnosis to deploy in 90 days.",
+    sub: "We map your operation, find where work is structured around humans doing the steps, and build the system that redesigns it — running inside your infrastructure, owned by your team.",
     cta1: "Get a Free AI Opportunity Diagnosis",
     cta2: "Learn How We Work",
-    badges: ["We Co-create", "We Train", "You Own the System"]
+    badges: ["We Co-create", "We Train", "You Own the System", "Workflow Redesigned. Not Just Automated."]
   },
   proof: {
     label: "Industries we focus on",
@@ -148,10 +148,10 @@ const en: Dict = {
   },
   authority: {
     heading:
-      "We know what breaks in service operations - and why AI usually doesn't fix it.",
+      "We know what breaks in service operations — and why most AI projects fix the wrong thing.",
     paragraphs: [
       "Most service operations run on data they never fully use. Demand signals sit in ticketing exports. Maintenance risk lives in equipment logs. Research and reporting workflows eat days of expert time that could be spent on higher-value work. The data and processes are there - the system to act on them isn't.",
-      "We design for that gap.",
+      "The mistake isn't implementing AI. It's implementing AI inside workflows designed for humans to do the steps. We design for the structural gap — where work needs to be rebuilt, not just automated.",
       "A document research and report generation system we deployed at Lumina, a fire engineering consultancy in Dubai, reduced their expert reporting workflow from 4-5 days per case to under 3 hours. This is the kind of operational impact we design for: specific to your operation, running in your infrastructure, fully owned by your team. Not a generic tool. Not a SaaS subscription. The system itself."
     ]
   },
@@ -188,8 +188,8 @@ const en: Dict = {
     ]
   },
   problems: {
-    heading: "Why most AI projects in operations don't last",
-    sub: "The problem isn't the technology. It's what happens after the pilot - and who ends up owning the result.",
+    heading: "AI doesn't fail. The way work is designed around it does.",
+    sub: "The problem isn't the technology. It's that most companies are automating the wrong thing — tasks inside broken workflows, instead of redesigning the workflows themselves.",
     items: [
       {
         title: "The signals exist. The system to act on them doesn't.",
@@ -200,8 +200,12 @@ const en: Dict = {
         desc: "In most service operations, the highest-cost bottleneck isn't strategy - it's assembly. Documents gathered from multiple sources. Reports written by hand from research that took days to organize. Approvals that require someone to manually pull together information that already exists in the system."
       },
       {
-        title: "When the vendor leaves, the system stops.",
-        desc: "Most AI projects fail after the proof of concept - not because the technology didn't work, but because no one on the team was trained to run it. The vendor moves on. The system goes dark. You're back to spreadsheets, with nothing to show for the investment."
+        title: "When the project ends, the system stops — because the organization never changed around it.",
+        desc: "Most AI projects fail after the proof of concept — not because the technology broke, but because leaders kept operating the same way. The vendor built the tool. Nobody redesigned the decisions the tool was supposed to inform. When the project closed, the system went dark. You were back to spreadsheets, with nothing to show for the investment."
+      },
+      {
+        title: "Your AI pilot worked. Your operation didn't change.",
+        desc: "The highest-return AI use cases aren't faster emails or summarized documents. They're underwriting redesigned end-to-end. Hiring to onboarding handled by agents that coordinate the process — not assist humans doing it. Companies that capture real value aren't automating tasks inside existing workflows. They're redesigning the workflow around AI doing the work. Most pilots skip this step entirely."
       }
     ]
   },
@@ -222,16 +226,16 @@ const en: Dict = {
     sub: "",
     items: [
       {
-        title: "Operational AI Opportunity Diagnosis",
-        desc: "We map your operation with the team running it - not with generic frameworks. You get a prioritized list of the highest-value automation opportunities in your specific workflows: revenue, staffing, marketing, maintenance, compliance, reporting."
+        title: "Workflow Redesign Diagnosis",
+        desc: "We map your operation to find where work is still built around humans coordinating the steps. You get a prioritized list of where redesigning the workflow around AI — not just automating tasks inside it — creates the highest measurable impact."
       },
       {
         title: "Custom AI Systems",
         desc: "We design and build the system for your exact context - demand forecasting, document research automation, revenue analytics, predictive maintenance, compliance reporting, marketing triggers, or anything else your operation needs."
       },
       {
-        title: "Team Training and Full Handoff",
-        desc: "Every project ends with your team trained to operate, modify, and evolve what was built. We transfer the knowledge to run the system - not just the software itself - so the investment lasts."
+        title: "Capability Transfer — Your Team Runs It",
+        desc: "Every project ends with your team able to operate, modify, and evolve what was built — without us. Not a training session. A transfer of how to think about, maintain, and grow the system as your operation changes."
       }
     ]
   },
@@ -310,7 +314,7 @@ const en: Dict = {
         role: "Full Stack Engineer",
         bio: "Bio coming soon.",
         fullBio:
-          "Enrique Ibarra works at the intersection of artificial intelligence, blockchain, and digital development, with a focus on turning technology into practical solutions for businesses. He builds and implements systems that improve processes, reduce costs, and increase efficiency through automation and the intelligent use of data.\n\nHis projects have international reach, including initiatives in Europe, Latin America, and the Middle East, and focus on applying AI strategically — helping organizations adopt new technologies without unnecessary complexity. His approach combines structured thinking with a practical mindset, always looking for the right questions and solutions that actually work day-to-day across different industries.\n\nThroughout his career, he has also developed expertise in Web3 and application development, working with digital products and new forms of technological infrastructure. His focus is on building useful, well-designed solutions aligned with real business needs.",
+          "Enrique Ibarra works at the intersection of artificial intelligence and digital development, with a focus on turning technology into practical solutions for businesses. He builds and implements systems that improve processes, reduce costs, and increase efficiency through automation and the intelligent use of data.\n\nHis projects have international reach, including initiatives in Europe, Latin America, and the Middle East, and focus on applying AI strategically — helping organizations adopt new technologies without unnecessary complexity. His approach combines structured thinking with a practical mindset, always looking for the right questions and solutions that actually work day-to-day across different industries.\n\nThroughout his career, he has also developed expertise in Web3 and application development, working with digital products and new forms of technological infrastructure. His focus is on building useful, well-designed solutions aligned with real business needs.",
         image: "/Enrique_PP.png"
       }
     ]
@@ -415,6 +419,10 @@ const en: Dict = {
         q: "What happens after delivery? Do we need River Labs to maintain it?",
         a: "No - and that's a core design principle of every project we take on. Every system includes full documentation and team training so your operation can maintain and evolve it independently. We don't design for dependency."
       },
+      {
+        q: "How do you handle AI errors and quality control?",
+        a: "Every system we build includes validation layers specific to your context — not generic guardrails. When the system flags a decision for human review, your team reviews it. Confidence thresholds are set with your team during the pilot. We design for appropriate human oversight, not full automation of decisions that require judgment."
+      },
     ]
   },
   cta: {
@@ -478,12 +486,12 @@ const es: Dict = {
   },
   hero: {
     heading1: "El sistema de IA que",
-    headingItalic: "reemplaza las planillas",
-    heading2: "que operan tu negocio.",
-    sub: "Construimos IA operacional personalizada dentro de tu infraestructura - forecasting de demanda, automatización de reportes y eliminación de flujos manuales. Del diagnóstico al deploy en 90 días.",
+    headingItalic: "reemplaza cómo opera tu negocio",
+    heading2: "— no solo cómo procesa tareas.",
+    sub: "Mapeamos tu operación, identificamos dónde el trabajo está estructurado de forma incorrecta, y construimos el sistema que lo rediseña — corriendo dentro de tu infraestructura, en propiedad de tu equipo.",
     cta1: "Diagnóstico Gratuito de IA",
     cta2: "Conoce cómo trabajamos",
-    badges: ["Co-creamos", "Capacitamos", "Tú eres dueño del sistema"]
+    badges: ["Co-creamos", "Capacitamos", "Tú eres dueño del sistema", "Flujo rediseñado. No solo automatizado."]
   },
   proof: {
     label: "Industrias en las que nos enfocamos",
@@ -497,10 +505,10 @@ const es: Dict = {
   },
   authority: {
     heading:
-      "Sabemos qué falla en las operaciones de servicio - y por qué la IA normalmente no lo resuelve.",
+      "Sabemos qué falla en las operaciones de servicio — y por qué la mayoría de los proyectos de IA resuelven el problema equivocado.",
     paragraphs: [
       "La mayoría de las operaciones de servicio trabajan con datos que nunca aprovechan del todo. Las señales de demanda quedan en exportaciones de boletería. El riesgo de mantenimiento vive en los registros de equipos. Los flujos de investigación y reportes consumen días de tiempo de expertos que podrían dedicarse a trabajo de mayor valor. Los datos y los procesos están ahí - el sistema para actuar sobre ellos, no.",
-      "Diseñamos para esa brecha.",
+      "El error no es implementar IA. Es implementar IA dentro de flujos de trabajo diseñados para que los humanos hagan los pasos. Diseñamos para la brecha estructural — donde el trabajo necesita ser reconstruido, no solo automatizado.",
       "Un sistema de investigación documental y generación de informes que implementamos en Lumina, una consultora de ingeniería contra incendios en Dubai, redujo su flujo de trabajo de informes especializados de 4-5 días por caso a menos de 3 horas. Este es el tipo de impacto operativo que diseñamos: específico a tu operación, corriendo en tu infraestructura, completamente en propiedad de tu equipo. No una herramienta genérica. No una suscripción SaaS. El sistema mismo."
     ]
   },
@@ -537,22 +545,24 @@ const es: Dict = {
     ]
   },
   problems: {
-    heading:
-      "Por qué la mayoría de los proyectos de IA en operaciones no duran",
-    sub: "El problema no es la tecnología. Es lo que pasa después del piloto - y quién termina siendo dueño del resultado.",
+    heading: "La IA no falla. La forma en que el trabajo está diseñado a su alrededor sí.",
+    sub: "El problema no es la tecnología. Es que la mayoría de las empresas está automatizando lo incorrecto — tareas dentro de flujos de trabajo rotos, en vez de rediseñar los flujos mismos.",
     items: [
       {
         title: "Las señales existen. El sistema para actuar sobre ellas, no.",
         desc: "Picos de demanda, ventanas de precios, alertas de mantenimiento, brechas de personal - tu operación produce estas señales todos los días. Pero sin un sistema que las visibilice automáticamente, tu equipo decide por instinto o por la planilla del año pasado. Los datos siempre estuvieron. La herramienta para actuar sobre ellos, no."
       },
       {
-        title:
-          "Tiempo de expertos perdido en trabajo que no debería ser manual",
+        title: "Tiempo de expertos perdido en trabajo que no debería ser manual",
         desc: "En la mayoría de las operaciones de servicio, el cuello de botella más costoso no es la estrategia - es el ensamblaje. Documentos reunidos de múltiples fuentes. Reportes escritos a mano a partir de investigaciones que tardaron días en organizarse. Aprobaciones que requieren que alguien junte manualmente información que ya existe en el sistema."
       },
       {
-        title: "Cuando el proveedor se va, el sistema se apaga.",
-        desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto - no porque la tecnología no funcionó, sino porque nadie del equipo fue capacitado para operarla. El proveedor se va. El sistema se apaga. Vuelves a las planillas sin nada que mostrar por la inversión."
+        title: "Cuando el proyecto termina, el sistema se apaga — porque la organización nunca cambió a su alrededor.",
+        desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto — no porque la tecnología falló, sino porque los líderes siguieron operando de la misma manera. El proveedor construyó la herramienta. Nadie rediseñó las decisiones que la herramienta debía informar. Cuando el proyecto cerró, el sistema se apagó. Volviste a las planillas sin nada que mostrar por la inversión."
+      },
+      {
+        title: "Tu piloto de IA funcionó. Tu operación no cambió.",
+        desc: "Los casos de uso de mayor retorno no son emails más rápidos ni documentos resumidos. Son procesos de contratación gestionados por agentes de punta a punta. Operaciones de compliance rediseñadas en vez de solo monitoreadas. Las empresas que capturan valor real no están automatizando tareas dentro de flujos existentes — están rediseñando el flujo alrededor de la IA realizando el trabajo. La mayoría de los pilotos se salta este paso por completo."
       }
     ]
   },
@@ -574,16 +584,16 @@ const es: Dict = {
     sub: "",
     items: [
       {
-        title: "Diagnóstico de Oportunidades de IA",
-        desc: "Mapeamos tu operación con el equipo que la opera - no con marcos genéricos. Obtienes una lista priorizada de las oportunidades de automatización de mayor valor en tus flujos: ingresos, staffing, marketing, mantenimiento, compliance, reportes."
+        title: "Diagnóstico de Rediseño de Flujo",
+        desc: "Mapeamos tu operación para encontrar dónde el trabajo todavía está construido alrededor de humanos coordinando los pasos. Obtienes una lista priorizada de dónde rediseñar el flujo alrededor de la IA — no solo automatizar tareas dentro de él — crea el mayor impacto medible."
       },
       {
         title: "Sistemas de IA Personalizados",
         desc: "Diseñamos y construimos el sistema para tu contexto exacto - forecasting de demanda, automatización de investigación documental, analítica de ingresos, mantenimiento predictivo, reportes de compliance, disparadores de marketing, o lo que tu operación necesite."
       },
       {
-        title: "Capacitación del Equipo y Entrega Total",
-        desc: "Todo proyecto termina con tu equipo capacitado para operar, modificar y evolucionar lo que fue construido. Transferimos el conocimiento para operar el sistema - no solo el software - para que la inversión perdure."
+        title: "Transferencia de Capacidad — Tu Equipo Lo Opera",
+        desc: "Todo proyecto termina con tu equipo capaz de operar, modificar y evolucionar lo construido — sin nosotros. No una capacitación. Una transferencia de cómo pensar, mantener y hacer crecer el sistema a medida que tu operación cambia."
       }
     ]
   },
@@ -663,7 +673,7 @@ const es: Dict = {
         role: "Full Stack Engineer",
         bio: "Bio próximamente.",
         fullBio:
-          "Enrique Ibarra trabaja en la intersección entre inteligencia artificial, blockchain y desarrollo digital, con foco en transformar la tecnología en soluciones prácticas para las empresas. Se dedica a la creación e implementación de sistemas que mejoran procesos, reducen costos y aumentan la eficiencia mediante la automatización y el uso inteligente de los datos.\n\nSus proyectos tienen alcance internacional, con iniciativas en Europa, América Latina y Oriente Medio, y se centran en aplicar IA de forma estratégica, ayudando a las organizaciones a adoptar nuevas tecnologías sin complejidad innecesaria. Su enfoque combina el pensamiento estructurado con una mentalidad práctica, buscando siempre las preguntas correctas y soluciones que realmente funcionen en el día a día de distintas industrias.\n\nA lo largo de su trayectoria, también desarrolló experiencia en Web3 y desarrollo de aplicaciones, trabajando con productos digitales y nuevas formas de infraestructura tecnológica. Su foco está en construir soluciones útiles, bien diseñadas y alineadas con las necesidades reales del negocio.",
+          "Enrique Ibarra trabaja en la intersección entre inteligencia artificial y desarrollo digital, con foco en transformar la tecnología en soluciones prácticas para las empresas. Se dedica a la creación e implementación de sistemas que mejoran procesos, reducen costos y aumentan la eficiencia mediante la automatización y el uso inteligente de los datos.\n\nSus proyectos tienen alcance internacional, con iniciativas en Europa, América Latina y Oriente Medio, y se centran en aplicar IA de forma estratégica, ayudando a las organizaciones a adoptar nuevas tecnologías sin complejidad innecesaria. Su enfoque combina el pensamiento estructurado con una mentalidad práctica, buscando siempre las preguntas correctas y soluciones que realmente funcionen en el día a día de distintas industrias.\n\nA lo largo de su trayectoria, también desarrolló experiencia en Web3 y desarrollo de aplicaciones, trabajando con productos digitales y nuevas formas de infraestructura tecnológica. Su foco está en construir soluciones útiles, bien diseñadas y alineadas con las necesidades reales del negocio.",
         image: "/Enrique_PP.png"
       }
     ]
@@ -769,6 +779,10 @@ const es: Dict = {
         q: "¿Qué pasa después de la entrega? ¿Necesitamos a River Labs para mantenerlo?",
         a: "No - y ese es un principio de diseño central en cada proyecto que tomamos. Cada sistema incluye documentación completa y capacitación del equipo para que tu operación pueda mantenerlo y evolucionarlo de forma independiente. No diseñamos para la dependencia."
       },
+      {
+        q: "¿Cómo manejan los errores de la IA y el control de calidad?",
+        a: "Cada sistema que construimos incluye capas de validación específicas a tu contexto — no guardrails genéricos. Cuando el sistema marca una decisión para revisión humana, tu equipo la revisa. Los umbrales de confianza se definen con tu equipo durante el piloto. Diseñamos para supervisión humana adecuada, no automatización total de decisiones que requieren juicio."
+      },
     ]
   },
   cta: {
@@ -831,13 +845,13 @@ const pt: Dict = {
     cta: "Diagnóstico Gratuito"
   },
   hero: {
-    heading1: "A IA não vai substituir tudo,",
-    headingItalic: "mas tem a capacidade de melhorar",
-    heading2: "fluxos de trabalho.",
-    sub: "Trabalhamos nessa interseção: reduzindo custos, retrabalho e propensão a erros manuais",
+    heading1: "O sistema de IA que",
+    headingItalic: "substitui como sua operação funciona",
+    heading2: "— não apenas como ela processa tarefas.",
+    sub: "Mapeamos sua operação, identificamos onde o trabalho está estruturado de forma errada, e construímos o sistema que o redesenha — rodando na sua infraestrutura, de propriedade da sua equipe.",
     cta1: "Diagnóstico Gratuito de IA",
     cta2: "Veja como trabalhamos",
-    badges: ["Co-criamos", "Capacitamos", "Você é dono do sistema"]
+    badges: ["Co-criamos", "Capacitamos", "Você é dono do sistema", "Fluxo redesenhado. Não apenas automatizado."]
   },
   proof: {
     label: "Indústrias em que nos focamos",
@@ -851,10 +865,10 @@ const pt: Dict = {
   },
   authority: {
     heading:
-      "Sabemos o que quebra em operações de serviço - e por que a IA normalmente não resolve.",
+      "Sabemos o que quebra em operações de serviço — e por que a maioria dos projetos de IA resolve o problema errado.",
     paragraphs: [
       "A maioria das operações de serviço trabalha com dados que nunca aproveita totalmente. Sinais de demanda ficam presos em exportações de bilheteria. O risco de manutenção vive nos registros de equipamentos. Fluxos de pesquisa e elaboração de relatórios consomem dias de tempo de especialistas que poderiam ser usados em trabalho de maior valor. Os dados e os processos estão lá - o sistema para agir sobre eles, não.",
-      "Desenhamos para essa lacuna.",
+      "O erro não é implementar IA. É implementar IA dentro de fluxos de trabalho desenhados para humanos realizarem as etapas. Desenhamos para a lacuna estrutural — onde o trabalho precisa ser reconstruído, não apenas automatizado.",
       "Um sistema de pesquisa documental e geração de relatórios que implementamos na Lumina, uma consultoria de engenharia de incêndio em Dubai, reduziu o fluxo de trabalho de relatórios especializados de 4-5 dias por caso para menos de 3 horas. É esse o tipo de impacto operacional que projetamos: específico à sua operação, rodando na sua infraestrutura, completamente de propriedade da sua equipe. Não uma ferramenta genérica. Não uma assinatura SaaS. O sistema em si."
     ]
   },
@@ -891,21 +905,24 @@ const pt: Dict = {
     ]
   },
   problems: {
-    heading: "Por que a maioria dos projetos de IA em operações não dura?",
-    sub: "O problema não é a tecnologia. É o que acontece depois do piloto - e quem acaba sendo dono do resultado.",
+    heading: "A IA não falha. A forma como o trabalho é estruturado ao redor dela sim.",
+    sub: "O problema não é a tecnologia. É que a maioria das empresas está automatizando a coisa errada — tarefas dentro de fluxos de trabalho quebrados, em vez de redesenhar os próprios fluxos.",
     items: [
       {
         title: "Os dados existem, mas estão fragmentados.",
         desc: "Picos de demanda, janelas de precificação, alertas de manutenção, lacunas de equipe - a sua operação produz esses sinais todo dia. Mas sem um sistema que os evidencie automaticamente, seu time decide por instinto ou pela planilha do ano passado. Os dados sempre estiveram lá. A ferramenta para agir sobre eles, não."
       },
       {
-        title:
-          "Trabalho e retrabalho em tarefas que poderiam ser automatizadas.",
+        title: "Trabalho e retrabalho em tarefas que poderiam ser automatizadas.",
         desc: "Na maioria das operações de serviço, o gargalo mais caro não é a estratégia - é a montagem. Documentos reunidos de múltiplas fontes. Relatórios escritos à mão a partir de pesquisas que levaram dias para organizar. Aprovações que exigem que alguém junte manualmente informações que já existem no sistema."
       },
       {
-        title: "Sistemas e ferramentas complexas demais para usar.",
-        desc: "A maioria dos projetos de IA falha depois da prova de conceito - não porque a tecnologia não funcionou, mas porque ninguém da equipe foi treinado para operá-la. O fornecedor vai embora. O sistema para. Você volta para as planilhas sem nada para mostrar pelo investimento."
+        title: "Quando o projeto termina, o sistema para — porque a organização nunca mudou ao redor dele.",
+        desc: "A maioria dos projetos de IA falha depois da prova de conceito — não porque a tecnologia quebrou, mas porque os líderes continuaram operando da mesma forma. O fornecedor construiu a ferramenta. Ninguém redesenhou as decisões que ela deveria informar. Quando o projeto fechou, o sistema apagou. Você voltou para as planilhas sem nada para mostrar pelo investimento."
+      },
+      {
+        title: "Seu piloto de IA funcionou. Sua operação não mudou.",
+        desc: "Os casos de uso de maior retorno não são e-mails mais rápidos ou documentos resumidos. São processos de contratação gerenciados por agentes de ponta a ponta. Operações de compliance redesenhadas em vez de apenas monitoradas. Empresas que capturam valor real não estão automatizando tarefas dentro de fluxos existentes — estão redesenhando o fluxo ao redor da IA realizando o trabalho. A maioria dos pilotos pula essa etapa inteiramente."
       }
     ]
   },
@@ -928,16 +945,16 @@ const pt: Dict = {
     sub: "",
     items: [
       {
-        title: "Diagnóstico de Oportunidades de IA",
-        desc: "Mapeamos sua operação com o time que a opera, e geramos uma lista com as principais oportunidades em desenvolver soluções que otimizem o dia-a-dia do marketing, manutenção, financeiro e compliance."
+        title: "Diagnóstico de Redesenho de Fluxo",
+        desc: "Mapeamos sua operação para encontrar onde o trabalho ainda está construído ao redor de humanos coordenando as etapas. Você recebe uma lista priorizada de onde redesenhar o fluxo ao redor da IA — não apenas automatizar tarefas dentro dele — cria o maior impacto mensurável."
       },
       {
         title: "Sistemas de IA Personalizados",
         desc: "Projetamos e construímos o sistema para o seu contexto exato - previsão de demanda, automação de pesquisa documental, analytics de receita, manutenção preditiva, relatórios de compliance, gatilhos de marketing, ou o que sua operação precisar."
       },
       {
-        title: "Treinamento da Equipe e Entrega Total",
-        desc: "Todo projeto termina com sua equipe treinada para operar, modificar e evoluir o que foi construído. Transferimos o conhecimento para operar o sistema - não apenas o software - para que o investimento dure."
+        title: "Transferência de Capacidade — Sua Equipe Opera",
+        desc: "Todo projeto termina com sua equipe capaz de operar, modificar e evoluir o que foi construído — sem nós. Não um treinamento. Uma transferência de como pensar, manter e desenvolver o sistema à medida que sua operação muda."
       }
     ]
   },
@@ -1006,7 +1023,7 @@ const pt: Dict = {
         role: "Engenheiro Full Stack",
         bio: "Bio em breve.",
         fullBio:
-          "Enrique Ibarra trabalha na interseção entre inteligência artificial, blockchain e desenvolvimento digital, com foco em transformar tecnologia em soluções práticas para empresas. Atua na criação e implementação de sistemas que melhoram processos, reduzem custos e aumentam eficiência por meio de automação e uso inteligente de dados.\n\nSeus projetos têm alcance internacional, incluindo iniciativas na Europa, América Latina e Oriente Médio, e se concentram em aplicar IA de forma estratégica, ajudando organizações a adotar novas tecnologias sem complexidade desnecessária. Sua abordagem combina pensamento estruturado com uma mentalidade prática, buscando sempre as perguntas certas e soluções que realmente funcionem no dia a dia de diferentes indústrias.\n\nAo longo de sua trajetória, também desenvolveu experiência em Web3 e desenvolvimento de aplicações, trabalhando com produtos digitais e novas formas de infraestrutura tecnológica. Seu foco está em construir soluções úteis, bem desenhadas e alinhadas às necessidades reais de negócio.",
+          "Enrique Ibarra trabalha na interseção entre inteligência artificial e desenvolvimento digital, com foco em transformar tecnologia em soluções práticas para empresas. Atua na criação e implementação de sistemas que melhoram processos, reduzem custos e aumentam eficiência por meio de automação e uso inteligente de dados.\n\nSeus projetos têm alcance internacional, incluindo iniciativas na Europa, América Latina e Oriente Médio, e se concentram em aplicar IA de forma estratégica, ajudando organizações a adotar novas tecnologias sem complexidade desnecessária. Sua abordagem combina pensamento estruturado com uma mentalidade prática, buscando sempre as perguntas certas e soluções que realmente funcionem no dia a dia de diferentes indústrias.\n\nAo longo de sua trajetória, também desenvolveu experiência em Web3 e desenvolvimento de aplicações, trabalhando com produtos digitais e novas formas de infraestrutura tecnológica. Seu foco está em construir soluções úteis, bem desenhadas e alinhadas às necessidades reais de negócio.",
         image: "/Enrique_PP.png"
       }
     ]
@@ -1111,6 +1128,10 @@ const pt: Dict = {
       {
         q: "O que acontece após a entrega de uma ferramenta desenvolvida por vocês? Precisamos da River Labs para manter?",
         a: "Não - e esse é um princípio de design central em cada projeto que assumimos. Todo sistema inclui documentação completa e treinamento da equipe para que sua operação possa mantê-lo e evoluí-lo de forma independente. Não projetamos para dependência."
+      },
+      {
+        q: "Como vocês lidam com erros da IA e controle de qualidade?",
+        a: "Todo sistema que construímos inclui camadas de validação específicas ao seu contexto — não guardrails genéricos. Quando o sistema sinaliza uma decisão para revisão humana, sua equipe a revisa. Os limites de confiança são definidos com sua equipe durante o piloto. Projetamos para supervisão humana adequada, não automação total de decisões que exigem julgamento."
       }
     ]
   },
