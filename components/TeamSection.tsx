@@ -104,13 +104,7 @@ function MemberCard({
 export default function TeamSection({ dict }: { dict: Dict["team"] }) {
   const [open, setOpen] = useState(false);
 
-  // Derive bio label from first member's locale hint — fall back to English
-  const bioLabel =
-    dict.members[0]?.bio === "Bio em breve."
-      ? "Bio completa"
-      : dict.members[0]?.bio === "Bio próximamente."
-      ? "Bio completa"
-      : "Full bio";
+  const bioLabel = dict.bioLabel;
 
   return (
     <section id="team" className="py-24 px-6 max-w-7xl mx-auto w-full border-t border-gray-100">

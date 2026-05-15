@@ -49,16 +49,19 @@ export type Dict = {
   services: {
     heading: string
     sub: string
+    entryPoint: string
     items: { title: string; desc: string }[]
   }
   sectorIdeas: {
     heading: string
     sub: string
+    useCasesLabel: string
     sectors: { name: string; items: string[] }[]
   }
   team: {
     heading: string
     sub: string
+    bioLabel: string
     members: {
       name: string
       role: string
@@ -220,6 +223,7 @@ const en: Dict = {
   services: {
     heading: "What we build",
     sub: "",
+    entryPoint: "Starting point",
     items: [
       {
         title: "Workflow Redesign Diagnosis",
@@ -238,6 +242,7 @@ const en: Dict = {
   sectorIdeas: {
     heading: "What these systems look like in practice",
     sub: "Concrete AI systems designed for the operational problems that repeat most often in service businesses.",
+    useCasesLabel: "Use cases",
     sectors: [
       {
         name: "Revenue & Demand",
@@ -280,6 +285,7 @@ const en: Dict = {
   team: {
     heading: "Built by operators who implement the systems themselves.",
     sub: "River Labs was founded by engineers and operators who have built automation systems across e-commerce, operations, and regulated services. We focus on one thing: turning operational data into systems teams can actually run - not prototypes that disappear after the pilot.",
+    bioLabel: "Full bio",
     members: [
       {
         name: "Leonardo Werner",
@@ -574,6 +580,7 @@ const es: Dict = {
   services: {
     heading: "Lo que construimos",
     sub: "",
+    entryPoint: "Punto de entrada",
     items: [
       {
         title: "Diagnóstico de Rediseño de Flujo",
@@ -592,6 +599,7 @@ const es: Dict = {
   sectorIdeas: {
     heading: "Cómo lucen estos sistemas en la práctica",
     sub: "Sistemas de IA concretos diseñados para los problemas operativos que se repiten con más frecuencia en los negocios de servicio.",
+    useCasesLabel: "Casos de uso",
     sectors: [
       {
         name: "Ingresos y Demanda",
@@ -635,6 +643,7 @@ const es: Dict = {
     heading:
       "Construido por operadores que implementan los sistemas ellos mismos.",
     sub: "River Labs fue fundado por ingenieros y operadores que han construido sistemas de automatización en e-commerce, operaciones y servicios regulados. Nos enfocamos en una cosa: convertir datos operativos en sistemas que los equipos puedan realmente operar - no prototipos que desaparecen después del piloto.",
+    bioLabel: "Bio completa",
     members: [
       {
         name: "Leonardo Werner",
@@ -931,6 +940,7 @@ const pt: Dict = {
   services: {
     heading: "Construímos soluções específicas para o seu contexto.",
     sub: "",
+    entryPoint: "Ponto de entrada",
     items: [
       {
         title: "Diagnóstico de Redesenho de Fluxo",
@@ -949,6 +959,7 @@ const pt: Dict = {
   sectorIdeas: {
     heading: "Como essas soluções se parecem na prática?",
     sub: "Sistemas de IA concretos projetados para os problemas operacionais que se repetem com mais frequência em negócios de serviço.",
+    useCasesLabel: "Casos de uso",
     sectors: [
       {
         name: "Receita e Demanda",
@@ -981,6 +992,7 @@ const pt: Dict = {
     heading:
       "Construído por operadores que implementam os sistemas eles mesmos.",
     sub: "A River Labs foi fundada por quatro profissionais que desenvolveram para empresas globais de diferentes setores e indústrias. O foco é único: melhorar o fluxo de trabalho das pessoas por meio de soluções tecnológicas.",
+    bioLabel: "Bio completa",
     members: [
       {
         name: "Leonardo Werner",

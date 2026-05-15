@@ -43,7 +43,7 @@ export default function SectorIdeasSection({ dict }: { dict: Dict["sectorIdeas"]
             {/* Label + sector name */}
             <div className="flex flex-col gap-1">
               <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-white/40">
-                Casos de uso
+                {dict.useCasesLabel}
               </span>
               <h3 className="text-lg font-semibold text-white leading-snug">
                 {sector.name}

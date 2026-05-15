@@ -90,7 +90,7 @@ export default function ServicesSection({ dict }: { dict: Dict["services"] }) {
           </div>
           <div className="relative z-10 mt-auto pt-6 border-t border-indigo-100">
             <span className="font-mono text-xs tracking-widest uppercase text-indigo-400">
-              Ponto de entrada
+              {dict.entryPoint}
             </span>
           </div>
         </div>
