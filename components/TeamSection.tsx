@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Dict } from "@/lib/translations";
 
 function DotPattern({ id }: { id: string }) {
@@ -26,6 +26,68 @@ function DotPattern({ id }: { id: string }) {
       <rect width="100%" height="100%" fill={`url(#indigo-${id})`} mask={`url(#mask-${id})`} />
       <rect width="100%" height="100%" fill={`url(#violet-${id})`} mask={`url(#mask-${id})`} />
     </svg>
+  );
+}
+
+function BioModal({
+  member,
+  idx,
+  onClose,
+}: {
+  member: Dict["team"]["members"][number];
+  idx: number;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 md:hidden flex flex-col animate-fade-in-up"
+      style={{ background: "linear-gradient(135deg, #EEF0FF 0%, #EDE8FF 100%)" }}
+    >
+      <DotPattern id={`modal-${idx}`} />
+
+      {/* Header */}
+      <div className="relative z-10 flex items-center justify-between px-5 pt-12 pb-5 border-b border-indigo-100/70">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 rounded-full overflow-hidden bg-indigo-100 shrink-0 ring-2 ring-white">
+            <Image
+              src={member.image}
+              alt={member.name}
+              width={48}
+              height={48}
+              className="object-cover w-full h-full"
+              style={{ objectPosition: member.objectPosition ?? "center top" }}
+            />
+          </div>
+          <div>
+            <p className="text-base font-semibold text-gray-900 leading-snug">{member.name}</p>
+            <p className="text-sm text-indigo-400 font-normal leading-snug">{member.role}</p>
+          </div>
+        </div>
+        <button
+          onClick={onClose}
+          aria-label="Close"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-white/60 text-gray-500 hover:text-gray-800 transition-colors shrink-0"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Scrollable bio */}
+      <div className="relative z-10 flex-1 overflow-y-auto px-5 py-6 space-y-4">
+        {member.fullBio?.split("\n\n").map((para, i) => (
+          <p key={i} className="text-sm text-gray-700 leading-relaxed">
+            {para}
+          </p>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -86,8 +148,9 @@ function MemberCard({
             </svg>
           </button>
 
+          {/* Desktop only: inline accordion */}
           {open && (
-            <div className="mt-3 text-left space-y-2">
+            <div className="hidden md:block mt-3 text-left space-y-2">
               {member.fullBio.split("\n\n").map((para, i) => (
                 <p key={i} className="text-xs text-gray-600 leading-relaxed">
                   {para}
@@ -102,9 +165,7 @@ function MemberCard({
 }
 
 export default function TeamSection({ dict }: { dict: Dict["team"] }) {
-  const [open, setOpen] = useState(false);
-
-  const bioLabel = dict.bioLabel;
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
     <section id="team" className="py-24 px-6 max-w-7xl mx-auto w-full border-t border-gray-100">
@@ -119,9 +180,25 @@ export default function TeamSection({ dict }: { dict: Dict["team"] }) {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {dict.members.map((member, idx) => (
-          <MemberCard key={idx} member={member} idx={idx} bioLabel={bioLabel} open={open} onToggle={() => setOpen((v) => !v)} />
+          <MemberCard
+            key={idx}
+            member={member}
+            idx={idx}
+            bioLabel={dict.bioLabel}
+            open={openIdx === idx}
+            onToggle={() => setOpenIdx(openIdx === idx ? null : idx)}
+          />
         ))}
       </div>
+
+      {/* Mobile full-screen bio — one person at a time */}
+      {openIdx !== null && dict.members[openIdx]?.fullBio && (
+        <BioModal
+          member={dict.members[openIdx]}
+          idx={openIdx}
+          onClose={() => setOpenIdx(null)}
+        />
+      )}
     </section>
   );
 }
