@@ -5,6 +5,7 @@ const METRICS = [
   { value: "1 mês",  label: "para primeira página" },
   { value: "91%",    label: "redução em custos" },
   { value: "< 3h",   label: "por relatório" },
+  { value: "3x",     label: "taxa de resposta" },
 ];
 
 function DotCluster({ id }: { id: string }) {

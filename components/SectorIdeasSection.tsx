@@ -23,6 +23,15 @@ const ICONS = [
   ),
 ];
 
+// CRM & Communication category sits at a different index per language,
+// so its icon is keyed by name rather than by position.
+const CRM_ICON = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+  </svg>
+);
+const CRM_NAMES = ["CRM & Communication", "CRM y Comunicación", "CRM e Comunicação"];
+
 export default function SectorIdeasSection({ dict }: { dict: Dict["sectorIdeas"] }) {
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto w-full border-t border-gray-100">
@@ -52,7 +61,7 @@ export default function SectorIdeasSection({ dict }: { dict: Dict["sectorIdeas"]
 
             {/* Icon */}
             <div>
-              {ICONS[idx]}
+              {CRM_NAMES.includes(sector.name) ? CRM_ICON : ICONS[idx]}
             </div>
 
             {/* Divider */}

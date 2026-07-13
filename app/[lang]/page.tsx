@@ -2,7 +2,8 @@ import { getDictionary } from "@/lib/translations";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import SocialProofBar from "@/components/SocialProofBar";
-import CasesSection from "@/components/CasesSection";
+// TODO: UPDATE LATER - re-enable when case studies are ready (see CasesSection usage below)
+// import CasesSection from "@/components/CasesSection";
 import ProblemSection from "@/components/ProblemSection";
 import DifferentiationSection from "@/components/DifferentiationSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -28,7 +29,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <main>
         <Hero dict={dict.hero} lang={typedLang} />
         <SocialProofBar dict={dict.proof} />
-        <CasesSection dict={dict.cases} />
+        {/* TODO: UPDATE LATER - "Sistemas reais. Resultados medidos." case studies section
+            hidden until case studies are strong enough to support large-deal closes.
+            Re-enable by uncommenting the CasesSection below. */}
+        {/* <CasesSection dict={dict.cases} /> */}
         <ProblemSection dict={dict.problems} />
         <DifferentiationSection dict={dict.differentiation} />
         <ServicesSection dict={dict.services} />

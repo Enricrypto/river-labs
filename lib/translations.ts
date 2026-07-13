@@ -15,12 +15,14 @@ export type Dict = {
     headingItalic: string
     heading2: string
     sub: string
+    subline?: string
     cta1: string
     cta2: string
     badges: string[]
   }
   proof: {
     label: string
+    note?: string
     sectors: string[]
   }
   authority: {
@@ -134,13 +136,15 @@ const en: Dict = {
     heading1: "The AI system that",
     headingItalic: "replaces the spreadsheets",
     heading2: "running your operation.",
-    sub: "We map your operation, find where work is structured around humans doing the steps, and build the system that redesigns it - running inside your infrastructure, owned by your team.",
+    sub: "We map your operation, find where work is structured around humans doing the steps, and build the system that redesigns it, from document processing to CRM and lead communication. Running inside your infrastructure, owned by your team.",
+    subline: "Not another tool to learn. A system that already runs when you receive it, while your team watches the results.",
     cta1: "Get a Free AI Opportunity Diagnosis",
     cta2: "Learn How We Work",
     badges: ["We Co-create", "We Train", "You Own the System", "Workflow Redesigned. Not Just Automated."]
   },
   proof: {
     label: "Industries we focus on",
+    note: "In CRM and lead automation, we also work with professional service operations, law firms, real estate, and political campaigns.",
     sectors: [
       "Tourism",
       "Transport",
@@ -187,6 +191,14 @@ const en: Dict = {
           "Fire engineering consultancy in Dubai. Expert reporting required gathering documents, precise referencing, and structured writing - 4 to 5 days per case.",
         result:
           "Under 3 hours per report. System runs in their infrastructure. Team owns it completely."
+      },
+      {
+        tag: "CRM · WhatsApp",
+        client: "Law firm",
+        context:
+          "Mid-sized firm in Rio de Janeiro with 20,000+ leads in the base. Manual outreach and mass blasts with no segmentation, no follow-up, and no CRM integration. No conversation history, no lead scoring, no cadence.",
+        result:
+          "Full WhatsApp conversation cadence, run by AI agents. CRM integrated with lead scoring and segmentation. Response rate 3x higher. The team's role changed: from operating outreach to reading a dashboard."
       }
     ]
   },
@@ -206,6 +218,10 @@ const en: Dict = {
         title: "When the project ends, the system stops - because the organization never changed around it.",
         desc: "Most AI projects fail after the proof of concept - not because the technology broke, but because leaders kept operating the same way. The vendor built the tool. Nobody redesigned the decisions the tool was supposed to inform. When the project closed, the system went dark. You were back to spreadsheets, with nothing to show for the investment."
       },
+      {
+        title: "Lead communication still depends on someone coordinating every step.",
+        desc: "Many teams still manage lead relationships by hand, with tools that demand constant operation, training, and a human decision at every step. When the key person leaves or gets overloaded, communication stops. The next stage isn't a better tool: it's a system that runs without someone driving it, with the team watching outcomes instead of managing steps."
+      },
     ]
   },
   differentiation: {
@@ -218,7 +234,7 @@ const en: Dict = {
       "Fully documented and transferable code",
     ],
     closing:
-      "When the project ends, you own the system completely. Not a license. Not a dashboard. The system itself - documented, transferable, and built to evolve with your team."
+      "When the project ends, you own the system completely. Not a license. Not a dashboard you operate - agents that run the flow, with your team supervising. The system itself: documented, transferable, and built to evolve with your team."
   },
   services: {
     heading: "What we build",
@@ -231,7 +247,7 @@ const en: Dict = {
       },
       {
         title: "Custom AI Systems",
-        desc: "We design and build the system for your exact context - demand forecasting, document research automation, revenue analytics, predictive maintenance, compliance reporting, marketing triggers, or anything else your operation needs."
+        desc: "Systems with AI agents that run the workflow end to end: they decide the next step, call your existing systems, handle exceptions, and escalate to a human only when needed. We design and build for your exact context - demand forecasting, document research automation, revenue analytics, predictive maintenance, compliance reporting, marketing triggers, CRM and WhatsApp outreach automation, or anything else your operation needs."
       },
       {
         title: "Capability Transfer - Your Team Runs It",
@@ -278,6 +294,15 @@ const en: Dict = {
           "AI-powered legal document classification and analysis",
           "Anomaly detection in contracts and audits",
           "AI-assisted due diligence for M&A and partnerships"
+        ]
+      },
+      {
+        name: "CRM & Communication",
+        items: [
+          "AI agents that run the full lead cadence over WhatsApp, from first contact to close, with no manual operation",
+          "CRM with dynamic segmentation by profile, history, and engagement level, updated in real time by the agents",
+          "Mass outreach at scale with an observability dashboard: your team monitors, the system executes",
+          "Autonomous communication operation for campaigns, firms, and sales teams, with optional human intervention"
         ]
       }
     ]
@@ -425,6 +450,10 @@ const en: Dict = {
         q: "How do you handle AI errors and quality control?",
         a: "Every system we build includes validation layers specific to your context - not generic guardrails. When the system flags a decision for human review, your team reviews it. Confidence thresholds are set with your team during the pilot. We design for appropriate human oversight, not full automation of decisions that require judgment."
       },
+      {
+        q: "Do you build automations or AI agents? What's the difference?",
+        a: "Automation runs a predefined step. An agent conducts the flow: it decides the next step, calls your systems, handles exceptions, and escalates to a human when the case needs one. We build systems where agents do the work end to end, your team supervises, and steps in when it chooses to. It's the difference between speeding up a task and delegating the operation."
+      },
     ]
   },
   cta: {
@@ -490,13 +519,15 @@ const es: Dict = {
     heading1: "El sistema de IA que",
     headingItalic: "reemplaza cómo opera tu negocio",
     heading2: "- no solo cómo procesa tareas.",
-    sub: "Mapeamos tu operación, identificamos dónde el trabajo está estructurado de forma incorrecta, y construimos el sistema que lo rediseña - corriendo dentro de tu infraestructura, en propiedad de tu equipo.",
+    sub: "Mapeamos tu operación, identificamos dónde el trabajo está estructurado de forma incorrecta, y construimos el sistema que lo rediseña, desde el procesamiento de documentos hasta el CRM y la comunicación con leads. Corriendo dentro de tu infraestructura, en propiedad de tu equipo.",
+    subline: "No una herramienta más para aprender. Un sistema que ya opera cuando lo recibes, mientras tu equipo observa los resultados.",
     cta1: "Diagnóstico Gratuito de IA",
     cta2: "Conoce cómo trabajamos",
     badges: ["Co-creamos", "Capacitamos", "Tú eres dueño del sistema", "Flujo rediseñado. No solo automatizado."]
   },
   proof: {
     label: "Industrias en las que nos enfocamos",
+    note: "En CRM y automatización de leads, también trabajamos con operaciones de servicio profesional, despachos jurídicos, inmobiliarias y campañas políticas.",
     sectors: [
       "Turismo",
       "Transporte",
@@ -543,6 +574,14 @@ const es: Dict = {
           "Consultora de ingeniería contra incendios en Dubai. La elaboración de informes requería recopilar documentos, referencias precisas y redacción estructurada - 4 a 5 días por caso.",
         result:
           "Menos de 3 horas por informe. El sistema corre en su infraestructura. El equipo lo posee completamente."
+      },
+      {
+        tag: "CRM · WhatsApp",
+        client: "Despacho jurídico",
+        context:
+          "Despacho de tamaño medio en Río de Janeiro con más de 20.000 leads en la base. Prospección manual y disparos masivos sin segmentación, sin follow-up y sin integración con CRM. Sin historial de conversación, sin scoring de leads, sin cadencia.",
+        result:
+          "Cadencia completa de conversaciones por WhatsApp, conducida por agentes de IA. CRM integrado con scoring y segmentación de leads. Tasa de respuesta 3x mayor. El rol del equipo cambió: de operar la prospección a leer un panel."
       }
     ]
   },
@@ -562,6 +601,10 @@ const es: Dict = {
         title: "Cuando el proyecto termina, el sistema se apaga - porque la organización nunca cambió a su alrededor.",
         desc: "La mayoría de los proyectos de IA fallan después de la prueba de concepto - no porque la tecnología falló, sino porque los líderes siguieron operando de la misma manera. El proveedor construyó la herramienta. Nadie rediseñó las decisiones que la herramienta debía informar. Cuando el proyecto cerró, el sistema se apagó. Volviste a las planillas sin nada que mostrar por la inversión."
       },
+      {
+        title: "La comunicación con leads todavía depende de alguien coordinando cada paso.",
+        desc: "Muchos equipos aún gestionan la relación con leads a mano, con herramientas que exigen operación constante, capacitación y una decisión humana en cada paso. Cuando la persona clave se va o queda sobrecargada, la comunicación se detiene. La siguiente etapa no es una herramienta mejor: es un sistema que corre sin que alguien lo conduzca, con el equipo observando resultados en vez de gestionar pasos."
+      },
     ]
   },
   differentiation: {
@@ -575,7 +618,7 @@ const es: Dict = {
       "Código completamente documentado y transferible",
     ],
     closing:
-      "Cuando el proyecto termina, eres dueño del sistema por completo. No una licencia. No un dashboard. El sistema mismo - documentado, transferible, y construido para evolucionar con tu equipo."
+      "Cuando el proyecto termina, eres dueño del sistema por completo. No una licencia. No un dashboard que operas - agentes que ejecutan el flujo, con tu equipo supervisando. El sistema mismo: documentado, transferible, y construido para evolucionar con tu equipo."
   },
   services: {
     heading: "Lo que construimos",
@@ -588,7 +631,7 @@ const es: Dict = {
       },
       {
         title: "Sistemas de IA Personalizados",
-        desc: "Diseñamos y construimos el sistema para tu contexto exacto - forecasting de demanda, automatización de investigación documental, analítica de ingresos, mantenimiento predictivo, reportes de compliance, disparadores de marketing, o lo que tu operación necesite."
+        desc: "Sistemas con agentes de IA que ejecutan el flujo de punta a punta: deciden el próximo paso, accionan tus sistemas existentes, manejan excepciones y escalan a un humano solo cuando es necesario. Diseñamos y construimos para tu contexto exacto - forecasting de demanda, automatización de investigación documental, analítica de ingresos, mantenimiento predictivo, reportes de compliance, disparadores de marketing, automatización de CRM y disparos por WhatsApp, o lo que tu operación necesite."
       },
       {
         title: "Transferencia de Capacidad - Tu Equipo Lo Opera",
@@ -635,6 +678,15 @@ const es: Dict = {
           "Clasificación y análisis de documentos jurídicos con IA",
           "Detección de anomalías en contratos y auditorías",
           "Due diligence asistida por IA para M&A y alianzas"
+        ]
+      },
+      {
+        name: "CRM y Comunicación",
+        items: [
+          "Agentes de IA que conducen la cadencia completa de leads por WhatsApp, del primer contacto al cierre, sin operación manual",
+          "CRM con segmentación dinámica por perfil, historial y nivel de engagement, actualizado en tiempo real por los agentes",
+          "Disparos a escala con panel de observabilidad: tu equipo monitorea, el sistema ejecuta",
+          "Operación de comunicación autónoma para campañas, despachos y equipos comerciales, con intervención humana opcional"
         ]
       }
     ]
@@ -784,6 +836,10 @@ const es: Dict = {
         q: "¿Cómo manejan los errores de la IA y el control de calidad?",
         a: "Cada sistema que construimos incluye capas de validación específicas a tu contexto - no guardrails genéricos. Cuando el sistema marca una decisión para revisión humana, tu equipo la revisa. Los umbrales de confianza se definen con tu equipo durante el piloto. Diseñamos para supervisión humana adecuada, no automatización total de decisiones que requieren juicio."
       },
+      {
+        q: "¿Construyen automatizaciones o agentes de IA? ¿Cuál es la diferencia?",
+        a: "Una automatización ejecuta un paso predefinido. Un agente conduce el flujo: decide el próximo paso, acciona tus sistemas, maneja excepciones y escala a un humano cuando el caso lo requiere. Construimos sistemas donde los agentes hacen el trabajo de punta a punta, tu equipo supervisa y interviene cuando lo decide. Es la diferencia entre acelerar una tarea y delegar la operación."
+      },
     ]
   },
   cta: {
@@ -849,13 +905,15 @@ const pt: Dict = {
     heading1: "O sistema de IA que",
     headingItalic: "substitui como sua operação funciona",
     heading2: "- não apenas como ela processa tarefas.",
-    sub: "Mapeamos sua operação, identificamos onde o trabalho está estruturado de forma errada, e construímos o sistema que o redesenha - rodando na sua infraestrutura, de propriedade da sua equipe.",
+    sub: "Mapeamos sua operação, identificamos onde o trabalho está estruturado de forma errada, e construímos o sistema que o redesenha, do processamento de documentos ao CRM e à comunicação com leads. Rodando na sua infraestrutura, de propriedade da sua equipe.",
+    subline: "Não mais uma ferramenta para aprender. Um sistema que já opera quando você recebe, enquanto sua equipe acompanha os resultados.",
     cta1: "Diagnóstico Gratuito de IA",
     cta2: "Veja como trabalhamos",
     badges: ["Co-criamos", "Capacitamos", "Você é dono do sistema", "Fluxo redesenhado. Não apenas automatizado."]
   },
   proof: {
     label: "Indústrias em que nos focamos",
+    note: "Em CRM e automação de leads, também atuamos com operações de serviço profissional, escritórios jurídicos, imobiliárias e campanhas políticas.",
     sectors: [
       "Turismo",
       "Transporte",
@@ -902,6 +960,14 @@ const pt: Dict = {
           "Consultoria de engenharia de incêndio em Dubai. O processo de elaboração de relatórios especializados - coleta de documentos, referenciamento preciso e escrita estruturada - levava de 4 a 5 dias por caso.",
         result:
           "Menos de 3 horas por relatório. O sistema roda na infraestrutura deles. A equipe é dona do sistema."
+      },
+      {
+        tag: "CRM · WhatsApp",
+        client: "Escritório jurídico",
+        context:
+          "Escritório de médio porte no Rio de Janeiro com mais de 20 mil leads na base. Prospecção manual e disparos em massa sem segmentação, sem follow-up e sem integração com CRM. Nenhum histórico de conversa, nenhuma pontuação de lead, nenhuma cadência.",
+        result:
+          "Cadência completa de conversas via WhatsApp, conduzida por agentes de IA. CRM integrado com pontuação e segmentação de leads. Taxa de resposta 3x maior. O papel da equipe mudou: deixou de operar a prospecção e passou a acompanhar um painel."
       }
     ]
   },
@@ -921,6 +987,10 @@ const pt: Dict = {
         title: "Quando o projeto termina, o sistema para - porque a organização nunca mudou ao redor dele.",
         desc: "A maioria dos projetos de IA falha depois da prova de conceito - não porque a tecnologia quebrou, mas porque os líderes continuaram operando da mesma forma. O fornecedor construiu a ferramenta. Ninguém redesenhou as decisões que ela deveria informar. Quando o projeto fechou, o sistema apagou. Você voltou para as planilhas sem nada para mostrar pelo investimento."
       },
+      {
+        title: "A comunicação com leads ainda depende de alguém coordenando cada etapa.",
+        desc: "Muitas equipes gerenciam o relacionamento com leads na mão, com ferramentas que exigem operação constante, treinamento e uma decisão humana a cada passo. Quando a pessoa-chave sai ou fica sobrecarregada, a comunicação para. O próximo estágio não é uma ferramenta melhor: é um sistema que roda sem alguém conduzindo, com a equipe acompanhando resultados em vez de gerenciar etapas."
+      },
     ]
   },
   differentiation: {
@@ -935,7 +1005,7 @@ const pt: Dict = {
       "Código completamente documentado e transferível",
     ],
     closing:
-      "Quando o projeto termina, você é dono do sistema por completo. Não uma licença. Não um dashboard. O sistema em si - documentado, transferível, e construído para evoluir com a sua equipe."
+      "Quando o projeto termina, você é dono do sistema por completo. Não uma licença. Não um dashboard que você opera - agentes que executam o fluxo, com a sua equipe supervisionando. O sistema em si: documentado, transferível, e construído para evoluir com a sua equipe."
   },
   services: {
     heading: "Construímos soluções específicas para o seu contexto.",
@@ -948,7 +1018,7 @@ const pt: Dict = {
       },
       {
         title: "Sistemas de IA Personalizados",
-        desc: "Projetamos e construímos o sistema para o seu contexto exato - previsão de demanda, automação de pesquisa documental, analytics de receita, manutenção preditiva, relatórios de compliance, gatilhos de marketing, ou o que sua operação precisar."
+        desc: "Sistemas com agentes de IA que executam o fluxo de ponta a ponta: decidem o próximo passo, acionam seus sistemas existentes, lidam com exceções e escalam para um humano só quando necessário. Projetamos e construímos para o seu contexto exato - previsão de demanda, automação de pesquisa documental, analytics de receita, manutenção preditiva, relatórios de compliance, gatilhos de marketing, automação de CRM e disparos no WhatsApp, ou o que sua operação precisar."
       },
       {
         title: "Transferência de Capacidade - Sua Equipe Opera",
@@ -984,6 +1054,15 @@ const pt: Dict = {
           "Classificação e análise de documentos jurídicos com IA",
           "Detecção de anomalias em contratos e auditorias",
           "Due diligence assistida por IA para M&A e parcerias"
+        ]
+      },
+      {
+        name: "CRM e Comunicação",
+        items: [
+          "Agentes de IA que conduzem a cadência completa de leads via WhatsApp, do primeiro contato ao fechamento, sem operação manual",
+          "CRM com segmentação dinâmica por perfil, histórico e nível de engajamento, atualizado em tempo real pelos agentes",
+          "Disparos em escala com painel de observabilidade: sua equipe monitora, o sistema executa",
+          "Operação de comunicação autônoma para campanhas, escritórios e times comerciais, com intervenção humana opcional"
         ]
       }
     ]
@@ -1132,6 +1211,10 @@ const pt: Dict = {
       {
         q: "Como vocês lidam com erros da IA e controle de qualidade?",
         a: "Todo sistema que construímos inclui camadas de validação específicas ao seu contexto - não guardrails genéricos. Quando o sistema sinaliza uma decisão para revisão humana, sua equipe a revisa. Os limites de confiança são definidos com sua equipe durante o piloto. Projetamos para supervisão humana adequada, não automação total de decisões que exigem julgamento."
+      },
+      {
+        q: "Vocês constroem automações ou agentes de IA? Qual a diferença?",
+        a: "Uma automação executa um passo predefinido. Um agente conduz o fluxo: decide o próximo passo, aciona seus sistemas, lida com exceções e escala para um humano quando o caso exige. Construímos sistemas em que os agentes fazem o trabalho de ponta a ponta, sua equipe supervisiona e intervém quando decide. É a diferença entre acelerar uma tarefa e delegar a operação."
       }
     ]
   },

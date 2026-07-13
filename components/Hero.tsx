@@ -47,6 +47,14 @@ export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string 
             {dict.sub}
           </p>
 
+          {dict.subline && (
+            <p
+              className={`text-base md:text-lg text-white/40 -mt-6 mb-10 leading-relaxed font-normal max-w-2xl ${mounted ? "hero-fade-2" : "opacity-0"}`}
+            >
+              {dict.subline}
+            </p>
+          )}
+
           <div
             className={`flex flex-col sm:flex-row items-start gap-3 ${mounted ? "hero-fade-3" : "opacity-0"}`}
           >

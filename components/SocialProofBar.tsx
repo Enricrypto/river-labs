@@ -33,6 +33,12 @@ export default function SocialProofBar({ dict }: { dict: Dict["proof"] }) {
         </div>
       </div>
 
+      {dict.note && (
+        <div className="max-w-7xl mx-auto px-6 pb-4 -mt-1">
+          <p className="text-xs text-gray-400 leading-relaxed">{dict.note}</p>
+        </div>
+      )}
+
       <style>{`
         @keyframes ticker {
           0%   { transform: translateX(0); }
