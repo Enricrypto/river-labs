@@ -24,7 +24,7 @@ export default function Footer({ dict, lang }: { dict: Dict["footer"]; lang: "en
 
         <div className="flex flex-wrap gap-x-8 gap-y-4 text-base text-white/60 font-medium">
           {dict.links.map((link, i) => {
-            const href = i === 0 ? `/${lang}#services` : i === 1 ? `/${lang}/cases` : `/${lang}/contact`;
+            const href = i === 0 ? `/${lang}#services` : `/${lang}/contact`;
             return (
               <Link key={link} href={href} className="hover:text-white transition-colors">
                 {link}
@@ -43,17 +43,7 @@ export default function Footer({ dict, lang }: { dict: Dict["footer"]; lang: "en
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10 text-base text-white/30 font-normal">
         <p>{dict.copyright}</p>
-        <div className="flex items-center gap-6">
-          <Link href="#" className="text-white/50 hover:text-white transition-colors">
-            <Linkedin className="w-5 h-5" strokeWidth={1.5} />
-          </Link>
-          <Link href="#" className="text-white/50 hover:text-white transition-colors">
-            <Instagram className="w-5 h-5" strokeWidth={1.5} />
-          </Link>
-          <Link href="#" className="text-white/50 hover:text-white transition-colors">
-            <MessageCircle className="w-5 h-5" strokeWidth={1.5} />
-          </Link>
-        </div>
+        {/* Social links coming soon */}
       </div>
     </footer>
   );

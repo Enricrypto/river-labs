@@ -133,23 +133,24 @@ const en: Dict = {
     cta: "Free Diagnosis"
   },
   hero: {
-    heading1: "The AI system that",
-    headingItalic: "replaces the spreadsheets",
-    heading2: "running your operation.",
-    sub: "We map your operation, find where work is structured around humans doing the steps, and build the system that redesigns it, from document processing to CRM and lead communication. Running inside your infrastructure, owned by your team.",
-    subline: "Not another tool to learn. A system that already runs when you receive it, while your team watches the results.",
-    cta1: "Get a Free AI Opportunity Diagnosis",
-    cta2: "Learn How We Work",
-    badges: ["We Co-create", "We Train", "You Own the System", "Workflow Redesigned. Not Just Automated."]
+    heading1: "Diagnosis first.",
+    headingItalic: "System next.",
+    heading2: "Capability that stays.",
+    sub: "We help established companies in traditional sectors discover exactly where they're losing value — and build, on demand, whatever the diagnosis requires. In your infrastructure, with your team in control.",
+    subline: "Not a consulting practice that leaves slides. A boutique that enters through diagnosis, designs the solution, and leaves with capability inside your house.",
+    cta1: "Have a diagnosis conversation",
+    cta2: "See how we work",
+    badges: ["Custom-made, not off-the-shelf", "Senior from day one", "Planned exit", "Your system, your code"]
   },
   proof: {
-    label: "Industries we focus on",
-    note: "In CRM and lead automation, we also work with professional service operations, law firms, real estate, and political campaigns.",
+    label: "Sectors",
+    note: "",
     sectors: [
       "Tourism",
-      "Transport",
+      "Ports & Transport",
       "Hospitality",
       "Events",
+      "Infrastructure",
       "Compliance & Legal"
     ]
   },
@@ -199,6 +200,14 @@ const en: Dict = {
           "Mid-sized firm in Rio de Janeiro with 20,000+ leads in the base. Manual outreach and mass blasts with no segmentation, no follow-up, and no CRM integration. No conversation history, no lead scoring, no cadence.",
         result:
           "Full WhatsApp conversation cadence, run by AI agents. CRM integrated with lead scoring and segmentation. Response rate 3x higher. The team's role changed: from operating outreach to reading a dashboard."
+      },
+      {
+        tag: "Commercial Diagnosis · Tourism",
+        client: "Cruise terminal",
+        context:
+          "One of the country's leading passenger terminals saw volume fall in a record-setting market. Urgent need to understand market strategy: which ports are growing, which cruise lines increase frequency, how tariffs and occupancy behave at competing ports.",
+        result:
+          "Diagnosis with 10 interviews with cruise lines, port associations, and port authorities; tariff cross-reference from 4 port authorities; reconciliation of revenue model with internal data. Two priced decision paths. Three-stage action plan with clear completion criteria for each milestone. Market intelligence bulletin and performance dashboard implemented as a consequence of the plan."
       }
     ]
   },
@@ -308,29 +317,21 @@ const en: Dict = {
     ]
   },
   team: {
-    heading: "Built by operators who implement the systems themselves.",
-    sub: "River Labs was founded by engineers and operators who have built automation systems across e-commerce, operations, and regulated services. We focus on one thing: turning operational data into systems teams can actually run - not prototypes that disappear after the pilot.",
+    heading: "Founders who sign the diagnosis and lead the build.",
+    sub: "River Labs was founded by three partners with experience across infrastructure, technology, and operations at global firms. The founders personally conduct every engagement — from diagnosis to production systems — and activate a network of specialists by project: market analysts, data engineers, designers, and sector experts.",
     bioLabel: "Full bio",
     members: [
       {
         name: "Leonardo Werner",
-        role: "Culture, People & Governance",
+        role: "Founder · Strategy, People & Governance",
         bio: "Bio coming soon.",
         fullBio:
           "Leonardo Werner works at the intersection of ethics, organizational culture, and corporate governance. He is a senior consultant at Principia Advisory and visiting professor at PUC-Rio and EAE Business School in Barcelona, where he teaches business ethics in undergraduate and graduate programs.\n\nHis projects have global reach and focus on helping organizations build initiatives that align culture, strategy, and emerging technologies from an ethical perspective. He is also a fellow at FreedomLab, a Dutch think tank, where he writes about the impact of digital technologies on individuals and society.\n\nBefore dedicating himself to ethics and governance consulting, he worked in corporate intelligence, compliance (KYC/AML), and reputational due diligence, with a focus on clients operating in Latin America.",
         image: "/Leonardo_PP.png"
       },
       {
-        name: "João Guilherme Santos",
-        role: "Solutions Architect",
-        bio: "Bio coming soon.",
-        fullBio: "João Guilherme is a mechanical-aeronautical engineer graduated from the Instituto Tecnológico de Aeronáutica (ITA). During his studies, he developed a strong foundation in analytical reasoning, complex problem-solving, and systems thinking - competencies he now applies directly to the design of technology solutions. Complementing his technical background, he holds a postgraduate degree in e-commerce and digital business, which allows him to connect engineering fundamentals with modern digital business strategies.\n\nWith over 5 years of experience at VTEX, João began his career as a trainee and, for the past 4 years, has worked as a Solution Engineer, leading the design of solution architectures for e-commerce operations. Based in Barcelona for the past two years, his work is strongly focused on enterprise clients across Europe, where he works directly with companies from different industries and levels of complexity. Throughout this period, he has participated in strategic architecture definition processes for large organizations, including global groups such as City Football Group, contributing to the development of scalable, integrated solutions aligned with business objectives.\n\nHis experience combines technical depth with a practical, results-oriented perspective, enabling him to translate complex challenges into robust and viable architectures. João works at the intersection of technology and business, supporting companies in defining digital strategies, integrating systems, and evolving their commerce platforms - always with a focus on performance, scalability, and user experience.",
-        image: "/Joao_PP.png",
-        objectPosition: "center top"
-      },
-      {
         name: "Antonio Rapozo",
-        role: "Developer & Tech Solutions",
+        role: "Founder · Solution Architecture",
         bio: "Bio coming soon.",
         fullBio:
           "Antonio Rapozo is a senior full-stack engineer with over 8 years of experience building mission-critical systems for the government, transportation, and energy sectors. Over the past 4 years, he has developed bridge inspection and infrastructure asset management platforms used by more than 15 state Departments of Transportation in the US, processing data related to over $500 million in annual investments.\n\nHe currently works on a browser security platform for managed service providers (MSPs), focused on protection against emerging AI threats, phishing, malware, and DNS filtering. His work transforms the browser - today the most vulnerable access point in organizations - into a secure, manageable workspace with advanced security controls, credential analysis, and productivity monitoring.\n\nHis technical expertise spans Vue.js, React, C#, .NET, TypeScript, and AWS, with dual AWS Solutions Architect certification. He integrates AI into production systems using OpenAI, LangChain, and Semantic Kernel, and is the creator of MemoryKit - an open-source .NET library implementing a neuroscience-inspired memory architecture for AI applications.\n\nWith a background in mechanical engineering from CEFET/RJ, a double-degree program in Germany (Deggendorf/IIK Düsseldorf), and a Machine Learning certification from Stanford, Antonio brings a rare combination of technical depth, architectural vision, and experience in complex regulatory environments. He is Brazilian, multilingual (Portuguese, English, German, Spanish), and has worked remotely with distributed teams since 2020.\n\nHis focus is on building scalable solutions that connect high-level software engineering with real business needs - from American government infrastructure to the next generation of intelligent agents.",
@@ -338,7 +339,7 @@ const en: Dict = {
       },
       {
         name: "Enrique Ibarra",
-        role: "Full Stack Engineer",
+        role: "Founder · Product & Engineering",
         bio: "Bio coming soon.",
         fullBio:
           "Enrique Ibarra works at the intersection of artificial intelligence and digital development, with a focus on turning technology into practical solutions for businesses. He builds and implements systems that improve processes, reduce costs, and increase efficiency through automation and the intelligent use of data.\n\nHis projects have international reach, including initiatives in Europe, Latin America, and the Middle East, and focus on applying AI strategically - helping organizations adopt new technologies without unnecessary complexity. His approach combines structured thinking with a practical mindset, always looking for the right questions and solutions that actually work day-to-day across different industries.\n\nThroughout his career, he has also developed expertise in Web3 and application development, working with digital products and new forms of technological infrastructure. His focus is on building useful, well-designed solutions aligned with real business needs.",
@@ -466,8 +467,8 @@ const en: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs.",
-    links: ["Services", "Client Area", "Contact"],
-    cta: "Start Free Diagnosis"
+    links: ["Services", "Contact"],
+    cta: "Start Diagnosis"
   },
   solutions: {
     heading: "What we build",
@@ -516,24 +517,25 @@ const es: Dict = {
     cta: "Diagnóstico Gratuito"
   },
   hero: {
-    heading1: "El sistema de IA que",
-    headingItalic: "reemplaza cómo opera tu negocio",
-    heading2: "- no solo cómo procesa tareas.",
-    sub: "Mapeamos tu operación, identificamos dónde el trabajo está estructurado de forma incorrecta, y construimos el sistema que lo rediseña, desde el procesamiento de documentos hasta el CRM y la comunicación con leads. Corriendo dentro de tu infraestructura, en propiedad de tu equipo.",
-    subline: "No una herramienta más para aprender. Un sistema que ya opera cuando lo recibes, mientras tu equipo observa los resultados.",
-    cta1: "Diagnóstico Gratuito de IA",
-    cta2: "Conoce cómo trabajamos",
-    badges: ["Co-creamos", "Capacitamos", "Tú eres dueño del sistema", "Flujo rediseñado. No solo automatizado."]
+    heading1: "Diagnóstico primero.",
+    headingItalic: "Sistema después.",
+    heading2: "Capacidad que queda.",
+    sub: "Ayudamos a empresas establecidas en sectores tradicionales a descubrir exactamente dónde están perdiendo valor — y construimos, a medida, lo que el diagnóstico exige. En tu infraestructura, con tu equipo al mando.",
+    subline: "No una consultoría que deja slides. Una boutique que entra por el diagnóstico, diseña la solución y se va con capacidad dentro de tu casa.",
+    cta1: "Conversar sobre un diagnóstico",
+    cta2: "Ver cómo trabajamos",
+    badges: ["A medida, no de catálogo", "Sénior de día uno", "Salida planeada", "Tu sistema, tu código"]
   },
   proof: {
-    label: "Industrias en las que nos enfocamos",
-    note: "En CRM y automatización de leads, también trabajamos con operaciones de servicio profesional, despachos jurídicos, inmobiliarias y campañas políticas.",
+    label: "Sectores",
+    note: "",
     sectors: [
       "Turismo",
-      "Transporte",
+      "Puertos y Transporte",
       "Hospitalidad",
       "Eventos",
-      "Compliance & Legal"
+      "Infraestructura",
+      "Compliance & Jurídico"
     ]
   },
   authority: {
@@ -582,6 +584,14 @@ const es: Dict = {
           "Despacho de tamaño medio en Río de Janeiro con más de 20.000 leads en la base. Prospección manual y disparos masivos sin segmentación, sin follow-up y sin integración con CRM. Sin historial de conversación, sin scoring de leads, sin cadencia.",
         result:
           "Cadencia completa de conversaciones por WhatsApp, conducida por agentes de IA. CRM integrado con scoring y segmentación de leads. Tasa de respuesta 3x mayor. El rol del equipo cambió: de operar la prospección a leer un panel."
+      },
+      {
+        tag: "Diagnóstico Comercial · Turismo",
+        client: "Terminal de cruceros",
+        context:
+          "Uno de los principales terminales de pasajeros del país vio caer volúmenes en un mercado en expansión. Necesidad urgente de entender la estrategia de mercado: qué puertos crecen, qué armadores aumentan frecuencia, cómo se comportan tarifa y ocupación en puertos competidores.",
+        result:
+          "Diagnóstico con 10 entrevistas con armadores, asociaciones portuarias y autoridades; cruzamiento de tarifas de 4 autoridades; reconciliación de modelo de ingresos con datos internos. Dos caminos de decisión con precios. Plan de acción de 3 etapas con criterio claro de conclusión para cada hito. Boletín de inteligencia de mercado y panel de indicadores implementados como consecuencia."
       }
     ]
   },
@@ -693,29 +703,21 @@ const es: Dict = {
   },
   team: {
     heading:
-      "Construido por operadores que implementan los sistemas ellos mismos.",
-    sub: "River Labs fue fundado por ingenieros y operadores que han construido sistemas de automatización en e-commerce, operaciones y servicios regulados. Nos enfocamos en una cosa: convertir datos operativos en sistemas que los equipos puedan realmente operar - no prototipos que desaparecen después del piloto.",
+      "Fundadores que firman el diagnóstico y lideran la construcción.",
+    sub: "River Labs fue fundado por tres socios con experiencia en infraestructura, tecnología y operaciones en empresas globales. Los fundadores conducen personalmente cada engagement — del diagnóstico a los sistemas en producción — e activan una red de especialistas por proyecto: analistas de mercado, ingenieros de datos, diseñadores y expertos sectoriales.",
     bioLabel: "Bio completa",
     members: [
       {
         name: "Leonardo Werner",
-        role: "Cultura, Personas & Gobernanza",
+        role: "Socio-fundador · Estrategia, Personas y Gobernanza",
         bio: "Bio próximamente.",
         fullBio:
           "Leonardo Werner trabaja en la intersección entre ética, cultura organizacional y gobernanza corporativa. Es consultor sénior en Principia Advisory y profesor invitado de la PUC-Rio y de la EAE Business School, en Barcelona, donde imparte ética empresarial en cursos de grado y posgrado.\n\nSus proyectos tienen alcance global y se centran en ayudar a las organizaciones a construir iniciativas que alineen cultura, estrategia y tecnologías emergentes desde una perspectiva ética. También es fellow del FreedomLab, think tank holandés, donde escribe sobre el impacto de las tecnologías digitales para individuos y sociedad.\n\nAntes de dedicarse a la consultoría en ética y gobernanza, trabajó en inteligencia corporativa, compliance (KYC/AML) y due diligence reputacional, con foco en clientes con operaciones en América Latina.",
         image: "/Leonardo_PP.png"
       },
       {
-        name: "João Guilherme Santos",
-        role: "Arquitecto de Soluciones",
-        bio: "Bio próximamente.",
-        fullBio: "João Guilherme es ingeniero mecánico-aeronáutico egresado del Instituto Tecnológico de Aeronáutica (ITA). Durante su formación, desarrolló una base sólida en razonamiento analítico, resolución de problemas complejos y pensamiento sistémico - competencias que hoy aplica directamente en la concepción de soluciones tecnológicas. Complementando su formación técnica, cuenta con un posgrado en e-commerce y negocios digitales, lo que le permite conectar fundamentos de ingeniería con estrategias modernas de negocios digitales.\n\nCon más de 5 años de experiencia en VTEX, João inició su trayectoria como trainee y, hace 4 años, se desempeña como Solution Engineer, liderando el diseño de arquitecturas de solución para operaciones de e-commerce. Radicado en Barcelona desde hace dos años, su trabajo está fuertemente orientado a clientes enterprise de Europa, donde trabaja directamente con empresas de distintas industrias y niveles de complejidad. A lo largo de este período, participó en procesos estratégicos de definición de arquitectura para grandes organizaciones, incluidos grupos globales como City Football Group, contribuyendo a la construcción de soluciones escalables, integradas y alineadas a los objetivos de negocio.\n\nSu experiencia combina profundidad técnica con una visión práctica y orientada a resultados, permitiéndole traducir desafíos complejos en arquitecturas robustas y viables. João actúa en la intersección entre tecnología y negocio, apoyando a empresas en la definición de estrategias digitales, integración de sistemas y evolución de sus plataformas de comercio, siempre con foco en performance, escalabilidad y experiencia del usuario.",
-        image: "/Joao_PP.png",
-        objectPosition: "center top"
-      },
-      {
         name: "Antonio Rapozo",
-        role: "Desarrollador & Soluciones Tech",
+        role: "Socio-fundador · Arquitectura de Soluciones",
         bio: "Bio próximamente.",
         fullBio:
           "Antonio Rapozo es ingeniero full-stack sénior con más de 8 años de experiencia construyendo sistemas de misión crítica para los sectores de gobierno, transporte y energía. En los últimos 4 años, desarrolló plataformas de inspección de puentes y gestión de activos de infraestructura utilizadas por más de 15 Departamentos de Transporte estatales en EE. UU., procesando datos relacionados con más de 500 millones de dólares en inversiones anuales.\n\nActualmente trabaja en una plataforma de seguridad de navegadores para proveedores de servicios gestionados (MSPs), con foco en la protección contra amenazas emergentes de IA, phishing, malware y filtrado DNS. Su trabajo transforma el navegador - hoy el punto de acceso más vulnerable en las organizaciones - en un workspace seguro y gestionable, con controles avanzados de seguridad, análisis de credenciales y monitoreo de productividad.\n\nSu expertise técnico abarca Vue.js, React, C#, .NET, TypeScript y AWS, con doble certificación AWS Solutions Architect. Integra IA en sistemas de producción con OpenAI, LangChain y Semantic Kernel, y es creador de MemoryKit - biblioteca open-source en .NET que implementa una arquitectura de memoria inspirada en neurociencia para aplicaciones de IA.\n\nCon formación en ingeniería mecánica por el CEFET/RJ, programa de doble titulación en Alemania (Deggendorf/IIK Düsseldorf) y certificación en Machine Learning por Stanford, Antonio aporta una combinación poco común de profundidad técnica, visión arquitectónica y experiencia en entornos regulatorios complejos. Es brasileño, multilingüe (portugués, inglés, alemán, español) y trabaja de forma remota con equipos distribuidos desde 2020.\n\nSu foco está en construir soluciones escalables que conecten la ingeniería de software de alto nivel con las necesidades reales del negocio - desde la infraestructura gubernamental estadounidense hasta la próxima generación de agentes inteligentes.",
@@ -723,7 +725,7 @@ const es: Dict = {
       },
       {
         name: "Enrique Ibarra",
-        role: "Full Stack Engineer",
+        role: "Socio-fundador · Producto e Ingeniería",
         bio: "Bio próximamente.",
         fullBio:
           "Enrique Ibarra trabaja en la intersección entre inteligencia artificial y desarrollo digital, con foco en transformar la tecnología en soluciones prácticas para las empresas. Se dedica a la creación e implementación de sistemas que mejoran procesos, reducen costos y aumentan la eficiencia mediante la automatización y el uso inteligente de los datos.\n\nSus proyectos tienen alcance internacional, con iniciativas en Europa, América Latina y Oriente Medio, y se centran en aplicar IA de forma estratégica, ayudando a las organizaciones a adoptar nuevas tecnologías sin complejidad innecesaria. Su enfoque combina el pensamiento estructurado con una mentalidad práctica, buscando siempre las preguntas correctas y soluciones que realmente funcionen en el día a día de distintas industrias.\n\nA lo largo de su trayectoria, también desarrolló experiencia en Web3 y desarrollo de aplicaciones, trabajando con productos digitales y nuevas formas de infraestructura tecnológica. Su foco está en construir soluciones útiles, bien diseñadas y alineadas con las necesidades reales del negocio.",
@@ -852,8 +854,8 @@ const es: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs.",
-    links: ["Servicios", "Área de Cliente", "Contacto"],
-    cta: "Diagnóstico Gratuito"
+    links: ["Servicios", "Contacto"],
+    cta: "Iniciar Diagnóstico"
   },
   solutions: {
     heading: "Lo que construimos",
@@ -902,24 +904,25 @@ const pt: Dict = {
     cta: "Diagnóstico Gratuito"
   },
   hero: {
-    heading1: "O sistema de IA que",
-    headingItalic: "substitui como sua operação funciona",
-    heading2: "- não apenas como ela processa tarefas.",
-    sub: "Mapeamos sua operação, identificamos onde o trabalho está estruturado de forma errada, e construímos o sistema que o redesenha, do processamento de documentos ao CRM e à comunicação com leads. Rodando na sua infraestrutura, de propriedade da sua equipe.",
-    subline: "Não mais uma ferramenta para aprender. Um sistema que já opera quando você recebe, enquanto sua equipe acompanha os resultados.",
-    cta1: "Diagnóstico Gratuito de IA",
-    cta2: "Veja como trabalhamos",
-    badges: ["Co-criamos", "Capacitamos", "Você é dono do sistema", "Fluxo redesenhado. Não apenas automatizado."]
+    heading1: "Diagnóstico primeiro.",
+    headingItalic: "Sistema depois.",
+    heading2: "Capacidade que fica.",
+    sub: "Ajudamos empresas estabelecidas em setores tradicionais a descobrir exatamente onde estão perdendo — e construímos, sob medida, o que o diagnóstico exige. Na sua infraestrutura, com a sua equipe no comando.",
+    subline: "Não uma consultoria que abandona slides. Uma boutique que entra pelo diagnóstico, desenha a solução, e sai com a capacidade dentro de casa.",
+    cta1: "Conversar sobre um diagnóstico",
+    cta2: "Ver como trabalhamos",
+    badges: ["Sob medida, não prateleira", "Sênior do começo ao fim", "Saída planejada", "Seu sistema, seu código"]
   },
   proof: {
-    label: "Indústrias em que nos focamos",
-    note: "Em CRM e automação de leads, também atuamos com operações de serviço profissional, escritórios jurídicos, imobiliárias e campanhas políticas.",
+    label: "Setores",
+    note: "",
     sectors: [
       "Turismo",
-      "Transporte",
+      "Portos e Transporte",
       "Hospitalidade",
       "Eventos",
-      "Compliance & Legal"
+      "Infraestrutura",
+      "Compliance & Jurídico"
     ]
   },
   authority: {
@@ -968,6 +971,14 @@ const pt: Dict = {
           "Escritório de médio porte no Rio de Janeiro com mais de 20 mil leads na base. Prospecção manual e disparos em massa sem segmentação, sem follow-up e sem integração com CRM. Nenhum histórico de conversa, nenhuma pontuação de lead, nenhuma cadência.",
         result:
           "Cadência completa de conversas via WhatsApp, conduzida por agentes de IA. CRM integrado com pontuação e segmentação de leads. Taxa de resposta 3x maior. O papel da equipe mudou: deixou de operar a prospecção e passou a acompanhar um painel."
+      },
+      {
+        tag: "Diagnóstico Comercial · Turismo",
+        client: "Terminal de cruzeiros",
+        context:
+          "Um dos principais terminais de passageiros do país via o volume cair em um mercado em recorde. Necessidade urgente de entender a estratégia de mercado: que portos estão crescendo, quais armadores aumentam frequência, como a tarifa e a ocupação se comportam nos portos concorrentes.",
+        result:
+          "Diagnóstico com 10 entrevistas com armadores, associações portuárias e autoridades; cruzamento de tarifas de 4 autoridades portuárias; reconciliação de modelo de receita com dados internos. Dois caminhos de decisão precificados. Plano de ação em 3 etapas com critério de conclusão para cada item. Implementação de boletim de inteligência de mercado e painel de indicadores como consequência."
       }
     ]
   },
@@ -1069,29 +1080,21 @@ const pt: Dict = {
   },
   team: {
     heading:
-      "Construído por operadores que implementam os sistemas eles mesmos.",
-    sub: "A River Labs foi fundada por quatro profissionais que desenvolveram para empresas globais de diferentes setores e indústrias. O foco é único: melhorar o fluxo de trabalho das pessoas por meio de soluções tecnológicas.",
+      "Sócios que assinam o diagnóstico e lideram a construção.",
+    sub: "A River Labs foi fundada por três sócios com experiência em empresas globais de infraestrutura, tecnologia e operações. Os fundadores conduzem pessoalmente cada engajamento — do diagnóstico ao sistema em produção — e acionam uma rede de especialistas por projeto: analistas de mercado, engenheiros de dados, designers e especialistas setoriais.",
     bioLabel: "Bio completa",
     members: [
       {
         name: "Leonardo Werner",
-        role: "Cultura, Pessoas & Governança",
+        role: "Sócio-fundador · Estratégia, Pessoas e Governança",
         bio: "Bio em breve.",
         fullBio:
           "Leonardo Werner trabalha na interseção entre ética, cultura organizacional e governança corporativa. É consultor sênior na Principia Advisory e professor convidado da PUC-Rio e da EAE Business School, em Barcelona, onde leciona ética empresarial em cursos de graduação e pós-graduação.\n\nSeus projetos têm alcance global e se concentram em ajudar organizações a construir iniciativas que alinhem cultura, estratégia e tecnologias emergentes a partir de uma perspectiva ética. É também fellow do FreedomLab, think tank holandês, onde escreve sobre os impactos das tecnologias digitais para indivíduos e sociedade.\n\nAntes de se dedicar à consultoria em ética e governança, atuou em inteligência corporativa, compliance (KYC/AML) e due diligence reputacional, com foco em clientes com operações na América Latina.",
         image: "/Leonardo_PP.png"
       },
       {
-        name: "João Guilherme Santos",
-        role: "Arquiteto de Soluções",
-        bio: "Bio em breve.",
-        fullBio: "João Guilherme é engenheiro mecânico-aeronáutico formado pelo Instituto Tecnológico de Aeronáutica (ITA). Durante sua formação, desenvolveu uma base sólida em raciocínio analítico, resolução de problemas complexos e pensamento sistêmico, competências que hoje aplica diretamente na concepção de soluções tecnológicas. Complementando sua formação técnica, possui pós-graduação em e-commerce e negócios digitais, o que lhe permite conectar fundamentos de engenharia com estratégias modernas de negócios digitais.\n\nCom mais de 5 anos de experiência na VTEX, João iniciou sua trajetória como trainee e, há 4 anos, atua como Solution Engineer, liderando o desenho de arquiteturas de solução para operações de e-commerce. Vivendo em Barcelona há dois anos, sua atuação é fortemente focada em clientes enterprise da Europa, onde trabalha diretamente com empresas de diferentes indústrias e níveis de complexidade. Ao longo desse período, participou de processos estratégicos de definição de arquitetura para grandes organizações, incluindo grupos globais como o City Football Group, contribuindo para a construção de soluções escaláveis, integradas e alinhadas aos objetivos de negócio.\n\nSua experiência combina profundidade técnica com uma visão prática e orientada a resultados, permitindo traduzir desafios complexos em arquiteturas robustas e viáveis. João atua na interseção entre tecnologia e negócio, apoiando empresas na definição de estratégias digitais, integração de sistemas e evolução de suas plataformas de comércio, sempre com foco em performance, escalabilidade e experiência do usuário.",
-        image: "/Joao_PP.png",
-        objectPosition: "center top"
-      },
-      {
         name: "Antonio Rapozo",
-        role: "Desenvolvedor & Soluções Tech",
+        role: "Sócio-fundador · Arquitetura de Soluções",
         bio: "Bio em breve.",
         fullBio:
           "Antonio Rapozo é engenheiro full-stack sênior com mais de 8 anos de experiência construindo sistemas de missão crítica para os setores de governo, transportes e energia. Nos últimos 4 anos, desenvolveu plataformas de inspeção de pontes e gestão de ativos de infraestrutura utilizadas por mais de 15 Departamentos de Transporte estaduais nos EUA, processando dados referentes a mais de US$ 500 milhões em investimentos anuais.\n\nAtualmente, atua no desenvolvimento de uma plataforma de segurança de navegadores voltada para provedores de serviços gerenciados (MSPs), trabalhando na proteção contra ameaças emergentes de IA, phishing, malware e filtragem DNS. Seu trabalho transforma o navegador - hoje o ponto de acesso mais vulnerável nas organizações - em um workspace seguro e gerenciável, com controles avançados de segurança, análise de credenciais e monitoramento de produtividade.\n\nSua expertise técnica abrange Vue.js, React, C#, .NET, TypeScript e AWS, com dupla certificação AWS Solutions Architect. Integra inteligência artificial em sistemas de produção utilizando OpenAI, LangChain e Semantic Kernel, e é criador do MemoryKit - biblioteca open-source em .NET que implementa uma arquitetura de memória inspirada em neurociência para aplicações de IA.\n\nCom formação em engenharia mecânica pelo CEFET/RJ, programa de duplo diploma na Alemanha (Deggendorf/IIK Düsseldorf) e certificação em Machine Learning por Stanford, Antonio traz uma combinação rara de profundidade técnica, visão arquitetural e experiência em ambientes regulatórios complexos. É brasileiro, multilíngue (português, inglês, alemão, espanhol) e atua remotamente com equipes distribuídas desde 2020.\n\nSeu foco está em construir soluções escaláveis que conectam engenharia de software de alto nível com as necessidades reais de negócio - da infraestrutura governamental americana à próxima geração de agentes inteligentes.",
@@ -1099,7 +1102,7 @@ const pt: Dict = {
       },
       {
         name: "Enrique Ibarra",
-        role: "Engenheiro Full Stack",
+        role: "Sócio-fundador · Produto e Engenharia",
         bio: "Bio em breve.",
         fullBio:
           "Enrique Ibarra trabalha na interseção entre inteligência artificial e desenvolvimento digital, com foco em transformar tecnologia em soluções práticas para empresas. Atua na criação e implementação de sistemas que melhoram processos, reduzem custos e aumentam eficiência por meio de automação e uso inteligente de dados.\n\nSeus projetos têm alcance internacional, incluindo iniciativas na Europa, América Latina e Oriente Médio, e se concentram em aplicar IA de forma estratégica, ajudando organizações a adotar novas tecnologias sem complexidade desnecessária. Sua abordagem combina pensamento estruturado com uma mentalidade prática, buscando sempre as perguntas certas e soluções que realmente funcionem no dia a dia de diferentes indústrias.\n\nAo longo de sua trajetória, também desenvolveu experiência em Web3 e desenvolvimento de aplicações, trabalhando com produtos digitais e novas formas de infraestrutura tecnológica. Seu foco está em construir soluções úteis, bem desenhadas e alinhadas às necessidades reais de negócio.",
@@ -1228,8 +1231,8 @@ const pt: Dict = {
   },
   footer: {
     copyright: "© 2026 River Labs.",
-    links: ["Serviços", "Área do Cliente", "Contato"],
-    cta: "Diagnóstico Gratuito"
+    links: ["Serviços", "Contato"],
+    cta: "Iniciar Diagnóstico"
   },
   solutions: {
     heading: "O que construímos",

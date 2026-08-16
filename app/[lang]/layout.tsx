@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
 
+const CANONICAL_URL = "https://riverlabs.ai";
+
 const meta: Record<string, { title: string; description: string; htmlLang: string }> = {
   pt: {
     htmlLang: "pt-BR",
-    title: "River Labs - Automação com IA para Operações que Precisam de Resultado",
+    title: "River Labs - Diagnóstico e Sistemas sob Medida para Empresas Tradicionais",
     description:
-      "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
+      "Boutique de estratégia e tecnologia para empresas estabelecidas. Diagnóstico primeiro, sistema depois. Construído na sua infraestrutura, capacidade que fica.",
   },
   es: {
     htmlLang: "es",
-    title: "River Labs - Automatización con IA para Operaciones que Necesitan Resultado",
+    title: "River Labs - Diagnóstico y Sistemas Personalizados para Empresas Establecidas",
     description:
-      "Desarrollamos soluciones de IA y automatización personalizadas en tu infraestructura - sin dependencia de SaaS. Diagnóstico gratuito. Resultados en semanas.",
+      "Boutique de estrategia y tecnología para empresas consolidadas. Diagnóstico primero, sistema después. Construido en tu infraestructura, capacidad que queda.",
   },
   en: {
     htmlLang: "en",
-    title: "River Labs - AI Automation for Operations That Need Results",
+    title: "River Labs - Diagnosis and Custom Systems for Established Companies",
     description:
-      "We build custom AI and automation solutions inside your infrastructure - no SaaS dependency. Free diagnosis. Results in weeks.",
+      "Strategy and technology boutique for established enterprises. Diagnosis first, system next. Built in your infrastructure, capability that stays.",
   },
 };
 
@@ -26,15 +28,27 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { lang } = await params;
   const m = meta[lang] ?? meta.pt;
+  const url = `${CANONICAL_URL}/${lang}`;
+
   return {
     title: m.title,
     description: m.description,
+    canonical: url,
+    openGraph: {
+      url: url,
+      title: m.title,
+      description: m.description,
+      siteName: "River Labs",
+      locale: m.htmlLang,
+      type: "website",
+    },
     alternates: {
       languages: {
         "pt-BR": "/pt",
         es: "/es",
         en: "/en",
       },
+      canonical: CANONICAL_URL,
     },
   };
 }

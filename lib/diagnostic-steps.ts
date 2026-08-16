@@ -34,7 +34,7 @@ const stepsPT: StepDef[] = [
         id: "setor",
         label: "Em qual setor sua empresa atua?",
         type: "choice",
-        options: ["Logística & transporte", "Imobiliário & construção", "Varejo & e-commerce", "Manufatura & indústria", "Saúde & clínicas", "Educação", "Financeiro & contabilidade", "Tecnologia & SaaS", "Agronegócio", "Outro"],
+        options: ["Turismo", "Portos e Transporte", "Hospitalidade & Eventos", "Infraestrutura & Indústria", "Compliance & Jurídico", "Logística & transporte", "Imobiliário & construção", "Varejo & e-commerce", "Manufatura & indústria", "Saúde & clínicas", "Educação", "Financeiro & contabilidade", "Tecnologia & SaaS", "Agronegócio", "Outro"],
         required: true,
       },
       {
@@ -192,7 +192,7 @@ const stepsEN: StepDef[] = [
         id: "setor",
         label: "What sector does your company operate in?",
         type: "choice",
-        options: ["Logistics & transportation", "Real estate & construction", "Retail & e-commerce", "Manufacturing & industry", "Healthcare & clinics", "Education", "Finance & accounting", "Technology & SaaS", "Agribusiness", "Other"],
+        options: ["Tourism", "Ports & Transportation", "Hospitality & Events", "Infrastructure & Industry", "Compliance & Legal", "Logistics & transportation", "Real estate & construction", "Retail & e-commerce", "Manufacturing & industry", "Healthcare & clinics", "Education", "Finance & accounting", "Technology & SaaS", "Agribusiness", "Other"],
         required: true,
       },
       {
@@ -350,7 +350,7 @@ const stepsES: StepDef[] = [
         id: "setor",
         label: "¿En qué sector opera tu empresa?",
         type: "choice",
-        options: ["Logística & transporte", "Inmobiliario & construcción", "Retail & e-commerce", "Manufactura & industria", "Salud & clínicas", "Educación", "Finanzas & contabilidad", "Tecnología & SaaS", "Agronegocios", "Otro"],
+        options: ["Turismo", "Puertos & Transporte", "Hospitalidad & Eventos", "Infraestructura & Industria", "Compliance & Jurídico", "Logística & transporte", "Inmobiliario & construcción", "Retail & e-commerce", "Manufactura & industria", "Salud & clínicas", "Educación", "Finanzas & contabilidad", "Tecnología & SaaS", "Agronegocios", "Otro"],
         required: true,
       },
       {
