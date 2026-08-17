@@ -39,8 +39,11 @@ function BioModal({
   onClose: () => void;
 }) {
   useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
+    // Locking document.body directly froze desktop too: this modal is only
+    // display:none above md, so it still mounts and still ran the lock.
+    // The class is scoped to the mobile breakpoint in globals.css.
+    document.body.classList.add("bio-modal-open");
+    return () => { document.body.classList.remove("bio-modal-open"); };
   }, []);
 
   return (
@@ -178,7 +181,15 @@ export default function TeamSection({ dict }: { dict: Dict["team"] }) {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      {/* Three members no longer fill a four-column row, so the grid tracks the
+          count and centres itself rather than leaving a gap on the right. */}
+      <div
+        className={`grid grid-cols-2 gap-5 ${
+          dict.members.length === 3
+            ? "md:grid-cols-3 md:max-w-4xl md:mx-auto"
+            : "md:grid-cols-4"
+        }`}
+      >
         {dict.members.map((member, idx) => (
           <MemberCard
             key={idx}

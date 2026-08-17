@@ -1,5 +1,14 @@
 export type Lang = "en" | "es" | "pt"
 
+/** Sector icons are keyed explicitly: the sector lists differ per language, so
+ *  looking an icon up by array position silently mismatches or drops it. */
+export type SectorIcon =
+  | "revenue"
+  | "operations"
+  | "marketing"
+  | "compliance"
+  | "crm"
+
 export type Dict = {
   nav: {
     services: string
@@ -58,7 +67,7 @@ export type Dict = {
     heading: string
     sub: string
     useCasesLabel: string
-    sectors: { name: string; items: string[] }[]
+    sectors: { name: string; icon: SectorIcon; items: string[] }[]
   }
   team: {
     heading: string
@@ -270,6 +279,7 @@ const en: Dict = {
     sectors: [
       {
         name: "Revenue & Demand",
+        icon: "revenue",
         items: [
           "Dynamic pricing tied to demand, seasonality, and external events",
           "Demand forecasting with automatic staffing and supply triggers",
@@ -279,6 +289,7 @@ const en: Dict = {
       },
       {
         name: "Operations & Knowledge Work",
+        icon: "operations",
         items: [
           "Document research and report generation - multi-day workflows to hours",
           "Predictive maintenance alerts from equipment logs and service history",
@@ -288,6 +299,7 @@ const en: Dict = {
       },
       {
         name: "Marketing & Growth",
+        icon: "marketing",
         items: [
           "Automated marketing triggers based on demand forecasting",
           "Channel attribution analysis for marketing spend",
@@ -297,6 +309,7 @@ const en: Dict = {
       },
       {
         name: "Compliance & Legal",
+        icon: "compliance",
         items: [
           "Regulatory obligation monitoring and automated alerts",
           "AI-powered legal document classification and analysis",
@@ -306,6 +319,7 @@ const en: Dict = {
       },
       {
         name: "CRM & Communication",
+        icon: "crm",
         items: [
           "AI agents that run the full lead cadence over WhatsApp, from first contact to close, with no manual operation",
           "CRM with dynamic segmentation by profile, history, and engagement level, updated in real time by the agents",
@@ -652,6 +666,7 @@ const es: Dict = {
     sectors: [
       {
         name: "Ingresos y Demanda",
+        icon: "revenue",
         items: [
           "Precios dinámicos ligados a demanda, estacionalidad y eventos externos",
           "Forecasting de demanda con disparadores automáticos de staffing e insumos",
@@ -661,6 +676,7 @@ const es: Dict = {
       },
       {
         name: "Operaciones y Trabajo de Conocimiento",
+        icon: "operations",
         items: [
           "Investigación documental y generación de informes - flujos de días a horas",
           "Alertas predictivas de mantenimiento desde registros de equipos e historial",
@@ -670,6 +686,7 @@ const es: Dict = {
       },
       {
         name: "Marketing y Crecimiento",
+        icon: "marketing",
         items: [
           "Disparadores automáticos de marketing basados en forecasting de demanda",
           "Análisis de atribución de canales para inversión en marketing",
@@ -679,6 +696,7 @@ const es: Dict = {
       },
       {
         name: "Compliance & Legal",
+        icon: "compliance",
         items: [
           "Monitoreo de obligaciones regulatorias y alertas automáticas",
           "Clasificación y análisis de documentos jurídicos con IA",
@@ -688,6 +706,7 @@ const es: Dict = {
       },
       {
         name: "CRM y Comunicación",
+        icon: "crm",
         items: [
           "Agentes de IA que conducen la cadencia completa de leads por WhatsApp, del primer contacto al cierre, sin operación manual",
           "CRM con segmentación dinámica por perfil, historial y nivel de engagement, actualizado en tiempo real por los agentes",
@@ -1037,6 +1056,7 @@ const pt: Dict = {
     sectors: [
       {
         name: "Receita e Demanda",
+        icon: "revenue",
         items: [
           "Precificação dinâmica ligada a demanda, sazonalidade e eventos externos",
           "Previsão de demanda com gatilhos automáticos de equipe e suprimentos",
@@ -1045,6 +1065,7 @@ const pt: Dict = {
       },
       {
         name: "Marketing",
+        icon: "marketing",
         items: [
           "Gatilhos automáticos de marketing baseados em previsão de demanda",
           "Análise de atribuição de canais para investimento em marketing",
@@ -1053,6 +1074,7 @@ const pt: Dict = {
       },
       {
         name: "Compliance & Legal",
+        icon: "compliance",
         items: [
           "Monitoramento de obrigações regulatórias e alertas automáticos",
           "Classificação e análise de documentos jurídicos com IA",
@@ -1062,6 +1084,7 @@ const pt: Dict = {
       },
       {
         name: "CRM e Comunicação",
+        icon: "crm",
         items: [
           "Agentes de IA que conduzem a cadência completa de leads via WhatsApp, do primeiro contato ao fechamento, sem operação manual",
           "CRM com segmentação dinâmica por perfil, histórico e nível de engajamento, atualizado em tempo real pelos agentes",

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ArrowLeft, Lock, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { use } from "react";
+import { useSessionFlag } from "@/lib/use-mounted";
 
 const SESSION_KEY = "rl_cases_access";
 
@@ -45,16 +46,13 @@ export default function CasesPage({ params }: { params: Promise<{ lang: string }
   const safeLang = (["en", "es", "pt"].includes(lang) ? lang : "pt") as "en" | "es" | "pt";
   const t = UI[safeLang];
 
-  const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (sessionStorage.getItem(SESSION_KEY) === "true") {
-      setUnlocked(true);
-    }
-  }, []);
+  const storedUnlock = useSessionFlag(SESSION_KEY);
+  const [justUnlocked, setJustUnlocked] = useState(false);
+  const unlocked = storedUnlock || justUnlocked;
 
   // The password is verified server-side against CASES_PASSWORD. Keeping it in
   // this client component would ship it to every visitor in the JS bundle.
@@ -70,7 +68,7 @@ export default function CasesPage({ params }: { params: Promise<{ lang: string }
 
     if (res.ok) {
       sessionStorage.setItem(SESSION_KEY, "true");
-      setUnlocked(true);
+      setJustUnlocked(true);
       setError(false);
     } else {
       setError(true);

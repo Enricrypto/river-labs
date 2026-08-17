@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Linkedin, Instagram, MessageCircle } from "lucide-react";
 import Logo from "./Logo";
 import type { Dict } from "@/lib/translations";
 

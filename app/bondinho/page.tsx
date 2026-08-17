@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useMounted } from "@/lib/use-mounted";
 import { Lock, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import BondinhoMarketStudySection from "@/components/BondinhoMarketStudySection";
@@ -14,12 +15,8 @@ export default function BondinhoPage() {
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [show, setShow] = useState(false);
-  const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setReady(true);
-  }, []);
+  const ready = useMounted();
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

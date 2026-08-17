@@ -3,7 +3,7 @@ import type { Dict } from "@/lib/translations";
 const ICONS = [
   // Diagnóstico — magnifying glass with pulse line
   (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+    <svg key="diagnostico" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
       <circle cx="11" cy="11" r="7" />
       <path d="M16.5 16.5l4 4" />
       <path d="M8 11h2l1.5-2.5L13 13l1.5-2H16" />
@@ -11,7 +11,7 @@ const ICONS = [
   ),
   // Sistemas de IA — neural network nodes
   (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+    <svg key="sistemas-ia" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
       <circle cx="5" cy="6" r="2" />
       <circle cx="5" cy="18" r="2" />
       <circle cx="19" cy="12" r="2" />
@@ -21,7 +21,7 @@ const ICONS = [
   ),
   // Treinamento e Entrega — person with upward arrow
   (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+    <svg key="treinamento" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="9" cy="7" r="4" />
       <path d="M19 8v8M16 11l3-3 3 3" />

@@ -1,14 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import type { Dict } from "@/lib/translations";
+import { useMounted } from "@/lib/use-mounted";
 
 export default function Hero({ dict, lang }: { dict: Dict["hero"]; lang: string }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useMounted();
 
   return (
     <section className="pt-6 pb-12 px-4 md:px-6 w-full max-w-7xl mx-auto flex flex-col items-center">

@@ -1,36 +1,63 @@
-import type { Dict } from "@/lib/translations";
+import type { Dict, SectorIcon } from "@/lib/translations";
 
-const ICONS = [
-  // Receita e Demanda — trending up
-  (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+/**
+ * Keyed by sector identity, not array position. The sector list differs per
+ * language (PT has no Operations entry), so an index-based lookup handed
+ * Marketing the compliance shield and left Compliance & Legal with nothing.
+ */
+const ICONS: Record<SectorIcon, React.ReactNode> = {
+  // Revenue & Demand — trending up
+  revenue: (
+    <>
       <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
       <polyline points="17 6 23 6 23 12" />
-    </svg>
+    </>
   ),
-  // Marketing — megaphone
-  (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+  // Operations & Knowledge Work — document with content lines
+  operations: (
+    <>
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="8" y1="13" x2="16" y2="13" />
+      <line x1="8" y1="17" x2="13" y2="17" />
+    </>
+  ),
+  // Marketing & Growth — megaphone
+  marketing: (
+    <>
       <path d="M3 11l19-9-9 19-2-8-8-2z" />
-    </svg>
+    </>
   ),
   // Compliance & Legal — shield with check
-  (
-    <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+  compliance: (
+    <>
       <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       <path d="M9 12l2 2 4-4" />
-    </svg>
+    </>
   ),
-];
+  // CRM & Communication — chat bubble
+  crm: (
+    <>
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </>
+  ),
+};
 
-// CRM & Communication category sits at a different index per language,
-// so its icon is keyed by name rather than by position.
-const CRM_ICON = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-  </svg>
-);
-const CRM_NAMES = ["CRM & Communication", "CRM y Comunicación", "CRM e Comunicação"];
+function Icon({ icon }: { icon: SectorIcon }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="white"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-8 h-8"
+    >
+      {ICONS[icon]}
+    </svg>
+  );
+}
 
 export default function SectorIdeasSection({ dict }: { dict: Dict["sectorIdeas"] }) {
   return (
@@ -49,8 +76,9 @@ export default function SectorIdeasSection({ dict }: { dict: Dict["sectorIdeas"]
             className="rounded-2xl p-8 flex flex-col gap-6 overflow-hidden"
             style={{ background: "linear-gradient(145deg, #0F1D56 0%, #162470 100%)" }}
           >
-            {/* Label + sector name */}
-            <div className="flex flex-col gap-1">
+            {/* Label + sector name. Reserving two lines of title keeps the icon
+                and divider on the same baseline across every card in a row. */}
+            <div className="flex flex-col gap-1 md:min-h-18">
               <span className="font-mono text-[10px] font-bold tracking-widest uppercase text-white/40">
                 {dict.useCasesLabel}
               </span>
@@ -61,7 +89,7 @@ export default function SectorIdeasSection({ dict }: { dict: Dict["sectorIdeas"]
 
             {/* Icon */}
             <div>
-              {CRM_NAMES.includes(sector.name) ? CRM_ICON : ICONS[idx]}
+              <Icon icon={sector.icon} />
             </div>
 
             {/* Divider */}

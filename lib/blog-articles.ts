@@ -150,7 +150,7 @@ O motivo não é tecnologia. É organização.
   },
   {
     id: "3",
-    slug: "tecnologia-certa-diagnóstico-certo",
+    slug: "tecnologia-certa-diagnostico-certo",
     title: "Por que a tecnologia certa é consequência do diagnóstico certo",
     subtitle: "Escolher a ferramenta antes de entender o problema é um erro que empresas estabelecidas cometem todo dia. E custa caro.",
     author: "Leonardo Werner",

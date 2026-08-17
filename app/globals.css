@@ -12,6 +12,13 @@
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
 
+/* The bio modal mounts at every breakpoint but is display:none above md.
+   Scoping the scroll lock to the same breakpoint keeps desktop scrollable
+   while an invisible modal is open. */
+@media (max-width: 767px) {
+  body.bio-modal-open { overflow: hidden; }
+}
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
