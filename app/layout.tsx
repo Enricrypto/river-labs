@@ -38,14 +38,9 @@ export const metadata: Metadata = {
       "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
     url: SITE_URL,
     siteName: "River Labs",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "River Labs - Automação com IA",
-      },
-    ],
+    // og:image comes from app/[lang]/opengraph-image.tsx. The previous
+    // /og-image.png reference pointed at a file that does not exist, which
+    // is why link previews rendered without a card.
     locale: "pt_BR",
     type: "website",
   },
@@ -54,7 +49,6 @@ export const metadata: Metadata = {
     title: "River Labs - Automação com IA para Operações que Precisam de Resultado",
     description:
       "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
-    images: ["/og-image.png"],
   },
 };
 
