@@ -5,7 +5,6 @@ import { ArrowLeft, Lock, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { use } from "react";
 
-const PASSWORD = "riverlabs1234#";
 const SESSION_KEY = "rl_cases_access";
 
 const UI = {
@@ -49,6 +48,7 @@ export default function CasesPage({ params }: { params: Promise<{ lang: string }
   const [unlocked, setUnlocked] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem(SESSION_KEY) === "true") {
@@ -56,14 +56,25 @@ export default function CasesPage({ params }: { params: Promise<{ lang: string }
     }
   }, []);
 
-  function handleSubmit(e: React.FormEvent) {
+  // The password is verified server-side against CASES_PASSWORD. Keeping it in
+  // this client component would ship it to every visitor in the JS bundle.
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (password === PASSWORD) {
+    setLoading(true);
+    const res = await fetch("/api/unlock", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ client: "cases", password }),
+    });
+    setLoading(false);
+
+    if (res.ok) {
       sessionStorage.setItem(SESSION_KEY, "true");
       setUnlocked(true);
       setError(false);
     } else {
       setError(true);
+      setPassword("");
     }
   }
 
@@ -98,7 +109,8 @@ export default function CasesPage({ params }: { params: Promise<{ lang: string }
             {error && <p className="text-red-500 text-xs">{t.error}</p>}
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors"
+              disabled={loading}
+              className="flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition-colors disabled:opacity-60"
             >
               {t.submit}
               <ArrowUpRight className="w-4 h-4" strokeWidth={2} />

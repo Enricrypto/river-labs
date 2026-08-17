@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +21,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "River Labs - Automação com IA para Operações que Precisam de Resultado",
   description:
     "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     title: "River Labs - Automação com IA para Operações que Precisam de Resultado",
     description:
       "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
-    url: "https://riverlabs.ai",
+    url: SITE_URL,
     siteName: "River Labs",
     images: [
       {

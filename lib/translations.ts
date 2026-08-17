@@ -67,7 +67,6 @@ export type Dict = {
     members: {
       name: string
       role: string
-      bio: string
       fullBio?: string
       image: string
       objectPosition?: string
@@ -324,7 +323,6 @@ const en: Dict = {
       {
         name: "Leonardo Werner",
         role: "Founder · Strategy, People & Governance",
-        bio: "Bio coming soon.",
         fullBio:
           "Leonardo Werner works at the intersection of ethics, organizational culture, and corporate governance. He is a senior consultant at Principia Advisory and visiting professor at PUC-Rio and EAE Business School in Barcelona, where he teaches business ethics in undergraduate and graduate programs.\n\nHis projects have global reach and focus on helping organizations build initiatives that align culture, strategy, and emerging technologies from an ethical perspective. He is also a fellow at FreedomLab, a Dutch think tank, where he writes about the impact of digital technologies on individuals and society.\n\nBefore dedicating himself to ethics and governance consulting, he worked in corporate intelligence, compliance (KYC/AML), and reputational due diligence, with a focus on clients operating in Latin America.",
         image: "/Leonardo_PP.png"
@@ -332,7 +330,6 @@ const en: Dict = {
       {
         name: "Antonio Rapozo",
         role: "Founder · Solution Architecture",
-        bio: "Bio coming soon.",
         fullBio:
           "Antonio Rapozo is a senior full-stack engineer with over 8 years of experience building mission-critical systems for the government, transportation, and energy sectors. Over the past 4 years, he has developed bridge inspection and infrastructure asset management platforms used by more than 15 state Departments of Transportation in the US, processing data related to over $500 million in annual investments.\n\nHe currently works on a browser security platform for managed service providers (MSPs), focused on protection against emerging AI threats, phishing, malware, and DNS filtering. His work transforms the browser - today the most vulnerable access point in organizations - into a secure, manageable workspace with advanced security controls, credential analysis, and productivity monitoring.\n\nHis technical expertise spans Vue.js, React, C#, .NET, TypeScript, and AWS, with dual AWS Solutions Architect certification. He integrates AI into production systems using OpenAI, LangChain, and Semantic Kernel, and is the creator of MemoryKit - an open-source .NET library implementing a neuroscience-inspired memory architecture for AI applications.\n\nWith a background in mechanical engineering from CEFET/RJ, a double-degree program in Germany (Deggendorf/IIK Düsseldorf), and a Machine Learning certification from Stanford, Antonio brings a rare combination of technical depth, architectural vision, and experience in complex regulatory environments. He is Brazilian, multilingual (Portuguese, English, German, Spanish), and has worked remotely with distributed teams since 2020.\n\nHis focus is on building scalable solutions that connect high-level software engineering with real business needs - from American government infrastructure to the next generation of intelligent agents.",
         image: "/Antonio_PP.png"
@@ -340,7 +337,6 @@ const en: Dict = {
       {
         name: "Enrique Ibarra",
         role: "Founder · Product & Engineering",
-        bio: "Bio coming soon.",
         fullBio:
           "Enrique Ibarra works at the intersection of artificial intelligence and digital development, with a focus on turning technology into practical solutions for businesses. He builds and implements systems that improve processes, reduce costs, and increase efficiency through automation and the intelligent use of data.\n\nHis projects have international reach, including initiatives in Europe, Latin America, and the Middle East, and focus on applying AI strategically - helping organizations adopt new technologies without unnecessary complexity. His approach combines structured thinking with a practical mindset, always looking for the right questions and solutions that actually work day-to-day across different industries.\n\nThroughout his career, he has also developed expertise in Web3 and application development, working with digital products and new forms of technological infrastructure. His focus is on building useful, well-designed solutions aligned with real business needs.",
         image: "/Enrique_PP.png"
@@ -710,7 +706,6 @@ const es: Dict = {
       {
         name: "Leonardo Werner",
         role: "Socio-fundador · Estrategia, Personas y Gobernanza",
-        bio: "Bio próximamente.",
         fullBio:
           "Leonardo Werner trabaja en la intersección entre ética, cultura organizacional y gobernanza corporativa. Es consultor sénior en Principia Advisory y profesor invitado de la PUC-Rio y de la EAE Business School, en Barcelona, donde imparte ética empresarial en cursos de grado y posgrado.\n\nSus proyectos tienen alcance global y se centran en ayudar a las organizaciones a construir iniciativas que alineen cultura, estrategia y tecnologías emergentes desde una perspectiva ética. También es fellow del FreedomLab, think tank holandés, donde escribe sobre el impacto de las tecnologías digitales para individuos y sociedad.\n\nAntes de dedicarse a la consultoría en ética y gobernanza, trabajó en inteligencia corporativa, compliance (KYC/AML) y due diligence reputacional, con foco en clientes con operaciones en América Latina.",
         image: "/Leonardo_PP.png"
@@ -718,7 +713,6 @@ const es: Dict = {
       {
         name: "Antonio Rapozo",
         role: "Socio-fundador · Arquitectura de Soluciones",
-        bio: "Bio próximamente.",
         fullBio:
           "Antonio Rapozo es ingeniero full-stack sénior con más de 8 años de experiencia construyendo sistemas de misión crítica para los sectores de gobierno, transporte y energía. En los últimos 4 años, desarrolló plataformas de inspección de puentes y gestión de activos de infraestructura utilizadas por más de 15 Departamentos de Transporte estatales en EE. UU., procesando datos relacionados con más de 500 millones de dólares en inversiones anuales.\n\nActualmente trabaja en una plataforma de seguridad de navegadores para proveedores de servicios gestionados (MSPs), con foco en la protección contra amenazas emergentes de IA, phishing, malware y filtrado DNS. Su trabajo transforma el navegador - hoy el punto de acceso más vulnerable en las organizaciones - en un workspace seguro y gestionable, con controles avanzados de seguridad, análisis de credenciales y monitoreo de productividad.\n\nSu expertise técnico abarca Vue.js, React, C#, .NET, TypeScript y AWS, con doble certificación AWS Solutions Architect. Integra IA en sistemas de producción con OpenAI, LangChain y Semantic Kernel, y es creador de MemoryKit - biblioteca open-source en .NET que implementa una arquitectura de memoria inspirada en neurociencia para aplicaciones de IA.\n\nCon formación en ingeniería mecánica por el CEFET/RJ, programa de doble titulación en Alemania (Deggendorf/IIK Düsseldorf) y certificación en Machine Learning por Stanford, Antonio aporta una combinación poco común de profundidad técnica, visión arquitectónica y experiencia en entornos regulatorios complejos. Es brasileño, multilingüe (portugués, inglés, alemán, español) y trabaja de forma remota con equipos distribuidos desde 2020.\n\nSu foco está en construir soluciones escalables que conecten la ingeniería de software de alto nivel con las necesidades reales del negocio - desde la infraestructura gubernamental estadounidense hasta la próxima generación de agentes inteligentes.",
         image: "/Antonio_PP.png"
@@ -726,7 +720,6 @@ const es: Dict = {
       {
         name: "Enrique Ibarra",
         role: "Socio-fundador · Producto e Ingeniería",
-        bio: "Bio próximamente.",
         fullBio:
           "Enrique Ibarra trabaja en la intersección entre inteligencia artificial y desarrollo digital, con foco en transformar la tecnología en soluciones prácticas para las empresas. Se dedica a la creación e implementación de sistemas que mejoran procesos, reducen costos y aumentan la eficiencia mediante la automatización y el uso inteligente de los datos.\n\nSus proyectos tienen alcance internacional, con iniciativas en Europa, América Latina y Oriente Medio, y se centran en aplicar IA de forma estratégica, ayudando a las organizaciones a adoptar nuevas tecnologías sin complejidad innecesaria. Su enfoque combina el pensamiento estructurado con una mentalidad práctica, buscando siempre las preguntas correctas y soluciones que realmente funcionen en el día a día de distintas industrias.\n\nA lo largo de su trayectoria, también desarrolló experiencia en Web3 y desarrollo de aplicaciones, trabajando con productos digitales y nuevas formas de infraestructura tecnológica. Su foco está en construir soluciones útiles, bien diseñadas y alineadas con las necesidades reales del negocio.",
         image: "/Enrique_PP.png"
@@ -1087,7 +1080,6 @@ const pt: Dict = {
       {
         name: "Leonardo Werner",
         role: "Sócio-fundador · Estratégia, Pessoas e Governança",
-        bio: "Bio em breve.",
         fullBio:
           "Leonardo Werner trabalha na interseção entre ética, cultura organizacional e governança corporativa. É consultor sênior na Principia Advisory e professor convidado da PUC-Rio e da EAE Business School, em Barcelona, onde leciona ética empresarial em cursos de graduação e pós-graduação.\n\nSeus projetos têm alcance global e se concentram em ajudar organizações a construir iniciativas que alinhem cultura, estratégia e tecnologias emergentes a partir de uma perspectiva ética. É também fellow do FreedomLab, think tank holandês, onde escreve sobre os impactos das tecnologias digitais para indivíduos e sociedade.\n\nAntes de se dedicar à consultoria em ética e governança, atuou em inteligência corporativa, compliance (KYC/AML) e due diligence reputacional, com foco em clientes com operações na América Latina.",
         image: "/Leonardo_PP.png"
@@ -1095,7 +1087,6 @@ const pt: Dict = {
       {
         name: "Antonio Rapozo",
         role: "Sócio-fundador · Arquitetura de Soluções",
-        bio: "Bio em breve.",
         fullBio:
           "Antonio Rapozo é engenheiro full-stack sênior com mais de 8 anos de experiência construindo sistemas de missão crítica para os setores de governo, transportes e energia. Nos últimos 4 anos, desenvolveu plataformas de inspeção de pontes e gestão de ativos de infraestrutura utilizadas por mais de 15 Departamentos de Transporte estaduais nos EUA, processando dados referentes a mais de US$ 500 milhões em investimentos anuais.\n\nAtualmente, atua no desenvolvimento de uma plataforma de segurança de navegadores voltada para provedores de serviços gerenciados (MSPs), trabalhando na proteção contra ameaças emergentes de IA, phishing, malware e filtragem DNS. Seu trabalho transforma o navegador - hoje o ponto de acesso mais vulnerável nas organizações - em um workspace seguro e gerenciável, com controles avançados de segurança, análise de credenciais e monitoramento de produtividade.\n\nSua expertise técnica abrange Vue.js, React, C#, .NET, TypeScript e AWS, com dupla certificação AWS Solutions Architect. Integra inteligência artificial em sistemas de produção utilizando OpenAI, LangChain e Semantic Kernel, e é criador do MemoryKit - biblioteca open-source em .NET que implementa uma arquitetura de memória inspirada em neurociência para aplicações de IA.\n\nCom formação em engenharia mecânica pelo CEFET/RJ, programa de duplo diploma na Alemanha (Deggendorf/IIK Düsseldorf) e certificação em Machine Learning por Stanford, Antonio traz uma combinação rara de profundidade técnica, visão arquitetural e experiência em ambientes regulatórios complexos. É brasileiro, multilíngue (português, inglês, alemão, espanhol) e atua remotamente com equipes distribuídas desde 2020.\n\nSeu foco está em construir soluções escaláveis que conectam engenharia de software de alto nível com as necessidades reais de negócio - da infraestrutura governamental americana à próxima geração de agentes inteligentes.",
         image: "/Antonio_PP.png"
@@ -1103,7 +1094,6 @@ const pt: Dict = {
       {
         name: "Enrique Ibarra",
         role: "Sócio-fundador · Produto e Engenharia",
-        bio: "Bio em breve.",
         fullBio:
           "Enrique Ibarra trabalha na interseção entre inteligência artificial e desenvolvimento digital, com foco em transformar tecnologia em soluções práticas para empresas. Atua na criação e implementação de sistemas que melhoram processos, reduzem custos e aumentam eficiência por meio de automação e uso inteligente de dados.\n\nSeus projetos têm alcance internacional, incluindo iniciativas na Europa, América Latina e Oriente Médio, e se concentram em aplicar IA de forma estratégica, ajudando organizações a adotar novas tecnologias sem complexidade desnecessária. Sua abordagem combina pensamento estruturado com uma mentalidade prática, buscando sempre as perguntas certas e soluções que realmente funcionem no dia a dia de diferentes indústrias.\n\nAo longo de sua trajetória, também desenvolveu experiência em Web3 e desenvolvimento de aplicações, trabalhando com produtos digitais e novas formas de infraestrutura tecnológica. Seu foco está em construir soluções úteis, bem desenhadas e alinhadas às necessidades reais de negócio.",
         image: "/Enrique_PP.png"

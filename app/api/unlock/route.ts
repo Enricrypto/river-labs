@@ -8,6 +8,7 @@ function getPassword(client: string): string | undefined {
     case "trem-corcovado": return process.env.TREM_CORCOVADO_PASSWORD;
     case "bondinho":       return process.env.BONDINHO_PASSWORD;
     case "cataratas":      return process.env.CATARATAS_PASSWORD;
+    case "cases":          return process.env.CASES_PASSWORD;
     default:               return undefined;
   }
 }

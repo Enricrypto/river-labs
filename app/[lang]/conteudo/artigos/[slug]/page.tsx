@@ -1,20 +1,29 @@
 import { getArticle } from "@/lib/blog-articles";
+import { notFound } from "next/navigation";
 import Link from "next/link";
+import { SITE_URL } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }) {
-  const { slug } = await params;
+  const { lang, slug } = await params;
   const article = getArticle(slug);
 
   if (!article) {
     return {
       title: "Artigo não encontrado",
       description: "O artigo que você procura não existe.",
+      robots: { index: false, follow: false },
     };
   }
 
   return {
     title: `${article.title} - River Labs`,
     description: article.subtitle,
+    // Drafts stay reachable by direct link so they can be shared for review,
+    // but they must never enter the index.
+    robots: article.published ? undefined : { index: false, follow: false },
+    alternates: {
+      canonical: `${SITE_URL}/${lang}/conteudo/artigos/${slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.subtitle,
@@ -28,18 +37,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ lang: 
   const { lang, slug } = await params;
   const article = getArticle(slug);
 
-  if (!article) {
-    return (
-      <div className="w-full bg-white py-16 px-6">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Artigo não encontrado</h1>
-          <Link href={`/${lang}/conteudo/artigos`} className="text-blue-600 hover:underline">
-            Voltar aos artigos
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  // Rendering a "not found" body with HTTP 200 is a soft-404; return a real one.
+  if (!article) notFound();
 
   return (
     <div className="w-full bg-white py-16 px-6">

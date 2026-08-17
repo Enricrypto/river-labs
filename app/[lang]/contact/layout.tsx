@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-const CANONICAL_URL = "https://riverlabs.ai";
+import { SITE_URL } from "@/lib/site";
 
 const meta: Record<string, { title: string; description: string }> = {
   pt: {
@@ -22,7 +21,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { lang } = await params;
   const m = meta[lang] ?? meta.pt;
-  const url = `${CANONICAL_URL}/${lang}/contact`;
+  const url = `${SITE_URL}/${lang}/contact`;
 
   return {
     title: m.title,
