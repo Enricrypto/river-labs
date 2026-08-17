@@ -22,6 +22,12 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  verification: {
+    // Google Search Console ownership, URL-prefix property for SITE_URL.
+    // Lives in the root layout so every page carries it — "/" itself is a
+    // 307 to /pt and has no HTML body for the verifier to read.
+    google: "PA3FY8dzeN4dFH7pF7VD6W-BjXq_yPiSrwF5mlqAoNo",
+  },
   title: "River Labs - Automação com IA para Operações que Precisam de Resultado",
   description:
     "Desenvolvemos soluções de IA e automação customizadas na sua infraestrutura - sem dependência de SaaS. Diagnóstico gratuito. Resultados em semanas.",
